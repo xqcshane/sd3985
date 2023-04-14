@@ -1,0 +1,2 @@
+D:\uproject\sd3985\Project\obj\Debug\PhotonChat.csproj.AssemblyReference.cache
+D:\uproject\sd3985\Project\obj\Debug\PhotonChat.csproj.CoreCompileInputs.cache

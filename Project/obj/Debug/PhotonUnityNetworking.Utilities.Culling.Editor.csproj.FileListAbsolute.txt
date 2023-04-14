@@ -1,0 +1,2 @@
+D:\uproject\sd3985\Project\obj\Debug\PhotonUnityNetworking.Utilities.Culling.Editor.csproj.AssemblyReference.cache
+D:\uproject\sd3985\Project\obj\Debug\PhotonUnityNetworking.Utilities.Culling.Editor.csproj.CoreCompileInputs.cache
