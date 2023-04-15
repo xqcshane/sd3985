@@ -21,7 +21,11 @@ public class Enemyfollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+       
     }
     private void FixedUpdate()
     {
@@ -50,5 +54,12 @@ public class Enemyfollow : MonoBehaviour
         gameObject.transform.localScale = currentScale;
         faceright = !faceright;
     }
-
+    //emyattack
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-5);
+        }
+    }
 }

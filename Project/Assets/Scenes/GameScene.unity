@@ -500,7 +500,7 @@ GameObject:
   - component: {fileID: 809986269}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -584,7 +584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1128617344}
   speed: 5
-  health: 0
+  health: 100
   damage: 0
   sight: 15
 --- !u!61 &809986269
@@ -597,7 +597,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.082062244, y: -0.035369158}
@@ -1029,9 +1029,10 @@ GameObject:
   - component: {fileID: 1128617345}
   - component: {fileID: 1128617350}
   - component: {fileID: 1128617349}
+  - component: {fileID: 1128617351}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1069,7 +1070,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 0
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &1128617347
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1151,12 +1152,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5346947c2db4c6e4d8f94b2e592fe898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 2272316590253364122, guid: eb8771d47aa04504aacdb7037d5aa8c9, type: 3}
+  bullet1: {fileID: 7400203235159826638, guid: 451446c756b5b4f46b6897448e2901f0, type: 3}
+  bullet2: {fileID: 22675927609925208, guid: fd4296e2a01d8fc459c1cf4e226f97cd, type: 3}
+  bullet3: {fileID: 6482701619066125320, guid: 729228a8b6b1137459d186d920e547bf, type: 3}
+  bullet4: {fileID: 3873522454332554993, guid: d5a163706184efb4f922e11eff219812, type: 3}
   speed: 20
-  range: 0.5
+  range: 0.6
   damage: 0
   firerate: 1
-  mode: 1
+  speed1: 10
+  range1: 0.35
+  damage1: 5
+  firerate1: 1
+  speed2: 5
+  range2: 0.5
+  damage2: 20
+  firerate2: 1
+  speed3: 20
+  range3: 0.6
+  damage3: 5
+  firerate3: 0.25
   currentweaponindex: 0
   guns: []
   gunholder: {fileID: 0}
@@ -1168,13 +1183,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128617344}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0897634, y: -3.3792665}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1185,8 +1200,22 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.24, y: 10.24}
+  m_Size: {x: 4.3127084, y: 3.4814668}
   m_EdgeRadius: 0
+--- !u!114 &1128617351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128617344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e32267836b0db44eabf122e0c9575c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeInvincible: 0
+  maxHealth: 100
 --- !u!1 &1183561466
 GameObject:
   m_ObjectHideFlags: 0
