@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     float invincibleTimer;
     public float timeInvincible = 2.0f;
     public int maxHealth = 100;
-    public int health { get { return currentHealth; } }
+    public int health { get { return currentHealth; } set { currentHealth = value; } }
     int currentHealth;
     void Start()
     {
