@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bulletcontrol : MonoBehaviour
 {
-    public float damage;
+    public float damage=0;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy") )

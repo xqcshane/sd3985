@@ -19,25 +19,25 @@ public class PlayerAim : MonoBehaviour
     [Header("Normal Staff")]
     public float speed=20;
     public float range=0.5f;
-    public float damage = 10;
+    public float damage = 10.0f;
     public float firerate=0.5f;
     private float nextfire=0f;
     [Header("ShotGun Staff")]
     public float speed1=10;
     public float range1=0.5f;
-    public float damage1 = 20;
+    public float damage1 = 20.0f;
     public float firerate1 = 1f;
     private float nextfire1 = 0f;
     [Header("Bomb Staff")]
     public float speed2 = 5;
     public float range2 = 0.5f;
-    public float damage2 = 40;
+    public float damage2 = 40.0f;
     public float firerate2 = 1f;
     private float nextfire2 = 0f;
     [Header("MachineGun Staff")]
     public float speed3 = 25;
     public float range3 = 0.3f;
-    public float damage3 = 2;
+    public float damage3 = 2.0f;
     public float firerate3 = 0.01f;
     private float nextfire3 = 0f;
     //setting the weapon
@@ -49,7 +49,7 @@ public class PlayerAim : MonoBehaviour
     string[] Gunlist = { "normalStaff","shotgunStaff","bombStaff","machineGunStaff"};
     float angle;
     // Start is called before the first frame update
-    private void Awake()
+    private void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         guns=new GameObject[4];
@@ -59,12 +59,12 @@ public class PlayerAim : MonoBehaviour
             guns[i].SetActive(false);
         }
         guns[0].SetActive(true);
-        aimtransform = transform.Find(Gunlist[0]);
-        bullet = bullet1;
+        aimtransform = transform.Find(Gunlist[0]);    
         bullet1.GetComponent<Bulletcontrol>().damage = damage;
         bullet2.GetComponent<Bulletcontrol>().damage = damage1;
-        bullet3.GetComponent<Bulletcontrol>().damage= damage2;
-        bullet4.GetComponent<Bulletcontrol>(). damage= damage3;
+        bullet3.GetComponent<Bulletcontrol>().damage = damage2;
+        bullet4.GetComponent<Bulletcontrol>(). damage = damage3;
+        bullet = bullet1;
         currentweaponindex = 0;
     }
 
