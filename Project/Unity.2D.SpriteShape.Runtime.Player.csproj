@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -47,30 +47,33 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.12</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.18</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2020.3.24f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\Spline.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\External\LibTessDotNet\Dict.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\SpriteShape.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\External\LibTessDotNet\PriorityHeap.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\External\LibTessDotNet\Sweep.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\External\LibTessDotNet\Mesh.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\External\LibTessDotNet\MeshUtils.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\BezierUtility.cs" />
+    <Analyzer Include="D:\visual studio\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\External\LibTessDotNet\Tess.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\AssemblyInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\UTess2D\Tessellator.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\UTess2D\ArraySlice.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\SpriteShapeGeometryCache.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\SpriteShapeController.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\External\LibTessDotNet\PriorityQueue.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\SpriteShapeGenerator.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\SplineUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\External\LibTessDotNet\Dict.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\BezierUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\Spline.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\External\LibTessDotNet\PriorityHeap.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\SpriteShapeController.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\External\LibTessDotNet\PriorityQueue.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\UTess2D\ArraySlice.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\SpriteShape.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\External\LibTessDotNet\Sweep.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\External\LibTessDotNet\Mesh.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\SpriteShapeGeometryCache.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\External\LibTessDotNet\Geom.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\External\LibTessDotNet\MeshUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.2d.spriteshape@5.1.7\Runtime\External\LibTessDotNet\LICENSE.txt" />
@@ -274,9 +277,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\AOT\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
       <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
@@ -631,17 +631,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
-      <Project>{C8A94660-C051-2646-2FBC-FBAF85C98A55}</Project>
-      <Name>Unity.2D.Common.Runtime</Name>
+    <ProjectReference Include="Unity.2D.Common.Runtime.Player.csproj">
+      <Project>{FD130960-B575-C9CB-D7D6-97E5E7DA4432}</Project>
+      <Name>Unity.2D.Common.Runtime.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{A57734E9-AB90-D453-7833-03AA90424E3E}</Project>
-      <Name>Unity.Mathematics</Name>
+    <ProjectReference Include="Unity.Mathematics.Player.csproj">
+      <Project>{E8C0E808-5664-9E7E-9240-B598E6A5B908}</Project>
+      <Name>Unity.Mathematics.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{A30111FA-DFBE-C300-CA8D-566E6AF9622A}</Project>
-      <Name>UnityEngine.UI</Name>
+    <ProjectReference Include="UnityEngine.UI.Player.csproj">
+      <Project>{38E7A7B1-2C4F-FCE2-D30E-2B190DE619C6}</Project>
+      <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
