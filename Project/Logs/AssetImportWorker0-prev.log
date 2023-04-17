@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.24f1 (79c78de19888) revision 7980941'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22621) 64bit CoreCountrySpecific' Language: 'zh' Physical Memory: 16236 MB
+OS: 'Windows 11  (10.0.22621) 64bit CoreCountrySpecific' Language: 'zh' Physical Memory: 16253 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
@@ -11,116 +11,199 @@ C:\Program Files\Unity\Hub\Editor\2020.3.24f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-D:/uproject/sd3985/Project
+D:/GitHub_Unity/sd3985/Project
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53949
+<<<<<<< HEAD
+54399
 Successfully changed project path to: D:/uproject/sd3985/Project
 D:/uproject/sd3985/Project
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 38.51 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 38.36 ms, found 2 plugins.
+=======
+54967
+Successfully changed project path to: D:/GitHub_Unity/sd3985/Project
+D:/GitHub_Unity/sd3985/Project
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 43.69 ms, found 2 plugins.
+>>>>>>> origin/trying1
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.24f1 (79c78de19888)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.24f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/uproject/sd3985/Project/Assets
+[Subsystems] Discovering subsystems at path D:/GitHub_Unity/sd3985/Project/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3050 Laptop GPU (ID=0x25e2)
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f99)
     Vendor:   
-    VRAM:     3991 MB
-    Driver:   30.0.15.1236
+    VRAM:     3962 MB
+    Driver:   27.21.14.5749
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.24f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.24f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.24f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56640
+<<<<<<< HEAD
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56696
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56204
+>>>>>>> origin/trying1
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.24f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.24f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004376 seconds.
+<<<<<<< HEAD
+Registered in 0.004465 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 36.93 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 36.82 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.491 seconds
+- Completed reload, in  0.520 seconds
 Domain Reload Profiling:
-	ReloadAssembly (491ms)
-		BeginReloadAssembly (65ms)
+	ReloadAssembly (520ms)
+		BeginReloadAssembly (66ms)
+=======
+Registered in 0.004575 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 44.53 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.583 seconds
+Domain Reload Profiling:
+	ReloadAssembly (583ms)
+		BeginReloadAssembly (67ms)
+>>>>>>> origin/trying1
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (354ms)
+<<<<<<< HEAD
+		EndReloadAssembly (383ms)
 			LoadAssemblies (62ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (110ms)
+			SetupTypeCache (116ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (22ms)
-			SetupLoadedEditorAssemblies (138ms)
+			RebuildScriptCaches (21ms)
+			SetupLoadedEditorAssemblies (155ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (37ms)
-				BeforeProcessingInitializeOnLoad (12ms)
-				ProcessInitializeOnLoadAttributes (62ms)
-				ProcessInitializeOnLoadMethodAttributes (21ms)
+				BeforeProcessingInitializeOnLoad (13ms)
+				ProcessInitializeOnLoadAttributes (74ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
+=======
+		EndReloadAssembly (432ms)
+			LoadAssemblies (63ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (129ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (33ms)
+			SetupLoadedEditorAssemblies (167ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (45ms)
+				BeforeProcessingInitializeOnLoad (17ms)
+				ProcessInitializeOnLoadAttributes (75ms)
+				ProcessInitializeOnLoadMethodAttributes (24ms)
+>>>>>>> origin/trying1
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003671 seconds.
+<<<<<<< HEAD
+Registered in 0.003858 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.814 seconds
+- Completed reload, in  0.909 seconds
 Domain Reload Profiling:
-	ReloadAssembly (814ms)
-		BeginReloadAssembly (123ms)
+	ReloadAssembly (910ms)
+		BeginReloadAssembly (127ms)
+=======
+Registered in 0.004554 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.043 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1044ms)
+		BeginReloadAssembly (147ms)
+>>>>>>> origin/trying1
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (15ms)
-		EndReloadAssembly (636ms)
-			LoadAssemblies (91ms)
+<<<<<<< HEAD
+			CreateAndSetChildDomain (16ms)
+		EndReloadAssembly (727ms)
+			LoadAssemblies (92ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (202ms)
+			SetupTypeCache (228ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (33ms)
-			SetupLoadedEditorAssemblies (262ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (318ms)
+=======
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (834ms)
+			LoadAssemblies (99ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (286ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (321ms)
+>>>>>>> origin/trying1
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (74ms)
-				ProcessInitializeOnLoadAttributes (158ms)
+<<<<<<< HEAD
+				BeforeProcessingInitializeOnLoad (94ms)
+				ProcessInitializeOnLoadAttributes (192ms)
 				ProcessInitializeOnLoadMethodAttributes (12ms)
-				AfterProcessingInitializeOnLoad (12ms)
+				AfterProcessingInitializeOnLoad (13ms)
+=======
+				BeforeProcessingInitializeOnLoad (86ms)
+				ProcessInitializeOnLoadAttributes (197ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
+				AfterProcessingInitializeOnLoad (14ms)
+>>>>>>> origin/trying1
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2107 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.1 MB.
-System memory in use after: 93.2 MB.
+<<<<<<< HEAD
+Unloading 2187 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.4 MB.
+System memory in use after: 97.4 MB.
 
-Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 2542.
-Total: 2.797800 ms (FindLiveObjects: 0.193600 ms CreateObjectMapping: 0.051300 ms MarkObjects: 2.449200 ms  DeleteObjects: 0.102700 ms)
+Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 2622.
+Total: 3.111200 ms (FindLiveObjects: 0.184000 ms CreateObjectMapping: 0.075300 ms MarkObjects: 2.779700 ms  DeleteObjects: 0.071200 ms)
+=======
+Unloading 2133 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.2 MB.
+System memory in use after: 94.3 MB.
+
+Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 2565.
+Total: 3.493300 ms (FindLiveObjects: 0.270800 ms CreateObjectMapping: 0.100200 ms MarkObjects: 3.041700 ms  DeleteObjects: 0.078500 ms)
+>>>>>>> origin/trying1
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -135,409 +218,532 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/UI/ToolTipSystem.cs
-  artifactKey: Guid(c247d51d98be9f64ca3c70754aab57cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/UI/ToolTipSystem.cs using Guid(c247d51d98be9f64ca3c70754aab57cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4cb0ef20cffc017c1f58345d5920af8') in 0.035113 seconds 
-  Import took 0.038070 seconds .
+<<<<<<< HEAD
+  path: Assets/Scenes/SkillChoosing.unity
+  artifactKey: Guid(79b6d8ad598415d44ba58e48e85d9e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SkillChoosing.unity using Guid(79b6d8ad598415d44ba58e48e85d9e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5f99fc69082c0218f91438876bf2e25') in 0.010658 seconds 
+  Import took 0.014006 seconds .
+=======
+  path: Assets/Scenes/GameScene 1.unity
+  artifactKey: Guid(a90473778bb574943bf2b016f68f99b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/GameScene 1.unity using Guid(a90473778bb574943bf2b016f68f99b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa44a513c7d833e64a502366783bdcd9') in 0.012087 seconds 
+  Import took 0.015145 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000217 seconds.
-  path: Assets/Scripts/UI/TooltipTrigger.cs
-  artifactKey: Guid(d1d0b33cba0c33b4486ab8816ebb8c40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/UI/TooltipTrigger.cs using Guid(d1d0b33cba0c33b4486ab8816ebb8c40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efbed7c5769d0c99b71f9d0d676414a8') in 0.001719 seconds 
-  Import took 0.004309 seconds .
+  Time since last request: 8.493080 seconds.
+  path: Assets/Scenes/Fire.unity
+  artifactKey: Guid(a90473778bb574943bf2b016f68f99b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Fire.unity using Guid(a90473778bb574943bf2b016f68f99b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b37570825a440eb5b01c433168e8a74') in 0.006443 seconds 
+  Import took 0.009540 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 4.798268 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG
-  artifactKey: Guid(351870e914a971d43a229453b982c25b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG using Guid(351870e914a971d43a229453b982c25b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '816e181f191b480879fb81dc730b3b0b') in 0.001821 seconds 
-  Import took 0.004968 seconds .
+  Time since last request: 35.498696 seconds.
+  path: Assets/Images
+  artifactKey: Guid(56f1a42c7dafc984e91f53d74f8abfcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images using Guid(56f1a42c7dafc984e91f53d74f8abfcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87cb907161ecccc471073f621b7dfa19') in 0.005884 seconds 
+  Import took 0.009370 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.070512 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon1.png
-  artifactKey: Guid(a9f04f2f65ed34f45ac6889dfdbd6096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon1.png using Guid(a9f04f2f65ed34f45ac6889dfdbd6096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9965e3c27ae47c1b08d56c2f6d6c5956') in 0.083702 seconds 
-  Import took 0.086976 seconds .
+  Time since last request: 0.026478 seconds.
+  path: Assets/Images/arrow_1.png
+  artifactKey: Guid(c1b742ff4cf96b14a984cd1aca5ae3d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/arrow_1.png using Guid(c1b742ff4cf96b14a984cd1aca5ae3d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7160646ea5291d2f3ee3112e683fd6d1') in 0.095982 seconds 
+  Import took 0.099004 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000191 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon47.png
-  artifactKey: Guid(b5e080bf4d603fc4cabbb5a2501d529e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon47.png using Guid(b5e080bf4d603fc4cabbb5a2501d529e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4de3fb2de12b5c3f8769c1c351e5a7a3') in 0.021400 seconds 
-  Import took 0.024228 seconds .
+  Time since last request: 0.000302 seconds.
+  path: Assets/Images/peaks_3.png
+  artifactKey: Guid(35417e22ba8e50f4bb62e42e3a58c9ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/peaks_3.png using Guid(35417e22ba8e50f4bb62e42e3a58c9ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4378d86cdeb5a4215e0741755fa0828b') in 0.012724 seconds 
+  Import took 0.015690 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000196 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon42.png
-  artifactKey: Guid(f2997571bf86eb34f868b94c6c9c8c79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon42.png using Guid(f2997571bf86eb34f868b94c6c9c8c79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67e443486a392c029aec2f95fe36fcab') in 0.019890 seconds 
-  Import took 0.022571 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon14.png
-  artifactKey: Guid(b34b29e8b927f264f8203529539ff50d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon14.png using Guid(b34b29e8b927f264f8203529539ff50d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04423b9e3fb0e55649ed25802eb78dab') in 0.013791 seconds 
-  Import took 0.016448 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000215 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon8.png
-  artifactKey: Guid(e07501ca509b13441a8eb6f17069b489) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon8.png using Guid(e07501ca509b13441a8eb6f17069b489) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5357c404f092b482186acec6d84aef3') in 0.016995 seconds 
-  Import took 0.019832 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000189 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon43.png
-  artifactKey: Guid(e54101173bdf1fa488e7866a10a1e8de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon43.png using Guid(e54101173bdf1fa488e7866a10a1e8de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '794093a8311cadf7f67e43460ca689f1') in 0.010316 seconds 
-  Import took 0.012886 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000214 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon32.png
-  artifactKey: Guid(e11745bac411efc48ae5d249a22551d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon32.png using Guid(e11745bac411efc48ae5d249a22551d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7cff5613bb6eb761e6f5a1396fe9b88') in 0.012828 seconds 
-  Import took 0.015554 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000216 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon20.png
-  artifactKey: Guid(53cff99639470ba4999ae595287143a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon20.png using Guid(53cff99639470ba4999ae595287143a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '420779217934407224797e8338f60e5c') in 0.016271 seconds 
-  Import took 0.018966 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000215 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon35.png
-  artifactKey: Guid(4e822aef56927c04da2502b7392cd5b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon35.png using Guid(4e822aef56927c04da2502b7392cd5b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '831442debb5e05e7a53dfe2ef8ab2e6f') in 0.011040 seconds 
-  Import took 0.013805 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000211 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon39.png
-  artifactKey: Guid(ecd405cee8c8a174f99f9e31b6393b07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon39.png using Guid(ecd405cee8c8a174f99f9e31b6393b07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f343bf800010a9c16bd98b73130cef3c') in 0.014800 seconds 
-  Import took 0.017604 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000230 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon36.png
-  artifactKey: Guid(b65d241d691f91e45ba2994020812ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon36.png using Guid(b65d241d691f91e45ba2994020812ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f91f8283f5b92579c9e4c07178fd1ba') in 0.015060 seconds 
-  Import took 0.017874 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000165 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon4.png
-  artifactKey: Guid(c7061a2eaa258ba43a0c7e793b06af88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon4.png using Guid(c7061a2eaa258ba43a0c7e793b06af88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2be86656dad47c02056fc55ea0ed7304') in 0.011806 seconds 
-  Import took 0.014452 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon2.png
-  artifactKey: Guid(414198cdb5c00a44e8d95c7c3f81408a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon2.png using Guid(414198cdb5c00a44e8d95c7c3f81408a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b41576fa1e952a3e9e89445c34a5f48') in 0.013221 seconds 
-  Import took 0.015837 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000205 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon5.png
-  artifactKey: Guid(323f6420ae38257499ba31722e263b12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon5.png using Guid(323f6420ae38257499ba31722e263b12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8059ffd5b7d42903d75669d01926e75') in 0.013815 seconds 
-  Import took 0.016527 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000226 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon41.png
-  artifactKey: Guid(3f6b0f75d21e4ba48a18858e1cd854c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon41.png using Guid(3f6b0f75d21e4ba48a18858e1cd854c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6981e27d7c30c88e8a4882a7dc33d7a2') in 0.014280 seconds 
-  Import took 0.017026 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000237 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon31.png
-  artifactKey: Guid(ff0eaeb7ab7961b458d82294af9526da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon31.png using Guid(ff0eaeb7ab7961b458d82294af9526da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff4aa35951c230ee7efce440aebd8651') in 0.014473 seconds 
-  Import took 0.017591 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000224 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon24.png
-  artifactKey: Guid(a0995c5e982236145a9e4a6f3828d039) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon24.png using Guid(a0995c5e982236145a9e4a6f3828d039) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '762465262953f6ad919ba0ba428f3379') in 0.011953 seconds 
-  Import took 0.014925 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000232 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon45.png
-  artifactKey: Guid(806ff63079b5c5149943be493f9e2156) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon45.png using Guid(806ff63079b5c5149943be493f9e2156) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9015bbb27f376eebf1eed1ae517cfe4') in 0.012309 seconds 
-  Import took 0.015378 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000214 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon33.png
-  artifactKey: Guid(638a1848215a4f046a8ae9afdd25a580) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon33.png using Guid(638a1848215a4f046a8ae9afdd25a580) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7360152d9b7a110e3b6e5bc4c892b657') in 0.015197 seconds 
-  Import took 0.018053 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000211 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon11.png
-  artifactKey: Guid(ff7c43c356f0ce4428118c73448f2a76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon11.png using Guid(ff7c43c356f0ce4428118c73448f2a76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06e29b1e6932e7ffa559552ca8c65d5c') in 0.012326 seconds 
-  Import took 0.015305 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000222 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon16.png
-  artifactKey: Guid(664be11915b403a4b96ac3097c019111) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon16.png using Guid(664be11915b403a4b96ac3097c019111) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0bf2170446d6640308dd008b85d7c46') in 0.013453 seconds 
-  Import took 0.016532 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000216 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon26.png
-  artifactKey: Guid(298abc38591a64e45a0eb42aa1a01038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon26.png using Guid(298abc38591a64e45a0eb42aa1a01038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '465087c7b558282a533dbe74f07000a5') in 0.011847 seconds 
-  Import took 0.014844 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000213 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon48.png
-  artifactKey: Guid(5fb2112d3a2a57a48b5312b3e342b278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon48.png using Guid(5fb2112d3a2a57a48b5312b3e342b278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32170b6a5516ea2c48488441dbf0687b') in 0.015582 seconds 
-  Import took 0.018404 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000223 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon40.png
-  artifactKey: Guid(d5c4cfb036a176a4a9fa172c2ef64b7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon40.png using Guid(d5c4cfb036a176a4a9fa172c2ef64b7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22d155c06337522fc487f2d40999c788') in 0.011811 seconds 
-  Import took 0.014833 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000221 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon13.png
-  artifactKey: Guid(f78b0faf31ba4fe47ba26c94e6f55c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon13.png using Guid(f78b0faf31ba4fe47ba26c94e6f55c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc274a1e56aa8d6d0903553de45549bf') in 0.015119 seconds 
-  Import took 0.018142 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000211 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon27.png
-  artifactKey: Guid(fc2225c4af8a9f645a15ee22c876136b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon27.png using Guid(fc2225c4af8a9f645a15ee22c876136b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c8417d37a2641b3a340fecb536554dc') in 0.010856 seconds 
-  Import took 0.014046 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon22.png
-  artifactKey: Guid(87f743b0680f4194eb32eeb5552daac2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon22.png using Guid(87f743b0680f4194eb32eeb5552daac2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57df95031348a606d265b8b8bf4099a3') in 0.015469 seconds 
-  Import took 0.018289 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000226 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon6.png
-  artifactKey: Guid(4ac9fc3a135869f4b98bf27d0c366dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon6.png using Guid(4ac9fc3a135869f4b98bf27d0c366dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b7c108a1d808e232ded0f6d4860974f') in 0.010739 seconds 
-  Import took 0.013700 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000187 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon19.png
-  artifactKey: Guid(383e1b8357813174db5f6e245eeb87a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon19.png using Guid(383e1b8357813174db5f6e245eeb87a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6938d4b86a11ffcc0fe32b19bcf7203') in 0.014915 seconds 
-  Import took 0.017702 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000225 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon12.png
-  artifactKey: Guid(93078ff18a06bf747a7e22049b702fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon12.png using Guid(93078ff18a06bf747a7e22049b702fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b8863004174ca22f2df2746afb423fe') in 0.008356 seconds 
-  Import took 0.011567 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000184 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon3.png
-  artifactKey: Guid(210b90445cb52c844839e9ee3cda1b75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon3.png using Guid(210b90445cb52c844839e9ee3cda1b75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfc2f750a63a592e381a16fafed9f538') in 0.011264 seconds 
-  Import took 0.014157 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000204 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon15.png
-  artifactKey: Guid(4c99c54c968f93a46b125fdd415c4970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon15.png using Guid(4c99c54c968f93a46b125fdd415c4970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0d04d82ec2b351822f16c3677e41b93') in 0.010023 seconds 
-  Import took 0.013299 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon28.png
-  artifactKey: Guid(ef65e02167a689149b270ab048dccf71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon28.png using Guid(ef65e02167a689149b270ab048dccf71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2045d50ec72035ac97361eee6dc2c496') in 0.009208 seconds 
-  Import took 0.012033 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon18.png
-  artifactKey: Guid(989d4f2f28dacfb41919bcfa07fe5e46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon18.png using Guid(989d4f2f28dacfb41919bcfa07fe5e46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd72852f158faa916a5f9b696db614827') in 0.008160 seconds 
-  Import took 0.011380 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000192 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon37.png
-  artifactKey: Guid(e44202a489e907843b98c387b5330c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon37.png using Guid(e44202a489e907843b98c387b5330c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '961c8d758409deb59e88da0e14270d4c') in 0.010171 seconds 
-  Import took 0.013021 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000204 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon10.png
-  artifactKey: Guid(37fea579f7ad11048a0271e708664d5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon10.png using Guid(37fea579f7ad11048a0271e708664d5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5baebb8ab06309aa7724cc2ef855ddc1') in 0.007928 seconds 
-  Import took 0.010898 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000204 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon17.png
-  artifactKey: Guid(772cb1db66d532b45bba4a67468be20a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon17.png using Guid(772cb1db66d532b45bba4a67468be20a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a59e200d8ac7cb7284f8849ad2286871') in 0.008007 seconds 
-  Import took 0.011242 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000208 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon29.png
-  artifactKey: Guid(0606733eb87a7bd4ba3f561f641fd26f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon29.png using Guid(0606733eb87a7bd4ba3f561f641fd26f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '767dc8baf7832a7a38bb8bd3c880c18c') in 0.007731 seconds 
-  Import took 0.010734 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000194 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon23.png
-  artifactKey: Guid(66916cc85249ad54da8c3c8d936c7e36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon23.png using Guid(66916cc85249ad54da8c3c8d936c7e36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4932ea629c667733aeb1e12eb14c4f82') in 0.007853 seconds 
-  Import took 0.010875 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000219 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon38.png
-  artifactKey: Guid(79d857e900b661840bdd1f89e604eb97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon38.png using Guid(79d857e900b661840bdd1f89e604eb97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9b7417cfb65aa5cd4d9b64bf4234394') in 0.007815 seconds 
-  Import took 0.010546 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000189 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon44.png
-  artifactKey: Guid(294b7cef11ade19458d36ba70ff9b50f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon44.png using Guid(294b7cef11ade19458d36ba70ff9b50f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e3625490805b83b9df6bfc37575db79') in 0.010356 seconds 
-  Import took 0.013162 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000228 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon21.png
-  artifactKey: Guid(f1512b405a4bad940a4a961e681dae24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon21.png using Guid(f1512b405a4bad940a4a961e681dae24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14370c1a941e5b2abf52c9dee1280af2') in 0.010544 seconds 
-  Import took 0.013379 seconds .
+  Time since last request: 0.000203 seconds.
+  path: Assets/Images/coin_3.png
+  artifactKey: Guid(351cc982abf2c694c90965a5b015d4a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/coin_3.png using Guid(351cc982abf2c694c90965a5b015d4a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6e5e44e893bb64d076db8f1cfab1dd4') in 0.015661 seconds 
+  Import took 0.018823 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000231 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon34.png
-  artifactKey: Guid(c06b52e768643924dabb4e6863d9ed1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon34.png using Guid(c06b52e768643924dabb4e6863d9ed1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5bca685adedc2d30c0dfca16bb9943d') in 0.007550 seconds 
-  Import took 0.010368 seconds .
+  path: Assets/Images/peaks_1.png
+  artifactKey: Guid(7a76561f0f283e7498f2b0c89bf5c1ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/peaks_1.png using Guid(7a76561f0f283e7498f2b0c89bf5c1ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c331c95c4280913750f38cb91a3bcf6') in 0.012112 seconds 
+  Import took 0.015337 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000183 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon9.png
-  artifactKey: Guid(0f5560b96b400c44cab2dabc291db056) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon9.png using Guid(0f5560b96b400c44cab2dabc291db056) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ceeec25841685f5ddffb16b39c2c552') in 0.007884 seconds 
-  Import took 0.010747 seconds .
+  Time since last request: 0.000211 seconds.
+  path: Assets/Images/arrow_2.png
+  artifactKey: Guid(3af347a7d20b9734eaf18a2190baaba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/arrow_2.png using Guid(3af347a7d20b9734eaf18a2190baaba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa4c1ca1c7561885b4c0e759ebc0b2e0') in 0.012448 seconds 
+  Import took 0.015982 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000220 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon30.png
-  artifactKey: Guid(e1ed3d5da45e6054986500934ebb5cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon30.png using Guid(e1ed3d5da45e6054986500934ebb5cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61c20355af9157945a6f18f2329a383d') in 0.008288 seconds 
-  Import took 0.011421 seconds .
+  Time since last request: 0.000261 seconds.
+  path: Assets/Images/coin_4.png
+  artifactKey: Guid(fcb52c5b61d863a4796b1e8064383294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/coin_4.png using Guid(fcb52c5b61d863a4796b1e8064383294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc75ce8a6dbe9f8abdb83024a8f162b1') in 0.014406 seconds 
+  Import took 0.017583 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000224 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon7.png
-  artifactKey: Guid(238e1a1d61dab6444ae3b1b5be86c78f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon7.png using Guid(238e1a1d61dab6444ae3b1b5be86c78f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '164e8fd9a4a54c551c3eb621e81f54e5') in 0.007428 seconds 
-  Import took 0.010593 seconds .
+  Time since last request: 0.000265 seconds.
+  path: Assets/Images/coin_1.png
+  artifactKey: Guid(039d021ad78876247b9fc6f8e90736ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/coin_1.png using Guid(039d021ad78876247b9fc6f8e90736ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3df510adf2476e41a94ff1e556e6d713') in 0.011887 seconds 
+  Import took 0.015017 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Images/peaks_4.png
+  artifactKey: Guid(6dd0b585f89ea594abdb19ef54941d7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/peaks_4.png using Guid(6dd0b585f89ea594abdb19ef54941d7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e174f3649ecfca28e1eeb0e9ebc4ba84') in 0.013237 seconds 
+  Import took 0.016316 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000270 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon25.png
-  artifactKey: Guid(59e511461ac401b47a39f8aa91ded9d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon25.png using Guid(59e511461ac401b47a39f8aa91ded9d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '021fcc4f946cec9af1328fbca0dbf0bf') in 0.008865 seconds 
-  Import took 0.011908 seconds .
+  path: Assets/Images/peaks_2.png
+  artifactKey: Guid(1f05e978ccefc43438a08edcd58dd3c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/peaks_2.png using Guid(1f05e978ccefc43438a08edcd58dd3c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5df0639c216f56b52a368b500550e87') in 0.012642 seconds 
+  Import took 0.015796 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000260 seconds.
-  path: Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon46.png
-  artifactKey: Guid(f7b3b38d64c957f4ba13a37253e5035a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Swordsman Skills Free Icons Pixel Art/PNG/Icon46.png using Guid(f7b3b38d64c957f4ba13a37253e5035a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10ec1944f1b95ea400ea732e66553161') in 0.008506 seconds 
-  Import took 0.011639 seconds .
+  Time since last request: 0.000204 seconds.
+  path: Assets/Images/arrow_4.png
+  artifactKey: Guid(d1d6f0eadd790754cadf13171e470e73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/arrow_4.png using Guid(d1d6f0eadd790754cadf13171e470e73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9aad584aab267662919c99b93d887530') in 0.014037 seconds 
+  Import took 0.017299 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Images/coin_2.png
+  artifactKey: Guid(97ddcd21d7d97954cbdcb4e30b5d95ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/coin_2.png using Guid(97ddcd21d7d97954cbdcb4e30b5d95ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99ebb0478c96f63eef365ec7f7d89f3d') in 0.012868 seconds 
+  Import took 0.015902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Images/arrow_3.png
+  artifactKey: Guid(a332b6db2940b4345a5c0791b95a37b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/arrow_3.png using Guid(a332b6db2940b4345a5c0791b95a37b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f45073ff6e3b5cab88799634e9003740') in 0.013301 seconds 
+  Import took 0.016390 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/Images/Just_arrow.png
+  artifactKey: Guid(b9fdf1fada7b12a409a1308821577464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Just_arrow.png using Guid(b9fdf1fada7b12a409a1308821577464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c05477c2bd5284b705d6a5f05e03f7d8') in 0.013449 seconds 
+  Import took 0.017068 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.691050 seconds.
+  path: Assets/Images/flamethrower_1_1.png
+  artifactKey: Guid(4675070a7eb0f27408caf89e5d8fd22e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/flamethrower_1_1.png using Guid(4675070a7eb0f27408caf89e5d8fd22e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '611f8149ce08f0840875743ec15e0143') in 0.011246 seconds 
+  Import took 0.014449 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.401136 seconds.
+  path: Assets/Images/flamethrower_1_2.png
+  artifactKey: Guid(d6dbba7b9c690144884abf0f3fa8bb01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/flamethrower_1_2.png using Guid(d6dbba7b9c690144884abf0f3fa8bb01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5fcfb1324b1534fecfcf480cf958429') in 0.010168 seconds 
+  Import took 0.013522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.172439 seconds.
+  path: Assets/Images/flamethrower_1_3.png
+  artifactKey: Guid(42f38d7c45eab934e9760161c1b3b3bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/flamethrower_1_3.png using Guid(42f38d7c45eab934e9760161c1b3b3bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1aab2953ab866f41ad5c770d203ac5fe') in 0.011620 seconds 
+  Import took 0.014805 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.837801 seconds.
+  path: Assets/Images/flamethrower_1_4.png
+  artifactKey: Guid(73ac845231476ce4ba5c8ca501baa774) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/flamethrower_1_4.png using Guid(73ac845231476ce4ba5c8ca501baa774) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df0a1a9587b155e2a9208a49e2c0f5d1') in 0.010361 seconds 
+  Import took 0.013528 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.384212 seconds.
+  path: Assets/Images/flamethrower_1_4 1.png
+  artifactKey: Guid(4cb3e290ab418e542a5bade39004cb85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/flamethrower_1_4 1.png using Guid(4cb3e290ab418e542a5bade39004cb85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3deff6910840a88f15447b0fa3aeb219') in 0.011556 seconds 
+  Import took 0.015594 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.592088 seconds.
+  path: Assets/Images/flamethrower_1_1.png
+  artifactKey: Guid(4675070a7eb0f27408caf89e5d8fd22e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/flamethrower_1_1.png using Guid(4675070a7eb0f27408caf89e5d8fd22e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ffd8a9b864b8d145fa8b7e90f5d1eb1') in 0.011287 seconds 
+  Import took 0.014834 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/Images/flamethrower_1_2.png
+  artifactKey: Guid(d6dbba7b9c690144884abf0f3fa8bb01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/flamethrower_1_2.png using Guid(d6dbba7b9c690144884abf0f3fa8bb01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '714d4f80a252a188045a45c69344ec72') in 0.013323 seconds 
+  Import took 0.016224 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Images/flamethrower_1_4.png
+  artifactKey: Guid(73ac845231476ce4ba5c8ca501baa774) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/flamethrower_1_4.png using Guid(73ac845231476ce4ba5c8ca501baa774) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c688154b75e32184ddac9e7e10dc68ed') in 0.012315 seconds 
+  Import took 0.015818 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/Images/flamethrower_1_3.png
+  artifactKey: Guid(42f38d7c45eab934e9760161c1b3b3bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/flamethrower_1_3.png using Guid(42f38d7c45eab934e9760161c1b3b3bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21b768211d54dff87d005317157baeb8') in 0.012912 seconds 
+  Import took 0.016717 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.583615 seconds.
+  path: Assets/Images/flamethrower_1_1.png
+  artifactKey: Guid(4675070a7eb0f27408caf89e5d8fd22e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/flamethrower_1_1.png using Guid(4675070a7eb0f27408caf89e5d8fd22e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0782845509b078b8612601114ccb575') in 0.015270 seconds 
+  Import took 0.019048 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Images/flamethrower_1_2.png
+  artifactKey: Guid(d6dbba7b9c690144884abf0f3fa8bb01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/flamethrower_1_2.png using Guid(d6dbba7b9c690144884abf0f3fa8bb01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53860bca68197cfe507a8e1afc593e55') in 0.023939 seconds 
+  Import took 0.027199 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/Images/flamethrower_1_4.png
+  artifactKey: Guid(73ac845231476ce4ba5c8ca501baa774) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/flamethrower_1_4.png using Guid(73ac845231476ce4ba5c8ca501baa774) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b563474b95d134ea2e2a6ec9815a72f9') in 0.014833 seconds 
+  Import took 0.018063 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000343 seconds.
+  path: Assets/Images/flamethrower_1_3.png
+  artifactKey: Guid(42f38d7c45eab934e9760161c1b3b3bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/flamethrower_1_3.png using Guid(42f38d7c45eab934e9760161c1b3b3bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a9a431f2ec8b499b4967582f7fb576e') in 0.008981 seconds 
+  Import took 0.012290 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 394.178306 seconds.
+  path: Assets/Prefebs/Traps
+  artifactKey: Guid(28503dfb34afa7f458bd1a9c80a9c925) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/Traps using Guid(28503dfb34afa7f458bd1a9c80a9c925) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76a1e370e9e9d46f4af032a5172e746b') in 0.007350 seconds 
+  Import took 0.011186 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.043012 seconds.
+  path: Assets/Prefebs/Traps/Arrow.prefab
+  artifactKey: Guid(a1744b0fb77f6ab42884ed421c03fa53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/Traps/Arrow.prefab using Guid(a1744b0fb77f6ab42884ed421c03fa53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd477de2e949c148e8e467a2f97d246f2') in 0.040237 seconds 
+  Import took 0.044244 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/Prefebs/Traps/arrow_1.prefab
+  artifactKey: Guid(eab1d6993584eb14b83d0462b0870a40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/Traps/arrow_1.prefab using Guid(eab1d6993584eb14b83d0462b0870a40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e29c331267949a12e25868f5d488ea8') in 0.012608 seconds 
+  Import took 0.015759 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Prefebs/Traps/FakeTrophy.prefab
+  artifactKey: Guid(97f8259bcfdd1814ba4b63c6ee87afd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/Traps/FakeTrophy.prefab using Guid(97f8259bcfdd1814ba4b63c6ee87afd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efbeb557087b32fd9684c22c32ff5e9e') in 0.028944 seconds 
+  Import took 0.032529 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Prefebs/Traps/Thrones.prefab
+  artifactKey: Guid(010d2feaa9384df409c9ed8a398596ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/Traps/Thrones.prefab using Guid(010d2feaa9384df409c9ed8a398596ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c365a6d5108f2fb1723be488c2cc2b9e') in 0.024426 seconds 
+  Import took 0.027705 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/Prefebs/Traps/Just_arrow.prefab
+  artifactKey: Guid(ad11ac085d51bd145b08b4935f471b44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/Traps/Just_arrow.prefab using Guid(ad11ac085d51bd145b08b4935f471b44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7e1f47a7c67ceec0ff2f27337405bbe') in 0.012226 seconds 
+  Import took 0.015425 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 114.986444 seconds.
+  path: Assets/Scripts/Traps
+  artifactKey: Guid(eed96b31da112a948a09dcde38965432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Traps using Guid(eed96b31da112a948a09dcde38965432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1220cfc2dd2ddc9b45c7bde8a602ff17') in 0.002530 seconds 
+  Import took 0.005865 seconds .
+>>>>>>> origin/trying1
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+<<<<<<< HEAD
+Registered in 0.004030 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.971 seconds
+Domain Reload Profiling:
+	ReloadAssembly (972ms)
+		BeginReloadAssembly (150ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (758ms)
+			LoadAssemblies (121ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (247ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (291ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (74ms)
+				ProcessInitializeOnLoadAttributes (181ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (16ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2165 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.7 MB.
+System memory in use after: 95.8 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2625.
+Total: 2.756000 ms (FindLiveObjects: 0.198300 ms CreateObjectMapping: 0.086400 ms MarkObjects: 2.452100 ms  DeleteObjects: 0.018200 ms)
+=======
+Registered in 0.005081 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.992 seconds
+Domain Reload Profiling:
+	ReloadAssembly (993ms)
+		BeginReloadAssembly (134ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (11ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (790ms)
+			LoadAssemblies (107ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (274ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (292ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (82ms)
+				ProcessInitializeOnLoadAttributes (177ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2124 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.0 MB.
+System memory in use after: 97.1 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2580.
+Total: 4.003100 ms (FindLiveObjects: 0.268700 ms CreateObjectMapping: 0.063100 ms MarkObjects: 3.644200 ms  DeleteObjects: 0.024500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004470 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.947 seconds
+Domain Reload Profiling:
+	ReloadAssembly (947ms)
+		BeginReloadAssembly (117ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (766ms)
+			LoadAssemblies (100ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (266ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (286ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (76ms)
+				ProcessInitializeOnLoadAttributes (180ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2124 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.0 MB.
+System memory in use after: 97.1 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2583.
+Total: 2.863400 ms (FindLiveObjects: 0.257700 ms CreateObjectMapping: 0.047400 ms MarkObjects: 2.533500 ms  DeleteObjects: 0.023000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 149.403573 seconds.
+  path: Assets/Prefebs/Traps/FireWall.prefab
+  artifactKey: Guid(c262be5271a6a1b4b841772b26d96d39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/Traps/FireWall.prefab using Guid(c262be5271a6a1b4b841772b26d96d39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7660f8a63d150086a7d11743aeee772') in 0.056194 seconds 
+  Import took 0.059464 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.177378 seconds.
+  path: Assets/Scenes/GameScene.unity
+  artifactKey: Guid(234a83800b4f81f45bedd5625d2dbdb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/GameScene.unity using Guid(234a83800b4f81f45bedd5625d2dbdb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87c6bb941459d05a360a98857e137ac9') in 0.006491 seconds 
+  Import took 0.009861 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004666 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.943 seconds
+Domain Reload Profiling:
+	ReloadAssembly (944ms)
+		BeginReloadAssembly (115ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (764ms)
+			LoadAssemblies (99ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (263ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (284ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (76ms)
+				ProcessInitializeOnLoadAttributes (177ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2124 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.0 MB.
+System memory in use after: 97.2 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2587.
+Total: 3.699900 ms (FindLiveObjects: 0.257200 ms CreateObjectMapping: 0.141000 ms MarkObjects: 3.275500 ms  DeleteObjects: 0.024400 ms)
+>>>>>>> origin/trying1
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
