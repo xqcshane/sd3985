@@ -19,6 +19,10 @@ public class PlayerMove : MonoBehaviour
     // 每帧调用一次 Update
     void Update()
     {
+      
+    }
+    private void FixedUpdate()
+    {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -28,5 +32,4 @@ public class PlayerMove : MonoBehaviour
         transform.position = position;
     }
 
-  
 }

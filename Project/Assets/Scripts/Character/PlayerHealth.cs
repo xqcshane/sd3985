@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     bool isInvincible;
     float invincibleTimer;
-    public float timeInvincible = 2.0f;
+    public float timeInvincible = 0.2f;
     public int maxHealth = 100;
     public int health { get { return currentHealth; } set { currentHealth = value; } }
     int currentHealth;
@@ -32,6 +32,7 @@ public class PlayerHealth : MonoBehaviour
     }
     public void ChangeHealth(int amount)
     {
+     
         if (amount < 0)
         {
             if (isInvincible)

@@ -16,5 +16,10 @@ public class Bulletcontrol : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (collision.gameObject.CompareTag("BOSS"))
+        {
+            collision.gameObject.GetComponent<BossFollow>().health -= damage;
+            Destroy(gameObject);
+        }
     }
 }
