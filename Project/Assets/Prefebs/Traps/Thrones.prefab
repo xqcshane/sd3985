@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7357880793279022791}
   - component: {fileID: 7357880793279022790}
   - component: {fileID: 7357880793279022789}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: peaks_1 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,9 +69,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1946767399
-  m_SortingLayer: 1
-  m_SortingOrder: -1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7a76561f0f283e7498f2b0c89bf5c1ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 7357880793553177964}
   - component: {fileID: 7357880793553177963}
   - component: {fileID: 7357880793553177962}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: peaks_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,9 +171,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1946767399
-  m_SortingLayer: 1
-  m_SortingOrder: -1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7a76561f0f283e7498f2b0c89bf5c1ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 7357880794169324515}
   - component: {fileID: 7357880794169324514}
   - component: {fileID: 7357880794169324513}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: peaks_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,9 +273,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1946767399
-  m_SortingLayer: 1
-  m_SortingOrder: -1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7a76561f0f283e7498f2b0c89bf5c1ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 7357880794446438858}
   - component: {fileID: 7357880794446438856}
   - component: {fileID: 7357880794446438855}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Thrones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ Transform:
   m_GameObject: {fileID: 7357880794446438854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 22.91, y: 4.41, z: -1.2229548}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.54693, y: 0.54693, z: 0.54693}
   m_Children:
   - {fileID: 7357880793553177964}
   - {fileID: 7357880795020150071}
@@ -385,9 +385,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1946767399
-  m_SortingLayer: 1
-  m_SortingOrder: -1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 7357880794614594564}
   - component: {fileID: 7357880794614594563}
   - component: {fileID: 7357880794614594562}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: peaks_1 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,9 +506,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1946767399
-  m_SortingLayer: 1
-  m_SortingOrder: -1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7a76561f0f283e7498f2b0c89bf5c1ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -550,7 +550,7 @@ GameObject:
   - component: {fileID: 7357880794634839588}
   - component: {fileID: 7357880794634839587}
   - component: {fileID: 7357880794634839586}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: peaks_1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -608,9 +608,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1946767399
-  m_SortingLayer: 1
-  m_SortingOrder: -1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7a76561f0f283e7498f2b0c89bf5c1ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -652,7 +652,7 @@ GameObject:
   - component: {fileID: 7357880794837182998}
   - component: {fileID: 7357880794837182997}
   - component: {fileID: 7357880794837182996}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: peaks_1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -710,9 +710,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1946767399
-  m_SortingLayer: 1
-  m_SortingOrder: -1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7a76561f0f283e7498f2b0c89bf5c1ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -754,7 +754,7 @@ GameObject:
   - component: {fileID: 7357880795020150071}
   - component: {fileID: 7357880795020150070}
   - component: {fileID: 7357880795020150069}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: peaks_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -812,9 +812,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1946767399
-  m_SortingLayer: 1
-  m_SortingOrder: -1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7a76561f0f283e7498f2b0c89bf5c1ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -856,7 +856,7 @@ GameObject:
   - component: {fileID: 7357880795100883074}
   - component: {fileID: 7357880795100883073}
   - component: {fileID: 7357880795100883072}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: peaks_1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -914,9 +914,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1946767399
-  m_SortingLayer: 1
-  m_SortingOrder: -1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7a76561f0f283e7498f2b0c89bf5c1ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -958,7 +958,7 @@ GameObject:
   - component: {fileID: 7357880795114288035}
   - component: {fileID: 7357880795114288034}
   - component: {fileID: 7357880795114288033}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: peaks_1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1016,9 +1016,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1946767399
-  m_SortingLayer: 1
-  m_SortingOrder: -1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7a76561f0f283e7498f2b0c89bf5c1ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

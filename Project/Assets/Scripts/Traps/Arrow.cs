@@ -24,21 +24,12 @@ public class Arrow : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-5);
+            Destroy(gameObject);
         }
-
-        /*
-        EnemyController e = other.collider.GetComponent<EnemyController>();
-        if (e != null)
-        {
-            e.Fix();
-        }
-        */
-
-        Destroy(gameObject);
     }
 }
