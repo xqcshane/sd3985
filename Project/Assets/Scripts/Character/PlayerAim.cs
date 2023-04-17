@@ -48,6 +48,8 @@ public class PlayerAim : MonoBehaviour
     public GameObject currentGun;
     string[] Gunlist = { "normalStaff","shotgunStaff","bombStaff","machineGunStaff"};
     float angle;
+
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -88,7 +90,6 @@ public class PlayerAim : MonoBehaviour
        else if( currentweaponindex == 3) { 
             MachineGun();   
         }
-       
     }
     private void HandleAim()
     {
