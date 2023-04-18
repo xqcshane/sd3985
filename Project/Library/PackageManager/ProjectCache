@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638173514283154322
-    m_Hash: 3748228069
+      ticks: 638173945098334349
+    m_Hash: 1531681044
   m_LockFileStatus:
     m_FilePath: D:/uproject/sd3985/Project/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638173514283202102
-    m_Hash: 907109450
+      ticks: 638173945098344363
+    m_Hash: 1247003020
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
