@@ -12,6 +12,9 @@ public class Enemyfollow : MonoBehaviour
     public float damage;
     public float sight;
     bool faceright = true;
+
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +26,21 @@ public class Enemyfollow : MonoBehaviour
     {
         if (health <= 0)
         {
-            Destroy(gameObject);
+
+
+            StartCoroutine(MyCoroutine());
         }
-       
     }
+
+    private IEnumerator MyCoroutine()
+    {
+        Debug.Log("globin dead");
+        animator.SetBool("death", true);
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
+        yield return null;
+    }
+
     private void FixedUpdate()
     {
         distance = Vector2.Distance(transform.position, player.transform.position);
@@ -35,16 +49,25 @@ public class Enemyfollow : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         if (distance < sight)
         {
+            animator.SetBool("outOfSight", false);
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
             if (transform.position.x > player.transform.position.x && faceright)
             {
+                animator.SetBool("run_right", true);
                 Flip();
             }
             else if (transform.position.x < player.transform.position.x && !faceright)
             {
+                animator.SetBool("run_left", true);
                 Flip();
             }
             //transform.rotation = Quaternion.Euler(Vector3.forward * angle);
+        }
+        else
+        {
+            animator.SetBool("run_right", false);
+            animator.SetBool("run_left", false);
+            animator.SetBool("outOfSight", true);
         }
     }
     void Flip()

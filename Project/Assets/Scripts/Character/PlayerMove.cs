@@ -10,10 +10,15 @@ public class PlayerMove : MonoBehaviour
     float horizontal;
     float vertical;
 
+    public bool canMove;
+    public bool slower;
+    public float originalSpeed;
+
     // 在第一次帧更新之前调用 Start
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+        originalSpeed = speed;
     }
 
     // 每帧调用一次 Update
@@ -23,13 +28,20 @@ public class PlayerMove : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
 
-        Vector2 position = transform.position;
-        position.x = position.x + speed * horizontal;
-        position.y = position.y + speed * vertical;
-        transform.position = position;
+        if (canMove)
+        {
+            if (slower)
+            {
+                speed = originalSpeed * 0.1f;
+            }
+            float horizontal = Input.GetAxis("Horizontal");
+            float vertical = Input.GetAxis("Vertical");
+
+            Vector2 position = transform.position;
+            position.x = position.x + speed * horizontal;
+            position.y = position.y + speed * vertical;
+            transform.position = position;
+        }
     }
-
 }
