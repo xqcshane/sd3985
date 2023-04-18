@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Globin.unity
+    guid: 10e6ba97983a0c8409fa2a74a230da58
+  - enabled: 1
     path: Assets/Scenes/StartLoadingScene.unity
     guid: 1580ccaac1d477444a41e895296c76c6
   - enabled: 1
@@ -17,7 +20,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RoomScene.unity
     guid: 0e9e645dbfc250f4794d1e72ef2e3527
-  - enabled: 1
-    path: Assets/Scenes/GameScene.unity
-    guid: 234a83800b4f81f45bedd5625d2dbdb4
   m_configObjects: {}
