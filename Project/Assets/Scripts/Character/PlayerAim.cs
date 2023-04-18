@@ -181,7 +181,7 @@ public class PlayerAim : MonoBehaviour
     }
     private void changegun()
     {
-        if (Input.GetKey(KeyCode.Alpha1))
+        if (currentweaponindex == 0)
         {
             guns[0].SetActive(true);
             aimtransform = transform.Find(Gunlist[0]);
@@ -189,9 +189,8 @@ public class PlayerAim : MonoBehaviour
             guns[2].SetActive(false);
             guns[3].SetActive(false);
             bullet = bullet1;
-            currentweaponindex = 0;
         }
-        else if (Input.GetKey(KeyCode.Alpha2))
+        else if (currentweaponindex == 1)
         {
             guns[1].SetActive(true);
             aimtransform = transform.Find(Gunlist[1]);
@@ -199,9 +198,8 @@ public class PlayerAim : MonoBehaviour
             guns[2].SetActive(false);
             guns[3].SetActive(false);
             bullet = bullet2;
-            currentweaponindex = 1;
         }
-        else if (Input.GetKey(KeyCode.Alpha3))
+        else if (currentweaponindex == 2)
         {
             guns[2].SetActive(true);
             aimtransform = transform.Find(Gunlist[2]);
@@ -209,9 +207,8 @@ public class PlayerAim : MonoBehaviour
             guns[1].SetActive(false);
             guns[3].SetActive(false);
             bullet = bullet3;
-            currentweaponindex = 2;
         }
-        else if (Input.GetKey(KeyCode.Alpha4))
+        else if (currentweaponindex==3)
         {
             guns[3].SetActive(true);
             aimtransform = transform.Find(Gunlist[3]);
@@ -219,7 +216,6 @@ public class PlayerAim : MonoBehaviour
             guns[1].SetActive(false);
             guns[2].SetActive(false);
             bullet = bullet4;
-            currentweaponindex = 3;
         }
     }
  
