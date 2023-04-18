@@ -26,6 +26,8 @@ public class Enemyfollow : MonoBehaviour
     {
         if (health <= 0)
         {
+
+
             StartCoroutine(MyCoroutine());
         }
     }
