@@ -680,13 +680,13 @@
       <Project>{4AA2FAA1-8F3C-AC18-46A2-628002AE0540}</Project>
       <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{A30111FA-DFBE-C300-CA8D-566E6AF9622A}</Project>
-      <Name>UnityEngine.UI</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{6B83E877-1207-1E33-ACA6-B2A122B5A702}</Project>
       <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{A30111FA-DFBE-C300-CA8D-566E6AF9622A}</Project>
+      <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
       <Project>{B362D4E1-C932-620B-9A56-8F0D9B6A7363}</Project>

@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class Enemyfollow : MonoBehaviour
 {
-    public GameObject player;
+    GameObject player;
+    GameObject controller;
     private float distance;
     public float speed;
     public float health;
@@ -18,7 +19,8 @@ public class Enemyfollow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindWithTag("Player");
+        controller = GameObject.FindWithTag("Controller");
     }
 
     // Update is called once per frame
@@ -26,8 +28,7 @@ public class Enemyfollow : MonoBehaviour
     {
         if (health <= 0)
         {
-
-
+            controller.GetComponent<Controller>().score += 10;
             StartCoroutine(MyCoroutine());
         }
     }
@@ -50,16 +51,26 @@ public class Enemyfollow : MonoBehaviour
         if (distance < sight)
         {
             animator.SetBool("outOfSight", false);
-            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-            if (transform.position.x > player.transform.position.x && faceright)
+            animator.SetBool("outOfRange", true);
+            if (System.Math.Abs(transform.position.x - player.transform.position.x) > 2 && health > 0)
             {
-                animator.SetBool("run_right", true);
-                Flip();
+                
+                transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+
+                if (transform.position.x > player.transform.position.x && faceright)
+                {
+                    animator.SetBool("run_right", true);
+                    Flip();
+                }
+                else if (transform.position.x < player.transform.position.x && !faceright)
+                {
+                    animator.SetBool("run_left", true);
+                    Flip();
+                }
             }
-            else if (transform.position.x < player.transform.position.x && !faceright)
+            if (System.Math.Abs(transform.position.x - player.transform.position.x)<2  )
             {
-                animator.SetBool("run_left", true);
-                Flip();
+                animator.SetBool("attack",true);
             }
             //transform.rotation = Quaternion.Euler(Vector3.forward * angle);
         }

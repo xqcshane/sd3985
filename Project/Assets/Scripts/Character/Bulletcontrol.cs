@@ -10,7 +10,8 @@ public class Bulletcontrol : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy") )
         {
             collision.gameObject.GetComponent<Enemyfollow>().health -= damage;
-         Destroy(gameObject);
+            collision.gameObject.GetComponent<Enemyfollow>().animator.Play("globin_hit");
+            Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("Respawn"))
         {

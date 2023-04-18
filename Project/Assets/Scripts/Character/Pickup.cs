@@ -6,15 +6,33 @@ using UnityEngine.UIElements;
 public class Pickup : MonoBehaviour
 {
     public GameObject Staff1;
+    GameObject player;
+    private float distance;
     public GameObject Staff2;
     public GameObject Staff3;
     public GameObject Staff4;
     public int index = 1;
-    private void OnTriggerEnter2D(Collider2D collision)
+    void Start()
     {
-        Debug.Log("yi");
+        player = GameObject.FindWithTag("Player");
+    }
+    private void Update()
+    {
+    distance = Vector2.Distance(transform.position, player.transform.position);
+        if (distance < 2)
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
+        else
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
         if (collision.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.F))
         {
+           
             Debug.Log("yi2");
             if (collision.GetComponent<PlayerAim>().currentweaponindex==0)
             {
