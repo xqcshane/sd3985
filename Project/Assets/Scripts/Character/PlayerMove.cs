@@ -36,7 +36,7 @@ public class PlayerMove : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if( _pv.IsMine && PR == 0)
+        if(PR == 0)
         {
             if (canMove)
                 {

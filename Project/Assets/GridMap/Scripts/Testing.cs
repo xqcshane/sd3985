@@ -14,6 +14,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey.Utils;
+using Photon.Pun;
 
 [System.Serializable]
 public struct SetOfBlock
@@ -74,7 +75,12 @@ public class Testing : MonoBehaviour {
             if(!TrapGridValue){
                 TrapGrid.SetBoolValue(UtilsClass.GetMouseWorldPosition(), true);
                 if(myPrefab != null){
-                    Instantiate(myPrefab, TrapGrid.GetCellCenterPosition(UtilsClass.GetMouseWorldPosition()), Quaternion.identity);
+                    //if(PhotonNetwork.CurrentRoom == null){}
+                    PhotonNetwork.Instantiate(myPrefab.name, TrapGrid.GetCellCenterPosition(UtilsClass.GetMouseWorldPosition()), Quaternion.identity);
+
+                        //Instantiate(myPrefab, TrapGrid.GetCellCenterPosition(UtilsClass.GetMouseWorldPosition()), Quaternion.identity);
+                    
+                    //PhotonNetwork.Instantiate("MyPrefabName", new Vector3(0, 0, 0), Quaternion.identity, 0);
                 }        
             }
         }
