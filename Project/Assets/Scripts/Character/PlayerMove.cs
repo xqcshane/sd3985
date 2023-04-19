@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using Photon.Pun;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -14,34 +15,43 @@ public class PlayerMove : MonoBehaviour
     public bool slower;
     public float originalSpeed;
 
-    // 在第一次帧更新之前调用 Start
+    private Controller GameController;
+    private int PR;
+    private PhotonView _pv;
+    // 锟节碉拷一锟斤拷帧锟斤拷锟斤拷之前锟斤拷锟斤拷 Start
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         originalSpeed = speed;
+        _pv = this.gameObject.GetComponent<PhotonView>();
+
+        GameController = GameObject.Find("Controller").GetComponent<Controller>();
+        PR = GameController.PlayerRole;
     }
 
-    // 每帧调用一次 Update
+    // 每帧锟斤拷锟斤拷一锟斤拷 Update
     void Update()
     {
       
     }
     private void FixedUpdate()
     {
-
-        if (canMove)
+        if( _pv.IsMine && PR == 0)
         {
-            if (slower)
-            {
-                speed = originalSpeed * 0.1f;
-            }
-            float horizontal = Input.GetAxis("Horizontal");
-            float vertical = Input.GetAxis("Vertical");
+            if (canMove)
+                {
+                    if (slower)
+                    {
+                        speed = originalSpeed * 0.1f;
+                    }
+                    float horizontal = Input.GetAxis("Horizontal");
+                    float vertical = Input.GetAxis("Vertical");
 
-            Vector2 position = transform.position;
-            position.x = position.x + speed * horizontal;
-            position.y = position.y + speed * vertical;
-            transform.position = position;
+                    Vector2 position = transform.position;
+                    position.x = position.x + speed * horizontal;
+                    position.y = position.y + speed * vertical;
+                    transform.position = position;
+                }
+            }
         }
     }
-}
