@@ -71,7 +71,7 @@ public class SGSManager : MonoBehaviourPunCallbacks
     }
 
     public override void OnCreatedRoom(){
-        PhotonNetwork.LocalPlayer.NickName = Random.Range(1, 10000).ToString();
+        PhotonNetwork.LocalPlayer.NickName = "Player1" ;
         Debug.Log("Create successfully");
     }
 
@@ -81,7 +81,6 @@ public class SGSManager : MonoBehaviourPunCallbacks
     }
 
     public override void OnJoinedRoom(){
-        PhotonNetwork.LocalPlayer.NickName = Random.Range(1, 10000).ToString();
         Debug.Log("Room Joined");
         SceneManager.LoadScene("RoomScene");
     }
