@@ -24,7 +24,6 @@ public class RSManager : MonoBehaviourPunCallbacks
             UpdatePlayerList();
         }
 
-
     }
 
     public override void OnMasterClientSwitched(Player newMasterClient){
@@ -42,15 +41,14 @@ public class RSManager : MonoBehaviourPunCallbacks
         textPlayerList.text = sb.ToString();
         
         if(CountPlayerNum == 2){
-            if (PhotonNetwork.IsMasterClient)
-            {
-                PhotonNetwork.LocalPlayer.NickName = "Player1";
+            /*
+            if(PhotonNetwork.IsMasterClient){
+                PhotonNetwork.LocalPlayer.NickName = "Player1" ;
+            }else{
+                PhotonNetwork.LocalPlayer.NickName = "Player2" ;
             }
-            else
-            {
-                PhotonNetwork.LocalPlayer.NickName = "Player2";
-            }
-            OnClickStartGame(); 
+            */
+           OnClickStartGame(); 
         }
     }
 
