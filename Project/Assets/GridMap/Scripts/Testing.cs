@@ -37,23 +37,28 @@ public class Testing : MonoBehaviour {
     public int Number_y;
     public float cellSize;
 
+    private Controller GameController;
+    private int PR;
 
     private void Start() {
-        Vector3 NowPosition = this.transform.position;
+        GameController = GameObject.Find("Controller").GetComponent<Controller>();
+        PR = GameController.PlayerRole;
+        if(PR == 1)
+        {
+            Vector3 NowPosition = this.transform.position;
 
-        TrapGrid = new TrapGrid(Number_x, Number_y, cellSize, NowPosition);
+            TrapGrid = new TrapGrid(Number_x, Number_y, cellSize, NowPosition);
 
-        foreach (SetOfBlock USLK in BlockInUses)
-        {  
-            for (int i = USLK.start_y; i < USLK.end_y; i++)
-                {
-                    TrapGrid.SetBoolValue(USLK.x,i,false);
-                }
+            foreach (SetOfBlock USLK in BlockInUses)
+            {  
+                for (int i = USLK.start_y; i < USLK.end_y; i++)
+                    {
+                        TrapGrid.SetBoolValue(USLK.x,i,false);
+                    }
+            }
+
+            heatMapVisual = new HeatMapVisual(TrapGrid, GetComponent<MeshFilter>());
         }
-
-        heatMapVisual = new HeatMapVisual(TrapGrid, GetComponent<MeshFilter>());
-
-         
     }
 
     private void Update() {

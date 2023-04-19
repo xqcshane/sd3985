@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3870382309475261218}
   - component: {fileID: 3870382309475261217}
-  - component: {fileID: 3870382309475261226}
-  - component: {fileID: 3870382309475261227}
   - component: {fileID: 3972464140717556710}
+  - component: {fileID: -7145614928734396515}
+  - component: {fileID: 4096964139333380713}
   m_Layer: 0
   m_Name: TroubleMake
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3870382309475261226
+--- !u!114 &3972464140717556710
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,14 +94,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3870382309475261225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Script: {fileID: 11500000, guid: 6eb1bf58c0653a14fb6de47331c639fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
---- !u!114 &3870382309475261227
+  speed: 1
+  canMove: 1
+  slower: 0
+  originalSpeed: 0
+--- !u!114 &-7145614928734396515
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,12 +119,11 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents:
-  - {fileID: 3870382309475261226}
+  ObservedComponents: []
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &3972464140717556710
+--- !u!114 &4096964139333380713
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,10 +132,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3870382309475261225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eb1bf58c0653a14fb6de47331c639fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  canMove: 1
-  slower: 0
-  originalSpeed: 0
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
