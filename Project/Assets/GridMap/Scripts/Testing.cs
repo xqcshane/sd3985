@@ -39,10 +39,16 @@ public class Testing : MonoBehaviour {
 
     private Controller GameController;
     private int PR;
+    //
+    private bool StartGame;
 
     private void Start() {
         GameController = GameObject.Find("Controller").GetComponent<Controller>();
         PR = GameController.PlayerRole;
+        //
+        StartGame = GameController.GameStart;
+
+        //
         if(PR == 1)
         {
             Vector3 NowPosition = this.transform.position;
@@ -62,15 +68,23 @@ public class Testing : MonoBehaviour {
     }
 
     private void Update() {
+        StartGame = GameController.GameStart;
         if(PR == 1)
         {
             HandleClickToModifyTrapGrid();
             HandleHeatMapMouseMove();
+            /*
             if (Input.GetMouseButtonDown(1)) {
                 Debug.Log(TrapGrid.GetValue(UtilsClass.GetMouseWorldPosition()));
                 TrapGrid = new TrapGrid(0, 0, 0f, new Vector3(0, 0));
                 heatMapVisual = new HeatMapVisual(TrapGrid, GetComponent<MeshFilter>());
             }
+            */
+        }
+        if(StartGame){
+            TrapGrid = new TrapGrid(0, 0, 0f, new Vector3(0, 0));
+            heatMapVisual = new HeatMapVisual(TrapGrid, GetComponent<MeshFilter>());
+            Destroy(this); 
         }
     }
 
