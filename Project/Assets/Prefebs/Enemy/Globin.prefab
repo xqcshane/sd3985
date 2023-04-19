@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  health: 40
+  health: 20
   damage: 5
   sight: 30
   animator: {fileID: 3858578563158172165}
@@ -189,7 +189,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: -2723326072104256762}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
