@@ -13,7 +13,7 @@ public class Enemyfollow : MonoBehaviour
     public float damage;
     public float sight;
     bool faceright = true;
-
+    bool enterpassage;
     public Animator animator;
 
     // Start is called before the first frame update
@@ -49,12 +49,13 @@ public class Enemyfollow : MonoBehaviour
         direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         if (distance < sight)
-        {;
+        {
+            ;
             animator.SetBool("outOfSight", false);
-         
+
             if (System.Math.Abs(transform.position.x - player.transform.position.x) > 2 && health > 0)
             {
-                
+
                 transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
 
                 if (transform.position.x > player.transform.position.x && faceright)
@@ -68,9 +69,9 @@ public class Enemyfollow : MonoBehaviour
                     Flip();
                 }
             }
-            if (System.Math.Abs(transform.position.x - player.transform.position.x)<2  )
+            if (System.Math.Abs(transform.position.x - player.transform.position.x) < 2)
             {
-                animator.SetBool("attack",true);
+                animator.SetBool("attack", true);
             }
             //transform.rotation = Quaternion.Euler(Vector3.forward * angle);
         }

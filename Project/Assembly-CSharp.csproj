@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\Character\Bulletcontrol.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralUISpace.cs" />
+    <Compile Include="Assets\Scripts\Enemy\CreateMonster.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanAudio.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\Button_Sprite.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\MonoBehaviours\CameraFollowSetup.cs" />
@@ -110,6 +111,7 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
     <Compile Include="Assets\Scripts\UI\LoadingCircle.cs" />
     <Compile Include="Assets\GridMap\Scripts\MeshUtils.cs" />
+    <Compile Include="Assets\Scripts\Character\TroubleMakeMove.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralAdvancedTechniques.cs" />
     <Compile Include="Assets\Scripts\UI\PointerCreater.cs" />
     <Compile Include="Assets\Scripts\Character\PlayerHealth.cs" />
@@ -164,7 +166,7 @@
     <Compile Include="Assets\LeanTween\Examples\Archived\TestingRigidbodyCS.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\FunctionPeriodic.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\Following.cs" />
-    <Compile Include="Assets\Scripts\Enemy\CreateMonster.cs" />
+    <Compile Include="Assets\Scripts\Passage\Passage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

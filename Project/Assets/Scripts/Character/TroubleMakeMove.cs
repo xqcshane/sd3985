@@ -36,7 +36,7 @@ public class TroubleMakeMove : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if( _pv.IsMine && PR == 1)
+        if(  PR == 1)
         {
             if (canMove)
                 {

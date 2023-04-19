@@ -18,7 +18,7 @@ public class PlayerMove : MonoBehaviour
     private Controller GameController;
     private int PR;
     private PhotonView _pv;
-    // �ڵ�һ��֡����֮ǰ���� Start
+    // Start
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
@@ -29,14 +29,14 @@ public class PlayerMove : MonoBehaviour
         PR = GameController.PlayerRole;
     }
 
-    // ÿ֡����һ�� Update
+    //  Update
     void Update()
     {
       
     }
     private void FixedUpdate()
     {
-        if( _pv.IsMine && PR == 0)
+        if( PR == 0)
         {
             if (canMove)
                 {
