@@ -19,7 +19,7 @@ public class Pickup : MonoBehaviour
     private void Update()
     {
     distance = Vector2.Distance(transform.position, player.transform.position);
-        if (distance < 2)
+        if (distance < 10)
         {
             transform.GetChild(0).gameObject.SetActive(true);
         }

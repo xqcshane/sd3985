@@ -97,6 +97,8 @@ GameObject:
   - component: {fileID: 7318323369495244465}
   - component: {fileID: 3313340600445379594}
   - component: {fileID: 4592182587116242267}
+  - component: {fileID: 992301650}
+  - component: {fileID: 992301651}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -252,19 +254,19 @@ MonoBehaviour:
   bullet2: {fileID: 22675927609925208, guid: fd4296e2a01d8fc459c1cf4e226f97cd, type: 3}
   bullet3: {fileID: 6482701619066125320, guid: 729228a8b6b1137459d186d920e547bf, type: 3}
   bullet4: {fileID: 3873522454332554993, guid: d5a163706184efb4f922e11eff219812, type: 3}
-  speed: 20
+  speed: 30
   range: 0.6
   damage: 10
   firerate: 1
-  speed1: 10
+  speed1: 30
   range1: 0.35
   damage1: 20
   firerate1: 1
-  speed2: 5
+  speed2: 20
   range2: 0.5
   damage2: 40
   firerate2: 1
-  speed3: 20
+  speed3: 40
   range3: 0.6
   damage3: 3
   firerate3: 0.25
@@ -286,6 +288,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeInvincible: 1
   maxHealth: 100
+--- !u!114 &992301650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4333316686542716053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
+--- !u!114 &992301651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4333316686542716053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 992301650}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &6430880398327776638
 GameObject:
   m_ObjectHideFlags: 0
