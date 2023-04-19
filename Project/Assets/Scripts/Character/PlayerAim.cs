@@ -49,7 +49,8 @@ public class PlayerAim : MonoBehaviour
     string[] Gunlist = { "normalStaff","shotgunStaff","bombStaff","machineGunStaff"};
     float angle;
 
-
+    private Controller GameController;
+    private int PR;
     // Start is called before the first frame update
     private void Start()
     {
@@ -68,27 +69,33 @@ public class PlayerAim : MonoBehaviour
         bullet4.GetComponent<Bulletcontrol>(). damage = damage3;
         bullet = bullet1;
         currentweaponindex = 0;
+
+        GameController = GameObject.Find("Controller").GetComponent<Controller>();
+        PR = GameController.PlayerRole;
     }
 
     // Update is called once per frame
     void Update()
     {
-        changegun();
-        HandleAim();   
-       if (currentweaponindex == 0)
+        if(PR == 0)
         {
-            NormalShoot();
-        }
-       else if (currentweaponindex == 1) 
-        {
-            ShotGun();
-        }
-       else if(currentweaponindex == 2)
-        {
-            Bomb();
-        }
-       else if( currentweaponindex == 3) { 
-            MachineGun();   
+            changegun();
+            HandleAim();   
+            if (currentweaponindex == 0)
+                {
+                    NormalShoot();
+                }
+            else if (currentweaponindex == 1) 
+                {
+                    ShotGun();
+                }
+            else if(currentweaponindex == 2)
+                {
+                    Bomb();
+                }
+            else if( currentweaponindex == 3) { 
+                    MachineGun();   
+                }
         }
     }
     private void HandleAim()
