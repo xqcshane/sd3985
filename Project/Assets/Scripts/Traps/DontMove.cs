@@ -16,7 +16,7 @@ public class DontMove : MonoBehaviour
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.GetComponent<PlayerMove>().canMove = false;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         player.GetComponent<PlayerMove>().canMove = true;
         yield return null;
     }

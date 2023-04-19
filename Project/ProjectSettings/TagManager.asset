@@ -7,6 +7,9 @@ TagManager:
   - Enemy
   - BOSS
   - Controller
+  - Skill
+  - SkillData
+  - SightMask
   layers:
   - Default
   - TransparentFX

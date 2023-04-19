@@ -5,7 +5,7 @@ using System.Collections;
 public class Skill : MonoBehaviour
 {
     // 技能的图标
-    public Image icon;
+    public Sprite icon;
 
     // 技能的冷却时间
     public float coolDown;
@@ -39,7 +39,9 @@ public class Skill : MonoBehaviour
 
         // 一开始冷却时满的，可以立即使用技能
         // 如果不想让玩家一开始能立即使用技能，这里设置成别的小于技能冷却的值
-        currentCoolDown = coolDown;
+        currentCoolDown = 5000.0f;
+
+        changeImage();
 
     }
 
@@ -51,7 +53,16 @@ public class Skill : MonoBehaviour
             currentCoolDown += Time.deltaTime;
 
             // 显示冷却动画
-            this.icon.fillAmount = currentCoolDown / coolDown;
+            this.gameObject.transform.GetChild(0).GetComponent<Image>().fillAmount = currentCoolDown / coolDown;
         }
+
+
+    }
+
+    public void changeImage()
+    {
+        Transform meeple = this.gameObject.transform.GetChild(0);
+        meeple.GetComponent<Image>().sprite = icon;
+        this.GetComponent<Image>().sprite = icon;
     }
 }
