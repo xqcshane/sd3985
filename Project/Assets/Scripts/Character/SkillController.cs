@@ -22,13 +22,13 @@ public class SkillController : MonoBehaviour
     public int index2;
     public GameObject SkillUI1;
     public GameObject SkillUI2;
-    GameObject player;
+    public GameObject player;
     GameObject sightmask;
     void Start()
     {
-        //GameObject data = GameObject.FindWithTag("SkillData");
-        //index1 = data.GetComponent<SkillData>().skillindex1;
-        //index2= data.GetComponent<SkillData>().skillindex2;
+        GameObject data = GameObject.FindWithTag("SkillData");
+        index1 = data.GetComponent<SkillData>().skillindex1;
+        index2= data.GetComponent<SkillData>().skillindex2;
         player = GameObject.FindWithTag("Player");
         sightmask = GameObject.FindGameObjectWithTag("SightMask");
         if (index1 == 1)

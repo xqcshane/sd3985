@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
+
 public class Controller : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -21,9 +23,17 @@ public class Controller : MonoBehaviour
 
     void Start()
     {
+        GameObject Status = GameObject.FindGameObjectWithTag("Status");
+        PlayerRole = Status.GetComponent<Status>().status;
         if(PlayerRole == 1){
             GameObject.Find("AdventureUIAndUICamera").SetActive(false);
+            PhotonNetwork.Instantiate("TroubleMake", new Vector3(85f, 85, 0f), Quaternion.identity);
         }
+        else
+        {
+            PhotonNetwork.Instantiate("Player", new Vector3(80f, 85, 0f), Quaternion.identity);
+        }
+        
     }
 
     // Update is called once per frame

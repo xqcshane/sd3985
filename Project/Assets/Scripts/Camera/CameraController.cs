@@ -12,17 +12,15 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         GameController = GameObject.Find("Controller").GetComponent<Controller>();
-        PR = GameController.PlayerRole;
-        if(PR == 0){
-            MyPlayer = GameObject.Find("Player");
-        }else if(PR == 1){
-            MyPlayer = GameObject.Find("TroubleMake");
-        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(MyPlayer.transform.position.x, MyPlayer.transform.position.y, transform.position.z);
+        if (MyPlayer != null)
+        {
+            transform.position = new Vector3(MyPlayer.transform.position.x, MyPlayer.transform.position.y, transform.position.z);
+        }
     }
 }

@@ -25,7 +25,7 @@ public class Skillchoose : MonoBehaviour
     public Button E;
     public Sprite before;
     public GameObject Data;
-    public float totaltime = 5.0f;
+    public float totaltime = 10.0f;
     public Text time;
     void Start()
     {
@@ -66,7 +66,7 @@ public class Skillchoose : MonoBehaviour
         Changeicon();
         if (totaltime > 0)
         {
-            time.text = "Time Remain:"+totaltime.ToString();
+            time.text = "Time Remain:"+((int)totaltime).ToString();
             totaltime -= Time.deltaTime;
         }
         else

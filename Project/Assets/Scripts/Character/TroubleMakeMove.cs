@@ -27,6 +27,11 @@ public class TroubleMakeMove : MonoBehaviour
 
         GameController = GameObject.Find("Controller").GetComponent<Controller>();
         PR = GameController.PlayerRole;
+
+        if (_pv.IsMine)
+        {
+            GameObject.Find("Main Camera").GetComponent<CameraController>().MyPlayer = this.gameObject;
+        }
     }
 
     // ÿ֡����һ�� Update
@@ -36,22 +41,19 @@ public class TroubleMakeMove : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if( PR == 1)
+        if (PR == 1)
         {
-            if (canMove)
-                {
-                    if (slower)
-                    {
-                        speed = originalSpeed * 0.1f;
-                    }
-                    float horizontal = Input.GetAxis("Horizontal");
-                    float vertical = Input.GetAxis("Vertical");
 
-                    Vector2 position = transform.position;
-                    position.x = position.x + speed * horizontal;
-                    position.y = position.y + speed * vertical;
-                    transform.position = position;
-                }
-            }
+
+            float horizontal = Input.GetAxis("Horizontal");
+            float vertical = Input.GetAxis("Vertical");
+
+            Vector2 position = transform.position;
+            position.x = position.x + speed * horizontal;
+            position.y = position.y + speed * vertical;
+            transform.position = position;
+
+
         }
+    }
     }

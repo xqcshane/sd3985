@@ -27,8 +27,19 @@ public class PlayerMove : MonoBehaviour
 
         GameController = GameObject.Find("Controller").GetComponent<Controller>();
         PR = GameController.PlayerRole;
+
+        if (_pv.IsMine)
+        {
+           InitalGame();
+        }
     }
 
+    private void InitalGame()
+    {
+        GameObject.Find("Main Camera").GetComponent<CameraController>().MyPlayer = this.gameObject;
+        GameObject.Find("Skill").GetComponent<SkillController>().player=this.gameObject;
+        GameObject.Find("HealthBar").GetComponent<HealthBar>().initialHealth(this.gameObject.GetComponent<PlayerHealth>());
+    }
     // ÿ֡����һ�� Update
     void Update()
     {
