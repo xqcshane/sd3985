@@ -15,6 +15,7 @@ public class PlayerAim : MonoBehaviour
     public GameObject bullet3;
     public GameObject bullet4;
     private Rigidbody2D bulletrb;
+   
     Rigidbody2D rigidbody2d;
     private Vector2 offset;
     //setting the Staff
@@ -117,10 +118,12 @@ public class PlayerAim : MonoBehaviour
             float realangle = angle + 45.0f;
             Quaternion rotation= Quaternion.Euler(0, 0, realangle);
             GameObject bullets = PhotonNetwork.Instantiate(bullet.name, aimtransform.position,rotation);
-            bulletrb = bullets.GetComponent<Rigidbody2D>();
-            bulletrb.velocity = bullets.transform.right * speed;
-            Destroy(bullets,range);
-          
+            bullets.GetComponent<Bulletcontrol>().speed = speed;
+            bullets.GetComponent<Bulletcontrol>().exsittime = range;
+            /* bulletrb = bullets.GetComponent<Rigidbody2D>();
+             bulletrb.velocity = bullets.transform.right * speed;
+             Destroy(bullets,range);*/
+
         }
     }
     private void FastShooting()

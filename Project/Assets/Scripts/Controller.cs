@@ -30,8 +30,10 @@ public class Controller : MonoBehaviour
     {
         GameObject Status = GameObject.FindGameObjectWithTag("Status");
         final = GameObject.FindGameObjectWithTag("Result");
+       
         PlayerRole = Status.GetComponent<Status>().status;
-        GameStart = false;
+        final.GetComponent<Result>().PR = PlayerRole;
+       GameStart = false;
         if (PlayerRole == 1)
         {
             GameObject.Find("AdventureUIAndUICamera").SetActive(false);
@@ -61,29 +63,42 @@ public class Controller : MonoBehaviour
             GameStart = false;
             Preparetime -= Time.deltaTime;
             //time.text = "Time Remain:" + ((int)totaltime).ToString();
+            time.text = ((int)Preparetime).ToString();
+            time.color = Color.yellow;
             time2.text = ((int)Preparetime).ToString();
             time2.color = Color.yellow;
         }
         else if (Gametime > 0)
         {
-            GameStart = true;
+            if (!GameStart)
+            {
+                GameObject[] IBs = GameObject.FindGameObjectsWithTag("InitialBlocks");
+                foreach(GameObject IB in IBs)
+                {
+                    IB.SetActive(false);
+                }
+                GameStart = true;
+            }
             Gametime -= Time.deltaTime;
             //time.text = "Time Remain:" + ((int)totaltime).ToString();
             time.text = ((int)Gametime).ToString();
             time.color = Color.white;
-        }
-        else if (final.GetComponent<Result>().death)
-        {
-            final.GetComponent<Result>().score = (int)(Gametime * 0.5 + score);
-            SceneManager.LoadScene("Conclusion");
+            time2.text = ((int)Gametime).ToString();
+            time2.color = Color.white;
         }
         else 
         {
-           
             final.GetComponent<Result>().score = (int)(Gametime * 0.5 + score);
             SceneManager.LoadScene("Conclusion");
             Debug.Log("Out Of Time0");
         }
+
+        if (final.GetComponent<Result>().death)
+        {
+            final.GetComponent<Result>().score = (int)(Gametime * 0.5 + score);
+            SceneManager.LoadScene("Conclusion");
+        }
+
     }
 
     void EnemyCreation()

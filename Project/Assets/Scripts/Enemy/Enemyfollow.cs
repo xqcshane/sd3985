@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection.Emit;
 using UnityEngine;
-
+using Photon.Pun;
 public class Enemyfollow : MonoBehaviour
 {
     GameObject player;
@@ -14,6 +14,7 @@ public class Enemyfollow : MonoBehaviour
     public float sight;
     bool faceright = true;
     bool enterpassage;
+    bool dead=false;
     public Animator animator;
 
     // Start is called before the first frame update
@@ -26,8 +27,9 @@ public class Enemyfollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
+        if (health <= 0 && !dead)
         {
+            dead = true;
             controller.GetComponent<Controller>().score += 10;
             StartCoroutine(MyCoroutine());
         }
@@ -38,7 +40,7 @@ public class Enemyfollow : MonoBehaviour
         Debug.Log("globin dead");
         animator.SetBool("death", true);
         yield return new WaitForSeconds(1f);
-        Destroy(gameObject);
+        PhotonNetwork.Destroy(gameObject);
         yield return null;
     }
 

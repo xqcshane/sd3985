@@ -7,6 +7,21 @@ using Photon.Pun;
 public class Bulletcontrol : MonoBehaviour
 {
     public float damage=0;
+    private Controller GameController;
+    private int PR;
+    public float exsittime = 100f;
+    public float speed = 10.0f;
+    public PhotonView pv;
+    private void Start()
+    {
+        GameController = GameObject.Find("Controller").GetComponent<Controller>();
+        PR = GameController.PlayerRole;
+        pv=this.gameObject.GetComponent<PhotonView>();
+        if (!pv.IsMine)
+        {
+            Destroy(this.gameObject.GetComponent<Rigidbody2D>());
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy") )
@@ -23,6 +38,24 @@ public class Bulletcontrol : MonoBehaviour
         {
             collision.gameObject.GetComponent<BossFollow>().health -= damage;
             PhotonNetwork.Destroy(gameObject);
+        }
+    }
+    private void Update()
+    {
+        if (PR == 0)
+        {
+            gameObject.GetComponent<Rigidbody2D>().velocity = gameObject.transform.right * speed;
+
+
+            //bulletrb.velocity = bullets.transform.right * speed;
+            if (exsittime > 0)
+            {
+                exsittime -= Time.deltaTime;
+            }
+            else
+            {
+               PhotonNetwork.Destroy(gameObject);
+            }
         }
     }
 }

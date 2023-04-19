@@ -29,131 +29,141 @@ public class TrapController : MonoBehaviour
     public GameObject move;
     public GameObject nowtrap;
     GameObject[] traps;
+    private Controller GameController;
+    int PR;
     void Start()
     {
-        GameObject data = GameObject.FindWithTag("TrapData");
-        index1 = data.GetComponent<TrapData>().skillindex1;
-        index2 = data.GetComponent<TrapData>().skillindex2;
-        index3 = data.GetComponent<TrapData>().skillindex3;
-        Sprite[] sprites = { fireicon, arrowicon, thronesicon, slowicon, moveicon };
-        traps = new GameObject[5];
-        traps[0] = FireTower;
-        traps[1]=Arrow;
-        traps[2]=Thrones;
-        traps[3]=slow;
-        traps[4] = move;
-        if (index1 == 1)
+        GameController = GameObject.Find("Controller").GetComponent<Controller>();
+        PR = GameController.PlayerRole;
+        if (PR == 1)
         {
-            amount1 = 2;
+            GameObject data = GameObject.FindWithTag("TrapData");
+            index1 = data.GetComponent<TrapData>().skillindex1;
+            index2 = data.GetComponent<TrapData>().skillindex2;
+            index3 = data.GetComponent<TrapData>().skillindex3;
+            Sprite[] sprites = { fireicon, arrowicon, thronesicon, slowicon, moveicon };
+            traps = new GameObject[5];
+            traps[0] = FireTower;
+            traps[1] = Arrow;
+            traps[2] = Thrones;
+            traps[3] = slow;
+            traps[4] = move;
+            if (index1 == 1)
+            {
+                amount1 = 2;
+            }
+            else if (index1 == 2 || index1 == 4 || index1 == 5)
+            {
+                amount1 = 1;
+            }
+            else if (index1 == 3)
+            {
+                amount1 = 3;
+            }
+            TrapUI1.GetComponent<TrapUI>().ChangeTrapImage(sprites[index1 - 1]);
+            TrapUI1.GetComponent<TrapUI>().ChangeTrapNumber(amount1.ToString());
+            if (index2 == 1)
+            {
+                amount2 = 2;
+            }
+            else if (index2 == 2 || index2 == 4 || index2 == 5)
+            {
+                amount2 = 1;
+            }
+            else if (index2 == 3)
+            {
+                amount2 = 3;
+            }
+            TrapUI2.GetComponent<TrapUI>().ChangeTrapImage(sprites[index2 - 1]);
+            TrapUI2.GetComponent<TrapUI>().ChangeTrapNumber(amount2.ToString());
+            if (index3 == 1)
+            {
+                amount3 = 2;
+            }
+            else if (index3 == 2 || index3 == 4 || index3 == 5)
+            {
+                amount3 = 1;
+            }
+            else if (index3 == 3)
+            {
+                amount3 = 3;
+            }
+            TrapUI3.GetComponent<TrapUI>().ChangeTrapImage(sprites[index3 - 1]);
+            TrapUI3.GetComponent<TrapUI>().ChangeTrapNumber(amount3.ToString());
+            nowtrap = null;
         }
-        else if (index1 == 2|| index1==4||index1==5)
-        {
-            amount1 = 1;
-        }
-        else if (index1 == 3)
-        {
-            amount1 = 3;
-        }
-        TrapUI1.GetComponent<TrapUI>().ChangeTrapImage(sprites[index1-1]);
-        TrapUI1.GetComponent<TrapUI>().ChangeTrapNumber(amount1.ToString());
-        if (index2 == 1)
-        {
-            amount2 = 2;
-        }
-        else if(index2 == 2 || index2 == 4 || index2 == 5)
-        {
-            amount2 = 1;
-        }
-        else if (index2 == 3) {
-            amount2 = 3;
-        }
-        TrapUI2.GetComponent<TrapUI>().ChangeTrapImage(sprites[index2 - 1]);
-        TrapUI2.GetComponent<TrapUI>().ChangeTrapNumber(amount2.ToString());
-        if (index3 == 1)
-        {
-            amount3 = 2;
-        }
-        else if (index3 == 2 || index3 == 4 || index3 == 5)
-        {
-            amount3 = 1;
-        }
-        else if (index3 == 3)
-        {
-            amount3 = 3;
-        }
-        TrapUI3.GetComponent<TrapUI>().ChangeTrapImage(sprites[index3 - 1]);
-        TrapUI3.GetComponent<TrapUI>().ChangeTrapNumber(amount3.ToString());
-        nowtrap = null;
     }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (PR == 1)
         {
-            TrapUI1.GetComponent<TrapUI>().OnChooseTrap();
-            TrapUI2.GetComponent<TrapUI>().UnChooseTrap();
-            TrapUI3.GetComponent<TrapUI>().UnChooseTrap();
-
-            trap1 = true;
-            trap2 = false; 
-            trap3 = false;
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            TrapUI1.GetComponent<TrapUI>().UnChooseTrap();
-            TrapUI2.GetComponent<TrapUI>().OnChooseTrap();
-            TrapUI3.GetComponent<TrapUI>().UnChooseTrap();
-
-            trap1 = false;
-            trap2 = true; 
-            trap3 = false;
-        }
-       else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            TrapUI1.GetComponent<TrapUI>().UnChooseTrap();
-            TrapUI2.GetComponent<TrapUI>().UnChooseTrap();
-            TrapUI3.GetComponent<TrapUI>().OnChooseTrap();
-
-            trap1 = false;
-            trap2 = false; ;
-            trap3 = true;
-        }
-
-        if (trap1)
-        {
-            if (amount1 > 0)
+            if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                nowtrap = traps[index1 - 1];
-            }
-            else
-            {
-                nowtrap = null;
-            }
-        }
-        if (trap2)
-        {
-            if (amount2 > 0)
-            {
-                nowtrap = traps[index2 - 1];
+                TrapUI1.GetComponent<TrapUI>().OnChooseTrap();
+                TrapUI2.GetComponent<TrapUI>().UnChooseTrap();
+                TrapUI3.GetComponent<TrapUI>().UnChooseTrap();
 
+                trap1 = true;
+                trap2 = false;
+                trap3 = false;
             }
-            else
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                nowtrap = null;
-            }
-        }
-        if (trap3)
-        {
-            if (amount3 > 0)
-            {
-                nowtrap = traps[index3 - 1];
-            }
-            else
-            {
-                nowtrap = null;
-            }
-        }
+                TrapUI1.GetComponent<TrapUI>().UnChooseTrap();
+                TrapUI2.GetComponent<TrapUI>().OnChooseTrap();
+                TrapUI3.GetComponent<TrapUI>().UnChooseTrap();
 
+                trap1 = false;
+                trap2 = true;
+                trap3 = false;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                TrapUI1.GetComponent<TrapUI>().UnChooseTrap();
+                TrapUI2.GetComponent<TrapUI>().UnChooseTrap();
+                TrapUI3.GetComponent<TrapUI>().OnChooseTrap();
+
+                trap1 = false;
+                trap2 = false; ;
+                trap3 = true;
+            }
+
+            if (trap1)
+            {
+                if (amount1 > 0)
+                {
+                    nowtrap = traps[index1 - 1];
+                }
+                else
+                {
+                    nowtrap = null;
+                }
+            }
+            if (trap2)
+            {
+                if (amount2 > 0)
+                {
+                    nowtrap = traps[index2 - 1];
+
+                }
+                else
+                {
+                    nowtrap = null;
+                }
+            }
+            if (trap3)
+            {
+                if (amount3 > 0)
+                {
+                    nowtrap = traps[index3 - 1];
+                }
+                else
+                {
+                    nowtrap = null;
+                }
+            }
+        }
     }
     public void usetrap()
     {

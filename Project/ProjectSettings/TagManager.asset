@@ -17,6 +17,7 @@ TagManager:
   - Grids
   - TrapController
   - Result
+  - InitialBlocks
   layers:
   - Default
   - TransparentFX
