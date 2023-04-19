@@ -79,15 +79,15 @@ public class GridsController : MonoBehaviour {
             TrapGrid.SetValue(UtilsClass.GetMouseWorldPosition(), 1);
             //Debug.Log(TrapGrid.GetCellCenterPosition(UtilsClass.GetMouseWorldPosition()));
             bool TrapGridValue = TrapGrid.GetBoolValue(UtilsClass.GetMouseWorldPosition());
-            if(!TrapGridValue){
-                TrapGrid.SetBoolValue(UtilsClass.GetMouseWorldPosition(), true);
+            if(!TrapGridValue){  
                 if(myPrefab != null){
                     //if(PhotonNetwork.CurrentRoom == null){}
-                    PhotonNetwork.Instantiate(myPrefab.name, TrapGrid.GetCellCenterPosition(UtilsClass.GetMouseWorldPosition()), Quaternion.identity);
+                    GameObject nowpref = PhotonNetwork.Instantiate(myPrefab.name, TrapGrid.GetCellCenterPosition(UtilsClass.GetMouseWorldPosition()), Quaternion.identity);
                     myTrapController.GetComponent<TrapController>().usetrap();
+                    TrapGrid.SetBoolValue(UtilsClass.GetMouseWorldPosition(), true);
 
 
-                        //Instantiate(myPrefab, TrapGrid.GetCellCenterPosition(UtilsClass.GetMouseWorldPosition()), Quaternion.identity);
+                    //Instantiate(myPrefab, TrapGrid.GetCellCenterPosition(UtilsClass.GetMouseWorldPosition()), Quaternion.identity);
 
                     //PhotonNetwork.Instantiate("MyPrefabName", new Vector3(0, 0, 0), Quaternion.identity, 0);
                 }        

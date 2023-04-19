@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -27,7 +29,10 @@ public class PlayerHealth : MonoBehaviour
         }
         if (currentHealth<=0)
         {
+            GameObject final = GameObject.FindGameObjectWithTag("Result");
+            final.GetComponent<Result>().death = true;
             Destroy(gameObject);
+
         }
     }
     public void ChangeHealth(int amount)

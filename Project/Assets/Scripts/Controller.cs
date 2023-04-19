@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
+using UnityEngine.SceneManagement;
 
 public class Controller : MonoBehaviour
 {
@@ -11,8 +12,9 @@ public class Controller : MonoBehaviour
     public float Preparetime = 30.0f;
     public float Gametime = 90.0f;
     public Text time;
+    public Text time2;
     public int PlayerRole;
-
+    GameObject final;
     public bool GameStart;
     //0 is adventure, 1 is troublemake
 
@@ -27,11 +29,13 @@ public class Controller : MonoBehaviour
     void Start()
     {
         GameObject Status = GameObject.FindGameObjectWithTag("Status");
+        final = GameObject.FindGameObjectWithTag("Result");
         PlayerRole = Status.GetComponent<Status>().status;
         GameStart = false;
         if (PlayerRole == 1)
         {
             GameObject.Find("AdventureUIAndUICamera").SetActive(false);
+            GameObject.Find("TroubleMakerAndUICamera").SetActive(true);
             PhotonNetwork.Instantiate("TroubleMake", new Vector3(200f, 70f, 0f), Quaternion.identity);
             GameObject[] grids = GameObject.FindGameObjectsWithTag("Grids");
             foreach (GameObject grid in grids)
@@ -41,6 +45,8 @@ public class Controller : MonoBehaviour
         }
         else
         {
+            GameObject.Find("AdventureUIAndUICamera").SetActive(true);
+            GameObject.Find("TroubleMakerAndUICamera").SetActive(false);
             PhotonNetwork.Instantiate("Player", new Vector3(12f, 7f, 0f), Quaternion.identity);
             EnemyCreation();
         }
@@ -55,8 +61,8 @@ public class Controller : MonoBehaviour
             GameStart = false;
             Preparetime -= Time.deltaTime;
             //time.text = "Time Remain:" + ((int)totaltime).ToString();
-            time.text = ((int)Preparetime).ToString();
-            time.color = Color.yellow;
+            time2.text = ((int)Preparetime).ToString();
+            time2.color = Color.yellow;
         }
         else if (Gametime > 0)
         {
@@ -66,8 +72,16 @@ public class Controller : MonoBehaviour
             time.text = ((int)Gametime).ToString();
             time.color = Color.white;
         }
-        else
+        else if (final.GetComponent<Result>().death)
         {
+            final.GetComponent<Result>().score = (int)(Gametime * 0.5 + score);
+            SceneManager.LoadScene("Conclusion");
+        }
+        else 
+        {
+           
+            final.GetComponent<Result>().score = (int)(Gametime * 0.5 + score);
+            SceneManager.LoadScene("Conclusion");
             Debug.Log("Out Of Time0");
         }
     }

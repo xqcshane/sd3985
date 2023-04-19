@@ -93,14 +93,7 @@ public class TrapController : MonoBehaviour
             TrapUI1.GetComponent<TrapUI>().OnChooseTrap();
             TrapUI2.GetComponent<TrapUI>().UnChooseTrap();
             TrapUI3.GetComponent<TrapUI>().UnChooseTrap();
-            if (amount1 > 0)
-            {
-                nowtrap = traps[index1 - 1];
-            }
-            else
-            {
-                nowtrap = null;
-            }
+
             trap1 = true;
             trap2 = false; 
             trap3 = false;
@@ -110,15 +103,7 @@ public class TrapController : MonoBehaviour
             TrapUI1.GetComponent<TrapUI>().UnChooseTrap();
             TrapUI2.GetComponent<TrapUI>().OnChooseTrap();
             TrapUI3.GetComponent<TrapUI>().UnChooseTrap();
-            if (amount2 > 0)
-            {
-                nowtrap = traps[index2 - 1];
-               
-            }
-            else
-            {
-                nowtrap = null;
-            }
+
             trap1 = false;
             trap2 = true; 
             trap3 = false;
@@ -128,6 +113,37 @@ public class TrapController : MonoBehaviour
             TrapUI1.GetComponent<TrapUI>().UnChooseTrap();
             TrapUI2.GetComponent<TrapUI>().UnChooseTrap();
             TrapUI3.GetComponent<TrapUI>().OnChooseTrap();
+
+            trap1 = false;
+            trap2 = false; ;
+            trap3 = true;
+        }
+
+        if (trap1)
+        {
+            if (amount1 > 0)
+            {
+                nowtrap = traps[index1 - 1];
+            }
+            else
+            {
+                nowtrap = null;
+            }
+        }
+        if (trap2)
+        {
+            if (amount2 > 0)
+            {
+                nowtrap = traps[index2 - 1];
+
+            }
+            else
+            {
+                nowtrap = null;
+            }
+        }
+        if (trap3)
+        {
             if (amount3 > 0)
             {
                 nowtrap = traps[index3 - 1];
@@ -136,9 +152,6 @@ public class TrapController : MonoBehaviour
             {
                 nowtrap = null;
             }
-            trap1 = false;
-            trap2 = false; ;
-            trap3 = true;
         }
 
     }
@@ -147,17 +160,29 @@ public class TrapController : MonoBehaviour
         if (trap1)
         {
             amount1 -= 1;
+            if (amount1 < 0)
+            {
+                amount1 = 0;
+            }
             TrapUI1.GetComponent<TrapUI>().ChangeTrapNumber(amount1.ToString());
 
         }
          if (trap2)
         {
             amount2 -= 1;
+            if (amount2 < 0)
+            {
+                amount2 = 0;
+            }
             TrapUI2.GetComponent<TrapUI>().ChangeTrapNumber(amount2.ToString());
         }
         if (trap3)
         {
             amount3 -= 1;
+            if (amount3 < 0)
+            {
+                amount3 = 0;
+            }
             TrapUI3.GetComponent<TrapUI>().ChangeTrapNumber(amount3.ToString());
         }
     }

@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SkillChoosing.unity
     guid: 79b6d8ad598415d44ba58e48e85d9e79
+  - enabled: 1
+    path: Assets/Scenes/Conclusion.unity
+    guid: 8ca1e828d5a8f18429ca951c4e9ed9f4
   m_configObjects: {}

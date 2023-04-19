@@ -16,6 +16,7 @@ TagManager:
   - Status
   - Grids
   - TrapController
+  - Result
   layers:
   - Default
   - TransparentFX
