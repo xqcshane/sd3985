@@ -8,9 +8,22 @@ public class Controller : MonoBehaviour
     public int score;
     public float totaltime = 90.0f;
     public Text time;
+    public int PlayerRole;
+    //0 is adventure, 1 is troublemake
+
+    /*
+    private Controller GameController;
+    private int PR;
+
+    GameController = GameObject.Find("Controller").GetComponent<Controller>();
+    PR = GameController.PlayerRole;
+    */
+
     void Start()
     {
-        
+        if(PlayerRole == 1){
+            GameObject.Find("AdventureUIAndUICamera").SetActive(false);
+        }
     }
 
     // Update is called once per frame
