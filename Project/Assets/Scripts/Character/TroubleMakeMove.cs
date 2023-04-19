@@ -27,6 +27,9 @@ public class TroubleMakeMove : MonoBehaviour
 
         GameController = GameObject.Find("Controller").GetComponent<Controller>();
         PR = GameController.PlayerRole;
+        if(_pv.IsMine){
+            GameObject.Find("Main Camera").GetComponent<CameraController>().MyPlayer = this.gameObject;
+        }
     }
 
     // ÿ֡����һ�� Update

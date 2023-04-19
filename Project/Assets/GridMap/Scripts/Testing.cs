@@ -62,13 +62,16 @@ public class Testing : MonoBehaviour {
     }
 
     private void Update() {
-        HandleClickToModifyTrapGrid();
-        HandleHeatMapMouseMove();
+        if(PR == 1)
+        {
+            HandleClickToModifyTrapGrid();
+            HandleHeatMapMouseMove();
 
-        if (Input.GetMouseButtonDown(1)) {
-            Debug.Log(TrapGrid.GetValue(UtilsClass.GetMouseWorldPosition()));
-            TrapGrid = new TrapGrid(0, 0, 0f, new Vector3(0, 0));
-            heatMapVisual = new HeatMapVisual(TrapGrid, GetComponent<MeshFilter>());
+            if (Input.GetMouseButtonDown(1)) {
+                Debug.Log(TrapGrid.GetValue(UtilsClass.GetMouseWorldPosition()));
+                TrapGrid = new TrapGrid(0, 0, 0f, new Vector3(0, 0));
+                heatMapVisual = new HeatMapVisual(TrapGrid, GetComponent<MeshFilter>());
+            }
         }
     }
 

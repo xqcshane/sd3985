@@ -27,6 +27,10 @@ public class PlayerMove : MonoBehaviour
 
         GameController = GameObject.Find("Controller").GetComponent<Controller>();
         PR = GameController.PlayerRole;
+        
+        if(_pv.IsMine){
+            initialGame();
+        }
     }
 
     // ÿ֡����һ�� Update
@@ -38,20 +42,27 @@ public class PlayerMove : MonoBehaviour
     {
         if(PR == 0)
         {
-            if (canMove)
+        if (canMove)
+            {
+                if (slower)
                 {
-                    if (slower)
-                    {
-                        speed = originalSpeed * 0.1f;
-                    }
-                    float horizontal = Input.GetAxis("Horizontal");
-                    float vertical = Input.GetAxis("Vertical");
-
-                    Vector2 position = transform.position;
-                    position.x = position.x + speed * horizontal;
-                    position.y = position.y + speed * vertical;
-                    transform.position = position;
+                    speed = originalSpeed * 0.1f;
                 }
+                float horizontal = Input.GetAxis("Horizontal");
+                float vertical = Input.GetAxis("Vertical");
+
+                Vector2 position = transform.position;
+                position.x = position.x + speed * horizontal;
+                position.y = position.y + speed * vertical;
+                transform.position = position;
             }
         }
     }
+
+    private void initialGame(){
+        GameObject.Find("Main Camera").GetComponent<CameraController>().MyPlayer = this.gameObject;
+        GameObject.Find("Skill").GetComponent<SkillController>().player = this.gameObject;
+        GameObject.Find("HealthBar").GetComponent<HealthBar>().initialHealth(this.gameObject.GetComponent<PlayerHealth>());
+    }
+
+}

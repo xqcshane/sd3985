@@ -59,7 +59,7 @@ public class RSManager : MonoBehaviourPunCallbacks
     }
 
     public void OnClickStartGame(){
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("SkillChoosing");
     }
 
     public void OnClickLeaveRoom(){

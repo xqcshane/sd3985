@@ -12,8 +12,6 @@ public class HealthBar : MonoBehaviour
     {
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         healthBar = GetComponent<Slider>();
-        healthBar.maxValue = playerHealth.maxHealth;
-        healthBar.value = playerHealth.maxHealth;
     }
 
     public void SetHealth(int hp)
@@ -24,5 +22,12 @@ public class HealthBar : MonoBehaviour
     private void Update()
     {
         SetHealth(playerHealth.health);
+    }
+
+    public void initialHealth(PlayerHealth myPlayerHealth)
+    {
+        playerHealth = myPlayerHealth;
+        healthBar.maxValue = playerHealth.maxHealth;
+        healthBar.value = playerHealth.maxHealth;
     }
 }
