@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEditor;
 //using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using Photon.Pun;
+
 
 public class PlayerAim : MonoBehaviour
 {
@@ -114,7 +116,7 @@ public class PlayerAim : MonoBehaviour
             nextfire = Time.time + firerate;
             float realangle = angle + 45.0f;
             Quaternion rotation= Quaternion.Euler(0, 0, realangle);
-            GameObject bullets = Instantiate(bullet, aimtransform.position,rotation);
+            GameObject bullets = PhotonNetwork.Instantiate(bullet.name, aimtransform.position,rotation);
             bulletrb = bullets.GetComponent<Rigidbody2D>();
             bulletrb.velocity = bullets.transform.right * speed;
             Destroy(bullets,range);
@@ -129,7 +131,7 @@ public class PlayerAim : MonoBehaviour
             nextfire = Time.time + firerate;
             float realangle = angle + 45.0f;
             Quaternion rotation = Quaternion.Euler(0, 0, realangle);
-            GameObject bullets = Instantiate(bullet, aimtransform.position, rotation);
+            GameObject bullets = PhotonNetwork.Instantiate(bullet.name, aimtransform.position, rotation);
             bulletrb = bullets.GetComponent<Rigidbody2D>();
             bulletrb.velocity = bullets.transform.right * speed;
             Destroy(bullets, range);
@@ -148,7 +150,7 @@ public class PlayerAim : MonoBehaviour
             Quaternion rotation1 = Quaternion.Euler(0, 0, realangle1);
             Quaternion rotation2 = Quaternion.Euler(0, 0, realangle2);
             Quaternion rotation3 = Quaternion.Euler(0, 0, realangle3);
-            GameObject[] bullets = { Instantiate(bullet, aimtransform.position, rotation3), Instantiate(bullet, aimtransform.position, rotation1), Instantiate(bullet, aimtransform.position, rotation2) };
+            GameObject[] bullets = { PhotonNetwork.Instantiate(bullet.name, aimtransform.position, rotation3), PhotonNetwork.Instantiate(bullet.name, aimtransform.position, rotation1), PhotonNetwork.Instantiate(bullet.name, aimtransform.position, rotation2) };
             for (int i = 0; i < bullets.Length; i++)
             {
                 bulletrb = bullets[i].GetComponent<Rigidbody2D>();
@@ -165,7 +167,7 @@ public class PlayerAim : MonoBehaviour
             nextfire = Time.time + firerate;
             float realangle = angle + 45.0f;
             Quaternion rotation = Quaternion.Euler(0, 0, realangle);
-            GameObject bullets = Instantiate(bullet, aimtransform.position, rotation);
+            GameObject bullets = PhotonNetwork.Instantiate(bullet.name, aimtransform.position, rotation);
             bulletrb = bullets.GetComponent<Rigidbody2D>();
             bulletrb.velocity = bullets.transform.right * speed;
             Destroy(bullets, range2);
@@ -179,7 +181,7 @@ public class PlayerAim : MonoBehaviour
             nextfire = Time.time + firerate3;
             float realangle = angle + 45.0f;
             Quaternion rotation = Quaternion.Euler(0, 0, realangle);
-            GameObject bullets = Instantiate(bullet, aimtransform.position, rotation);
+            GameObject bullets = PhotonNetwork.Instantiate(bullet.name, aimtransform.position, rotation);
             bulletrb = bullets.GetComponent<Rigidbody2D>();
             bulletrb.velocity = bullets.transform.right * speed;
      

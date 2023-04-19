@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+
 
 public class Bulletcontrol : MonoBehaviour
 {
@@ -11,16 +13,16 @@ public class Bulletcontrol : MonoBehaviour
         {
             collision.gameObject.GetComponent<Enemyfollow>().health -= damage;
             collision.gameObject.GetComponent<Enemyfollow>().animator.Play("globin_hit");
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("Respawn"))
         {
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("BOSS"))
         {
             collision.gameObject.GetComponent<BossFollow>().health -= damage;
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
     }
 }
