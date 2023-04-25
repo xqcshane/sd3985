@@ -63,7 +63,8 @@ public class NonetworkEnemy : MonoBehaviour
                 {
 
                     animator.SetBool("outOfSight", false);
-                    if (System.Math.Abs(transform.position.x - player.transform.position.x) > 2 && health > 0)
+                    //System.Math.Abs(transform.position.x - player.transform.position.x) > 2 &&
+                    if (health > 0)
                     {
 
                         transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
@@ -91,7 +92,7 @@ public class NonetworkEnemy : MonoBehaviour
             }
         }
     }
-    void Flip()
+    public void Flip()
     {
         Vector3 currentScale = gameObject.transform.localScale;
         currentScale.x *= -1;

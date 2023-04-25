@@ -41,7 +41,9 @@ public class Passage : MonoBehaviour
             GameObject[] allenemy = GameObject.FindGameObjectsWithTag("Enemy");
             for (int i = 0; i < allenemy.Length; i++)
             {
+                allenemy[i].GetComponent<NonetworkEnemy>().Flip();
                 allenemy[i].GetComponent<NonetworkEnemy>().enterpassage = false;
+                
             }
         }
         if (collision.gameObject.CompareTag("Enemy"))
