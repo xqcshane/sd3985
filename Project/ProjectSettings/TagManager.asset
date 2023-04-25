@@ -18,6 +18,9 @@ TagManager:
   - TrapController
   - Result
   - InitialBlocks
+  - FlyingEye
+  - Mushroom
+  - Seleton
   layers:
   - Default
   - TransparentFX
