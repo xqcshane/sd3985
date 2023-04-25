@@ -15,6 +15,9 @@ public class NonetworkEnemy : MonoBehaviour
     bool dead = false;
     public Animator animator;
 
+    bool canMove = true;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,21 +27,21 @@ public class NonetworkEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0 && !dead)
+        if (health <= 0)
         {
-            dead = true;
             StartCoroutine(MyCoroutine());
         }
     }
-
+    
     private IEnumerator MyCoroutine()
     {
         Debug.Log("globin dead");
-        animator.SetBool("death", true);
+        animator.Play("globin_death");
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
         yield return null;
     }
+    
 
     private void FixedUpdate()
     {
@@ -54,34 +57,37 @@ public class NonetworkEnemy : MonoBehaviour
         }
         else if (enterpassage == false)
         {
-            if (distance < sight)
+            if (canMove)
             {
-
-                animator.SetBool("outOfSight", false);
-                if (System.Math.Abs(transform.position.x - player.transform.position.x) > 2 && health > 0)
+                if (distance < sight)
                 {
 
-                    transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+                    animator.SetBool("outOfSight", false);
+                    if (System.Math.Abs(transform.position.x - player.transform.position.x) > 2 && health > 0)
+                    {
 
-                    if (transform.position.x > player.transform.position.x && faceright)
-                    {
-                        animator.SetBool("run_right", true);
-                        Flip();
+                        transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+
+                        if (transform.position.x > player.transform.position.x && faceright)
+                        {
+                            animator.SetBool("run_right", true);
+                            Flip();
+                        }
+                        else if (transform.position.x < player.transform.position.x && !faceright)
+                        {
+                            animator.SetBool("run_left", true);
+                            Flip();
+                        }
                     }
-                    else if (transform.position.x < player.transform.position.x && !faceright)
-                    {
-                        animator.SetBool("run_left", true);
-                        Flip();
-                    }
+
+                    //transform.rotation = Quaternion.Euler(Vector3.forward * angle);
                 }
-
-                //transform.rotation = Quaternion.Euler(Vector3.forward * angle);
-            }
-            else
-            {
-                animator.SetBool("run_right", false);
-                animator.SetBool("run_left", false);
-                animator.SetBool("outOfSight", true);
+                else
+                {
+                    animator.SetBool("run_right", false);
+                    animator.SetBool("run_left", false);
+                    animator.SetBool("outOfSight", true);
+                }
             }
         }
     }
@@ -95,10 +101,49 @@ public class NonetworkEnemy : MonoBehaviour
     //emyattack
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
         if (collision.gameObject.CompareTag("Player"))
         {
+            StartCoroutine(MyCoroutine3());
             collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-5);
         }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            StartCoroutine(MyCoroutine3());
+            collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-5);
+        }
+    }
+
+
+    private IEnumerator MyCoroutine3()
+    {
+        Debug.Log("globin attack");
+        animator.Play("globin_attack");
+        canMove = false;
+        yield return new WaitForSeconds(1f);
+        canMove = true;
+        animator.Play("globin_idle");
+        yield return null;
+    }
+
+    public void Damaged(float damage)
+    {
+        health -= damage;
+        //animator.Play("globin_hit");
+        StartCoroutine(MyCoroutine2());
+    }
+
+    private IEnumerator MyCoroutine2()
+    {
+        Debug.Log("globin hit");
+        animator.Play("globin_hit");
+        canMove = false;
+        yield return new WaitForSeconds(1f);
+        canMove = true;
+        animator.Play("globin_idle");
+        yield return null;
     }
 }

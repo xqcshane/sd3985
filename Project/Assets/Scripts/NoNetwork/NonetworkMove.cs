@@ -13,26 +13,45 @@ public class NonetworkMove : MonoBehaviour
     public bool slower;
     public float originalSpeed;
     public bool inpassage=false;
-  
 
-  
- 
+    public Animator animator;
+
     private void FixedUpdate()
     {
-            if (canMove)
+        if (canMove)
+        {
+            if (slower)
             {
-                if (slower)
-                {
-                    speed = originalSpeed * 0.1f;
-                }
-                float horizontal = Input.GetAxis("Horizontal");
-                float vertical = Input.GetAxis("Vertical");
-
-                Vector2 position = transform.position;
-                position.x = position.x + speed * horizontal;
-                position.y = position.y + speed * vertical;
-                transform.position = position;
+                speed = originalSpeed * 0.1f;
             }
+            float horizontal = Input.GetAxis("Horizontal");
+            float vertical = Input.GetAxis("Vertical");
+
+            
+            if (horizontal > 0)
+            {
+                animator.Play("Adventurer_right");
+            }else if(horizontal < 0)
+            {
+                animator.Play("Adventurer_left");
+            }else if(vertical > 0)
+            {
+                animator.Play("Adventurer_right");
+            }
+            else if (vertical < 0)
+            {
+                animator.Play("Adventurer_right");
+            }
+            else
+            {
+                animator.Play("Real_adventurer");
+            }
+
+            Vector2 position = transform.position;
+            position.x = position.x + speed * horizontal;
+            position.y = position.y + speed * vertical;
+            transform.position = position;
+        }
         
     }
 }
