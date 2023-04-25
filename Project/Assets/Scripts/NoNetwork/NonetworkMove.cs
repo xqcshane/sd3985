@@ -12,7 +12,7 @@ public class NonetworkMove : MonoBehaviour
     public bool canMove;
     public bool slower;
     public float originalSpeed;
-
+    public bool inpassage=false;
   
 
   

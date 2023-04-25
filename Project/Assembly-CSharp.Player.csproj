@@ -90,6 +90,7 @@
     <Compile Include="Assets\LeanTween\Framework\LTSeq.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\UI_TextComplex.cs" />
     <Compile Include="Assets\Enemy Galore 1 - Pixel Art\Script\EnemyTest.cs" />
+    <Compile Include="Assets\Scripts\NoNetwork\NonetworkCamera.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Scripts\Character\Bulletcontrol.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
@@ -113,6 +114,7 @@
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralSimpleUI.cs" />
     <Compile Include="Assets\Scripts\Enemy\BossDamage.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\Scripts\NoNetwork\NonetworkEnemy.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineEndless.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\MonoBehaviours\PositionRendererSorter.cs" />
     <Compile Include="Assets\Scripts\UI\TrapUI.cs" />
@@ -123,6 +125,7 @@
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSpline.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Resources\TMSetTrapViewController.cs" />
+    <Compile Include="Assets\Scripts\NoNetwork\NonetworkAim.cs" />
     <Compile Include="Assets\Scripts\Managers\RLSManager.cs" />
     <Compile Include="Assets\Scripts\UI\PointerToItems.cs" />
     <Compile Include="Assets\Scripts\Character\SkillController.cs" />
@@ -175,6 +178,7 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
     <Compile Include="Assets\Scripts\SkillChoosing\CountSkill.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\NoNetwork\NonetworkMove.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\MonoBehaviours\ComponentActions.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathBezier2d.cs" />
     <Compile Include="Assets\Scripts\UI\CrosshairController.cs" />
@@ -204,6 +208,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\GridMap\Scripts\TrapGrid.cs" />
     <Compile Include="Assets\LeanTween\Examples\Archived\OldGUIExamplesCS.cs" />
+    <Compile Include="Assets\Scripts\NoNetwork\Nonetworkbullet.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasic.cs" />
     <Compile Include="Assets\Scripts\Traps\FakeTrophy.cs" />
     <Compile Include="Assets\Scripts\Managers\RSManager.cs" />
@@ -213,11 +218,6 @@
     <Compile Include="Assets\LeanTween\Examples\Archived\TestingRigidbodyCS.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\FunctionPeriodic.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\Following.cs" />
-    <Compile Include="Assets\Scripts\NoNetwork\Nonetworkbullet.cs" />
-    <Compile Include="Assets\Scripts\NoNetwork\NonetworkAim.cs" />
-    <Compile Include="Assets\Scripts\NoNetwork\NonetworkCamera.cs" />
-    <Compile Include="Assets\Scripts\NoNetwork\NonetworkMove.cs" />
-    <Compile Include="Assets\Scripts\NoNetwork\NonetworkEnemy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

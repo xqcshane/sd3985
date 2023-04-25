@@ -11,7 +11,7 @@ public class NonetworkEnemy : MonoBehaviour
     public float damage;
     public float sight;
     bool faceright = true;
-    bool enterpassage;
+    public bool enterpassage = false;
     bool dead = false;
     public Animator animator;
 
@@ -46,35 +46,43 @@ public class NonetworkEnemy : MonoBehaviour
         Vector2 direction = player.transform.position - transform.position;
         direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        if (distance < sight)
-        {
-            ;
-            animator.SetBool("outOfSight", false);
-
-            if (System.Math.Abs(transform.position.x - player.transform.position.x) > 2 && health > 0)
-            {
-
-                transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-
-                if (transform.position.x > player.transform.position.x && faceright)
-                {
-                    animator.SetBool("run_right", true);
-                    Flip();
-                }
-                else if (transform.position.x < player.transform.position.x && !faceright)
-                {
-                    animator.SetBool("run_left", true);
-                    Flip();
-                }
-            }
-          
-            //transform.rotation = Quaternion.Euler(Vector3.forward * angle);
-        }
-        else
+        if (enterpassage == true)
         {
             animator.SetBool("run_right", false);
             animator.SetBool("run_left", false);
             animator.SetBool("outOfSight", true);
+        }
+        else if (enterpassage == false)
+        {
+            if (distance < sight)
+            {
+
+                animator.SetBool("outOfSight", false);
+                if (System.Math.Abs(transform.position.x - player.transform.position.x) > 2 && health > 0)
+                {
+
+                    transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+
+                    if (transform.position.x > player.transform.position.x && faceright)
+                    {
+                        animator.SetBool("run_right", true);
+                        Flip();
+                    }
+                    else if (transform.position.x < player.transform.position.x && !faceright)
+                    {
+                        animator.SetBool("run_left", true);
+                        Flip();
+                    }
+                }
+
+                //transform.rotation = Quaternion.Euler(Vector3.forward * angle);
+            }
+            else
+            {
+                animator.SetBool("run_right", false);
+                animator.SetBool("run_left", false);
+                animator.SetBool("outOfSight", true);
+            }
         }
     }
     void Flip()
@@ -87,7 +95,7 @@ public class NonetworkEnemy : MonoBehaviour
     //emyattack
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("nono");
+        
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-5);
