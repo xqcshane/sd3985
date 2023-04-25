@@ -11,7 +11,8 @@ public class Nonetworkbullet : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<NonetworkEnemy>().health -= damage;
+            collision.gameObject.GetComponent<NonetworkEnemy>().Damaged(damage);
+            //collision.gameObject.GetComponent<NonetworkEnemy>().health -= damage;
             //collision.gameObject.GetComponent<Enemyfollow>().animator.Play("globin_hit");
             Destroy(gameObject);
         }
