@@ -6,14 +6,17 @@ using UnityEngine.UIElements;
 
 public class BossAI : MonoBehaviour
 {
-    public int haha;
     public GameObject fireball;
     Rigidbody2D fireballrb;
-    public float firerate=1.5f;
+    public float firerate=5f;
     float nextfire = 0;
     public GameObject player;
     private float distance;
     public float angle;
+
+    public Animator Skill1;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +33,7 @@ public class BossAI : MonoBehaviour
         if (Time.time > nextfire)
         {
             nextfire = Time.time + firerate;
+            //Skill1.Play("BossAttack1");
             Throwfireball();
         }
     }
