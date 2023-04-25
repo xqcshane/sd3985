@@ -11,6 +11,7 @@ public class BossFollow : MonoBehaviour
     public int damage;
     public float sight;
     bool faceright = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,12 +54,13 @@ public class BossFollow : MonoBehaviour
         gameObject.transform.localScale = currentScale;
         faceright = !faceright;
     }
+
     //emyattack
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-damage);
+            //collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-damage);
         }
     }
 }

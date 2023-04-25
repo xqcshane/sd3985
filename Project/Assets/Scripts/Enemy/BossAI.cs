@@ -35,6 +35,8 @@ public class BossAI : MonoBehaviour
     }
     void Throwfireball()
     {
+        /*
+        Debug.Log("dfdfdfdfdfdfd");
         Quaternion rotation1 = Quaternion.Euler(0, 0, angle);
         Quaternion rotation2 = Quaternion.Euler(0, 0, angle+45.0f);
         Quaternion rotation3 = Quaternion.Euler(0, 0, angle+90.0f);
@@ -45,5 +47,6 @@ public class BossAI : MonoBehaviour
             fireballrb.velocity = fireballs[i].transform.right * 10;
             Destroy(fireballs[i], 0.5f);
         }
+        */
     }
 }

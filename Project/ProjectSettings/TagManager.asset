@@ -21,7 +21,10 @@ TagManager:
   - FlyingEye
   - Mushroom
   - Seleton
+<<<<<<< HEAD
   - Bullet
+=======
+>>>>>>> origin/reyes2
   layers:
   - Default
   - TransparentFX
