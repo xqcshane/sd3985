@@ -12,7 +12,14 @@ public void skill(int index)
     {
 
         GameObject skill = GameObject.FindWithTag("Skill");
-        skill.GetComponent<Skillchoose>().skillindex = index;      
+        int button = skill.GetComponent<Skillchoose>().buttonindex;
+        if (button != -1)
+        {
+            skill.GetComponent<Skillchoose>().skillindex = index;
+
+            skill.GetComponent<Skillchoose>().Changeicon(button);
+        }
+
     }
 
 }

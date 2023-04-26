@@ -27,12 +27,33 @@ public class Skillchoose : MonoBehaviour
     public GameObject Data;
     public float totaltime = 10.0f;
     public Text time;
+    private Sprite[] Sprites;
+    public int buttonindex=-1;
+    private GameObject frame1;
+    private GameObject frame2;
     void Start()
     {
-        before = Q.GetComponent<Image>().sprite;
-        
+        Sprite[] list = {before, heal, speed, bla, magic, clear, Change};
+        Sprites = list;
+        int[] randomskills = UniqRandom(7,5);
+        GameObject allskill = GameObject.Find("ASkillList");
+        for(int i=0; i < allskill.transform.childCount; i++)
+        {
+            allskill.transform.GetChild(i).gameObject.SetActive(false);
+        }
+        foreach (int i in randomskills)
+        {
+            allskill.transform.GetChild(i).gameObject.SetActive(true);
+        }
+        sendindex1 = 0;
+        sendindex2 = 0;
+        frame1 = Q.gameObject.transform.GetChild(0).gameObject;
+        frame2=E.gameObject.transform.GetChild(0).gameObject;
+        frame1.GetComponent<Image>().sprite = before;
+        frame2.GetComponent<Image>().sprite = before;
     }
-    public void chooseskill(int index)
+   
+        public void chooseskill(int index)
     {
         // find the skill
         if (index == 0)
@@ -63,7 +84,7 @@ public class Skillchoose : MonoBehaviour
     }
     private void Update()
     {
-        Changeicon();
+        //Changeicon();
         if (totaltime > 0)
         {
             time.text = "Time Remain:"+((int)totaltime).ToString();
@@ -74,82 +95,82 @@ public class Skillchoose : MonoBehaviour
             next();
         }
     }
-    private void Changeicon()
+    public void Changeicon(int index)
     {
-        if (skillindex == 1 )
+        buttonindex = index;
+        if (index == 0)
         {
-            if (skill1)
+                frame1.GetComponent<Image>().sprite = Change;
+                frame2.GetComponent<Image>().sprite = before;
+            if (skillindex != 0)
             {
-                Q.GetComponent<Image>().sprite = heal;
-                sendindex1 = 1;
+                if (skillindex == sendindex2) {
+                    E.GetComponent<Image>().sprite = Sprites[sendindex1];
+                    sendindex2 = sendindex1;
+                }
+                sendindex1 = skillindex;
+                Q.GetComponent<Image>().sprite = Sprites[sendindex1];
+                skillindex = 0;
             }
-            else
+        }
+        else if (index == 1)
+        {
+                frame2.GetComponent<Image>().sprite = Change;
+                frame1.GetComponent<Image>().sprite = before;
+            if (skillindex != 0)
             {
-                E.GetComponent<Image>().sprite = heal;
-                sendindex2 = 1;
+                if (sendindex1 == skillindex)
+                {
+                    Q.GetComponent<Image>().sprite = Sprites[sendindex2];
+                    sendindex1 = sendindex2;
+                }
+                sendindex2 = skillindex;
+                E.GetComponent<Image>().sprite = Sprites[sendindex2];
+                skillindex = 0;
+            }
+        }
+        
 
-            }
-        }
-        else if (skillindex == 2)
-        {
-            if (skill1)
-            {
-                Q.GetComponent<Image>().sprite = speed;
-                sendindex1 = 2;
-
-            }
-            else
-            {
-                E.GetComponent<Image>().sprite = speed;
-                sendindex2 = 2;
-
-            }
-        }
-        else if (skillindex == 3)
-        {
-            if (skill1)
-            {
-                Q.GetComponent<Image>().sprite = bla;
-                sendindex1 = 3;
-
-            }
-            else
-            {
-                E.GetComponent<Image>().sprite = bla;
-                sendindex2 = 3;
-            }
-        }
-        else if (skillindex == 4)
-        {
-            if (skill1)
-            {
-                Q.GetComponent<Image>().sprite = magic;
-                sendindex1 = 4;
-            }
-            else
-            {
-                E.GetComponent<Image>().sprite = magic;
-                sendindex2 = 4;
-            }
-        }
-        else if (skillindex == 5)
-        {
-            if (skill1)
-            {
-                Q.GetComponent<Image>().sprite = clear;
-                sendindex1 = 5;
-            }
-            else
-            {
-                E.GetComponent<Image>().sprite = clear;
-                sendindex2 = 5;
-            }
-        }
+       
     }
     public void next()
     {
         Data.GetComponent<SkillData>().skillindex1 = sendindex1;
         Data.GetComponent<SkillData>().skillindex2 = sendindex2;
         SceneManager.LoadScene("GameScene");
+    }
+
+    /*Changeskillinexicon(int curerentint)
+    {
+        E.GetComponent<Image>().sprite = Sprites[sendindex2];
+        Q.GetComponent<Image>().sprite = Sprites[sendindex1];
+        
+    }*/
+    public int[] UniqRandom(int RandomNumber, int NeedNumber)
+    {
+        int[] randomskills = new int[NeedNumber];
+        int maxnumber = 0;
+        while (maxnumber < NeedNumber)
+        {
+            int num = Random.Range(1, RandomNumber+ 1);
+            bool isOnList = false;
+            foreach (int i in randomskills)
+            {
+                if (i == num)
+                {
+                    isOnList = true;
+                }
+            }
+            if (!isOnList)
+            {
+                randomskills[maxnumber] = num;
+                maxnumber++;
+            }
+        }
+        for (int i = 0; i < randomskills.Length; i++)
+        {
+            randomskills[i] = randomskills[i] - 1;
+        }
+        return randomskills;
     }
 }

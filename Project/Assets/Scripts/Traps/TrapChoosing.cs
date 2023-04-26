@@ -27,9 +27,31 @@ public class TrapChoosing : MonoBehaviour
     public GameObject Data;
     public float totaltime = 10.0f;
     public Text time;
+    private Sprite[] Sprites;
+    public int buttonindex = -1;
+    private GameObject frame1;
+    private GameObject frame2;
     void Start()
     {
         before = Q.GetComponent<Image>().sprite;
+        Sprite[] list = { before, heal, speed, bla, magic, clear, Change };
+        Sprites = list;
+        int[] randomskills = UniqRandom(7, 5);
+        GameObject allskill = GameObject.Find("ASkillList");
+        for (int i = 0; i < allskill.transform.childCount; i++)
+        {
+            allskill.transform.GetChild(i).gameObject.SetActive(false);
+        }
+        foreach (int i in randomskills)
+        {
+            allskill.transform.GetChild(i).gameObject.SetActive(true);
+        }
+        sendindex1 = 0;
+        sendindex2 = 0;
+        frame1 = Q.gameObject.transform.GetChild(0).gameObject;
+        frame2 = E.gameObject.transform.GetChild(0).gameObject;
+        frame1.GetComponent<Image>().sprite = before;
+        frame2.GetComponent<Image>().sprite = before;
 
     }
     public void chooseskill(int index)
@@ -203,5 +225,32 @@ public class TrapChoosing : MonoBehaviour
         Data.GetComponent<TrapData>().skillindex2 = sendindex2;
         Data.GetComponent<TrapData>().skillindex3= sendindex3;
         SceneManager.LoadScene("GameScene");
+    }
+    public int[] UniqRandom(int RandomNumber, int NeedNumber)
+    {
+        int[] randomskills = new int[NeedNumber];
+        int maxnumber = 0;
+        while (maxnumber < NeedNumber)
+        {
+            int num = Random.Range(1, RandomNumber + 1);
+            bool isOnList = false;
+            foreach (int i in randomskills)
+            {
+                if (i == num)
+                {
+                    isOnList = true;
+                }
+            }
+            if (!isOnList)
+            {
+                randomskills[maxnumber] = num;
+                maxnumber++;
+            }
+        }
+        for (int i = 0; i < randomskills.Length; i++)
+        {
+            randomskills[i] = randomskills[i] - 1;
+        }
+        return randomskills;
     }
 }

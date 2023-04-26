@@ -48,6 +48,6 @@ public class PlayerHealth : MonoBehaviour
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        //Debug.Log(currentHealth + "/" + maxHealth);
+        Debug.Log(currentHealth + "/" + maxHealth);
     }
 }

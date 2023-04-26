@@ -2552,7 +2552,7 @@ GameObject:
   - component: {fileID: 364981252}
   - component: {fileID: 364981251}
   - component: {fileID: 364981250}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Mushroom (1)
   m_TagString: Mushroom
   m_Icon: {fileID: 0}
@@ -26524,7 +26524,7 @@ GameObject:
   - component: {fileID: 609120039}
   - component: {fileID: 609120038}
   - component: {fileID: 609120037}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Flying Eye (1)
   m_TagString: FlyingEye
   m_Icon: {fileID: 0}
@@ -36487,7 +36487,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1099059533}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -116.7, y: 102.5, z: -9.037676}
+  m_LocalPosition: {x: -117.6, y: 101.8, z: -9.037676}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1204039765}
@@ -36903,6 +36903,15 @@ MonoBehaviour:
   health: 200
   damage: 10
   sight: 100
+  boss: {fileID: 0}
+  startSkill: 0
+  skillRate1: 0
+  Skill1: {fileID: 0}
+  Skill21: {fileID: 0}
+  Skill22: {fileID: 0}
+  Skill23: {fileID: 0}
+  Skill24: {fileID: 0}
+  Skill3: {fileID: 0}
 --- !u!50 &1363895545
 Rigidbody2D:
   serializedVersion: 4
@@ -38700,7 +38709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ad93f1489568944b7302e2e0e286cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newpos: {x: -121.2, y: 133.9, z: 0}
+  newpos: {x: -120, y: 135, z: 0}
 --- !u!61 &1647714510
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38735,7 +38744,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647714508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -124.02, y: 105.48, z: -21.17421}
+  m_LocalPosition: {x: -123.7, y: 105.48, z: -21.17421}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -38776,7 +38785,7 @@ GameObject:
   - component: {fileID: 1729727739}
   - component: {fileID: 1729727738}
   - component: {fileID: 1729727737}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Seleton (1)
   m_TagString: Seleton
   m_Icon: {fileID: 0}

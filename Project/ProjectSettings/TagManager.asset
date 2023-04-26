@@ -8,19 +8,14 @@ TagManager:
   - Bullet
   - Grids
   - InitialBlocks
-<<<<<<< HEAD
-<<<<<<< HEAD
+  - Status
+  - Skill
+  - Traps
+  - TrapData
+  - SkillData
   - Mushroom
   - BOSS
   - FlyingEye
-=======
-  - FlyingEye
-  - Mushroom
->>>>>>> reyes2
-=======
-  - FlyingEye
-  - Mushroom
->>>>>>> reyes2
   - Seleton
   layers:
   - Default
@@ -29,7 +24,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Enemey
+  - Enemy
   - 
   - 
   - 

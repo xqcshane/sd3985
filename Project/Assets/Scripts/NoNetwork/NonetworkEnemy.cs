@@ -31,6 +31,85 @@ public class NonetworkEnemy : MonoBehaviour
         {
             StartCoroutine(MyCoroutine());
         }
+        distance = Vector2.Distance(transform.position, player.transform.position);
+        Vector2 direction = player.transform.position - transform.position;
+        direction.Normalize();
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        if (enterpassage == true)
+        {
+            animator.SetBool("run_right", false);
+            animator.SetBool("run_left", false);
+            animator.SetBool("outOfSight", true);
+            if (transform.position.x > player.transform.position.x && faceright)
+            {
+                animator.SetBool("run_right", true);
+                Flip();
+            }
+            else if (transform.position.x < player.transform.position.x && !faceright)
+            {
+                animator.SetBool("run_left", true);
+                Flip();
+            }
+        }
+        else if (enterpassage == false)
+        {
+            if (canMove)
+            {
+
+                if (distance < sight)
+                {
+
+                    animator.SetBool("outOfSight", false);
+                    if (health > 0)
+                    {
+
+                        transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+                        if (transform.position.x > player.transform.position.x)
+                        {
+                            animator.SetBool("run_right", true);
+                        }
+                        else if (transform.position.x < player.transform.position.x)
+                        {
+                            animator.SetBool("run_left", true);
+
+                        }
+                        if (transform.position.x > player.transform.position.x && faceright)
+                        {
+                            
+                            Flip();
+                          
+                           
+                        }
+                        else if (transform.position.x < player.transform.position.x && !faceright)
+                        {
+                            
+                            Flip();
+                            
+                       
+                        }
+
+                      
+                    }
+
+                    //transform.rotation = Quaternion.Euler(Vector3.forward * angle);
+                }
+                else if(distance > sight) 
+                {
+
+                    animator.SetBool("run_right", false);
+                    animator.SetBool("run_left", false);
+                    animator.SetBool("outOfSight", true);
+                   /* if (transform.position.x > player.transform.position.x && faceright)
+                    {
+                        Flip();
+                    }
+                    else if (transform.position.x < player.transform.position.x && !faceright)
+                    {
+                        Flip();
+                    }*/
+                }
+            }
+        }
     }
     
     private IEnumerator MyCoroutine()
@@ -45,51 +124,7 @@ public class NonetworkEnemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        distance = Vector2.Distance(transform.position, player.transform.position);
-        Vector2 direction = player.transform.position - transform.position;
-        direction.Normalize();
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        if (enterpassage == true)
-        {
-            animator.SetBool("run_right", false);
-            animator.SetBool("run_left", false);
-            animator.SetBool("outOfSight", true);
-        }
-        else if (enterpassage == false)
-        {
-            if (canMove)
-            {
-                if (distance < sight)
-                {
-
-                    animator.SetBool("outOfSight", false);
-                    if (System.Math.Abs(transform.position.x - player.transform.position.x) > 2 && health > 0)
-                    {
-
-                        transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-
-                        if (transform.position.x > player.transform.position.x && faceright)
-                        {
-                            animator.SetBool("run_right", true);
-                            Flip();
-                        }
-                        else if (transform.position.x < player.transform.position.x && !faceright)
-                        {
-                            animator.SetBool("run_left", true);
-                            Flip();
-                        }
-                    }
-
-                    //transform.rotation = Quaternion.Euler(Vector3.forward * angle);
-                }
-                else
-                {
-                    animator.SetBool("run_right", false);
-                    animator.SetBool("run_left", false);
-                    animator.SetBool("outOfSight", true);
-                }
-            }
-        }
+       
     }
     void Flip()
     {
@@ -120,7 +155,7 @@ public class NonetworkEnemy : MonoBehaviour
 
     private IEnumerator MyCoroutine3()
     {
-        Debug.Log("globin attack");
+        //Debug.Log("globin attack");
         animator.Play("globin_attack");
         canMove = false;
         yield return new WaitForSeconds(1f);

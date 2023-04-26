@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class TestGridInitial : MonoBehaviour
 {
-    public GridsController myGridsController;
+    public GameObject[] myGridsController;
     // Start is called before the first frame update
     void Start()
     {
-        myGridsController.initialGrid();
+        myGridsController = GameObject.FindGameObjectsWithTag("Grids");
+        foreach(GameObject x in myGridsController)
+        {
+            x.GetComponent<GridsController>().initialGrid();
+        }
+            
     }
 
     // Update is called once per frame
