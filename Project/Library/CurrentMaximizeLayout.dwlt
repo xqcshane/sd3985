@@ -20,6 +20,7 @@ MonoBehaviour:
     x: 0
     y: 30
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1536
     height: 723
   m_MinSize: {x: 678, y: 471}
@@ -34,6 +35,14 @@ MonoBehaviour:
   vertical: 0
   controlID: 17213
 >>>>>>> origin/reyes2
+=======
+    width: 1549
+    height: 730
+  m_MinSize: {x: 680, y: 342}
+  m_MaxSize: {x: 12005, y: 8042}
+  vertical: 0
+  controlID: 17213
+>>>>>>> reyes2
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -57,12 +66,17 @@ MonoBehaviour:
     x: 370.47897
     y: 19
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 724.4
     height: 413.4
 =======
     width: 781.32764
     height: 378.32773
 >>>>>>> origin/reyes2
+=======
+    width: 781.32764
+    height: 378.32773
+>>>>>>> reyes2
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -71,10 +85,14 @@ MonoBehaviour:
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_TargetSize: {x: 698, y: 392.4}
 =======
   m_TargetSize: {x: 635, y: 357.32773}
 >>>>>>> origin/reyes2
+=======
+  m_TargetSize: {x: 635, y: 357.32773}
+>>>>>>> reyes2
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -90,16 +108,22 @@ MonoBehaviour:
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_HBaseRangeMin: -279.2
     m_HBaseRangeMax: 279.2
     m_VBaseRangeMin: -156.96
     m_VBaseRangeMax: 156.96
 =======
+=======
+>>>>>>> reyes2
     m_HBaseRangeMin: -256.13443
     m_HBaseRangeMax: 256.13443
     m_VBaseRangeMin: -144.13219
     m_VBaseRangeMax: 144.13219
+<<<<<<< HEAD
 >>>>>>> origin/reyes2
+=======
+>>>>>>> reyes2
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -118,6 +142,7 @@ MonoBehaviour:
       x: 0
       y: 21
 <<<<<<< HEAD
+<<<<<<< HEAD
       width: 724.4
       height: 392.4
     m_Scale: {x: 1, y: 1}
@@ -128,12 +153,19 @@ MonoBehaviour:
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 390.66382, y: 178.66386}
 >>>>>>> origin/reyes2
+=======
+      width: 781.32764
+      height: 357.32773
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 390.66382, y: 178.66386}
+>>>>>>> reyes2
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
       x: -362.2
       y: -196.2
@@ -151,6 +183,15 @@ MonoBehaviour:
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 968.52075, y: 468.96875}
 >>>>>>> origin/reyes2
+=======
+      x: -390.66382
+      y: -178.66386
+      width: 781.32764
+      height: 357.32773
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 968.52075, y: 468.96875}
+>>>>>>> reyes2
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -176,6 +217,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 994.4
     height: 723
   m_MinSize: {x: 403, y: 471}
@@ -190,6 +232,14 @@ MonoBehaviour:
   vertical: 1
   controlID: 17184
 >>>>>>> origin/reyes2
+=======
+    width: 1152.8066
+    height: 730
+  m_MinSize: {x: 403, y: 342}
+  m_MaxSize: {x: 8003, y: 8042}
+  vertical: 1
+  controlID: 17184
+>>>>>>> reyes2
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -210,6 +260,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 994.4
     height: 434.4
   m_MinSize: {x: 403, y: 221}
@@ -224,6 +275,14 @@ MonoBehaviour:
   vertical: 0
   controlID: 17185
 >>>>>>> origin/reyes2
+=======
+    width: 1152.8066
+    height: 399.32773
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
+  vertical: 0
+  controlID: 17185
+>>>>>>> reyes2
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -242,12 +301,17 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 268
     height: 434.4
 =======
     width: 369.47897
     height: 399.32773
 >>>>>>> origin/reyes2
+=======
+    width: 369.47897
+    height: 399.32773
+>>>>>>> reyes2
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
@@ -277,6 +341,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 73.6
     width: 267
     height: 413.4
@@ -285,6 +350,11 @@ MonoBehaviour:
     width: 368.47897
     height: 378.32773
 >>>>>>> origin/reyes2
+=======
+    y: 72.60504
+    width: 368.47897
+    height: 378.32773
+>>>>>>> reyes2
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
@@ -292,10 +362,14 @@ MonoBehaviour:
       m_SelectedIDs: 
       m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_ExpandedIDs: 28f7ffffc2f9ffff1efaffff40faffff04fbffff
 =======
       m_ExpandedIDs: 00f9ffff48faffff3efbffff
 >>>>>>> origin/reyes2
+=======
+      m_ExpandedIDs: 00f9ffff48faffff3efbffff
+>>>>>>> reyes2
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -337,12 +411,17 @@ MonoBehaviour:
     x: 369.47897
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 726.4
     height: 434.4
 =======
     width: 783.32764
     height: 399.32773
 >>>>>>> origin/reyes2
+=======
+    width: 783.32764
+    height: 399.32773
+>>>>>>> reyes2
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 2}
@@ -373,16 +452,22 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 268
     y: 73.6
     width: 724.4
     height: 413.4
 =======
+=======
+>>>>>>> reyes2
     x: 369.47897
     y: 72.60504
     width: 781.32764
     height: 378.32773
+<<<<<<< HEAD
 >>>>>>> origin/reyes2
+=======
+>>>>>>> reyes2
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
@@ -396,6 +481,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -115.65808, y: 106.27737, z: -40.29011}
     speed: 2
     m_Value: {x: -115.65808, y: 106.27737, z: -40.29011}
@@ -404,6 +490,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -94.21662, y: 100.965065, z: -1.8381878}
 >>>>>>> origin/reyes2
+=======
+    m_Target: {x: -94.21662, y: 100.965065, z: -1.8381878}
+    speed: 2
+    m_Value: {x: -94.21662, y: 100.965065, z: -1.8381878}
+>>>>>>> reyes2
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -455,6 +546,7 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 11.01824
     speed: 2
     m_Value: 11.01824
@@ -463,6 +555,11 @@ MonoBehaviour:
     speed: 2
     m_Value: 3.5693364
 >>>>>>> origin/reyes2
+=======
+    m_Target: 3.5693364
+    speed: 2
+    m_Value: 3.5693364
+>>>>>>> reyes2
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -633,6 +730,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 434.4
     width: 994.4
     height: 288.6
@@ -640,13 +738,18 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 10}
 =======
+=======
+>>>>>>> reyes2
     y: 399.32773
     width: 1152.8066
     height: 330.67227
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 12}
+<<<<<<< HEAD
 >>>>>>> origin/reyes2
+=======
+>>>>>>> reyes2
   m_Panes:
   - {fileID: 11}
   - {fileID: 12}
@@ -675,6 +778,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 508
     width: 993.4
     height: 267.6
@@ -683,6 +787,11 @@ MonoBehaviour:
     width: 1151.8066
     height: 309.67227
 >>>>>>> origin/reyes2
+=======
+    y: 471.93274
+    width: 1151.8066
+    height: 309.67227
+>>>>>>> reyes2
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -710,16 +819,22 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 612}
     m_SelectedIDs: 6c4c0000
     m_LastClickedID: 19564
     m_ExpandedIDs: 00000000004c0000024c0000044c0000064c0000084c00000a4c00000c4c00000e4c0000104c0000124c0000144c0000244c000000ca9a3b
 =======
+=======
+>>>>>>> reyes2
     scrollPos: {x: 0, y: 430.32773}
     m_SelectedIDs: 42560000
     m_LastClickedID: 22082
     m_ExpandedIDs: 00000000c0550000c2550000c4550000c6550000c8550000ca550000cc550000ce550000d0550000d455000016560000e668000000ca9a3b
+<<<<<<< HEAD
 >>>>>>> origin/reyes2
+=======
+>>>>>>> reyes2
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -748,10 +863,14 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000004c0000024c0000044c0000064c0000084c00000a4c00000c4c00000e4c0000104c0000124c0000144c0000244c000000ca9a3b
 =======
     m_ExpandedIDs: 00000000c0550000c2550000c4550000c6550000c8550000ca550000cc550000ce550000d0550000d455000016560000e668000000ca9a3b
 >>>>>>> origin/reyes2
+=======
+    m_ExpandedIDs: 00000000c0550000c2550000c4550000c6550000c8550000ca550000cc550000ce550000d0550000d455000016560000e668000000ca9a3b
+>>>>>>> reyes2
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -777,16 +896,22 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedInstanceIDs: c44f0000
     m_LastClickedInstanceID: 20420
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000a2460000a046000090460000a44600006e8b0000dc4d00000000000038b40000e6d200007cb50000d6e900004ee50000a0e90000
 =======
+=======
+>>>>>>> reyes2
     m_SelectedInstanceIDs: f6f7ffff
     m_LastClickedInstanceID: -2058
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000a2460000a046000090460000a44600006e8b0000dc4d000038b40000e6d200007cb50000d6e900004ee50000a0e900000000000062ae00009e5900007c830000
+<<<<<<< HEAD
 >>>>>>> origin/reyes2
+=======
+>>>>>>> reyes2
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -836,6 +961,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 507.2
     width: 993
     height: 268
@@ -844,6 +970,11 @@ MonoBehaviour:
     width: 1151.8066
     height: 309.67227
 >>>>>>> origin/reyes2
+=======
+    y: 471.93274
+    width: 1151.8066
+    height: 309.67227
+>>>>>>> reyes2
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &13
 MonoBehaviour:
@@ -873,12 +1004,17 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LastSelectedObjectID: 20392
 --- !u!114 &13
 =======
   m_LastSelectedObjectID: -2058
 --- !u!114 &14
 >>>>>>> origin/reyes2
+=======
+  m_LastSelectedObjectID: -2058
+--- !u!114 &14
+>>>>>>> reyes2
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -894,6 +1030,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 994.4
     y: 0
     width: 541.6
@@ -904,12 +1041,19 @@ MonoBehaviour:
 =======
     x: 1152.8066
     y: 0
+=======
+    x: 1152.8066
+    y: 0
+>>>>>>> reyes2
     width: 396.19336
     height: 730
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
+<<<<<<< HEAD
 >>>>>>> origin/reyes2
+=======
+>>>>>>> reyes2
   m_Panes:
   - {fileID: 15}
   - {fileID: 16}
@@ -936,16 +1080,22 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 994.4
     y: 73.6
     width: 540.6
     height: 702
 =======
+=======
+>>>>>>> reyes2
     x: 1152.8066
     y: 72.60504
     width: 394.19336
     height: 709
+<<<<<<< HEAD
 >>>>>>> origin/reyes2
+=======
+>>>>>>> reyes2
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
@@ -954,9 +1104,12 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LastInspectedObjectInstanceID: 20420
   m_LastVerticalScrollValue: 36.799988
 =======
+=======
+>>>>>>> reyes2
   m_LastInspectedObjectInstanceID: -45566
   m_LastVerticalScrollValue: 0
 >>>>>>> origin/reyes2

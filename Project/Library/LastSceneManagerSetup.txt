@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/TestingScene.unity
+=======
+- path: Assets/Scenes/GGGGG.unity
+>>>>>>> reyes2
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -8,9 +8,14 @@ TagManager:
   - Bullet
   - Grids
   - InitialBlocks
+<<<<<<< HEAD
   - Mushroom
   - BOSS
   - FlyingEye
+=======
+  - FlyingEye
+  - Mushroom
+>>>>>>> reyes2
   - Seleton
   layers:
   - Default

@@ -63,8 +63,7 @@ public class NonetworkEnemy : MonoBehaviour
                 {
 
                     animator.SetBool("outOfSight", false);
-                    //System.Math.Abs(transform.position.x - player.transform.position.x) > 2 &&
-                    if (health > 0)
+                    if (System.Math.Abs(transform.position.x - player.transform.position.x) > 2 && health > 0)
                     {
 
                         transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
@@ -92,7 +91,7 @@ public class NonetworkEnemy : MonoBehaviour
             }
         }
     }
-    public void Flip()
+    void Flip()
     {
         Vector3 currentScale = gameObject.transform.localScale;
         currentScale.x *= -1;
@@ -121,7 +120,7 @@ public class NonetworkEnemy : MonoBehaviour
 
     private IEnumerator MyCoroutine3()
     {
-        //Debug.Log("globin attack");
+        Debug.Log("globin attack");
         animator.Play("globin_attack");
         canMove = false;
         yield return new WaitForSeconds(1f);
