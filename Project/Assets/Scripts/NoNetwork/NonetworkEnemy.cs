@@ -121,7 +121,7 @@ public class NonetworkEnemy : MonoBehaviour
 
     private IEnumerator MyCoroutine3()
     {
-        Debug.Log("globin attack");
+        //Debug.Log("globin attack");
         animator.Play("globin_attack");
         canMove = false;
         yield return new WaitForSeconds(1f);

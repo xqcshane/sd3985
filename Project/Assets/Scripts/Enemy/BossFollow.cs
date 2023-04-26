@@ -11,7 +11,6 @@ public class BossFollow : MonoBehaviour
     public int damage;
     public float sight;
     bool faceright = true;
-
     // Start is called before the first frame update
     void Start()
     {

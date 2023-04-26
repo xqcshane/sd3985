@@ -5,26 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - BOSS
-  - Controller
-  - Skill
-  - SkillData
-  - SightMask
-  - Wall
-  - Traps
-  - TrapData
-  - Status
-  - Grids
-  - TrapController
-  - Result
-  - InitialBlocks
-  - FlyingEye
-  - Mushroom
-  - Seleton
-<<<<<<< HEAD
   - Bullet
-=======
->>>>>>> origin/reyes2
+  - Grids
+  - InitialBlocks
+  - Mushroom
+  - BOSS
+  - FlyingEye
+  - Seleton
   layers:
   - Default
   - TransparentFX
@@ -32,8 +19,8 @@ TagManager:
   - 
   - Water
   - UI
-  - Map
-  - Enemy
+  - Enemey
+  - 
   - 
   - 
   - 
@@ -61,10 +48,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 1946767399
-    locked: 0
-  - name: Player
-    uniqueID: 4069761079
     locked: 0
