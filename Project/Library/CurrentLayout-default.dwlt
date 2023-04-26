@@ -20,9 +20,12 @@ MonoBehaviour:
     height: 780.10077
   m_ShowMode: 4
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Title: Inspector
   m_RootView: {fileID: 6}
 =======
+=======
+>>>>>>> reyes2
   m_Title: Scene
   m_RootView: {fileID: 2}
 >>>>>>> reyes2
@@ -97,6 +100,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 268.8
     height: 352.8
   m_MinSize: {x: 201, y: 221}
@@ -153,6 +157,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+=======
+>>>>>>> reyes2
     width: 1549
     height: 780
   m_MinSize: {x: 875, y: 300}
@@ -184,8 +190,13 @@ MonoBehaviour:
   m_MaxSize: {x: 0, y: 0}
   m_LoadedToolbars:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 19}
   m_MainToolbar: {fileID: 19}
+=======
+  - {fileID: 21}
+  m_MainToolbar: {fileID: 21}
+>>>>>>> reyes2
 =======
   - {fileID: 21}
   m_MainToolbar: {fileID: 21}
@@ -334,6 +345,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
     y: 0
     width: 1090.4
@@ -345,6 +357,10 @@ MonoBehaviour:
 =======
     x: 246.85713
     y: 0
+=======
+    x: 246.85713
+    y: 0
+>>>>>>> reyes2
     width: 855.9328
     height: 459.0252
   m_MinSize: {x: 202, y: 221}
@@ -372,6 +388,9 @@ MonoBehaviour:
 =======
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: ProjectBrowser
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
   m_EditorClassIdentifier: 
   m_Children:
@@ -381,6 +400,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 0
     width: 1090.4
     height: 352.8
@@ -389,6 +409,8 @@ MonoBehaviour:
   vertical: 0
   controlID: 67
 =======
+=======
+>>>>>>> reyes2
     y: 459.0252
     width: 1102.7899
     height: 270.9748
@@ -401,6 +423,9 @@ MonoBehaviour:
   - {fileID: 18}
   m_Selected: 0
   m_LastSelected: 1
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 --- !u!114 &11
 MonoBehaviour:
@@ -418,6 +443,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 268.8
     y: 0
     width: 821.60004
@@ -434,6 +460,10 @@ MonoBehaviour:
 =======
     x: 1102.7899
     y: 0
+=======
+    x: 1102.7899
+    y: 0
+>>>>>>> reyes2
     width: 446.21008
     height: 730
   m_MinSize: {x: 275, y: 50}
@@ -444,6 +474,9 @@ MonoBehaviour:
   - {fileID: 20}
   m_Selected: 0
   m_LastSelected: 0
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 --- !u!114 &12
 MonoBehaviour:
@@ -456,7 +489,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> reyes2
   m_Name: 
   m_EditorClassIdentifier: 
   m_MinSize: {x: 100, y: 100}
@@ -632,6 +668,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 268.80002
     y: 73.6
     width: 819.60004
@@ -675,6 +712,8 @@ MonoBehaviour:
     m_SelectedLayerIndex: 0
 --- !u!114 &13
 =======
+=======
+>>>>>>> reyes2
     x: 246.85713
     y: 72.60504
     width: 853.9328
@@ -745,6 +784,7 @@ MonoBehaviour:
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
 --- !u!114 &14
+<<<<<<< HEAD
 >>>>>>> reyes2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -920,6 +960,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
 --- !u!114 &15
+=======
+>>>>>>> reyes2
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -941,6 +983,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 73.6
     width: 267.8
     height: 331.8
@@ -952,6 +995,8 @@ MonoBehaviour:
       m_LastClickedID: 62434
       m_ExpandedIDs: d690ffff9291ffff8692ffff8293ffff
 =======
+=======
+>>>>>>> reyes2
     y: 72.60504
     width: 245.85713
     height: 438.0252
@@ -962,6 +1007,9 @@ MonoBehaviour:
       m_SelectedIDs: d63fffff
       m_LastClickedID: -49194
       m_ExpandedIDs: 64bcffff66bcffffb6bcffffeac4ffff12c5fffff4c7ffff08c8ffff4ec9ffff94caffffdacbffff20cdffff66ceffffaccffffff2d0ffff48d2ffffe2d3ffff14d4ffffded6fffff2d6ffff2adaffff44daffff20dcffffa6eaffffccf3ffffecf5ffff6ef7ffff22faffff36faffff3efbffff485b0000546b00008c6c0000d2de0000d8de0000b0070100dc1401005a18010020210100
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -987,7 +1035,11 @@ MonoBehaviour:
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &16
+=======
+--- !u!114 &15
+>>>>>>> reyes2
 =======
 --- !u!114 &15
 >>>>>>> reyes2
@@ -1011,15 +1063,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 268.80002
     y: 73.6
     width: 819.60004
     height: 331.8
 =======
+=======
+>>>>>>> reyes2
     x: 246.85713
     y: 72.60504
     width: 853.9328
     height: 438.0252
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
@@ -1034,9 +1092,15 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -104.89575, y: 102.99825, z: -0.8666518}
     speed: 2
     m_Value: {x: -104.89575, y: 102.99825, z: -0.8666518}
+=======
+    m_Target: {x: 557.3659, y: 117.788536, z: -17.618813}
+    speed: 2
+    m_Value: {x: 557.3659, y: 117.788536, z: -17.618813}
+>>>>>>> reyes2
 =======
     m_Target: {x: 557.3659, y: 117.788536, z: -17.618813}
     speed: 2
@@ -1093,9 +1157,15 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 7.168684
     speed: 2
     m_Value: 7.168684
+=======
+    m_Target: 22.8191
+    speed: 2
+    m_Value: 22.8191
+>>>>>>> reyes2
 =======
     m_Target: 22.8191
     speed: 2
@@ -1126,7 +1196,11 @@ MonoBehaviour:
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &17
+=======
+--- !u!114 &16
+>>>>>>> reyes2
 =======
 --- !u!114 &16
 >>>>>>> reyes2
@@ -1339,6 +1413,9 @@ MonoBehaviour:
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
 --- !u!114 &17
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1361,6 +1438,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 426.4
     width: 1089.4
     height: 349.2
@@ -1372,6 +1450,12 @@ MonoBehaviour:
     width: 1150
     height: 325
   m_ViewDataDictionary: {fileID: 0}
+=======
+    y: 456.605
+    width: 1150
+    height: 325
+  m_ViewDataDictionary: {fileID: 0}
+>>>>>>> reyes2
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52

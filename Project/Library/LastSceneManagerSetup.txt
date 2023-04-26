@@ -1,6 +1,10 @@
 sceneSetups:
 <<<<<<< HEAD
+<<<<<<< HEAD
 - path: Assets/Scenes/TestingScene.unity
+=======
+- path: Assets/Scenes/GGGGG.unity
+>>>>>>> reyes2
 =======
 - path: Assets/Scenes/GGGGG.unity
 >>>>>>> reyes2

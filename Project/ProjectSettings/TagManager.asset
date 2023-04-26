@@ -9,9 +9,14 @@ TagManager:
   - Grids
   - InitialBlocks
 <<<<<<< HEAD
+<<<<<<< HEAD
   - Mushroom
   - BOSS
   - FlyingEye
+=======
+  - FlyingEye
+  - Mushroom
+>>>>>>> reyes2
 =======
   - FlyingEye
   - Mushroom

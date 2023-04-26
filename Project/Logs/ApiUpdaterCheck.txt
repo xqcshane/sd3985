@@ -806,6 +806,7 @@ console write time    : 0ms
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [api-updater (non-obsolete-error-filter)] 2023/4/25 21:28:53 : Starting C:/Program Files/Unity/Hub/Editor/2020.3.24f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
 [api-updater (non-obsolete-error-filter)] Exception caught while loading types from D:\uproject\sd3985\Project\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll (some types may not be loaded)
 	Exception of type 'System.Reflection.ReflectionTypeLoadException' was thrown.
@@ -855,6 +856,8 @@ candidates parse time : 0ms
 C# parse time         : 259ms
 candidates check time : 41ms
 =======
+=======
+>>>>>>> reyes2
 [api-updater (non-obsolete-error-filter)] 2023/4/26 1:12:24 : Starting C:/Program Files/Unity/Hub/Editor/2020.3.24f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
 [api-updater (non-obsolete-error-filter)] 
 ----------------------------------
@@ -863,6 +866,9 @@ moved types parse time: 46ms
 candidates parse time : 1ms
 C# parse time         : 254ms
 candidates check time : 27ms
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 console write time    : 0ms
 

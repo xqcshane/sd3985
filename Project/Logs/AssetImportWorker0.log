@@ -16,6 +16,7 @@ D:/GitHub_Unity/sd3985/Project
 Logs/AssetImportWorker0.log
 -srvPort
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:Project/Logs/AssetImportWorker0.log
 55403
 Successfully changed project path to: D:/uproject/sd3985/Project
@@ -30,11 +31,16 @@ Using Asset Import Pipeline V2.
 Refreshing native plugins compatible for Editor in 156.28 ms, found 2 plugins.
 >>>>>>>> reyes2:Project/Logs/AssetImportWorker0-prev.log
 =======
+=======
+>>>>>>> reyes2
 58697
 Successfully changed project path to: D:/GitHub_Unity/sd3985/Project
 D:/GitHub_Unity/sd3985/Project
 Using Asset Import Pipeline V2.
 Refreshing native plugins compatible for Editor in 71.06 ms, found 2 plugins.
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.24f1 (79c78de19888)
@@ -52,6 +58,7 @@ Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.24f1/Editor/Data/Manage
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.24f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.24f1/Editor/Data/MonoBleedingEdge/etc'
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:Project/Logs/AssetImportWorker0.log
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56068
 ========
@@ -60,10 +67,14 @@ Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,susp
 =======
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56864
 >>>>>>> reyes2
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56864
+>>>>>>> reyes2
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.24f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.24f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:Project/Logs/AssetImportWorker0.log
 Registered in 0.004340 seconds.
@@ -89,6 +100,8 @@ Domain Reload Profiling:
 		BeginReloadAssembly (2854ms)
 >>>>>>>> reyes2:Project/Logs/AssetImportWorker0-prev.log
 =======
+=======
+>>>>>>> reyes2
 Registered in 0.004822 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
@@ -99,12 +112,16 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (650ms)
 		BeginReloadAssembly (78ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:Project/Logs/AssetImportWorker0.log
 		EndReloadAssembly (367ms)
@@ -138,6 +155,8 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadMethodAttributes (31ms)
 >>>>>>>> reyes2:Project/Logs/AssetImportWorker0-prev.log
 =======
+=======
+>>>>>>> reyes2
 		EndReloadAssembly (486ms)
 			LoadAssemblies (74ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
@@ -152,6 +171,9 @@ Domain Reload Profiling:
 				BeforeProcessingInitializeOnLoad (16ms)
 				ProcessInitializeOnLoadAttributes (77ms)
 				ProcessInitializeOnLoadMethodAttributes (28ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -159,6 +181,7 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:Project/Logs/AssetImportWorker0.log
 Registered in 0.003390 seconds.
@@ -183,6 +206,8 @@ Domain Reload Profiling:
 		BeginReloadAssembly (147ms)
 >>>>>>>> reyes2:Project/Logs/AssetImportWorker0-prev.log
 =======
+=======
+>>>>>>> reyes2
 Registered in 0.003848 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -194,11 +219,15 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1055ms)
 		BeginReloadAssembly (148ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:Project/Logs/AssetImportWorker0.log
 			CreateAndSetChildDomain (17ms)
@@ -220,6 +249,8 @@ Domain Reload Profiling:
 			SetupLoadedEditorAssemblies (973ms)
 >>>>>>>> reyes2:Project/Logs/AssetImportWorker0-prev.log
 =======
+=======
+>>>>>>> reyes2
 			CreateAndSetChildDomain (18ms)
 		EndReloadAssembly (839ms)
 			LoadAssemblies (102ms)
@@ -228,11 +259,15 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (49ms)
 			SetupLoadedEditorAssemblies (306ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:Project/Logs/AssetImportWorker0.log
 				BeforeProcessingInitializeOnLoad (87ms)
@@ -512,6 +547,8 @@ Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2680.
 Total: 3.969400 ms (FindLiveObjects: 0.213800 ms CreateObjectMapping: 0.049400 ms MarkObjects: 3.683600 ms  DeleteObjects: 0.020800 ms)
 >>>>>>>> reyes2:Project/Logs/AssetImportWorker0-prev.log
 =======
+=======
+>>>>>>> reyes2
 				BeforeProcessingInitializeOnLoad (85ms)
 				ProcessInitializeOnLoadAttributes (187ms)
 				ProcessInitializeOnLoadMethodAttributes (14ms)
@@ -531,6 +568,9 @@ System memory in use after: 101.3 MB.
 
 Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 2679.
 Total: 4.129200 ms (FindLiveObjects: 0.318300 ms CreateObjectMapping: 0.098500 ms MarkObjects: 3.606300 ms  DeleteObjects: 0.104200 ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -545,6 +585,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 Received Prepare
 Registering precompiled user dll's ...
@@ -748,6 +789,8 @@ Received Import Request.
 Start importing Assets/Scripts/Boss/Skill3.cs using Guid(ba8e7538c826d60489ce185d20887d78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17ab8df678deb2c4c269b6fbd22c659c') in 0.047440 seconds 
   Import took 0.050996 seconds .
 =======
+=======
+>>>>>>> reyes2
 Received Import Request.
   path: Assets/Scenes/Temp/MMMMMap 1.unity
   artifactKey: Guid(581d68252b38b9f45ac34b9377566f55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -841,11 +884,15 @@ Received Import Request.
   artifactKey: Guid(e5ce0374c206e1b489e8ea5045dd08aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Prefebs/Map/New Palette.prefab using Guid(e5ce0374c206e1b489e8ea5045dd08aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01d9eedd42d353817c6f0b2961e5f527') in 0.479000 seconds 
   Import took 0.483562 seconds .
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< HEAD
 <<<<<<< HEAD
 Registered in 0.003966 seconds.
 Begin MonoManager ReloadAssembly
@@ -859,6 +906,8 @@ Domain Reload Profiling:
 	ReloadAssembly (1026ms)
 		BeginReloadAssembly (148ms)
 =======
+=======
+>>>>>>> reyes2
 Registered in 0.004499 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -870,11 +919,15 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1293ms)
 		BeginReloadAssembly (191ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (7ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 			CreateAndSetChildDomain (43ms)
 		EndReloadAssembly (807ms)
@@ -1607,6 +1660,8 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadMethodAttributes (11ms)
 				AfterProcessingInitializeOnLoad (17ms)
 =======
+=======
+>>>>>>> reyes2
 			CreateAndSetChildDomain (50ms)
 		EndReloadAssembly (1024ms)
 			LoadAssemblies (138ms)
@@ -1623,11 +1678,15 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadAttributes (241ms)
 				ProcessInitializeOnLoadMethodAttributes (17ms)
 				AfterProcessingInitializeOnLoad (24ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
+<<<<<<< HEAD
 <<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 1.40 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -1638,6 +1697,8 @@ System memory in use after: 99.9 MB.
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2731.
 Total: 3.546500 ms (FindLiveObjects: 0.244400 ms CreateObjectMapping: 0.115200 ms MarkObjects: 3.156500 ms  DeleteObjects: 0.029000 ms)
 =======
+=======
+>>>>>>> reyes2
 Refreshing native plugins compatible for Editor in 1.06 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2221 Unused Serialized files (Serialized files now loaded: 0)
@@ -1646,6 +1707,9 @@ System memory in use after: 102.8 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2695.
 Total: 4.738200 ms (FindLiveObjects: 0.292700 ms CreateObjectMapping: 0.076400 ms MarkObjects: 4.331600 ms  DeleteObjects: 0.034400 ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -1662,6 +1726,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< HEAD
 <<<<<<< HEAD
 Registered in 0.003409 seconds.
 Begin MonoManager ReloadAssembly
@@ -1931,12 +1996,16 @@ Registered in 0.003655 seconds.
 =======
 Registered in 0.004995 seconds.
 >>>>>>> reyes2
+=======
+Registered in 0.004995 seconds.
+>>>>>>> reyes2
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:Project/Logs/AssetImportWorker0.log
 - Completed reload, in  0.826 seconds
@@ -1949,15 +2018,21 @@ Domain Reload Profiling:
 	ReloadAssembly (960ms)
 		BeginReloadAssembly (130ms)
 =======
+=======
+>>>>>>> reyes2
 - Completed reload, in  0.952 seconds
 Domain Reload Profiling:
 	ReloadAssembly (952ms)
 		BeginReloadAssembly (118ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 			CreateAndSetChildDomain (32ms)
 		EndReloadAssembly (763ms)
@@ -2147,11 +2222,16 @@ Domain Reload Profiling:
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (258ms)
 =======
+=======
+>>>>>>> reyes2
 			CreateAndSetChildDomain (33ms)
 		EndReloadAssembly (769ms)
 			LoadAssemblies (98ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (271ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (37ms)
@@ -2161,9 +2241,12 @@ Domain Reload Profiling:
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
 				BeforeProcessingInitializeOnLoad (87ms)
 				ProcessInitializeOnLoadAttributes (170ms)
 =======
+=======
+>>>>>>> reyes2
 				BeforeProcessingInitializeOnLoad (80ms)
 				ProcessInitializeOnLoadAttributes (174ms)
 				ProcessInitializeOnLoadMethodAttributes (14ms)
@@ -2224,6 +2307,9 @@ Domain Reload Profiling:
 				RefreshPlugins (1ms)
 				BeforeProcessingInitializeOnLoad (82ms)
 				ProcessInitializeOnLoadAttributes (176ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 				ProcessInitializeOnLoadMethodAttributes (12ms)
 				AfterProcessingInitializeOnLoad (13ms)
@@ -2231,6 +2317,7 @@ Domain Reload Profiling:
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
+<<<<<<< HEAD
 <<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -2241,6 +2328,8 @@ System memory in use after: 99.8 MB.
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2700.
 Total: 3.578600 ms (FindLiveObjects: 0.271000 ms CreateObjectMapping: 0.099900 ms MarkObjects: 3.185300 ms  DeleteObjects: 0.020600 ms)
 =======
+=======
+>>>>>>> reyes2
 Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2221 Unused Serialized files (Serialized files now loaded: 0)
@@ -2365,6 +2454,9 @@ System memory in use after: 102.8 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2707.
 Total: 3.734900 ms (FindLiveObjects: 0.367500 ms CreateObjectMapping: 0.154600 ms MarkObjects: 3.180400 ms  DeleteObjects: 0.029900 ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -2379,6 +2471,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 Received Import Request.
   Time since last request: 24.561118 seconds.
@@ -2442,6 +2535,8 @@ System memory in use after: 99.8 MB.
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2703.
 Total: 3.085600 ms (FindLiveObjects: 0.352300 ms CreateObjectMapping: 0.141200 ms MarkObjects: 2.569500 ms  DeleteObjects: 0.020500 ms)
 =======
+=======
+>>>>>>> reyes2
 Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.004743 seconds.
@@ -2487,6 +2582,9 @@ System memory in use after: 102.9 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2710.
 Total: 3.476900 ms (FindLiveObjects: 0.290900 ms CreateObjectMapping: 0.058300 ms MarkObjects: 3.105300 ms  DeleteObjects: 0.020700 ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -2503,6 +2601,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< HEAD
 <<<<<<< HEAD
 Registered in 0.004423 seconds.
 Begin MonoManager ReloadAssembly
@@ -2667,6 +2766,8 @@ Domain Reload Profiling:
 ========
 				BeforeProcessingInitializeOnLoad (73ms)
 =======
+=======
+>>>>>>> reyes2
 Registered in 0.003849 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -2695,6 +2796,9 @@ Domain Reload Profiling:
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (2ms)
 				BeforeProcessingInitializeOnLoad (81ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 				ProcessInitializeOnLoadAttributes (172ms)
 				ProcessInitializeOnLoadMethodAttributes (11ms)
@@ -2703,6 +2807,7 @@ Domain Reload Profiling:
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
+<<<<<<< HEAD
 <<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 0.76 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -2713,6 +2818,8 @@ System memory in use after: 99.9 MB.
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2712.
 Total: 3.517400 ms (FindLiveObjects: 0.343000 ms CreateObjectMapping: 0.119300 ms MarkObjects: 3.027800 ms  DeleteObjects: 0.024800 ms)
 =======
+=======
+>>>>>>> reyes2
 Refreshing native plugins compatible for Editor in 0.74 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2221 Unused Serialized files (Serialized files now loaded: 0)
@@ -2721,6 +2828,9 @@ System memory in use after: 103.0 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2713.
 Total: 3.008300 ms (FindLiveObjects: 0.230800 ms CreateObjectMapping: 0.051800 ms MarkObjects: 2.702700 ms  DeleteObjects: 0.021000 ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -2737,24 +2847,34 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Import Request.
 <<<<<<< HEAD
+<<<<<<< HEAD
   Time since last request: 331.086534 seconds.
   path: Assets/Scripts/Boss/Skill21.cs
   artifactKey: Guid(84859eea2bba61e4ea045d79759521f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scripts/Boss/Skill21.cs using Guid(84859eea2bba61e4ea045d79759521f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0db8d406dc10e8ab5fef503b7e38653') in 0.014086 seconds 
   Import took 0.018418 seconds .
 =======
+=======
+>>>>>>> reyes2
   Time since last request: 648.698590 seconds.
   path: Assets/Scenes/Temp/MMMMMap 2.unity
   artifactKey: Guid(1e4e90f58662d464f9c4e5bcc0341c26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scenes/Temp/MMMMMap 2.unity using Guid(1e4e90f58662d464f9c4e5bcc0341c26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6779136904f49c75529935b4c85e7b5') in 0.018474 seconds 
   Import took 0.022517 seconds .
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
 <<<<<<< HEAD
+<<<<<<< HEAD
 Registered in 0.003622 seconds.
+=======
+Registered in 0.003788 seconds.
+>>>>>>> reyes2
 =======
 Registered in 0.003788 seconds.
 >>>>>>> reyes2
@@ -2765,9 +2885,15 @@ Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Completed reload, in  0.949 seconds
 Domain Reload Profiling:
 	ReloadAssembly (949ms)
+=======
+- Completed reload, in  0.980 seconds
+Domain Reload Profiling:
+	ReloadAssembly (980ms)
+>>>>>>> reyes2
 =======
 - Completed reload, in  0.980 seconds
 Domain Reload Profiling:
@@ -2778,6 +2904,7 @@ Domain Reload Profiling:
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 			CreateAndSetChildDomain (31ms)
 		EndReloadAssembly (759ms)
@@ -2797,6 +2924,8 @@ Domain Reload Profiling:
 				AfterProcessingInitializeOnLoad (13ms)
 >>>>>>>> reyes2:Project/Logs/AssetImportWorker0-prev.log
 =======
+=======
+>>>>>>> reyes2
 			CreateAndSetChildDomain (33ms)
 		EndReloadAssembly (788ms)
 			LoadAssemblies (101ms)
@@ -2813,11 +2942,15 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadAttributes (173ms)
 				ProcessInitializeOnLoadMethodAttributes (13ms)
 				AfterProcessingInitializeOnLoad (13ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
+<<<<<<< HEAD
 <<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -2836,6 +2969,8 @@ System memory in use after: 99.9 MB.
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2716.
 Total: 3.206600 ms (FindLiveObjects: 0.298700 ms CreateObjectMapping: 0.099500 ms MarkObjects: 2.785100 ms  DeleteObjects: 0.021700 ms)
 =======
+=======
+>>>>>>> reyes2
 Refreshing native plugins compatible for Editor in 0.77 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2221 Unused Serialized files (Serialized files now loaded: 0)
@@ -2844,6 +2979,9 @@ System memory in use after: 103.0 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2716.
 Total: 2.998500 ms (FindLiveObjects: 0.235600 ms CreateObjectMapping: 0.051600 ms MarkObjects: 2.688700 ms  DeleteObjects: 0.021100 ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -2860,12 +2998,15 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Import Request.
 <<<<<<< HEAD
+<<<<<<< HEAD
   Time since last request: 9.557742 seconds.
   path: Assets/Scripts/Boss/Skill22.cs
   artifactKey: Guid(45cd8d47eea583e41a974cd46ae0c8b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scripts/Boss/Skill22.cs using Guid(45cd8d47eea583e41a974cd46ae0c8b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc235da8c18c6dd0639df8a03ed4d048') in 0.009271 seconds 
   Import took 0.012895 seconds .
 =======
+=======
+>>>>>>> reyes2
   Time since last request: 158.287567 seconds.
   path: Assets/Scenes/GameScene 1.unity
   artifactKey: Guid(3ee7eb6877087a6458c0e3c5f7b53c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -2879,14 +3020,20 @@ Received Import Request.
   artifactKey: Guid(3ee7eb6877087a6458c0e3c5f7b53c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scenes/GGGGG.unity using Guid(3ee7eb6877087a6458c0e3c5f7b53c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bc3c70d922b62e57007bca6e7520c13') in 0.006034 seconds 
   Import took 0.009655 seconds .
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
 <<<<<<< HEAD
+<<<<<<< HEAD
 Registered in 0.007371 seconds.
 =======
+=======
+>>>>>>> reyes2
 Registered in 0.003680 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -2946,6 +3093,9 @@ AssetImportParameters requested are different than current active one (requested
 Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.003830 seconds.
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -2953,6 +3103,7 @@ Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.73 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
+<<<<<<< HEAD
 <<<<<<< HEAD
 - Completed reload, in  0.964 seconds
 Domain Reload Profiling:
@@ -2971,6 +3122,8 @@ Domain Reload Profiling:
 			RebuildScriptCaches (37ms)
 			SetupLoadedEditorAssemblies (281ms)
 =======
+=======
+>>>>>>> reyes2
 - Completed reload, in  0.949 seconds
 Domain Reload Profiling:
 	ReloadAssembly (950ms)
@@ -2987,14 +3140,22 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (36ms)
 			SetupLoadedEditorAssemblies (282ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
 				BeforeProcessingInitializeOnLoad (79ms)
 				ProcessInitializeOnLoadAttributes (170ms)
+=======
+				BeforeProcessingInitializeOnLoad (76ms)
+				ProcessInitializeOnLoadAttributes (175ms)
+>>>>>>> reyes2
 =======
 				BeforeProcessingInitializeOnLoad (76ms)
 				ProcessInitializeOnLoadAttributes (175ms)
@@ -3006,6 +3167,7 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 <<<<<<< HEAD
+<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 1.11 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2223 Unused Serialized files (Serialized files now loaded: 0)
@@ -3015,6 +3177,8 @@ System memory in use after: 100.0 MB.
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2720.
 Total: 3.444400 ms (FindLiveObjects: 0.290300 ms CreateObjectMapping: 0.060300 ms MarkObjects: 3.071800 ms  DeleteObjects: 0.020500 ms)
 =======
+=======
+>>>>>>> reyes2
 Refreshing native plugins compatible for Editor in 0.73 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2221 Unused Serialized files (Serialized files now loaded: 0)
@@ -3023,6 +3187,9 @@ System memory in use after: 103.0 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2722.
 Total: 3.288200 ms (FindLiveObjects: 0.253200 ms CreateObjectMapping: 0.061700 ms MarkObjects: 2.950600 ms  DeleteObjects: 0.021300 ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -3037,6 +3204,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 Received Import Request.
   Time since last request: 10.256739 seconds.
@@ -3060,6 +3228,8 @@ Domain Reload Profiling:
 	ReloadAssembly (963ms)
 		BeginReloadAssembly (110ms)
 =======
+=======
+>>>>>>> reyes2
 Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.003570 seconds.
@@ -3131,12 +3301,16 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (929ms)
 		BeginReloadAssembly (115ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (30ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 		EndReloadAssembly (785ms)
 			LoadAssemblies (106ms)
@@ -3145,6 +3319,8 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (37ms)
 =======
+=======
+>>>>>>> reyes2
 		EndReloadAssembly (749ms)
 			LoadAssemblies (94ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
@@ -3441,6 +3617,9 @@ Domain Reload Profiling:
 			SetupTypeCache (260ms)
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (41ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 			SetupLoadedEditorAssemblies (278ms)
 				LogAssemblyErrors (0ms)
@@ -3455,6 +3634,7 @@ Domain Reload Profiling:
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
+<<<<<<< HEAD
 <<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 0.73 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -3671,6 +3851,8 @@ System memory in use after: 100.1 MB.
 Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2733.
 Total: 3.239900 ms (FindLiveObjects: 0.297300 ms CreateObjectMapping: 0.102800 ms MarkObjects: 2.815500 ms  DeleteObjects: 0.022500 ms)
 =======
+=======
+>>>>>>> reyes2
 Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2221 Unused Serialized files (Serialized files now loaded: 0)
@@ -3679,6 +3861,9 @@ System memory in use after: 103.3 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2743.
 Total: 3.181500 ms (FindLiveObjects: 0.326800 ms CreateObjectMapping: 0.056100 ms MarkObjects: 2.775500 ms  DeleteObjects: 0.020700 ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -3695,6 +3880,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< HEAD
 <<<<<<< HEAD
 Registered in 0.003796 seconds.
 Begin MonoManager ReloadAssembly
@@ -4155,6 +4341,8 @@ Domain Reload Profiling:
 	ReloadAssembly (962ms)
 		BeginReloadAssembly (120ms)
 =======
+=======
+>>>>>>> reyes2
 Registered in 0.003570 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -4166,12 +4354,16 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (944ms)
 		BeginReloadAssembly (116ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (30ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 		EndReloadAssembly (775ms)
 			LoadAssemblies (101ms)
@@ -4328,18 +4520,24 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (36ms)
 =======
+=======
+>>>>>>> reyes2
 		EndReloadAssembly (758ms)
 			LoadAssemblies (102ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (260ms)
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (37ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 			SetupLoadedEditorAssemblies (277ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 				BeforeProcessingInitializeOnLoad (76ms)
 				ProcessInitializeOnLoadAttributes (167ms)
@@ -4637,10 +4835,15 @@ Domain Reload Profiling:
 				BeforeProcessingInitializeOnLoad (77ms)
 				ProcessInitializeOnLoadAttributes (169ms)
 >>>>>>> reyes2
+=======
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (169ms)
+>>>>>>> reyes2
 				ProcessInitializeOnLoadMethodAttributes (11ms)
 				AfterProcessingInitializeOnLoad (13ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
@@ -4653,6 +4856,8 @@ System memory in use after: 103.7 MB.
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2823.
 Total: 3.201100 ms (FindLiveObjects: 0.244000 ms CreateObjectMapping: 0.056300 ms MarkObjects: 2.871600 ms  DeleteObjects: 0.027900 ms)
 =======
+=======
+>>>>>>> reyes2
 			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
@@ -4663,6 +4868,9 @@ System memory in use after: 103.3 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2746.
 Total: 2.992900 ms (FindLiveObjects: 0.231300 ms CreateObjectMapping: 0.056900 ms MarkObjects: 2.680700 ms  DeleteObjects: 0.022200 ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -4677,6 +4885,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 Received Import Request.
   Time since last request: 70.317059 seconds.
@@ -4728,6 +4937,8 @@ Domain Reload Profiling:
 			RebuildScriptCaches (37ms)
 			SetupLoadedEditorAssemblies (283ms)
 =======
+=======
+>>>>>>> reyes2
 Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.003607 seconds.
@@ -4753,21 +4964,30 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (38ms)
 			SetupLoadedEditorAssemblies (285ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
 				BeforeProcessingInitializeOnLoad (79ms)
 				ProcessInitializeOnLoadAttributes (174ms)
 				ProcessInitializeOnLoadMethodAttributes (11ms)
 				AfterProcessingInitializeOnLoad (12ms)
 =======
+=======
+>>>>>>> reyes2
 				BeforeProcessingInitializeOnLoad (78ms)
 				ProcessInitializeOnLoadAttributes (175ms)
 				ProcessInitializeOnLoadMethodAttributes (12ms)
 				AfterProcessingInitializeOnLoad (13ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -4776,6 +4996,7 @@ Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 <<<<<<< HEAD
+<<<<<<< HEAD
 Unloading 2220 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 103.5 MB.
 System memory in use after: 103.7 MB.
@@ -4783,12 +5004,17 @@ System memory in use after: 103.7 MB.
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2826.
 Total: 3.397800 ms (FindLiveObjects: 0.273500 ms CreateObjectMapping: 0.093200 ms MarkObjects: 3.010500 ms  DeleteObjects: 0.018700 ms)
 =======
+=======
+>>>>>>> reyes2
 Unloading 2221 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 103.1 MB.
 System memory in use after: 103.3 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2749.
 Total: 3.871500 ms (FindLiveObjects: 0.311000 ms CreateObjectMapping: 0.105400 ms MarkObjects: 3.430900 ms  DeleteObjects: 0.021900 ms)
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -4803,6 +5029,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 Received Import Request.
   Time since last request: 271.058899 seconds.
@@ -4892,6 +5119,8 @@ Start importing Assets/GUI/OArielG/2DSimpleUIPack/Sprites/ui-small-buttons.png u
   Import took 0.022684 seconds .
 
 =======
+=======
+>>>>>>> reyes2
 Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.003618 seconds.
@@ -5239,5 +5468,8 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+<<<<<<< HEAD
+>>>>>>> reyes2
+=======
 >>>>>>> reyes2
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
