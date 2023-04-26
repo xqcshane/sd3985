@@ -16,11 +16,12 @@ public class BossFollow : MonoBehaviour
     public Animator boss;
     private int skillNumber = 0;
 
-    float startSkill = 3f;
-    public float skillRate1 = 10f;
-    public Animator Skill1;
+    public float startSkill;
+    public float skillRate1;
     bool doSkilling1 = false;
 
+    public GameObject Skill1;
+    
     public GameObject Skill21;
     public GameObject Skill22;
     public GameObject Skill23;
@@ -39,11 +40,12 @@ public class BossFollow : MonoBehaviour
         {
             if (skillNumber == 0)
             {
+                Skill1.SetActive(true);
                 canMove = false;
                 doSkilling1 = true;
                 startSkill = Time.time + skillRate1;
-                Skill1.enabled = true;
-                Skill1.Play("BossAttack1");
+
+                Skill1.GetComponent<Animator>().Play("BossAttack1");
                 StartCoroutine(MyCoroutine1());
             }
             if (skillNumber == 1)
@@ -81,7 +83,7 @@ public class BossFollow : MonoBehaviour
         yield return new WaitForSeconds(2.36666666667f);
         canMove = true;
         doSkilling1 = false;
-        Skill1.enabled = false;
+        Skill1.SetActive(false);
         //Skill1.enabled = false;
         skillNumber = 1;
         yield return null;
