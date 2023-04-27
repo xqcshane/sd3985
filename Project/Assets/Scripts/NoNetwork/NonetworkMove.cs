@@ -13,9 +13,14 @@ public class NonetworkMove : MonoBehaviour
     public bool slower;
     public float originalSpeed;
     public bool inpassage=false;
+    public bool NotHit;
 
     public Animator animator;
 
+    private void Start()
+    {
+        NotHit = true;
+    }
     private void FixedUpdate()
     {
         if (canMove)
@@ -27,25 +32,30 @@ public class NonetworkMove : MonoBehaviour
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");
 
-            
-            if (horizontal > 0)
+            if (NotHit)
             {
-                animator.Play("Adventurer_right");
-            }else if(horizontal < 0)
-            {
-                animator.Play("Adventurer_left");
-            }else if(vertical > 0)
-            {
-                animator.Play("Adventurer_right");
+                if (horizontal > 0)
+                {
+                    animator.Play("Adventurer_right");
+                }
+                else if (horizontal < 0)
+                {
+                    animator.Play("Adventurer_left");
+                }
+                else if (vertical > 0)
+                {
+                    animator.Play("Adventurer_right");
+                }
+                else if (vertical < 0)
+                {
+                    animator.Play("Adventurer_right");
+                }
+                else
+                {
+                    animator.Play("Real_adventurer");
+                }
             }
-            else if (vertical < 0)
-            {
-                animator.Play("Adventurer_right");
-            }
-            else
-            {
-                animator.Play("Real_adventurer");
-            }
+
 
             Vector2 position = transform.position;
             position.x = position.x + speed * horizontal;

@@ -2728,7 +2728,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &518839039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26530,7 +26530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &609120037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36414,6 +36414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeInvincible: 1
   maxHealth: 40
+  animator: {fileID: 0}
 --- !u!114 &1099059536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36431,6 +36432,7 @@ MonoBehaviour:
   slower: 0
   originalSpeed: 1
   inpassage: 0
+  NotHit: 0
   animator: {fileID: 1204039763}
 --- !u!61 &1099059537
 BoxCollider2D:
@@ -36901,7 +36903,6 @@ MonoBehaviour:
   player: {fileID: 1099059533}
   speed: 20
   health: 200
-  damage: 10
   sight: 100
   boss: {fileID: 0}
   startSkill: 0
@@ -36912,6 +36913,13 @@ MonoBehaviour:
   Skill23: {fileID: 0}
   Skill24: {fileID: 0}
   Skill3: {fileID: 0}
+  Skill41: {fileID: 0}
+  Skill42: {fileID: 0}
+  Skill43: {fileID: 0}
+  Skill44: {fileID: 0}
+  Skill45: {fileID: 0}
+  Skill46: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!50 &1363895545
 Rigidbody2D:
   serializedVersion: 4
@@ -36993,7 +37001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1365036859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38624,7 +38632,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 1488265029}
-  sceneViewId: 4
+  sceneViewId: 3
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!212 &1488265031
@@ -47893,6 +47901,7 @@ MonoBehaviour:
   slower: 0
   originalSpeed: 0.1
   inpassage: 0
+  NotHit: 0
   animator: {fileID: 0}
 --- !u!61 &689208274634225997
 BoxCollider2D:
@@ -47934,6 +47943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeInvincible: 0.2
   maxHealth: 100
+  animator: {fileID: 0}
 --- !u!114 &689208274634225999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47948,6 +47958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeInvincible: 1
   maxHealth: 40
+  animator: {fileID: 0}
 --- !u!212 &689208274805952557
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -48068,6 +48079,6 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 2043259379102736453}
-  sceneViewId: 2
+  sceneViewId: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0

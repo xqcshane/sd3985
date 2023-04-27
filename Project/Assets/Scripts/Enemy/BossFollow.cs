@@ -47,7 +47,7 @@ public class BossFollow : MonoBehaviour
         }
         if (Time.time > startSkill)
         {
-            if (skillNumber == 8)
+            if (skillNumber == 0)
             {
                 Skill1.SetActive(true);
                 canMove = false;
@@ -164,10 +164,10 @@ public class BossFollow : MonoBehaviour
         direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        if (doSkilling1)
+        if (doSkilling1 && canMove)
         {
             canMove = false;
-            boss.Play("Move");
+            boss.Play("Move");            
         }
 
 
@@ -239,11 +239,11 @@ public class BossFollow : MonoBehaviour
     }
 
     private IEnumerator MyCoroutine()
-    {
-        animator.Play("Hit");
-        canMove = false;
+    {   
         canMove = false;
         doSkilling1 = true;
+        animator.Play("Hit");
+        //canMove = false;
         yield return new WaitForSeconds(1f);
         canMove = true;
         doSkilling1 = false;
