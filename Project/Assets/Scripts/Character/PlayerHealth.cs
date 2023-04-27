@@ -13,6 +13,9 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 100;
     public int health { get { return currentHealth; } set { currentHealth = value; } }
     int currentHealth;
+
+    public Animator animator;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -47,6 +50,11 @@ public class PlayerHealth : MonoBehaviour
             invincibleTimer = timeInvincible;
         }
 
+        if (amount < 0)
+        {
+            animator.Play("Adventurer_hit");
+        }
+        animator.Play("Adventurer_hit");
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
     }

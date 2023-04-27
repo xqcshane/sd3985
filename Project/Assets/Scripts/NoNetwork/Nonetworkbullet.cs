@@ -43,7 +43,8 @@ public class Nonetworkbullet : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("BOSS"))
         {
-            collision.gameObject.GetComponent<BossFollow>().health -= damage;
+            collision.gameObject.GetComponent<BossFollow>().Damaged(damage);
+            //collision.gameObject.GetComponent<BossFollow>().health -= damage;
             Destroy(gameObject);
         }
     }

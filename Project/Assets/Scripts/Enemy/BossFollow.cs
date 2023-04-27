@@ -8,7 +8,7 @@ public class BossFollow : MonoBehaviour
     private float distance;
     public float speed;
     public float health;
-    public int damage;
+    //public int damageToBoss;
     public float sight;
     bool faceright = true;
     bool canMove = true;
@@ -29,6 +29,15 @@ public class BossFollow : MonoBehaviour
 
     public GameObject Skill3;
 
+    public GameObject Skill41;
+    public GameObject Skill42;
+    public GameObject Skill43;
+    public GameObject Skill44;
+    public GameObject Skill45;
+    public GameObject Skill46;
+
+    public Animator animator;
+
     // Update is called once per frame
     void Update()
     {
@@ -38,7 +47,7 @@ public class BossFollow : MonoBehaviour
         }
         if (Time.time > startSkill)
         {
-            if (skillNumber == 0)
+            if (skillNumber == 8)
             {
                 Skill1.SetActive(true);
                 canMove = false;
@@ -74,6 +83,26 @@ public class BossFollow : MonoBehaviour
                 Skill3.GetComponent<Animator>().Play("Fire1");
                 StartCoroutine(MyCoroutine3());
             }
+            if (skillNumber == 3)
+            {
+                Skill41.SetActive(true);
+                Skill42.SetActive(true);
+                Skill43.SetActive(true);
+                Skill44.SetActive(true);
+                Skill45.SetActive(true);
+                Skill46.SetActive(true);
+                canMove = false;
+                doSkilling1 = true;
+                startSkill = Time.time + skillRate1;
+
+                Skill41.GetComponent<Animator>().Play("Skill4");
+                Skill42.GetComponent<Animator>().Play("Skill4");
+                Skill43.GetComponent<Animator>().Play("Skill4");
+                Skill44.GetComponent<Animator>().Play("Skill4");
+                Skill45.GetComponent<Animator>().Play("Skill4");
+                Skill46.GetComponent<Animator>().Play("Skill4");
+                StartCoroutine(MyCoroutine4());
+            }
 
         }
     }
@@ -104,11 +133,26 @@ public class BossFollow : MonoBehaviour
 
     private IEnumerator MyCoroutine3()
     {
-        yield return new WaitForSeconds(2.75f);
+        yield return new WaitForSeconds(2.76666666666666666666f);
         canMove = true;
         doSkilling1 = false;
         Skill3.SetActive(false);
         //Skill1.enabled = false;
+        skillNumber = 3;
+        yield return null;
+    }
+
+    private IEnumerator MyCoroutine4()
+    {
+        yield return new WaitForSeconds(1.5166666666666666666666666666667f);
+        canMove = true;
+        doSkilling1 = false;
+        Skill41.SetActive(false);
+        Skill42.SetActive(false);
+        Skill43.SetActive(false);
+        Skill44.SetActive(false);
+        Skill45.SetActive(false);
+        Skill46.SetActive(false);
         skillNumber = 0;
         yield return null;
     }
@@ -146,8 +190,11 @@ public class BossFollow : MonoBehaviour
 
         if (distance < 6)
         {
-            canMove = false;
-            boss.Play("Attack");
+            if (!doSkilling1)
+            {
+                canMove = false;
+                boss.Play("Attack");
+            }
         }
         else
         {
@@ -165,5 +212,42 @@ public class BossFollow : MonoBehaviour
         currentScale.x *= -1;
         gameObject.transform.localScale = currentScale;
         faceright = !faceright;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("dfsfsdfds");
+            collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-5);
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("dfsfsdfds");
+            collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-5);
+        }
+    }
+
+    public void Damaged(float damageToBoss)
+    {
+        health -= damageToBoss;
+        StartCoroutine(MyCoroutine());
+        Debug.Log("hitBoss");
+    }
+
+    private IEnumerator MyCoroutine()
+    {
+        animator.Play("Hit");
+        canMove = false;
+        canMove = false;
+        doSkilling1 = true;
+        yield return new WaitForSeconds(1f);
+        canMove = true;
+        doSkilling1 = false;
+        //animator.Play("Idle");
+        yield return null;
     }
 }
