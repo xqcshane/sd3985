@@ -63,6 +63,7 @@ public class BossFollow : MonoBehaviour
         if  (health < secondStage)
         {
             goToSecondStage = true;
+            skillRange = Random.Range(3, 5);
         }
 
         if (health <= 0)

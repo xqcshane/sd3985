@@ -320,8 +320,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 49076417}
   m_LocalRotation: {x: -0, y: -0, z: -0.7951158, w: 0.6064576}
-  m_LocalPosition: {x: 0.52, y: 0.19, z: 9.037676}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalPosition: {x: -3.01, y: -0.2, z: 9.037676}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 1534095771}
   m_RootOrder: 1
@@ -405,7 +405,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: c4555d3d6d6724849bf0278eb84cbbde, type: 3}
+  m_Sprite: {fileID: -2756864334482269654, guid: 31ed9e28b68a11e4180bee347822a132, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -482,6 +482,10 @@ PrefabInstance:
     - target: {fileID: 8624563699442648295, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
       propertyPath: m_Name
       value: Fire_II_Flame (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8624563699442648295, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8624563699442648295, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
       propertyPath: m_IsActive
@@ -830,6 +834,16 @@ Transform:
   m_Father: {fileID: 1534095771}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &379913387 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8624563699442648295, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
+  m_PrefabInstance: {fileID: 90851456}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &394548445 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8624563699442648295, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
+  m_PrefabInstance: {fileID: 958603283}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &434106908 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1407303529245236996, guid: d78d99ff754437e418458d860925d768, type: 3}
@@ -25079,6 +25093,10 @@ PrefabInstance:
       value: Fire_II_Flame (1)
       objectReference: {fileID: 0}
     - target: {fileID: 8624563699442648295, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8624563699442648295, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -25150,6 +25168,10 @@ PrefabInstance:
     - target: {fileID: 1407303529245236996, guid: d78d99ff754437e418458d860925d768, type: 3}
       propertyPath: m_Name
       value: Fire_Incendiary (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1407303529245236996, guid: d78d99ff754437e418458d860925d768, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1407303529245236996, guid: d78d99ff754437e418458d860925d768, type: 3}
       propertyPath: m_IsActive
@@ -25225,6 +25247,10 @@ PrefabInstance:
       value: Fire_Incendiary (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1407303529245236996, guid: d78d99ff754437e418458d860925d768, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1407303529245236996, guid: d78d99ff754437e418458d860925d768, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -25298,6 +25324,10 @@ PrefabInstance:
       value: Fire_Incendiary (5)
       objectReference: {fileID: 0}
     - target: {fileID: 1407303529245236996, guid: d78d99ff754437e418458d860925d768, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1407303529245236996, guid: d78d99ff754437e418458d860925d768, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -25355,7 +25385,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 90
+  field of view: 57
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -25400,11 +25430,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyPlayer: {fileID: 1534095769}
---- !u!1 &652610902 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8624563699442648295, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
-  m_PrefabInstance: {fileID: 958603283}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &652610903 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8624563699442648292, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
@@ -25732,6 +25757,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_III_Flame_B (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 484165457260565300, guid: f4231cf245918cd4a81a42bc62469965, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 484165457260565307, guid: f4231cf245918cd4a81a42bc62469965, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -25928,6 +25957,10 @@ PrefabInstance:
       value: Fire_II_Flame (3)
       objectReference: {fileID: 0}
     - target: {fileID: 8624563699442648295, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8624563699442648295, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -25947,7 +25980,7 @@ GameObject:
   - component: {fileID: 955901879}
   - component: {fileID: 955901880}
   - component: {fileID: 955901876}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boss
   m_TagString: BOSS
   m_Icon: {fileID: 0}
@@ -26015,7 +26048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1534095769}
   speed: 3
-  health: 200
+  health: 50
   sight: 100
   boss: {fileID: 955901880}
   startSkill: 0
@@ -26032,10 +26065,10 @@ MonoBehaviour:
   Skill44: {fileID: 434106908}
   Skill45: {fileID: 315255754}
   Skill46: {fileID: 1305121547}
-  Skill51: {fileID: 1266982597}
-  Skill52: {fileID: 652610902}
-  Skill53: {fileID: 1955952050}
-  Skill54: {fileID: 1747464405}
+  Skill51: {fileID: 1136360989}
+  Skill52: {fileID: 394548445}
+  Skill53: {fileID: 1004677075}
+  Skill54: {fileID: 379913387}
   animator: {fileID: 955901880}
 --- !u!95 &955901880
 Animator:
@@ -26205,11 +26238,20 @@ PrefabInstance:
       value: Fire_II_Flame (2)
       objectReference: {fileID: 0}
     - target: {fileID: 8624563699442648295, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8624563699442648295, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
+--- !u!1 &1004677075 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8624563699442648295, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
+  m_PrefabInstance: {fileID: 944665297}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1050859754
 GameObject:
   m_ObjectHideFlags: 0
@@ -26550,6 +26592,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1136360989 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8624563699442648295, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
+  m_PrefabInstance: {fileID: 524478620}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1162585312
 GameObject:
   m_ObjectHideFlags: 0
@@ -29987,13 +30034,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_III_Flame_A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4098834581827731982, guid: 274cbd4acd8565f4695655d6bb710569, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 274cbd4acd8565f4695655d6bb710569, type: 3}
---- !u!1 &1266982597 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8624563699442648295, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
-  m_PrefabInstance: {fileID: 524478620}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1266982600 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8624563699442648292, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
@@ -30124,6 +30170,10 @@ PrefabInstance:
     - target: {fileID: 1407303529245236996, guid: d78d99ff754437e418458d860925d768, type: 3}
       propertyPath: m_Name
       value: Fire_Incendiary (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1407303529245236996, guid: d78d99ff754437e418458d860925d768, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1407303529245236996, guid: d78d99ff754437e418458d860925d768, type: 3}
       propertyPath: m_IsActive
@@ -30281,6 +30331,10 @@ PrefabInstance:
       value: Fire_Incendiary (4)
       objectReference: {fileID: 0}
     - target: {fileID: 1407303529245236996, guid: d78d99ff754437e418458d860925d768, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1407303529245236996, guid: d78d99ff754437e418458d860925d768, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -30350,6 +30404,10 @@ PrefabInstance:
     - target: {fileID: 1284241484961176662, guid: 123491c37b61a6345b92e221d8ab889f, type: 3}
       propertyPath: m_Name
       value: Fire_III_Flame_C (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284241484961176662, guid: 123491c37b61a6345b92e221d8ab889f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 123491c37b61a6345b92e221d8ab889f, type: 3}
@@ -30446,7 +30504,7 @@ MonoBehaviour:
   bullet1: {fileID: 4819654526933113472, guid: 519ad967ce1cd2b47b222bced9549b49, type: 3}
   speed1: 10
   range1: 1
-  damage1: 1
+  damage1: 10
   firerate1: 1
 --- !u!114 &1534095774
 MonoBehaviour:
@@ -30462,7 +30520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeInvincible: 1
   maxHealth: 200
-  animator: {fileID: 0}
+  animator: {fileID: 814490735}
 --- !u!61 &1534095775
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30543,6 +30601,10 @@ PrefabInstance:
     - target: {fileID: 8522138926694928871, guid: 099831c921ff04f40be263e17bb36237, type: 3}
       propertyPath: m_Name
       value: Fire Bomb
+      objectReference: {fileID: 0}
+    - target: {fileID: 8522138926694928871, guid: 099831c921ff04f40be263e17bb36237, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 099831c921ff04f40be263e17bb36237, type: 3}
@@ -30661,6 +30723,10 @@ PrefabInstance:
     - target: {fileID: 1407303529245236996, guid: d78d99ff754437e418458d860925d768, type: 3}
       propertyPath: m_Name
       value: Fire_Incendiary (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1407303529245236996, guid: d78d99ff754437e418458d860925d768, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1407303529245236996, guid: d78d99ff754437e418458d860925d768, type: 3}
       propertyPath: m_IsActive
@@ -30816,13 +30882,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Napalm
       objectReference: {fileID: 0}
+    - target: {fileID: 5944322810395051484, guid: 88ec24feb74d03746acf79c6467ce29b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88ec24feb74d03746acf79c6467ce29b, type: 3}
---- !u!1 &1747464405 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8624563699442648295, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
-  m_PrefabInstance: {fileID: 90851456}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1747464406 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8624563699442648292, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
@@ -30914,11 +30979,6 @@ SpriteRenderer:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8522138926694928871, guid: 099831c921ff04f40be263e17bb36237, type: 3}
   m_PrefabInstance: {fileID: 1571392956}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1955952050 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8624563699442648295, guid: ab010414735b3ee46b8e12a1b5000164, type: 3}
-  m_PrefabInstance: {fileID: 944665297}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1955952051 stripped
 Transform:
@@ -31019,7 +31079,7 @@ GameObject:
   - component: {fileID: 2139153376}
   - component: {fileID: 2139153379}
   - component: {fileID: 2139153378}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fire_III_Hand (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
