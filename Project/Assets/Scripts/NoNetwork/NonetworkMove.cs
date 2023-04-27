@@ -13,6 +13,7 @@ public class NonetworkMove : MonoBehaviour
     public bool slower;
     public float originalSpeed;
     public bool inpassage=false;
+
     public bool NotHit;
 
     public Animator animator;
@@ -21,6 +22,7 @@ public class NonetworkMove : MonoBehaviour
     {
         NotHit = true;
     }
+
     private void FixedUpdate()
     {
         if (canMove)
@@ -55,7 +57,7 @@ public class NonetworkMove : MonoBehaviour
                     animator.Play("Real_adventurer");
                 }
             }
-
+            
 
             Vector2 position = transform.position;
             position.x = position.x + speed * horizontal;
