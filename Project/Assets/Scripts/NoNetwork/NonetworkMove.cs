@@ -20,64 +20,68 @@ public class NonetworkMove : MonoBehaviour
 
     public Animator weaponAnimator;
 
+    public bool NotHit = true;
+
     private void FixedUpdate()
     {
-        if (canMove)
+        if (NotHit)
         {
-            if (slower)
+            if (canMove)
             {
-                speed = originalSpeed * 0.1f;
-            }
-            float horizontal = Input.GetAxis("Horizontal");
-            float vertical = Input.GetAxis("Vertical");
+                if (slower)
+                {
+                    speed = originalSpeed * 0.1f;
+                }
+                float horizontal = Input.GetAxis("Horizontal");
+                float vertical = Input.GetAxis("Vertical");
 
-            
-            if (horizontal > 0)
-            {
-                animator.Play("Adventurer_right");
-                faceRight = true;
-                weaponAnimator.Play("weapon_flip");
-            }
-            else if(horizontal < 0)
-            {
-                animator.Play("Adventurer_left");
-                faceRight = false;
-                weaponAnimator.Play("weapon");
-            }
-            else if(vertical != 0)
-            {
-                if (faceRight)
+
+                if (horizontal > 0)
                 {
                     animator.Play("Adventurer_right");
+                    faceRight = true;
                     weaponAnimator.Play("weapon_flip");
                 }
-                else
+                else if (horizontal < 0)
                 {
                     animator.Play("Adventurer_left");
+                    faceRight = false;
                     weaponAnimator.Play("weapon");
                 }
-                
-            }
-            else
-            {
-                if (faceRight)
+                else if (vertical != 0)
                 {
-                    animator.Play("Real_adventurer");
-                    weaponAnimator.Play("weapon_flip");
+                    if (faceRight)
+                    {
+                        animator.Play("Adventurer_right");
+                        weaponAnimator.Play("weapon_flip");
+                    }
+                    else
+                    {
+                        animator.Play("Adventurer_left");
+                        weaponAnimator.Play("weapon");
+                    }
+
                 }
                 else
                 {
-                    animator.Play("Real_adventurer_Flip");
-                    weaponAnimator.Play("weapon");
-                }
-                
-            }
+                    if (faceRight)
+                    {
+                        animator.Play("Real_adventurer");
+                        weaponAnimator.Play("weapon_flip");
+                    }
+                    else
+                    {
+                        animator.Play("Real_adventurer_Flip");
+                        weaponAnimator.Play("weapon");
+                    }
 
-            Vector2 position = transform.position;
-            position.x = position.x + speed * horizontal;
-            position.y = position.y + speed * vertical;
-            transform.position = position;
+                }
+
+                Vector2 position = transform.position;
+                position.x = position.x + speed * horizontal;
+                position.y = position.y + speed * vertical;
+                transform.position = position;
+            }
         }
-        
     }
 }

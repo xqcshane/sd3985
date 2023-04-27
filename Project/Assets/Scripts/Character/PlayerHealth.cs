@@ -57,5 +57,13 @@ public class PlayerHealth : MonoBehaviour
         animator.Play("Adventurer_hit");
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
+        this.gameObject.GetComponent<NonetworkMove>().NotHit = false;
+        animator.Play("Adventurer_hit");
+        Invoke("ChangeAnimation", 0.8333333333333333333333333333333f);
+    }
+
+    private void ChangeAnimation()
+    {
+        this.gameObject.GetComponent<NonetworkMove>().NotHit = true;
     }
 }
