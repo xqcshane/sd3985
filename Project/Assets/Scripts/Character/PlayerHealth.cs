@@ -16,6 +16,8 @@ public class PlayerHealth : MonoBehaviour
 
     public Animator animator;
 
+    //public NonetworkMove nonetwork;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -50,12 +52,16 @@ public class PlayerHealth : MonoBehaviour
             invincibleTimer = timeInvincible;
         }
 
-        if (amount < 0)
-        {
-            animator.Play("Adventurer_hit");
-        }
-        animator.Play("Adventurer_hit");
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
+
+        this.gameObject.GetComponent<NonetworkMove>().NotHit = false;
+        animator.Play("Adventurer_hit");
+        Invoke("ChangeAnimation", 0.83333333333333333333333333333333f);
+    }
+
+    private void ChangeAnimation()
+    {
+        this.gameObject.GetComponent<NonetworkMove>().NotHit = true;
     }
 }
