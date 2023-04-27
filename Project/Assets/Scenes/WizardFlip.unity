@@ -30193,6 +30193,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_III_Flame_A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4098834581827731982, guid: 274cbd4acd8565f4695655d6bb710569, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 274cbd4acd8565f4695655d6bb710569, type: 3}
 --- !u!1 &1305121547 stripped
@@ -30737,9 +30741,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8522138926694928865, guid: 099831c921ff04f40be263e17bb36237, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8522138926694928871, guid: 099831c921ff04f40be263e17bb36237, type: 3}
       propertyPath: m_Name
       value: Fire Bomb
+      objectReference: {fileID: 0}
+    - target: {fileID: 8522138926694928871, guid: 099831c921ff04f40be263e17bb36237, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 099831c921ff04f40be263e17bb36237, type: 3}
@@ -30975,11 +30987,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1213935816, guid: 88ec24feb74d03746acf79c6467ce29b, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.28
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 1213935816, guid: 88ec24feb74d03746acf79c6467ce29b, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.32
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 5944322810395051457, guid: 88ec24feb74d03746acf79c6467ce29b, type: 3}
       propertyPath: m_RootOrder

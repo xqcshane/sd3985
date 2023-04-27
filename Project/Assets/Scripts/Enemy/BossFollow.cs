@@ -62,6 +62,7 @@ public class BossFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Go to second stage
         if (health < secondStage)
         {
             goToSecondStage = true;
