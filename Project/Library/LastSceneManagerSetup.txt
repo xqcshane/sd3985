@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/New2SkillChoosing.unity
+=======
+- path: Assets/Scenes/Intro.unity
+>>>>>>> reyes2
   isLoaded: 1
   isActive: 1
   isSubScene: 0
