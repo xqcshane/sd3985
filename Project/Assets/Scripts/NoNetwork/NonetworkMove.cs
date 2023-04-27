@@ -16,6 +16,10 @@ public class NonetworkMove : MonoBehaviour
 
     public Animator animator;
 
+    private bool faceRight = true;
+
+    public Animator weaponAnimator;
+
     private void FixedUpdate()
     {
         if (canMove)
@@ -31,20 +35,42 @@ public class NonetworkMove : MonoBehaviour
             if (horizontal > 0)
             {
                 animator.Play("Adventurer_right");
-            }else if(horizontal < 0)
+                faceRight = true;
+                weaponAnimator.Play("weapon_flip");
+            }
+            else if(horizontal < 0)
             {
                 animator.Play("Adventurer_left");
-            }else if(vertical > 0)
-            {
-                animator.Play("Adventurer_right");
+                faceRight = false;
+                weaponAnimator.Play("weapon");
             }
-            else if (vertical < 0)
+            else if(vertical != 0)
             {
-                animator.Play("Adventurer_right");
+                if (faceRight)
+                {
+                    animator.Play("Adventurer_right");
+                    weaponAnimator.Play("weapon_flip");
+                }
+                else
+                {
+                    animator.Play("Adventurer_left");
+                    weaponAnimator.Play("weapon");
+                }
+                
             }
             else
             {
-                animator.Play("Real_adventurer");
+                if (faceRight)
+                {
+                    animator.Play("Real_adventurer");
+                    weaponAnimator.Play("weapon_flip");
+                }
+                else
+                {
+                    animator.Play("Real_adventurer_Flip");
+                    weaponAnimator.Play("weapon");
+                }
+                
             }
 
             Vector2 position = transform.position;

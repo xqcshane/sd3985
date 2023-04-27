@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/BossGeneralAttakc.unity
+- path: Assets/Scenes/WizardFlip.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
