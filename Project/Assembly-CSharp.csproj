@@ -66,6 +66,7 @@
     <Compile Include="Assets\LeanTween\Examples\Scripts\LogoCinematic.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralCameraShake.cs" />
     <Compile Include="Assets\Scripts\UI\Skill.cs" />
+    <Compile Include="Assets\Score.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\LeanTween\Framework\LTDescr.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\Scripts\UI\RoomButtonClick.cs" />
     <Compile Include="Assets\Scripts\Enemy\BossAI.cs" />
+    <Compile Include="Assets\Scripts\Level\LevelController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Scripts\Traps\TrapChoosing.cs" />
     <Compile Include="Assets\Scripts\UI\Changeskillinex.cs" />
@@ -175,6 +177,7 @@
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSpline2d.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\Enemy\BossFollow.cs" />
+    <Compile Include="Assets\Scripts\Music\SettingSlider.cs" />
     <Compile Include="Assets\_\Base\BaseScripts\GameHandler_Setup.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingZLegacyExt.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplinePerformance.cs" />
@@ -216,6 +219,7 @@
     <Compile Include="Assets\Scripts\NoNetwork\Nonetworkbullet.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasic.cs" />
     <Compile Include="Assets\Scripts\Traps\FakeTrophy.cs" />
+    <Compile Include="Assets\Scripts\Music\IntroMusicController.cs" />
     <Compile Include="Assets\Scripts\Managers\RSManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\CMDebug.cs" />
@@ -224,10 +228,6 @@
     <Compile Include="Assets\LeanTween\Examples\Archived\TestingRigidbodyCS.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\FunctionPeriodic.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\Following.cs" />
-    <Compile Include="Assets\Scripts\Level\LevelController.cs" />
-    <Compile Include="Assets\Scripts\Music\IntroMusicController.cs" />
-    <Compile Include="Assets\Scripts\Music\SettingSlider.cs" />
-    <Compile Include="Assets\Score.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
