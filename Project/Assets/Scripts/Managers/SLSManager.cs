@@ -23,7 +23,7 @@ public class SLSManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby(){
         Debug.Log("Lobby Joined");
-        SceneManager.LoadScene("StartGameScene");
+        SceneManager.LoadScene("1");
         
     }
 }

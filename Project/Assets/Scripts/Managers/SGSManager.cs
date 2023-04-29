@@ -58,7 +58,7 @@ public class SGSManager : MonoBehaviourPunCallbacks
     public void OnRoomBtn(){
         SetAllBtns(false);
 
-        SceneManager.LoadScene("RoomListScene");
+        SceneManager.LoadScene("RL");
 
         //show loading page
     }
@@ -83,7 +83,7 @@ public class SGSManager : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom(){
         PhotonNetwork.LocalPlayer.NickName = Random.Range(1, 10000).ToString();
         Debug.Log("Room Joined");
-        SceneManager.LoadScene("RoomScene");
+        SceneManager.LoadScene("QS");
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
@@ -103,4 +103,14 @@ public class SGSManager : MonoBehaviourPunCallbacks
          RoomListText.text = sb.ToString();
          
      }
+
+    public void loadIntro()
+    {
+        SceneManager.LoadScene("I1");
+    }
+
+    public void loadSetting()
+    {
+        SceneManager.LoadScene("S1");
+    }
 }

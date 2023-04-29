@@ -17,7 +17,7 @@ public class RLSManager : MonoBehaviourPunCallbacks
     void Start()
     {
         if(PhotonNetwork.IsConnected==false){
-            SceneManager.LoadScene("StartGameScene");
+            SceneManager.LoadScene("1");
         }else{
             if(PhotonNetwork.CurrentLobby == null){
                 PhotonNetwork.JoinLobby();
@@ -47,7 +47,7 @@ public class RLSManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom(){
         Debug.Log("Room Joined");
-        SceneManager.LoadScene("RoomScene");
+        SceneManager.LoadScene("QS");
     }
 
     public override void OnRoomListUpdate(List<RoomInfo> roomList){
@@ -68,13 +68,13 @@ public class RLSManager : MonoBehaviourPunCallbacks
                 //set button variable
                 choiceButton.GetComponent<RoomButtonClick>().roomName = roomInfo.Name;    
                 choiceButton.transform.SetParent(m_ContentContainer);  
-    
+                choiceButton.transform.localScale = Vector3.one;
             }         
         }
 
     }
 
     public void OnClickBack(){
-        SceneManager.LoadScene("StartGameScene");
+        SceneManager.LoadScene("1");
     }
 }

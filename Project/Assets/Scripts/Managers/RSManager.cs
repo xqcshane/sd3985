@@ -18,7 +18,7 @@ public class RSManager : MonoBehaviourPunCallbacks
     void Start()
     {
         if(PhotonNetwork.CurrentRoom == null){
-            SceneManager.LoadScene("StartGameScene");
+            SceneManager.LoadScene("1");
         }else{
             textRoonName.text = PhotonNetwork.CurrentRoom.Name;
             UpdatePlayerList();
@@ -61,7 +61,7 @@ public class RSManager : MonoBehaviourPunCallbacks
     }
 
     public void OnClickStartGame(){
-        SceneManager.LoadScene("SkillChoosing");
+        SceneManager.LoadScene("New2SkillChoosing");
     }
 
     public void OnClickLeaveRoom(){
@@ -69,6 +69,6 @@ public class RSManager : MonoBehaviourPunCallbacks
     }
 
     public override void OnLeftRoom(){
-        SceneManager.LoadScene("StartGameScene");
+        SceneManager.LoadScene("1");
     }
 }

@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/StartGameScene.unity
+=======
+- path: Assets/Scenes/GameScene.unity
+>>>>>>> origin/xie8
   isLoaded: 1
   isActive: 1
   isSubScene: 0
