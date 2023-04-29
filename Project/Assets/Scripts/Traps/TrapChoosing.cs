@@ -31,12 +31,13 @@ public class TrapChoosing : MonoBehaviour
     private GameObject frame1;
     private GameObject frame2;
     private GameObject frame3;
+    private int[] randomskills;
     void Start()
     {
         before = Q.GetComponent<Image>().sprite;
         Sprite[] list = { before, heal, speed, bla, magic, clear, Change };
         Sprites = list;
-        int[] randomskills = UniqRandom(7, 5);
+        randomskills = UniqRandom(7, 5);
         GameObject allskill = GameObject.Find("TTrapList");
         for (int i = 0; i < allskill.transform.childCount; i++)
         {
@@ -197,6 +198,41 @@ public class TrapChoosing : MonoBehaviour
     }
     public void next()
     {
+        if (sendindex1 == 0 || sendindex2 == 0 || sendindex3 == 0)
+        {
+            if (sendindex1 == 0) {
+                for (int i = 0; i < randomskills.Length; i++)
+                {
+                    if (randomskills[i] != sendindex1 && randomskills[i] != sendindex2 && randomskills[i] != sendindex3)
+                    {
+                        sendindex1 = randomskills[i];
+                        break;
+                    }
+                }
+            }
+            if(sendindex2 == 0)
+            {
+                for (int i = 0; i < randomskills.Length; i++)
+                {
+                    if (randomskills[i] != sendindex1 && randomskills[i] != sendindex2 && randomskills[i] != sendindex3)
+                    {
+                        sendindex2 = randomskills[i];
+                        break;
+                    }
+                }
+            }
+            if (sendindex3 == 0)
+            {
+                for (int i = 0; i < randomskills.Length; i++)
+                {
+                    if (randomskills[i] != sendindex1 && randomskills[i] != sendindex2 && randomskills[i] != sendindex3)
+                    {
+                        sendindex3 = randomskills[i];
+                        break;
+                    }
+                }
+            }
+        }
         Data.GetComponent<TrapData>().skillindex1 = sendindex1;
         Data.GetComponent<TrapData>().skillindex2 = sendindex2;
         Data.GetComponent<TrapData>().skillindex3= sendindex3;

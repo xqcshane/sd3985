@@ -24,9 +24,7 @@ public class PlayerMove : MonoBehaviour
     public Animator animator;
     private bool faceRight = true;
     public Animator weaponAnimator;
-    public Animator weaponAnimator1;
-    public Animator weaponAnimator2;
-    public Animator weaponAnimator3;
+    
     public bool NotHit = true;
     void Start()
     {
@@ -56,8 +54,8 @@ public class PlayerMove : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if(PR == 0)
-        {
+        /*if (PR == 0)
+        { }*/
             if (NotHit)
             {
                 if (canMove)
@@ -74,85 +72,28 @@ public class PlayerMove : MonoBehaviour
                     {
                         animator.Play("Adventurer_right");
                         faceRight = true;
-                        if (currentweaponindex == 0)
-                        {
-                            weaponAnimator.Play("weapon_flip");
-                        }
-                        else if (currentweaponindex == 1)
-                        {
-                            weaponAnimator1.Play("weapon_flip");
-                        }
-                        else if(currentweaponindex == 2)
-                        {
-                            weaponAnimator2.Play("weapon_flip");
-                        }
-                        else if (currentweaponindex == 3){
-                            weaponAnimator3.Play("weapon_flip");
-                        }
+                     
                     }
                     else if (horizontal < 0)
                     {
                         animator.Play("Adventurer_left");
                         faceRight = false;
-                        //weaponAnimator.Play("weapon");
-                        if (currentweaponindex == 0)
-                        {
-                            weaponAnimator.Play("weapon");
-                        }
-                        else if (currentweaponindex == 1)
-                        {
-                            weaponAnimator1.Play("weapon");
-                        }
-                        else if (currentweaponindex == 2)
-                        {
-                            weaponAnimator2.Play("weapon");
-                        }
-                        else if (currentweaponindex == 3)
-                        {
-                            weaponAnimator3.Play("weapon");
-                        }
+                        weaponAnimator.Play("weapon");
+                      
                     }
                     else if (vertical != 0)
                     {
                         if (faceRight)
                         {
                             animator.Play("Adventurer_right");
-                            if (currentweaponindex == 0)
-                            {
-                                weaponAnimator.Play("weapon_flip");
-                            }
-                            else if (currentweaponindex == 1)
-                            {
-                                weaponAnimator1.Play("weapon_flip");
-                            }
-                            else if (currentweaponindex == 2)
-                            {
-                                weaponAnimator2.Play("weapon_flip");
-                            }
-                            else if (currentweaponindex == 3)
-                            {
-                                weaponAnimator3.Play("weapon_flip");
-                            }
+                            weaponAnimator.Play("weapon_flip");
+                      
                         }
                         else
                         {
                             animator.Play("Adventurer_left");
-                            if (currentweaponindex == 0)
-                            {
-                                weaponAnimator.Play("weapon");
-                            }
-                            else if (currentweaponindex == 1)
-                            {
-                                weaponAnimator1.Play("weapon");
-                            }
-                            else if (currentweaponindex == 2)
-                            {
-                                weaponAnimator2.Play("weapon");
-                            }
-                            else if (currentweaponindex == 3)
-                            {
-                                weaponAnimator3.Play("weapon");
-                            }
+                            weaponAnimator.Play("weapon");
+                       
                         }
 
                     }
@@ -161,44 +102,14 @@ public class PlayerMove : MonoBehaviour
                         if (faceRight)
                         {
                             animator.Play("Real_adventurer");
-                            //weaponAnimator.Play("weapon_flip");
-                            if (currentweaponindex == 0)
-                            {
-                                weaponAnimator.Play("weapon_flip");
-                            }
-                            else if (currentweaponindex == 1)
-                            {
-                                weaponAnimator1.Play("weapon_flip");
-                            }
-                            else if (currentweaponindex == 2)
-                            {
-                                weaponAnimator2.Play("weapon_flip");
-                            }
-                            else if (currentweaponindex == 3)
-                            {
-                                weaponAnimator3.Play("weapon_flip");
-                            }
+                            weaponAnimator.Play("weapon_flip");
+                           
                         }
                         else
                         {
                             animator.Play("Real_adventurer_Flip");
-                            //weaponAnimator.Play("weapon");
-                            if (currentweaponindex == 0)
-                            {
-                                weaponAnimator.Play("weapon");
-                            }
-                            else if (currentweaponindex == 1)
-                            {
-                                weaponAnimator1.Play("weapon");
-                            }
-                            else if (currentweaponindex == 2)
-                            {
-                                weaponAnimator2.Play("weapon");
-                            }
-                            else if (currentweaponindex == 3)
-                            {
-                                weaponAnimator3.Play("weapon");
-                            }
+                            weaponAnimator.Play("weapon");
+                          
                         }
 
                     }
@@ -209,7 +120,7 @@ public class PlayerMove : MonoBehaviour
                     transform.position = position;
                 }
             }
-        }
+      
     }
 
     }

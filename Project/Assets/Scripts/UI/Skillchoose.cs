@@ -32,11 +32,12 @@ public class Skillchoose : MonoBehaviour
     public int buttonindex=-1;
     private GameObject frame1;
     private GameObject frame2;
+    private int[] randomskills;
     void Start()
     {
         Sprite[] list = {before, heal, speed, bla, magic, clear, Change};
         Sprites = list;
-        int[] randomskills = UniqRandom(7,5);
+        randomskills = UniqRandom(7,5);
         GameObject allskill = GameObject.Find("ASkillList");
         for(int i=0; i < allskill.transform.childCount; i++)
         {
@@ -136,6 +137,32 @@ public class Skillchoose : MonoBehaviour
     }
     public void next()
     {
+        if (sendindex1 == 0 || sendindex2 == 0 )
+        {
+            if (sendindex1 == 0)
+            {
+                for (int i = 0; i < randomskills.Length; i++)
+                {
+                    if (randomskills[i] != sendindex1 && randomskills[i] != sendindex2)
+                    {
+                        sendindex1 = randomskills[i];
+                        break;
+                    }
+                }
+            }
+            if (sendindex2 == 0)
+            {
+                for (int i = 0; i < randomskills.Length; i++)
+                {
+                    if (randomskills[i] != sendindex1 && randomskills[i] != sendindex2)
+                    {
+                        sendindex2 = randomskills[i];
+                        break;
+                    }
+                }
+            }
+
+        }
         Data.GetComponent<SkillData>().skillindex1 = sendindex1;
         Data.GetComponent<SkillData>().skillindex2 = sendindex2;
         SceneManager.LoadScene("GameScene");

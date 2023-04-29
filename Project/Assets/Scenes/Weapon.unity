@@ -25908,7 +25908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &955901876
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31456,19 +31456,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5698858188213059954, guid: 334370936f2069547a909bebf6de6bbd, type: 3}
       propertyPath: sceneViewId
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5698858188668071221, guid: 334370936f2069547a909bebf6de6bbd, type: 3}
       propertyPath: sceneViewId
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5698858188956524721, guid: 334370936f2069547a909bebf6de6bbd, type: 3}
       propertyPath: sceneViewId
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5698858189652019665, guid: 334370936f2069547a909bebf6de6bbd, type: 3}
       propertyPath: sceneViewId
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5698858189652019692, guid: 334370936f2069547a909bebf6de6bbd, type: 3}
       propertyPath: m_Name
@@ -31520,7 +31520,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5698858189715441152, guid: 334370936f2069547a909bebf6de6bbd, type: 3}
       propertyPath: sceneViewId
-      value: 6
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8765844224137345807, guid: 334370936f2069547a909bebf6de6bbd, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8765844224137345807, guid: 334370936f2069547a909bebf6de6bbd, type: 3}
+      propertyPath: canMove
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8765844224137345807, guid: 334370936f2069547a909bebf6de6bbd, type: 3}
+      propertyPath: originalSpeed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 334370936f2069547a909bebf6de6bbd, type: 3}

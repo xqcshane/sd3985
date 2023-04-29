@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5698858188123970584}
   - component: {fileID: 5698858188123970587}
   - component: {fileID: 5698858188123970586}
+  - component: {fileID: 3720123143940460253}
   m_Layer: 0
   m_Name: Idle_m_0
   m_TagString: Untagged
@@ -102,6 +103,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3720123143940460253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5698858188123970585}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 1
+    Name: rightRun
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
 --- !u!1 &5698858188213059958
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,7 +567,6 @@ GameObject:
   - component: {fileID: 5698858189652019691}
   - component: {fileID: 5698858189652019665}
   - component: {fileID: 5698858189652019670}
-  - component: {fileID: 5698858189652019671}
   - component: {fileID: 5698858189652019668}
   - component: {fileID: 8765844224137345807}
   m_Layer: 0
@@ -656,7 +677,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 5698858189652019670}
-  - {fileID: 5698858189652019671}
+  - {fileID: 3720123143940460253}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -676,22 +697,6 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &5698858189652019671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5698858189652019692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowLayerWeightsInspector: 1
-  ShowParameterInspector: 1
-  m_SynchronizeParameters: []
-  m_SynchronizeLayers: []
 --- !u!114 &5698858189652019668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -739,7 +744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  canMove: 0
+  canMove: 1
   slower: 0
   originalSpeed: 0
   currentweaponindex: 0
