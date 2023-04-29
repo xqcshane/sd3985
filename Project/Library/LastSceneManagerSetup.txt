@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/New2SkillChoosing.unity
+=======
+- path: Assets/Scenes/Weapon.unity
+>>>>>>> origin/reyes4
   isLoaded: 1
   isActive: 1
   isSubScene: 0
