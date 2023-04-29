@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/WizardFlip.unity
+=======
+- path: Assets/Scenes/A.unity
+>>>>>>> origin/reyes4
   isLoaded: 1
   isActive: 1
   isSubScene: 0
