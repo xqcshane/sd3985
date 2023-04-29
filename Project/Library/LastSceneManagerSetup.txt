@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/WizardFlip.unity
+- path: Assets/Scenes/New2SkillChoosing.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
