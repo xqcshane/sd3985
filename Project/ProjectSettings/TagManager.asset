@@ -17,6 +17,12 @@ TagManager:
   - BOSS
   - FlyingEye
   - Seleton
+  - SightMask
+  - Result
+  - Controller
+  - TrapController
+  - Wall
+  - RandomRoom
   layers:
   - Default
   - TransparentFX
