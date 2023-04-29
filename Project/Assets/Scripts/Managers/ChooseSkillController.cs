@@ -9,22 +9,23 @@ public class ChooseSkillController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PhotonNetwork.IsMasterClient)
+        int status = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().status;
+        if (status==0)
         {
-            status = 0;
+            //status = 0;
             GameObject.Find("Adventure").SetActive(true);
             
             GameObject.Find("Troublemaker").SetActive(false);
         }
         else
         {
-            status = 1;
+            //status = 1;
             GameObject.Find("Adventure").SetActive(false);
 
             GameObject.Find("Troublemaker").SetActive(true);
         }
 
-        GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().status = status;
+       // GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().status = status;
     }
 
 }

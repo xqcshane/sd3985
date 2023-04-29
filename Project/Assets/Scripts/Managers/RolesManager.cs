@@ -3,38 +3,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using HashTable = ExitGames.Client.Photon.Hashtable;
-
+using UnityEngine.SceneManagement;
 
 public class RolesManager:MonoBehaviourPunCallbacks 
 {
     private int status;
     private PhotonView _pv;
+    public float totaltime = 10.0f;
     // Start is called before the first frame update
     void Start()
-    {  
-        _pv = this.gameObject.GetComponent<PhotonView>();   
-        if (PhotonNetwork.IsMasterClient){
-            int[] allstatus = UniqRandom(2,2);
+    {
+        _pv = this.gameObject.GetComponent<PhotonView>();
+        if (PhotonNetwork.IsMasterClient)
+        {
+            int mystatus = Random.Range(0, 2);
+            InitialStatues(mystatus);
             HashTable table = new HashTable();
-            table.Add("status", allstatus[1]);
+            int otherstatus = System.Math.Abs(mystatus - 1);
+            table.Add("status", otherstatus);
             PhotonNetwork.LocalPlayer.SetCustomProperties(table);
-            InitialStatues(allstatus[0]);
         }
     }
 
 
     public override void OnPlayerPropertiesUpdate(Photon.Realtime.Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
     {
-        if(targetPlayer == _pv.Owner){
+        if(!_pv.IsMine&&targetPlayer == _pv.Owner){
             int nowstatus = (int)changedProps["status"];
             InitialStatues(nowstatus);
+            Debug.Log("sty");
         }
     }
 
     public void InitialStatues(int nowstatus)
     {
         GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().status = nowstatus;
-        if(status == 0){
+        if(nowstatus == 0){
             GameObject.Find("Adventure").SetActive(true);
             GameObject.Find("Troublemaker").SetActive(false);
         }else{
@@ -43,6 +47,18 @@ public class RolesManager:MonoBehaviourPunCallbacks
         }
     }
 
+    private void Update()
+    {
+        //Changeicon();
+        if (totaltime > 0)
+        {
+            totaltime -= Time.deltaTime;
+        }
+        else
+        {
+            next();
+        }
+    }
     public int[] UniqRandom(int RandomNumber, int NeedNumber)
     {
         int[] randomskills = new int[NeedNumber];
@@ -69,5 +85,10 @@ public class RolesManager:MonoBehaviourPunCallbacks
             randomskills[i] = randomskills[i] - 1;
         }
         return randomskills;
+    }
+    public void next()
+    {
+      
+        SceneManager.LoadScene("New2SkillChoosing");
     }
 }
