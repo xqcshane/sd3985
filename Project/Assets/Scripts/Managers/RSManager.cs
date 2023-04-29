@@ -61,7 +61,7 @@ public class RSManager : MonoBehaviourPunCallbacks
     }
 
     public void OnClickStartGame(){
-        SceneManager.LoadScene("New2SkillChoosing");
+        SceneManager.LoadScene("Roles");
     }
 
     public void OnClickLeaveRoom(){
