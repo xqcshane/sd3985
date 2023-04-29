@@ -31,6 +31,7 @@ public class TrapChoosing : MonoBehaviour
     public int buttonindex = -1;
     private GameObject frame1;
     private GameObject frame2;
+    private GameObject frame3;
     void Start()
     {
         before = Q.GetComponent<Image>().sprite;
@@ -48,10 +49,13 @@ public class TrapChoosing : MonoBehaviour
         }
         sendindex1 = 0;
         sendindex2 = 0;
+        sendindex3 = 0;
         frame1 = Q.gameObject.transform.GetChild(0).gameObject;
         frame2 = E.gameObject.transform.GetChild(0).gameObject;
+        frame3= trap3.gameObject.transform.GetChild(0).gameObject;
         frame1.GetComponent<Image>().sprite = before;
         frame2.GetComponent<Image>().sprite = before;
+        frame3.GetComponent<Image>().sprite = before;
 
     }
     public void chooseskill(int index)
