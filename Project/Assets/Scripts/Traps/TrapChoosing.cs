@@ -37,7 +37,7 @@ public class TrapChoosing : MonoBehaviour
         Sprite[] list = { before, heal, speed, bla, magic, clear, Change };
         Sprites = list;
         int[] randomskills = UniqRandom(7, 5);
-        GameObject allskill = GameObject.Find("ASkillList");
+        GameObject allskill = GameObject.Find("TTrapList");
         for (int i = 0; i < allskill.transform.childCount; i++)
         {
             allskill.transform.GetChild(i).gameObject.SetActive(false);

@@ -23,6 +23,7 @@ public class Skillchoose : MonoBehaviour
     bool skilllock=false;
     public Button Q;
     public Button E;
+    public Button Trap3;
     public Sprite before;
     public GameObject Data;
     public float totaltime = 10.0f;

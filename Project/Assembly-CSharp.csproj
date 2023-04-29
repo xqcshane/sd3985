@@ -111,6 +111,7 @@
     <Compile Include="Assets\_\Stuff\CodeMonkey\Assets.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\World_Sprite.cs" />
+    <Compile Include="Assets\Scripts\Rooms\RandomRoomController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\World_Bar.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\UtilsClass.cs" />
@@ -189,6 +190,7 @@
     <Compile Include="Assets\Scripts\NoNetwork\NonetworkMove.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\MonoBehaviours\ComponentActions.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathBezier2d.cs" />
+    <Compile Include="Assets\Scripts\Rooms\RandomEmeny.cs" />
     <Compile Include="Assets\Scripts\UI\CrosshairController.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\UI_Sprite.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />

@@ -312,7 +312,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &49076418
 Transform:
   m_ObjectHideFlags: 0
@@ -325,7 +325,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 1534095771}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -105.332}
 --- !u!114 &49076419
 MonoBehaviour:
@@ -683,7 +683,7 @@ GameObject:
   - component: {fileID: 270161215}
   - component: {fileID: 270161214}
   m_Layer: 0
-  m_Name: shotgunStaff (1)
+  m_Name: machineGunStaff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1035,36 +1035,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &374352292
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 374352293}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &374352293
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374352292}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1534095771}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &434106908 stripped
 GameObject:
@@ -25968,7 +25938,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1534095771}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &814490734
 SpriteRenderer:
@@ -26238,12 +26208,12 @@ GameObject:
   - component: {fileID: 893171974}
   - component: {fileID: 893171973}
   m_Layer: 0
-  m_Name: shotgunStaff (2)
+  m_Name: bombStaff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &893171972
 Transform:
   m_ObjectHideFlags: 0
@@ -26256,7 +26226,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 1534095771}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -105.332}
 --- !u!95 &893171973
 Animator:
@@ -30878,7 +30848,7 @@ MonoBehaviour:
   originalSpeed: 1
   inpassage: 0
   animator: {fileID: 814490735}
-  weaponAnimator: {fileID: 49076422}
+  weaponAnimator: {fileID: 1604861555}
   NotHit: 1
 --- !u!4 &1534095771
 Transform:
@@ -30891,12 +30861,11 @@ Transform:
   m_LocalPosition: {x: -117.14866, y: 102.45257, z: -9.037676}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 814490733}
-  - {fileID: 49076418}
-  - {fileID: 270161213}
-  - {fileID: 893171972}
   - {fileID: 1604861554}
-  - {fileID: 374352293}
+  - {fileID: 814490733}
+  - {fileID: 270161213}
+  - {fileID: 49076418}
+  - {fileID: 893171972}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31058,7 +31027,7 @@ GameObject:
   - component: {fileID: 1604861556}
   - component: {fileID: 1604861555}
   m_Layer: 0
-  m_Name: shotgunStaff (3)
+  m_Name: normalStaff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31076,7 +31045,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 1534095771}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -105.332}
 --- !u!95 &1604861555
 Animator:
