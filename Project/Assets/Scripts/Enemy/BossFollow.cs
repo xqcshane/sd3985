@@ -26,7 +26,7 @@ public class BossFollow : MonoBehaviour
     bool doSkilling1 = false;
 
     public GameObject Skill1;
-    
+
     public GameObject Skill21;
     public GameObject Skill22;
     public GameObject Skill23;
@@ -50,6 +50,8 @@ public class BossFollow : MonoBehaviour
 
     private bool goToSecondStage = false;
 
+    private bool hitted = false;
+
     private void Start()
     {
         secondStage = health / 2;
@@ -60,10 +62,10 @@ public class BossFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if  (health < secondStage)
+        //Go to second stage
+        if (health < secondStage)
         {
             goToSecondStage = true;
-            skillRange = Random.Range(3, 5);
         }
 
         if (health <= 0)
@@ -106,9 +108,9 @@ public class BossFollow : MonoBehaviour
                 startSkill = Time.time + skillRate1;
 
                 Skill51.GetComponent<Animator>().Play("Skill5");
-                Skill52.GetComponent<Animator>().Play("Skill5");
-                Skill53.GetComponent<Animator>().Play("Skill5");
-                Skill54.GetComponent<Animator>().Play("Skill5");
+                Skill52.GetComponent<Animator>().Play("Skill52");
+                Skill53.GetComponent<Animator>().Play("Skill53");
+                Skill54.GetComponent<Animator>().Play("Skill54");
                 StartCoroutine(MyCoroutine5());
             }
             //»ðÊÖ
@@ -172,7 +174,7 @@ public class BossFollow : MonoBehaviour
         Skill22.SetActive(false);
         Skill23.SetActive(false);
         Skill24.SetActive(false);
-        skillRange = Random.Range(3,5);
+        skillRange = Random.Range(3, 5);
         yield return null;
     }
 
@@ -198,7 +200,7 @@ public class BossFollow : MonoBehaviour
         Skill44.SetActive(false);
         Skill45.SetActive(false);
         Skill46.SetActive(false);
-        skillRange = Random.Range(3,5);
+        skillRange = Random.Range(3, 5);
         yield return null;
     }
 
@@ -222,18 +224,24 @@ public class BossFollow : MonoBehaviour
         direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        if (doSkilling1 && canMove)
+        if (doSkilling1)
         {
-            canMove = false;
-            boss.Play("Move");
+            if (!canMove)
+            {
+                if (!hitted)
+                {
+                    canMove = false;
+                    boss.Play("Move");
+                }
+            }
         }
 
 
         if (canMove)
         {
-            if (distance < sight)
+            if (goToSecondStage)
             {
-                if (goToSecondStage)
+                if (distance < sight)
                 {
                     transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, secondSpeed * Time.deltaTime);
                     if (transform.position.x > player.transform.position.x && faceright)
@@ -246,7 +254,10 @@ public class BossFollow : MonoBehaviour
                     }
                     //transform.rotation = Quaternion.Euler(Vector3.forward * angle);
                 }
-                else
+            }
+            else
+            {
+                if (distance < sight)
                 {
                     transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
                     if (transform.position.x > player.transform.position.x && faceright)
@@ -258,7 +269,6 @@ public class BossFollow : MonoBehaviour
                         Flip();
                     }
                     //transform.rotation = Quaternion.Euler(Vector3.forward * angle);
-
                 }
             }
         }
@@ -315,12 +325,14 @@ public class BossFollow : MonoBehaviour
 
     private IEnumerator MyCoroutine()
     {
+        hitted = true;
         canMove = false;
         doSkilling1 = true;
         animator.Play("Hit");
         yield return new WaitForSeconds(1f);
         canMove = true;
         doSkilling1 = false;
+        hitted = false;
         //animator.Play("Idle");
         yield return null;
     }
