@@ -19,7 +19,6 @@ public class TrapChoosing : MonoBehaviour
     bool skill1 = false;
     bool skill2 = false;
     bool skill3=false;
-    bool skilllock = false;
     public Button Q;
     public Button E;
     public Button trap3;
@@ -58,7 +57,7 @@ public class TrapChoosing : MonoBehaviour
         frame3.GetComponent<Image>().sprite = before;
 
     }
-    public void chooseskill(int index)
+   /* public void chooseskill(int index)
     {
         // find the skill
         if (index == 0)
@@ -112,10 +111,10 @@ public class TrapChoosing : MonoBehaviour
             sendindex3 = 3;
         }
 
-    }
+    }*/
     private void Update()
     {
-        Changeicon();
+        //Changeicon();
         if (totaltime > 0)
         {
             time.text = "Time Remain:" + ((int)totaltime).ToString();
@@ -126,100 +125,73 @@ public class TrapChoosing : MonoBehaviour
             next();
         }
     }
-    private void Changeicon()
+    public void Changeicon(int index)
     {
-        if (skillindex == 1)
+        buttonindex = index;
+        if (index == 0)
         {
-            if (skill1)
+            frame1.GetComponent<Image>().sprite = Change;
+            frame2.GetComponent<Image>().sprite = before;
+            frame3.GetComponent<Image>().sprite = before;
+            if (skillindex != 0)
             {
-                Q.GetComponent<Image>().sprite = heal;
-                sendindex1 = 1;
-            }
-            else if(skill2) 
-            {
-                E.GetComponent<Image>().sprite = heal;
-                sendindex2 = 1;
-
-            }
-            else
-            {
-                trap3.GetComponent<Image>().sprite = heal;
-                sendindex3 = 1;
+                if (skillindex == sendindex2)
+                {
+                    E.GetComponent<Image>().sprite = Sprites[sendindex1];
+                    sendindex2 = sendindex1;
+                }
+                if (skillindex == sendindex3)
+                {
+                    trap3.GetComponent<Image>().sprite = Sprites[sendindex1];
+                    sendindex3 = sendindex1;
+                }
+                sendindex1 = skillindex;
+                Q.GetComponent<Image>().sprite = Sprites[sendindex1];
+                skillindex = 0;
             }
         }
-        else if (skillindex == 2)
+        else if (index == 1)
         {
-            if (skill1)
+            frame2.GetComponent<Image>().sprite = Change;
+            frame1.GetComponent<Image>().sprite = before;
+            frame3.GetComponent<Image>().sprite = before;
+            if (skillindex != 0)
             {
-                Q.GetComponent<Image>().sprite = speed;
-                sendindex1 = 2;
-
-            }
-            else if(skill2)
-            {
-                E.GetComponent<Image>().sprite = speed;
-                sendindex2 = 2;
-
-            }
-            else
-            {
-                trap3.GetComponent<Image>().sprite = speed;
-                sendindex3 = 2;
+                if (skillindex == sendindex1)
+                {
+                    Q.GetComponent<Image>().sprite = Sprites[sendindex2];
+                    sendindex1 = sendindex2;
+                }
+                if (skillindex == sendindex3)
+                {
+                    trap3.GetComponent<Image>().sprite = Sprites[sendindex2];
+                    sendindex3 = sendindex2;
+                }
+                sendindex2 = skillindex;
+                E.GetComponent<Image>().sprite = Sprites[sendindex2];
+                skillindex = 0;
             }
         }
-        else if (skillindex == 3)
+        else if(index == 2)
         {
-            if (skill1)
+            frame3.GetComponent<Image>().sprite = Change;
+            frame1.GetComponent<Image>().sprite = before;
+            frame2.GetComponent<Image>().sprite = before;
+            if (skillindex != 0)
             {
-                Q.GetComponent<Image>().sprite = bla;
-                sendindex1 = 3;
-
-            }
-            else if(skill2)
-            {
-                E.GetComponent<Image>().sprite = bla;
-                sendindex2 = 3;
-            }
-            else
-            {
-                trap3.GetComponent<Image>().sprite = bla;
-                sendindex3 = 3;
-            }
-        }
-        else if (skillindex == 4)
-        {
-            if (skill1)
-            {
-                Q.GetComponent<Image>().sprite = magic;
-                sendindex1 = 4;
-            }
-            else if(skill2)
-            {
-                E.GetComponent<Image>().sprite = magic;
-                sendindex2 = 4;
-            }
-            else
-            {
-                trap3.GetComponent<Image>().sprite = magic;
-                sendindex3 = 4;
-            }
-        }
-        else if (skillindex == 5)
-        {
-            if (skill1)
-            {
-                Q.GetComponent<Image>().sprite = clear;
-                sendindex1 = 5;
-            }
-            else if(skill2)
-            {
-                E.GetComponent<Image>().sprite = clear;
-                sendindex2 = 5;
-            }
-            else
-            {
-                trap3.GetComponent<Image>().sprite = clear;
-                sendindex3 = 5;
+                if (skillindex == sendindex1)
+                {
+                    Q.GetComponent<Image>().sprite = Sprites[sendindex3];
+                    sendindex1 = sendindex3;
+                }
+                if (skillindex == sendindex2)
+                {
+                    E.GetComponent<Image>().sprite = Sprites[sendindex3];
+                    sendindex2 = sendindex3;
+                }
+                sendindex3 = skillindex;
+                trap3.GetComponent<Image>().sprite = Sprites[sendindex3];
+                skillindex = 0;
             }
         }
     }

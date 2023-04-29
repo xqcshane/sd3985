@@ -47,8 +47,8 @@ public class PlayerAim : MonoBehaviour
     int totalweapon = 2;
     public int currentweaponindex;
     public GameObject[] guns;
-    public GameObject gunholder;
-    public GameObject currentGun;
+    //public GameObject gunholder;
+    //public GameObject currentGun;
     string[] Gunlist = { "normalStaff","shotgunStaff","bombStaff","machineGunStaff"};
     float angle;
 
