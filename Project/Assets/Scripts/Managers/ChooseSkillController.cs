@@ -27,5 +27,6 @@ public class ChooseSkillController : MonoBehaviour
 
        // GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().status = status;
     }
+    
 
 }
