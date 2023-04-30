@@ -58,6 +58,7 @@ MonoBehaviour:
   canMove: 1
   slower: 0
   originalSpeed: 0
+  animator: {fileID: 6643564053477368338}
 --- !u!114 &-7145614928734396515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,9 +150,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6872472070435909020}
   - component: {fileID: 9135655049708914573}
-  - component: {fileID: 9155521505514595431}
+  - component: {fileID: 6643564053477368338}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Skull_image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -227,7 +228,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &9155521505514595431
+--- !u!95 &6643564053477368338
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -237,7 +238,7 @@ Animator:
   m_GameObject: {fileID: 8436795879457256160}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4c0532641745796469a2b282b499260d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7a024876e72890640bf48b58ae606575, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

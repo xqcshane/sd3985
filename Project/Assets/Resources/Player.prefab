@@ -136,14 +136,14 @@ GameObject:
   - component: {fileID: 5698858188213059965}
   - component: {fileID: 5698858188213059954}
   - component: {fileID: 5698858188213059955}
-  - component: {fileID: 5698858188213059952}
+  - component: {fileID: 5698858188937934970}
   m_Layer: 0
   m_Name: bombStaff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5698858188213059953
 Transform:
   m_ObjectHideFlags: 0
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!95 &5698858188213059952
+--- !u!95 &5698858188937934970
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -258,7 +258,7 @@ Animator:
   m_GameObject: {fileID: 5698858188213059958}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b35534a49f9d2974884023cedafc1a67, type: 2}
+  m_Controller: {fileID: 9100000, guid: d9d8fd45c16c11b45ac56b8d3a85b6e5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -279,14 +279,14 @@ GameObject:
   - component: {fileID: 5698858188668071220}
   - component: {fileID: 5698858188668071221}
   - component: {fileID: 5698858188668071242}
-  - component: {fileID: 5698858188668071243}
+  - component: {fileID: 5698858188937934969}
   m_Layer: 0
   m_Name: machineGunStaff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5698858188668071240
 Transform:
   m_ObjectHideFlags: 0
@@ -391,7 +391,7 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!95 &5698858188668071243
+--- !u!95 &5698858188937934969
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -401,7 +401,7 @@ Animator:
   m_GameObject: {fileID: 5698858188668071241}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b35534a49f9d2974884023cedafc1a67, type: 2}
+  m_Controller: {fileID: 9100000, guid: 71275dbbf8bc73c41aaf9c8b4dc90118, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -422,14 +422,14 @@ GameObject:
   - component: {fileID: 5698858188956524720}
   - component: {fileID: 5698858188956524721}
   - component: {fileID: 5698858188956524726}
-  - component: {fileID: 5698858188956524723}
+  - component: {fileID: 5698858188937934971}
   m_Layer: 0
   m_Name: shotgunStaff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5698858188956524727
 Transform:
   m_ObjectHideFlags: 0
@@ -534,7 +534,7 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!95 &5698858188956524723
+--- !u!95 &5698858188937934971
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -544,7 +544,7 @@ Animator:
   m_GameObject: {fileID: 5698858188956524724}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b35534a49f9d2974884023cedafc1a67, type: 2}
+  m_Controller: {fileID: 9100000, guid: f3bd02d37f94b914082afe2f35c0e04d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -746,7 +746,7 @@ MonoBehaviour:
   speed: 1
   canMove: 1
   slower: 0
-  originalSpeed: 0
+  originalSpeed: 1
   currentweaponindex: 0
   inpassage: 0
   animator: {fileID: 5698858188123970586}

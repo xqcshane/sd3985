@@ -54,8 +54,8 @@ public class PlayerMove : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        /*if (PR == 0)
-        { }*/
+        if (PR == 0)
+        {
             if (NotHit)
             {
                 if (canMove)
@@ -72,14 +72,13 @@ public class PlayerMove : MonoBehaviour
                     {
                         animator.Play("Adventurer_right");
                         faceRight = true;
-                     
+                        weaponAnimator.Play("weapon_flip");
                     }
                     else if (horizontal < 0)
                     {
                         animator.Play("Adventurer_left");
                         faceRight = false;
                         weaponAnimator.Play("weapon");
-                      
                     }
                     else if (vertical != 0)
                     {
@@ -87,13 +86,11 @@ public class PlayerMove : MonoBehaviour
                         {
                             animator.Play("Adventurer_right");
                             weaponAnimator.Play("weapon_flip");
-                      
                         }
                         else
                         {
                             animator.Play("Adventurer_left");
                             weaponAnimator.Play("weapon");
-                       
                         }
 
                     }
@@ -103,13 +100,11 @@ public class PlayerMove : MonoBehaviour
                         {
                             animator.Play("Real_adventurer");
                             weaponAnimator.Play("weapon_flip");
-                           
                         }
                         else
                         {
                             animator.Play("Real_adventurer_Flip");
                             weaponAnimator.Play("weapon");
-                          
                         }
 
                     }
@@ -120,7 +115,7 @@ public class PlayerMove : MonoBehaviour
                     transform.position = position;
                 }
             }
-      
+        }
     }
 
     }
