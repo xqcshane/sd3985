@@ -10,7 +10,10 @@ public class RandomEmeny : MonoBehaviour
     public int EnemyNumber;
     void Start()
     {
-        StartRandom();
+        int PlayerRole = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().status;
+        if(PlayerRole == 0){
+            StartRandom();
+        }  
         //mypre.transform.position = new Vector3(Random.Range(-rmx, rmx), Random.Range(-rmy, rmy),0);
         
     }

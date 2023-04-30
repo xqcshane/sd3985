@@ -102,7 +102,7 @@
      <Compile Include="Assets\_\Stuff\CodeMonkey\Assets.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
      <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\World_Sprite.cs" />
-     <Compile Include="Assets\Scripts\Rooms\RandomRoomController.cs" />
+     <Compile Include="Assets\Scripts\Rooms\test\RandomRoomController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\World_Bar.cs" />
      <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\UtilsClass.cs" />
@@ -215,6 +215,7 @@
      <Compile Include="Assets\Scripts\Traps\FakeTrophy.cs" />
      <Compile Include="Assets\Scripts\Music\IntroMusicController.cs" />
      <Compile Include="Assets\Scripts\Managers\RSManager.cs" />
+     <Compile Include="Assets\Scripts\Rooms\RoomRandomController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\_\Stuff\CodeMonkey\CMDebug.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
