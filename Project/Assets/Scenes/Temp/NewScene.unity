@@ -656,7 +656,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -225206217
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 277f8c587693db9478b7e04ee8b13ca7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -909,6 +909,11 @@ MonoBehaviour:
   canMove: 0
   slower: 0
   originalSpeed: 0
+  currentweaponindex: 0
+  inpassage: 0
+  animator: {fileID: 0}
+  weaponAnimator: {fileID: 0}
+  NotHit: 1
 --- !u!50 &1128617346
 Rigidbody2D:
   serializedVersion: 4
@@ -968,7 +973,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -225206217
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2908bcc5a5e87b14598de14a4581d0e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1033,8 +1038,6 @@ MonoBehaviour:
   firerate3: 0.25
   currentweaponindex: 0
   guns: []
-  gunholder: {fileID: 0}
-  currentGun: {fileID: 0}
 --- !u!61 &1128617350
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1075,6 +1078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeInvincible: 2
   maxHealth: 100
+  animator: {fileID: 0}
 --- !u!1 &1183561466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,7 +1474,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -225206217
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b1dfee090b7cd0845998bd39d1a58777, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1552,7 +1556,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -225206217
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c4555d3d6d6724849bf0278eb84cbbde, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1634,7 +1638,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -225206217
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0a899d55b1dc0eb4caf21c611bdc465c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -11148,7 +11152,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -4357585938458432296, guid: 010d2feaa9384df409c9ed8a398596ee, type: 3}
       propertyPath: sceneViewId
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7357880794446438854, guid: 010d2feaa9384df409c9ed8a398596ee, type: 3}
       propertyPath: m_Name

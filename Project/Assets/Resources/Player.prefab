@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5698858188123970587}
   - component: {fileID: 5698858188123970586}
   - component: {fileID: 3720123143940460253}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Idle_m_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 4723107735738678597, guid: db1a08b89f9f9a741872ee3b4f90cb2f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 5698858188213059954}
   - component: {fileID: 5698858188213059955}
   - component: {fileID: 5698858188937934970}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bombStaff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: 3116903652035681868, guid: 31ed9e28b68a11e4180bee347822a132, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 5698858188668071221}
   - component: {fileID: 5698858188668071242}
   - component: {fileID: 5698858188937934969}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: machineGunStaff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +340,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: 7458918746889967490, guid: 31ed9e28b68a11e4180bee347822a132, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -423,7 +423,7 @@ GameObject:
   - component: {fileID: 5698858188956524721}
   - component: {fileID: 5698858188956524726}
   - component: {fileID: 5698858188937934971}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shotgunStaff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -483,7 +483,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: -7688832970219841945, guid: 31ed9e28b68a11e4180bee347822a132, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -569,7 +569,7 @@ GameObject:
   - component: {fileID: 5698858189652019670}
   - component: {fileID: 5698858189652019668}
   - component: {fileID: 8765844224137345807}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -765,7 +765,7 @@ GameObject:
   - component: {fileID: 5698858189715441152}
   - component: {fileID: 5698858189715441153}
   - component: {fileID: 5698858189715441158}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: normalStaff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -825,7 +825,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: 3106946425024690258, guid: 31ed9e28b68a11e4180bee347822a132, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

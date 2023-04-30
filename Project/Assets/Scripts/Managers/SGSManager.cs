@@ -10,8 +10,8 @@ using Photon.Realtime;
 
 public class SGSManager : MonoBehaviourPunCallbacks
 {
-    [SerializeField]
-    Text RoomListText;
+    //[SerializeField]
+    //Text RoomListText;
     [SerializeField]
     Button[] StartButtons;
 
@@ -100,7 +100,7 @@ public class SGSManager : MonoBehaviourPunCallbacks
                 sb.AppendLine("-> "+ roomInfo.Name + "   " +roomInfo.PlayerCount.ToString());
             } 
          }
-         RoomListText.text = sb.ToString();
+         //RoomListText.text = sb.ToString();
          
      }
 

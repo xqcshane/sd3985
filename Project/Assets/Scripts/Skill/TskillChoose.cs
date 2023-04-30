@@ -17,7 +17,6 @@ public class TskillChoose : MonoBehaviour
     public Button Q;
     public Sprite before;
     public GameObject Data;
-    public float totaltime = 10.0f;
    // public Text time;
     private Sprite[] Sprites;
     public int buttonindex = -1;
@@ -26,7 +25,7 @@ public class TskillChoose : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Sprite[] list = { before, heal, speed, bla, magic, clear, Change };
+       /* Sprite[] list = { before, heal, speed, bla, magic, clear, Change };
         Sprites = list;
         randomskills = UniqRandom(5, 3);
         GameObject allskill = GameObject.Find("TSkillList");
@@ -40,21 +39,13 @@ public class TskillChoose : MonoBehaviour
         }
         sendindex1 = 0;
         frame1 = Q.gameObject.transform.GetChild(0).gameObject;
-        frame1.GetComponent<Image>().sprite = before;
+        frame1.GetComponent<Image>().sprite = before;*/
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (totaltime > 0)
-        {
- 
-            totaltime -= Time.deltaTime;
-        }
-        else
-        {
-           
-        }
+    
     }
     public void Changeicon(int index)
     {
@@ -76,6 +67,24 @@ public class TskillChoose : MonoBehaviour
         sendindex1 = randomskills[0];
         //Data.GetComponent<TrapData>().skillindex1 = sendindex1;
        // SceneManager.LoadScene("GameScene");
+    }
+    public void IntialSkill()
+    {
+        Sprite[] list = { before, heal, speed, bla, magic, clear, Change };
+        Sprites = list;
+        randomskills = UniqRandom(5, 3);
+        GameObject allskill = GameObject.Find("TSkillList");
+        for (int i = 0; i < allskill.transform.childCount; i++)
+        {
+            allskill.transform.GetChild(i).gameObject.SetActive(false);
+        }
+        foreach (int i in randomskills)
+        {
+            allskill.transform.GetChild(i).gameObject.SetActive(true);
+        }
+        sendindex1 = 0;
+        frame1 = Q.gameObject.transform.GetChild(0).gameObject;
+        frame1.GetComponent<Image>().sprite = before;
     }
     public int[] UniqRandom(int RandomNumber, int NeedNumber)
     {

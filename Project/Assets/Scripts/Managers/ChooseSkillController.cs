@@ -16,7 +16,7 @@ public class ChooseSkillController : MonoBehaviour
             GameObject.Find("Adventure").SetActive(true);         
             GameObject.Find("Troublemaker").SetActive(false);
             GameObject.Find("TrapManager").SetActive(false) ;
-            GameObject.Find("TrapManager2").SetActive(!false);
+            GameObject.Find("TrapManager2").SetActive(false);
             GameObject.Find("Troublemakerskill").SetActive(false);
             GameObject.Find("TSkillManager2").SetActive(false);
             GameObject.Find("TSkillManager").SetActive(false);
@@ -27,7 +27,9 @@ public class ChooseSkillController : MonoBehaviour
             GameObject.Find("Adventure").SetActive(false);
             GameObject.Find("Troublemaker").SetActive(true);
             GameObject.Find("SkillManager").SetActive(false);
-            GameObject.Find("SkillManager2").SetActive(!false);
+            GameObject.Find("SkillManager2").SetActive(false);
+            GameObject.Find("TSkillManager").GetComponent<TskillChoose>().IntialSkill();
+            GameObject.Find("Troublemakerskill").SetActive(false);
         }
 
        // GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().status = status;
