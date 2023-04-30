@@ -5,6 +5,7 @@ using UnityEngine;
 public class MainMenuMusic : MonoBehaviour
 {
     public AudioSource startMenuMusic;
+    public float soundvalue;
 
     private static MainMenuMusic instance = null;
     public static MainMenuMusic Instance
@@ -14,6 +15,7 @@ public class MainMenuMusic : MonoBehaviour
 
     private void Awake()
     {
+        soundvalue = 1f;
         if (instance == null)
         {
             Debug.Log("huang");

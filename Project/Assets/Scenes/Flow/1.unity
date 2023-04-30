@@ -2185,6 +2185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startMenuMusic: {fileID: 2141084874}
+  soundvalue: 0
 --- !u!82 &2141084874
 AudioSource:
   m_ObjectHideFlags: 0
