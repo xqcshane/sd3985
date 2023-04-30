@@ -9,12 +9,11 @@ public class TChangeSkill : MonoBehaviour
 
         GameObject skill = GameObject.FindWithTag("TSkill");
         //skill.GetComponent<TrapChoosing>().skillindex = index;
-        int button = skill.GetComponent<TrapChoosing>().buttonindex;
+        int button = skill.GetComponent<TskillChoose>().buttonindex;
         if (button != -1)
         {
-            skill.GetComponent<TrapChoosing>().skillindex = index;
-
-            skill.GetComponent<TrapChoosing>().Changeicon(button);
+            skill.GetComponent<TskillChoose>().skillindex = index;
+            skill.GetComponent<TskillChoose>().Changeicon(button);
         }
     }
 }

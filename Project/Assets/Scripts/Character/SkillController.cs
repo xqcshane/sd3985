@@ -24,6 +24,7 @@ public class SkillController : MonoBehaviour
     public GameObject SkillUI2;
     public GameObject player;
     GameObject sightmask;
+    public int PR;
     void Start()
     {
         GameObject data = GameObject.FindWithTag("SkillData");
@@ -31,6 +32,7 @@ public class SkillController : MonoBehaviour
         index2= data.GetComponent<SkillData>().skillindex2;
         player = GameObject.FindWithTag("Player");
         sightmask = GameObject.FindGameObjectWithTag("SightMask");
+        PR = GameObject.Find("Controller").GetComponent<Controller>().PlayerRole;
         if (index1 == 1)
         {
             cooldowntime1 = 10.0f;
@@ -105,166 +107,173 @@ public class SkillController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
-        if (Input.GetKeyDown(KeyCode.Q) && Time.time > nextskill1)
+        if (PR == 0)
         {
-            SkillUI1.GetComponent<Skill>().UseSkill("Q");
-            if (index1 == 1)
-            {
-                nextskill1 = Time.time + cooldowntime1;          
-                addHealth();
-                Debug.Log("haha");
-            }
-            else if(index1 == 2)
-            {
-                nextskill1 = Time.time + cooldowntime1;
-                IncreaseSpeed();
-                contime1 = Time.time + 5.0f;
-                skillflag1 = true;
-            }
-            else if (index1 == 3)
-            {
-                nextskill1 = Time.time + cooldowntime1;
-                Blast();
-                contime1 = Time.time + 5.0f;
-                skillflag1 = true;
-            }
-            else if (index1 == 4){
-                nextskill1 = Time.time + cooldowntime1;
-                moreMagic();
-                contime1 = Time.time + 5.0f;
-                skillflag1 = true;
-            }
-            else if (index1 == 5)
-            {
-                nextskill1 = Time.time + cooldowntime1;
-                Clear();
-                contime1 = Time.time + 10.0f;
-                skillflag1 = true;
-            }
-          
 
-        }
-        //update the skill
-        if (index1 == 2 && skillflag1 == true)
-        {
-            if (Time.time > contime1)
+            if (Input.GetKeyDown(KeyCode.Q) && Time.time > nextskill1)
             {
-                player.GetComponent<PlayerMove>().speed /=1.5f;
-                skillflag1 = false;
-            }
-        }
-        else if (index1 == 3 && skillflag1 == true)
-        {
-            if (Time.time > contime1)
-            {
-                player.GetComponent<PlayerAim>().firerate += 0.2f;
-                player.GetComponent<PlayerAim>().firerate1 += 0.2f;
-                player.GetComponent<PlayerAim>().firerate2 += 0.2f;
-                player.GetComponent<PlayerAim>().speed3 -= 10f;
-                skillflag1 = false;
-            }
-        }
-        else if (index1 == 4 && skillflag1 == true)
-        {
-            if (Time.time > contime1)
-            {
-                player.GetComponent<PlayerAim>().damage -= 10;
-                player.GetComponent<PlayerAim>().damage1 -= 10;
-                player.GetComponent<PlayerAim>().damage2 -= 20;
-                player.GetComponent<PlayerAim>().damage3 -= 5;
-                skillflag1 = false;
-            }
-        }
-        else if (index1 == 5 && skillflag1 == true)
-        {
-            if (Time.time > contime1)
-            {
-                sightmask.transform.GetChild(0).gameObject.SetActive(true);
-                skillflag1 = false;
-            }
-        }
+                SkillUI1.GetComponent<Skill>().UseSkill("Q");
+                if (index1 == 1)
+                {
+                    nextskill1 = Time.time + cooldowntime1;
+                    addHealth();
+                    Debug.Log("haha");
+                }
+                else if (index1 == 2)
+                {
+                    nextskill1 = Time.time + cooldowntime1;
+                    IncreaseSpeed();
+                    contime1 = Time.time + 5.0f;
+                    skillflag1 = true;
+                }
+                else if (index1 == 3)
+                {
+                    nextskill1 = Time.time + cooldowntime1;
+                    Blast();
+                    contime1 = Time.time + 5.0f;
+                    skillflag1 = true;
+                }
+                else if (index1 == 4)
+                {
+                    nextskill1 = Time.time + cooldowntime1;
+                    moreMagic();
+                    contime1 = Time.time + 5.0f;
+                    skillflag1 = true;
+                }
+                else if (index1 == 5)
+                {
+                    nextskill1 = Time.time + cooldowntime1;
+                    Clear();
+                    contime1 = Time.time + 10.0f;
+                    skillflag1 = true;
+                }
 
-        // E skill
-            if (Input.GetKeyDown(KeyCode.E) && Time.time > nextskill2) 
-        {
-            SkillUI2.GetComponent<Skill>().UseSkill("E");
-            if (index2 == 1)
-            {
-                nextskill2 = Time.time + cooldowntime2;     
-                addHealth();
-                Debug.Log("haha");
+
             }
-            else if (index2 == 2)
+            //update the skill
+            if (index1 == 2 && skillflag1 == true)
             {
-                nextskill2 = Time.time + cooldowntime2;
-                IncreaseSpeed();
-                contime2 = Time.time + 5.0f;
-                skillflag2 = true;
+                if (Time.time > contime1)
+                {
+                    player.GetComponent<PlayerMove>().speed /= 1.5f;
+                    skillflag1 = false;
+                }
             }
-            else if (index2 == 3)
+            else if (index1 == 3 && skillflag1 == true)
             {
-                nextskill2 = Time.time + cooldowntime2;
-                Blast();
-                contime2 = Time.time + 5.0f;
-                skillflag2 = true;
+                if (Time.time > contime1)
+                {
+                    player.GetComponent<PlayerAim>().firerate += 0.2f;
+                    player.GetComponent<PlayerAim>().firerate1 += 0.2f;
+                    player.GetComponent<PlayerAim>().firerate2 += 0.2f;
+                    player.GetComponent<PlayerAim>().speed3 -= 10f;
+                    skillflag1 = false;
+                }
             }
-            else if (index2 == 4)
+            else if (index1 == 4 && skillflag1 == true)
             {
-                nextskill2 = Time.time + cooldowntime2;
-                moreMagic();
-                contime2 = Time.time + 5.0f;
-                skillflag2 = true;
+                if (Time.time > contime1)
+                {
+                    player.GetComponent<PlayerAim>().damage -= 10;
+                    player.GetComponent<PlayerAim>().damage1 -= 10;
+                    player.GetComponent<PlayerAim>().damage2 -= 20;
+                    player.GetComponent<PlayerAim>().damage3 -= 5;
+                    skillflag1 = false;
+                }
             }
-            else if (index2 == 5)
+            else if (index1 == 5 && skillflag1 == true)
             {
-                nextskill2 = Time.time + cooldowntime2;
-                Clear();
-                contime2 = Time.time + 10.0f;
-                skillflag2 = true;
+                if (Time.time > contime1)
+                {
+                    sightmask.transform.GetChild(0).gameObject.SetActive(true);
+                    skillflag1 = false;
+                }
             }
-        }
+
+            // E skill
+            if (Input.GetKeyDown(KeyCode.E) && Time.time > nextskill2)
+            {
+                SkillUI2.GetComponent<Skill>().UseSkill("E");
+                if (index2 == 1)
+                {
+                    nextskill2 = Time.time + cooldowntime2;
+                    addHealth();
+                    Debug.Log("haha");
+                }
+                else if (index2 == 2)
+                {
+                    nextskill2 = Time.time + cooldowntime2;
+                    IncreaseSpeed();
+                    contime2 = Time.time + 5.0f;
+                    skillflag2 = true;
+                }
+                else if (index2 == 3)
+                {
+                    nextskill2 = Time.time + cooldowntime2;
+                    Blast();
+                    contime2 = Time.time + 5.0f;
+                    skillflag2 = true;
+                }
+                else if (index2 == 4)
+                {
+                    nextskill2 = Time.time + cooldowntime2;
+                    moreMagic();
+                    contime2 = Time.time + 5.0f;
+                    skillflag2 = true;
+                }
+                else if (index2 == 5)
+                {
+                    nextskill2 = Time.time + cooldowntime2;
+                    Clear();
+                    contime2 = Time.time + 10.0f;
+                    skillflag2 = true;
+                }
+            }
 
             // update skill for E
-        if (index2 == 2 && skillflag2 == true)
-        {
-            if (Time.time > contime2)
+            if (index2 == 2 && skillflag2 == true)
             {
-                player.GetComponent<PlayerMove>().speed /= 1.5f;
-                skillflag2 = false;
+                if (Time.time > contime2)
+                {
+                    player.GetComponent<PlayerMove>().speed /= 1.5f;
+                    skillflag2 = false;
+                }
+            }
+            else if (index2 == 3 && skillflag2 == true)
+            {
+                if (Time.time > contime2)
+                {
+                    player.GetComponent<PlayerAim>().firerate += 0.2f;
+                    player.GetComponent<PlayerAim>().firerate1 += 0.2f;
+                    player.GetComponent<PlayerAim>().firerate2 += 0.2f;
+                    player.GetComponent<PlayerAim>().speed3 -= 10f;
+                    skillflag2 = false;
+                }
+            }
+            else if (index2 == 4 && skillflag2 == true)
+            {
+                if (Time.time > contime2)
+                {
+                    player.GetComponent<PlayerAim>().damage -= 10;
+                    player.GetComponent<PlayerAim>().damage1 -= 10;
+                    player.GetComponent<PlayerAim>().damage2 -= 20;
+                    player.GetComponent<PlayerAim>().damage3 -= 5;
+                    skillflag2 = false;
+                }
+            }
+            else if (index2 == 5 && skillflag2 == true)
+            {
+                if (Time.time > contime2)
+                {
+                    sightmask.transform.GetChild(0).gameObject.SetActive(true);
+                    skillflag2 = false;
+                }
             }
         }
-        else if (index2 == 3 && skillflag2 == true)
+        else if (PR == 0)
         {
-            if (Time.time > contime2)
-            {
-                player.GetComponent<PlayerAim>().firerate += 0.2f;
-                player.GetComponent<PlayerAim>().firerate1 += 0.2f;
-                player.GetComponent<PlayerAim>().firerate2 += 0.2f;
-                player.GetComponent<PlayerAim>().speed3 -= 10f;
-                skillflag2 = false;
-            }
-        }
-        else if (index2 == 4 && skillflag2 == true)
-        {
-            if (Time.time > contime2)
-            {
-                player.GetComponent<PlayerAim>().damage -= 10;
-                player.GetComponent<PlayerAim>().damage1 -= 10;
-                player.GetComponent<PlayerAim>().damage2 -= 20;
-                player.GetComponent<PlayerAim>().damage3 -= 5;
-                skillflag2 = false;
-            }
-        }
-        else if (index2 == 5 && skillflag2 == true)
-        {
-            if (Time.time > contime2)
-            {
-                sightmask.transform.GetChild(0).gameObject.SetActive(true);
-                skillflag2 = false;
-            }
-        }
 
+        }
     }
 
     // skill for add health

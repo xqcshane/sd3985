@@ -21,7 +21,7 @@ public class SGSManager : MonoBehaviourPunCallbacks
         SetAllBtns(false);
 
         if(PhotonNetwork.IsConnected==false){
-            SceneManager.LoadScene("StartLoadingScene");
+            SceneManager.LoadScene("SL");
         }else{
             if(PhotonNetwork.CurrentLobby == null){
                 PhotonNetwork.JoinLobby();
