@@ -23,6 +23,7 @@ TagManager:
   - TrapController
   - Wall
   - RandomRoom
+  - TSkill
   layers:
   - Default
   - TransparentFX

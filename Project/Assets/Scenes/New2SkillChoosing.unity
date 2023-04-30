@@ -371,8 +371,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1569960143}
-        m_TargetAssemblyTypeName: ChangeTrapIndex, Assembly-CSharp
+      - m_Target: {fileID: 1716477657}
+        m_TargetAssemblyTypeName: TChangeSkill, Assembly-CSharp
         m_MethodName: skill
         m_Mode: 3
         m_Arguments:
@@ -403,7 +403,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1d49f77fc7e5ea643991ed4a0c55e626, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e691198d56e3a1848b5009e1ff94dbb5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -879,7 +879,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &124535790
 GameObject:
@@ -1806,8 +1806,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1569960143}
-        m_TargetAssemblyTypeName: ChangeTrapIndex, Assembly-CSharp
+      - m_Target: {fileID: 1716477657}
+        m_TargetAssemblyTypeName: TChangeSkill, Assembly-CSharp
         m_MethodName: skill
         m_Mode: 3
         m_Arguments:
@@ -1838,7 +1838,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6bf64fa4faeec5546b4f6a2d3081b85d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2bccd332882fcd14b9e4c377e432c587, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2977,8 +2977,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 510203068}
-        m_TargetAssemblyTypeName: TrapChoosing, Assembly-CSharp
+      - m_Target: {fileID: 1476882277}
+        m_TargetAssemblyTypeName: TskillChoose, Assembly-CSharp
         m_MethodName: Changeicon
         m_Mode: 3
         m_Arguments:
@@ -4217,7 +4217,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 94f74dc7ef4696a47a0b54a2b6d2b76a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cdec13907ffc75749ab2ed436bec6b14, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5088,8 +5088,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1569960143}
-        m_TargetAssemblyTypeName: ChangeTrapIndex, Assembly-CSharp
+      - m_Target: {fileID: 1716477657}
+        m_TargetAssemblyTypeName: TChangeSkill, Assembly-CSharp
         m_MethodName: skill
         m_Mode: 3
         m_Arguments:
@@ -5120,7 +5120,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 859cd3d888473d04490221b61b581d2e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c0c621637e6ca054cb6f00c56255ade7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6612,11 +6612,11 @@ GameObject:
   - component: {fileID: 1476882277}
   m_Layer: 0
   m_Name: TSkillManager
-  m_TagString: Untagged
+  m_TagString: TSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1476882276
 Transform:
   m_ObjectHideFlags: 0
@@ -6629,7 +6629,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1476882277
 MonoBehaviour:
@@ -6645,13 +6645,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillindex: 0
   sendindex1: 0
-  heal: {fileID: 0}
-  speed: {fileID: 0}
-  bla: {fileID: 0}
-  magic: {fileID: 0}
-  clear: {fileID: 0}
+  heal: {fileID: 21300000, guid: e691198d56e3a1848b5009e1ff94dbb5, type: 3}
+  speed: {fileID: 21300000, guid: 2bccd332882fcd14b9e4c377e432c587, type: 3}
+  bla: {fileID: 21300000, guid: cdec13907ffc75749ab2ed436bec6b14, type: 3}
+  magic: {fileID: 21300000, guid: c46be55a65cb30e44b7c89e3c0d531da, type: 3}
+  clear: {fileID: 21300000, guid: c0c621637e6ca054cb6f00c56255ade7, type: 3}
   Change: {fileID: 21300000, guid: 37f57a0c61fc801499a0a562f1bd9777, type: 3}
-  Q: {fileID: 0}
+  Q: {fileID: 563594075}
   before: {fileID: 21300000, guid: 1455a3d096e0bf74fbbac0f76b17cbce, type: 3}
   Data: {fileID: 0}
   totaltime: 10
@@ -6747,7 +6747,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1491425145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6911,7 +6911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1623186986
 Transform:
   m_ObjectHideFlags: 0
@@ -7035,7 +7035,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1648347023
 MonoBehaviour:
@@ -7415,13 +7415,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1716477656}
+  - component: {fileID: 1716477657}
   m_Layer: 0
   m_Name: TSkillManager2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1716477656
 Transform:
   m_ObjectHideFlags: 0
@@ -7434,8 +7435,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1716477657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716477655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371020cf3f89c6c4d88108143455fd49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1782141296
 GameObject:
   m_ObjectHideFlags: 0
@@ -8690,8 +8703,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1569960143}
-        m_TargetAssemblyTypeName: ChangeTrapIndex, Assembly-CSharp
+      - m_Target: {fileID: 1716477657}
+        m_TargetAssemblyTypeName: TChangeSkill, Assembly-CSharp
         m_MethodName: skill
         m_Mode: 3
         m_Arguments:
@@ -8722,7 +8735,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7e1e3f7ce3b67a34dad034bda03c7925, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c46be55a65cb30e44b7c89e3c0d531da, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

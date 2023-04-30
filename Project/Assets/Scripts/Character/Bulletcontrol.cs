@@ -24,20 +24,34 @@ public class Bulletcontrol : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") )
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<Enemyfollow>().health -= damage;
-            collision.gameObject.GetComponent<Enemyfollow>().animator.Play("globin_hit");
-            PhotonNetwork.Destroy(gameObject);
+            collision.gameObject.GetComponent<NonetworkEnemy>().Damaged(damage);
+            Destroy(gameObject);
         }
-        if (collision.gameObject.CompareTag("Respawn"))
+        if (collision.gameObject.CompareTag("FlyingEye"))
         {
-            PhotonNetwork.Destroy(gameObject);
+            collision.gameObject.GetComponent<NoNetworkFlyingEye>().Damaged(damage);
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.CompareTag("Mushroom"))
+        {
+            collision.gameObject.GetComponent<NoNetworkMushroom>().Damaged(damage);
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.CompareTag("Seleton"))
+        {
+            collision.gameObject.GetComponent<NoNetworkSkeleton>().Damaged(damage);
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("BOSS"))
         {
-            collision.gameObject.GetComponent<BossFollow>().health -= damage;
-            PhotonNetwork.Destroy(gameObject);
+            collision.gameObject.GetComponent<BossFollow>().Damaged(damage);
+            Destroy(gameObject);
         }
     }
     private void Update()

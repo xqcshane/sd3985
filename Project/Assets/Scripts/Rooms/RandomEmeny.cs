@@ -31,7 +31,7 @@ public class RandomEmeny : MonoBehaviour
 
             Vector3 position = new Vector3(Random.Range(-rmx, rmx), Random.Range(1-rmy, rmy-1),0);
             GameObject mypre = PhotonNetwork.Instantiate(prefab.name, position+this.gameObject.transform.position, Quaternion.identity);
-            mypre.transform.parent = this.gameObject.transform;
+            //mypre.transform.parent = this.gameObject.transform;
         }
     }
 }
