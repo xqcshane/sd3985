@@ -52,7 +52,8 @@ MonoBehaviour:
   uiCamera: {fileID: 0}
   arrowSprite: {fileID: 21300000, guid: 936345f7fc3934efa8119a8700d904c7, type: 3}
   crossSprite: {fileID: 21300000, guid: 02800fb9cff14da47a04572790384d8b, type: 3}
-  respawns: []
+  MyFindItem: {fileID: 0}
+  ImageOrignalRoutate: 0
 --- !u!1 &6307022693729966822
 GameObject:
   m_ObjectHideFlags: 0

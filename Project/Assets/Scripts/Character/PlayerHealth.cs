@@ -82,8 +82,10 @@ public class PlayerHealth : MonoBehaviourPunCallbacks
     {
         if (role == 1)
         {
-            currentHealth = (int)changedProps["hp"];
-            Debug.Log(currentHealth + "/" + maxHealth);
+            if(changedProps.ContainsKey("hp")){
+                currentHealth = (int)changedProps["hp"];
+                Debug.Log(currentHealth + "/" + maxHealth);
+            }
         }
     }
 

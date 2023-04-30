@@ -23,11 +23,13 @@ public class PointerToItems : MonoBehaviour
     
     //change the border size
     private float bordersize = 100f;
+    private PointerCreater MyPointerCreater;
 
     private void Start(){        
         targetPosition = MyFindItem.transform.position;
-        PointerRectTransform = transform.Find("Pointer").GetComponent<RectTransform>();
-        pointerImage = transform.Find("Pointer").GetComponent<Image>();
+        PointerRectTransform = this.transform.FindChild("Pointer").GetComponent<RectTransform>();
+        pointerImage = this.transform.FindChild("Pointer").GetComponent<Image>();
+        MyPointerCreater = this.transform.parent.GetComponent<PointerCreater>();
     }
     
     public static float GetAngle(Vector2 a, Vector2 b)
@@ -38,33 +40,44 @@ public class PointerToItems : MonoBehaviour
     }
 
     private void Update(){
-        Vector3 toPosition = MyFindItem.transform.position;
-        Vector3 fromPosition =  Camera.main.transform.position;
-        fromPosition.z = 0f;
-        Vector3 dir = (toPosition - fromPosition).normalized;
-        float angle = GetAngle(fromPosition, toPosition) + ImageOrignalRoutate;      
-
-        PointerRectTransform.localEulerAngles = new Vector3(0,0,angle);
-
-        Vector3 targetPositionScreenPoint = Camera.main.WorldToScreenPoint(targetPosition);
-        bool isOffScreen = targetPositionScreenPoint.x <= bordersize || targetPositionScreenPoint.x >= Screen.width-bordersize || targetPositionScreenPoint.y <= bordersize || targetPositionScreenPoint.y >= Screen.height - bordersize;
-        if (isOffScreen){
-            pointerImage.sprite = arrowSprite;
-            Vector3 cappedtargetPositionScreen = targetPositionScreenPoint;
-            if(cappedtargetPositionScreen.x <= bordersize)cappedtargetPositionScreen.x=bordersize;
-            if(cappedtargetPositionScreen.x >= Screen.width - bordersize)cappedtargetPositionScreen.x=Screen.width - bordersize;
-            if(cappedtargetPositionScreen.y <= bordersize)cappedtargetPositionScreen.y=bordersize;
-            if(cappedtargetPositionScreen.y >= Screen.height - bordersize)cappedtargetPositionScreen.y=Screen.height - bordersize;
         
-            Vector3 pointerWorldPosition = uiCamera.ScreenToWorldPoint(cappedtargetPositionScreen);
+        if(MyFindItem != null){
+            if(MyPointerCreater.canSee){
+                pointerImage.enabled = true;
+                Vector3 toPosition = MyFindItem.transform.position;
+                Vector3 fromPosition =  Camera.main.transform.position;
+                fromPosition.z = 0f;
+                Vector3 dir = (toPosition - fromPosition).normalized;
+                float angle = GetAngle(fromPosition, toPosition) + ImageOrignalRoutate;      
+
+                PointerRectTransform.localEulerAngles = new Vector3(0,0,angle);
+
+                Vector3 targetPositionScreenPoint = Camera.main.WorldToScreenPoint(targetPosition);
+                bool isOffScreen = targetPositionScreenPoint.x <= bordersize || targetPositionScreenPoint.x >= Screen.width-bordersize || targetPositionScreenPoint.y <= bordersize || targetPositionScreenPoint.y >= Screen.height - bordersize;
+                if (isOffScreen){
+                    pointerImage.sprite = arrowSprite;
+                    Vector3 cappedtargetPositionScreen = targetPositionScreenPoint;
+                    if(cappedtargetPositionScreen.x <= bordersize)cappedtargetPositionScreen.x=bordersize;
+                    if(cappedtargetPositionScreen.x >= Screen.width - bordersize)cappedtargetPositionScreen.x=Screen.width - bordersize;
+                    if(cappedtargetPositionScreen.y <= bordersize)cappedtargetPositionScreen.y=bordersize;
+                    if(cappedtargetPositionScreen.y >= Screen.height - bordersize)cappedtargetPositionScreen.y=Screen.height - bordersize;
+                
+                    Vector3 pointerWorldPosition = uiCamera.ScreenToWorldPoint(cappedtargetPositionScreen);
+                    
+                    PointerRectTransform.position = pointerWorldPosition;
+                    PointerRectTransform.localPosition = new Vector3(PointerRectTransform.localPosition.x, PointerRectTransform.localPosition.y, 0f);
+                }else{
+                    pointerImage.sprite = crossSprite;
+                    Vector3 pointerWorldPosition = uiCamera.ScreenToWorldPoint(targetPositionScreenPoint);
+                    PointerRectTransform.position = pointerWorldPosition;
+                    PointerRectTransform.localPosition = new Vector3(PointerRectTransform.localPosition.x,PointerRectTransform.localPosition.y,0f);
+                }
+            }else{
+                pointerImage.enabled = false;
+            }
             
-            PointerRectTransform.position = pointerWorldPosition;
-            PointerRectTransform.localPosition = new Vector3(PointerRectTransform.localPosition.x, PointerRectTransform.localPosition.y, 0f);
         }else{
-            pointerImage.sprite = crossSprite;
-            Vector3 pointerWorldPosition = uiCamera.ScreenToWorldPoint(targetPositionScreenPoint);
-            PointerRectTransform.position = pointerWorldPosition;
-            PointerRectTransform.localPosition = new Vector3(PointerRectTransform.localPosition.x,PointerRectTransform.localPosition.y,0f);
+            Destroy( this.gameObject, 0);
         }
     }
 
