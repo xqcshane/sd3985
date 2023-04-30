@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":false,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":false,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":-46.57526397705078,"y":70.55931854248047,"z":31.499616622924806},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":40.37675094604492,"orthographic":true}
-=======
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":false,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":false,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":-72.8697738647461,"y":61.88666534423828,"z":-16.974035263061525},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":22.113922119140626,"orthographic":true}
->>>>>>> origin/XIE11
-=======
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":false,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":false,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":-72.8697738647461,"y":61.88666534423828,"z":-16.974035263061525},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":22.113922119140626,"orthographic":true}
->>>>>>> origin/XIE11
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":false,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":false,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":-79.54438781738281,"y":62.42828369140625,"z":-2.952577590942383},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":48.993858337402347,"orthographic":true}

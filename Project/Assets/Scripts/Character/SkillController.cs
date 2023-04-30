@@ -270,7 +270,7 @@ public class SkillController : MonoBehaviour
                 }
             }
         }
-        else if (PR == 0)
+        else if (PR == 1)
         {
 
         }
