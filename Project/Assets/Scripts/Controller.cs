@@ -33,24 +33,27 @@ public class Controller : MonoBehaviour
        
         PlayerRole = Status.GetComponent<Status>().status;
         final.GetComponent<Result>().PR = PlayerRole;
-       GameStart = false;
+        GameStart = false;
         if (PlayerRole == 1)
         {
             GameObject.Find("AdventureUIAndUICamera").SetActive(false);
             GameObject.Find("TroubleMakerAndUICamera").SetActive(true);
             PhotonNetwork.Instantiate("TroubleMake", new Vector3(200f, 70f, 0f), Quaternion.identity);
+            /*
             GameObject[] grids = GameObject.FindGameObjectsWithTag("Grids");
             foreach (GameObject grid in grids)
             {
                 grid.GetComponent<GridsController>().initialGrid();
             }
+            */
         }
         else
         {
             GameObject.Find("AdventureUIAndUICamera").SetActive(true);
             GameObject.Find("TroubleMakerAndUICamera").SetActive(false);
             PhotonNetwork.Instantiate("Player", new Vector3(12f, 7f, 0f), Quaternion.identity);
-            EnemyCreation();
+            GameObject.Find("BasicRoom").GetComponent<RoomRandomController>().StartRandomRooms();
+            //nemyCreation();
         }
 
     }
@@ -101,6 +104,7 @@ public class Controller : MonoBehaviour
 
     }
 
+    /*
     void EnemyCreation()
     {
         for (int i = 0; i < 10; i++)
@@ -116,5 +120,6 @@ public class Controller : MonoBehaviour
             PhotonNetwork.Instantiate("Enemy", new Vector3(110f, 96f, 0f), Quaternion.identity);
         }
     }
+    */
 }
 

@@ -47,6 +47,9 @@ public class GridsController : MonoBehaviour {
         PR = GameController.PlayerRole;
         isInitialed = false;
         myTrapController= GameObject.FindGameObjectWithTag("TrapController");
+        if(PR == 1){
+            initialGrid();
+        }
     }
 
     private void Update() {
