@@ -743,7 +743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69531a9f6198b834986264da4f4313b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 1
   canMove: 1
   slower: 0
   originalSpeed: 0
@@ -751,9 +751,6 @@ MonoBehaviour:
   inpassage: 0
   animator: {fileID: 5698858188123970586}
   weaponAnimator: {fileID: 5698858189715441158}
-  weaponAnimator1: {fileID: 5698858188956524723}
-  weaponAnimator2: {fileID: 5698858188213059952}
-  weaponAnimator3: {fileID: 5698858188668071243}
   NotHit: 1
 --- !u!1 &5698858189715441156
 GameObject:

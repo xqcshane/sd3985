@@ -20,7 +20,7 @@ public class Passage : MonoBehaviour
     {
         Debug.Log("haha");
         if (collision.gameObject.CompareTag("Player")){
-            /* if (collision.GetComponent<NonetworkMove>().inpassage == false)
+            if (collision.GetComponent<NonetworkMove>().inpassage == false)
              {
                  collision.gameObject.GetComponent<NonetworkMove>().inpassage =true;
                  collision.gameObject.GetComponent<NonetworkMove>().speed += 0.2f;
@@ -36,15 +36,15 @@ public class Passage : MonoBehaviour
                  {
                      allenemy[i].GetComponent<NonetworkEnemy>().enterpassage = false;
                  }
-             }*/
-            collision.gameObject.transform.position = newpos;
+             }
+            /*collision.gameObject.transform.position = newpos;
             GameObject[] allenemy = GameObject.FindGameObjectsWithTag("Enemy");
             for (int i = 0; i < allenemy.Length; i++)
             {
                 //allenemy[i].GetComponent<NonetworkEnemy>().Flip();
                 allenemy[i].GetComponent<NonetworkEnemy>().enterpassage = false;
                 
-            }
+            }*/
         }
         if (collision.gameObject.CompareTag("Enemy"))
         {
