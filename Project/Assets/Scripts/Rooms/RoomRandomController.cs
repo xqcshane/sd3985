@@ -8,6 +8,7 @@ public class RoomRandomController : MonoBehaviourPunCallbacks
 {
     public GameObject[] RandomRooms;
     public GameObject[] RoomPrefabs;
+    public GameObject BossRoomPrefabs;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,11 +52,38 @@ public class RoomRandomController : MonoBehaviourPunCallbacks
     public void StartRandomRooms(){
         
         int[] randomint = UniqRandom(RoomPrefabs.Length, RandomRooms.Length);
-
-        for(int i=0; i < RandomRooms.Length; i++)
+        int bossroomposition = Random.Range(0, 4);
+        randomint[bossroomposition] = -1;
+        GameObject MyRoom;
+        for (int i=0; i < RandomRooms.Length; i++)
         {
-            GameObject MyRoom = PhotonNetwork.Instantiate(RoomPrefabs[randomint[i]].name, RandomRooms[i].transform.position, Quaternion.Euler(0, 0, 0));
-            
+            if (randomint[i] != -1)
+            {
+                MyRoom = PhotonNetwork.Instantiate(RoomPrefabs[randomint[i]].name, RandomRooms[i].transform.position, Quaternion.Euler(0, 0, 0));
+            }
+            else
+            {
+                MyRoom = PhotonNetwork.Instantiate(BossRoomPrefabs.name, RandomRooms[i].transform.position, Quaternion.Euler(0, 0, 0));
+            }
+
+            MyRoom.transform.parent = RandomRooms[i].gameObject.transform;
+        }
+        GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().changeRoomInfo(randomint);
+    }
+
+    public void StartFixedRooms(int[] roomindex)
+    {
+        GameObject MyRoom;
+        for (int i = 0; i < RandomRooms.Length; i++)
+        {
+            if (roomindex[i] != -1)
+            {
+                MyRoom = PhotonNetwork.Instantiate(RoomPrefabs[roomindex[i]].name, RandomRooms[i].transform.position, Quaternion.Euler(0, 0, 0));
+            }
+            else
+            {
+                MyRoom = PhotonNetwork.Instantiate(BossRoomPrefabs.name, RandomRooms[i].transform.position, Quaternion.Euler(0, 0, 0));
+            }
             MyRoom.transform.parent = RandomRooms[i].gameObject.transform;
         }
     }

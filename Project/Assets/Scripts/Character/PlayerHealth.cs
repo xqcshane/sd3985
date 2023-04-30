@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using Photon.Pun;
 using HashTable = ExitGames.Client.Photon.Hashtable;
+using System.Linq;
 
 public class PlayerHealth : MonoBehaviourPunCallbacks
 {
@@ -80,7 +81,7 @@ public class PlayerHealth : MonoBehaviourPunCallbacks
 
     public override void OnPlayerPropertiesUpdate(Photon.Realtime.Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
     {
-        if (role == 1)
+        if (role == 1 && changedProps.ContainsKey("hp"))
         {
             currentHealth = (int)changedProps["hp"];
             Debug.Log(currentHealth + "/" + maxHealth);

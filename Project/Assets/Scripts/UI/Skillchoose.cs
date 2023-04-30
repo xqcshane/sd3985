@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -37,7 +38,24 @@ public class Skillchoose : MonoBehaviour
     {
         Sprite[] list = {before, heal, speed, bla, magic, clear, Change};
         Sprites = list;
-        randomskills = UniqRandom(7,5);
+        Status MyStatusScript = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>();
+        int NowSkillNumber = 0;
+        switch (MyStatusScript.round)
+        {
+            case 1:
+                NowSkillNumber = 5;
+                break;
+            case 2:
+                NowSkillNumber = 7;
+                break;
+            case 3:
+                NowSkillNumber = 9;
+                break;
+            default: 
+                NowSkillNumber = 5;
+                break;
+        }
+        randomskills = UniqRandom(7, NowSkillNumber);
         GameObject allskill = GameObject.Find("ASkillList");
         for(int i=0; i < allskill.transform.childCount; i++)
         {

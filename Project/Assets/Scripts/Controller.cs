@@ -16,6 +16,7 @@ public class Controller : MonoBehaviour
     public int PlayerRole;
     GameObject final;
     public bool GameStart;
+    public Vector3[] StartPoint;
     //0 is adventure, 1 is troublemake
 
     /*
@@ -27,13 +28,14 @@ public class Controller : MonoBehaviour
     */
 
     void Start()
-    {
+    {        
         GameObject Status = GameObject.FindGameObjectWithTag("Status");
         final = GameObject.FindGameObjectWithTag("Result");
        
         PlayerRole = Status.GetComponent<Status>().status;
         final.GetComponent<Result>().PR = PlayerRole;
         GameStart = false;
+
         if (PlayerRole == 1)
         {
             GameObject.Find("AdventureUIAndUICamera").SetActive(false);
@@ -51,8 +53,19 @@ public class Controller : MonoBehaviour
         {
             GameObject.Find("AdventureUIAndUICamera").SetActive(true);
             GameObject.Find("TroubleMakerAndUICamera").SetActive(false);
-            PhotonNetwork.Instantiate("Player", new Vector3(12f, 7f, 0f), Quaternion.identity);
-            GameObject.Find("BasicRoom").GetComponent<RoomRandomController>().StartRandomRooms();
+            int[] myrandom = UniqueRandom(4, 4);
+            PhotonNetwork.Instantiate("Player", StartPoint[myrandom[0]], Quaternion.identity);
+            PhotonNetwork.Instantiate("bomb", StartPoint[myrandom[1]], Quaternion.identity);
+            PhotonNetwork.Instantiate("fast", StartPoint[myrandom[2]], Quaternion.identity);
+            PhotonNetwork.Instantiate("shotgun", StartPoint[myrandom[3]], Quaternion.identity);
+            if (Status.GetComponent<Status>().turn == 1)
+            {
+                GameObject.Find("BasicRoom").GetComponent<RoomRandomController>().StartRandomRooms();
+            }
+            else
+            {
+                GameObject.Find("BasicRoom").GetComponent<RoomRandomController>().StartFixedRooms(Status.GetComponent<Status>().roominfo);
+            }
             //nemyCreation();
         }
 
@@ -80,6 +93,10 @@ public class Controller : MonoBehaviour
                 {
                     IB.SetActive(false);
                 }
+                if (PlayerRole == 0) {
+                    GameObject.Find("AdventureCanvas").GetComponent<PointerCreater>().StartInitialPointer();
+                        }
+
                 GameStart = true;
             }
             Gametime -= Time.deltaTime;
@@ -92,6 +109,7 @@ public class Controller : MonoBehaviour
         else 
         {
             final.GetComponent<Result>().score = (int)(Gametime * 0.5 + score);
+            GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().SetScore(final.GetComponent<Result>().score);
             SceneManager.LoadScene("Conclusion");
             Debug.Log("Out Of Time0");
         }
@@ -99,6 +117,7 @@ public class Controller : MonoBehaviour
         if (final.GetComponent<Result>().death)
         {
             final.GetComponent<Result>().score = (int)(Gametime * 0.5 + score);
+            GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().SetScore(final.GetComponent<Result>().score);
             SceneManager.LoadScene("Conclusion");
         }
 
@@ -121,5 +140,33 @@ public class Controller : MonoBehaviour
         }
     }
     */
+
+    public int[] UniqueRandom(int RandomNumber, int NeedNumber)
+    {
+        int[] randomskills = new int[NeedNumber];
+        int maxnumber = 0;
+        while (maxnumber < NeedNumber)
+        {
+            int num = Random.Range(1, RandomNumber + 1);
+            bool isOnList = false;
+            foreach (int i in randomskills)
+            {
+                if (i == num)
+                {
+                    isOnList = true;
+                }
+            }
+            if (!isOnList)
+            {
+                randomskills[maxnumber] = num;
+                maxnumber++;
+            }
+        }
+        for (int i = 0; i < randomskills.Length; i++)
+        {
+            randomskills[i] = randomskills[i] - 1;
+        }
+        return randomskills;
+    }
 }
 

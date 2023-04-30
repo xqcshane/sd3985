@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Score : MonoBehaviour
@@ -21,8 +22,14 @@ public class Score : MonoBehaviour
 
     public int growthRate = 10;
     private bool countOver = false;
-
+    public float showtime = 20.0f;
     // Update is called once per frame
+    void Start()
+    {
+        firstScoreFinal = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score1;
+        secondScoreFinal = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score2;
+        thirdScoreFinal = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score3;
+    }
     void Update()
     {
         score1.text = growthScores1.ToString("0");
@@ -67,6 +74,15 @@ public class Score : MonoBehaviour
         if (countOver)
         {
             CountOver();
+        }
+        if (showtime>0)
+        {
+
+            showtime -= Time.deltaTime;
+        }
+        else
+        {
+           //SceneManager.LoadScene("")
         }
     }
 

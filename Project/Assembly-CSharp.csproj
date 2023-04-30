@@ -119,6 +119,7 @@
     <Compile Include="Assets\Scripts\Enemy\BossDamage.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Scripts\NoNetwork\NonetworkEnemy.cs" />
+    <Compile Include="Assets\ZombiSoft\TinyHealthSystem\Demo\PopupText.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineEndless.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\MonoBehaviours\PositionRendererSorter.cs" />
     <Compile Include="Assets\Scripts\UI\TrapUI.cs" />
@@ -143,6 +144,8 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Scripts\Traps\ChangeTrapIndex.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralAdvancedTechniques.cs" />
+    <Compile Include="Assets\ZombiSoft\TinyHealthSystem\Demo\Demo.cs" />
+    <Compile Include="Assets\ZombiSoft\TinyHealthSystem\HealthSystem.cs" />
     <Compile Include="Assets\Scripts\UI\PointerCreater.cs" />
     <Compile Include="Assets\Scripts\Character\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Boss\testingBoss.cs" />
@@ -235,9 +238,6 @@
     <Compile Include="Assets\LeanTween\Examples\Archived\TestingRigidbodyCS.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\FunctionPeriodic.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\Following.cs" />
-    <Compile Include="Assets\ZombiSoft\TinyHealthSystem\Demo\Demo.cs" />
-    <Compile Include="Assets\ZombiSoft\TinyHealthSystem\HealthSystem.cs" />
-    <Compile Include="Assets\ZombiSoft\TinyHealthSystem\Demo\PopupText.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -285,7 +285,7 @@
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll" />
     <None Include="Assets\Photon\PhotonLibs\Photon3Unity3D.dll" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\Pixel FX - Fire\Read Me.txt" />
+    <None Include="Assets\GUI\Pixel FX - Fire\Read Me.txt" />
     <None Include="Assets\Photon\PhotonLibs\Metro\Photon3Unity3D.dll" />
     <None Include="Assets\LeanTween\Examples\Archived\2dUnlitWithFade.shader" />
     <None Include="Assets\Font\Slime&apos;s Pixel Font Pack!\Angel Code Format\Varnished (White)\Varnished (White).fnt" />

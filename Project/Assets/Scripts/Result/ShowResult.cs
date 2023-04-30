@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class ShowResult : MonoBehaviour
 {
     GameObject final;
@@ -10,6 +11,7 @@ public class ShowResult : MonoBehaviour
 
     //public Text result2;
     public Text score2;
+    public float showtime = 10.0f;
     void Start()
     {   
         final = GameObject.FindGameObjectWithTag("Result");
@@ -43,8 +45,45 @@ public class ShowResult : MonoBehaviour
                 score2.text = "You Kill the Adventure";
             }
         }
+        Destroy(GameObject.Find("Data1"));
+        Destroy(GameObject.Find("Data2"));
+        Destroy(GameObject.Find("result"));
+       // Destroy(GameObject.)
 
     }
 
-  
+    private void Update()
+    {
+        if (showtime > 0)
+        {       
+            showtime -= Time.deltaTime;
+        }
+        else
+        {
+            CheckAndChangeScene();
+        }
+    }
+
+
+    public void CheckAndChangeScene()
+    {
+        int MyRound = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().round;
+        int MyTurn = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().turn;
+        if(MyRound == 3 && MyTurn == 2)
+        {
+            SceneManager.LoadScene("Score");
+        }else if (MyTurn == 1)
+        {
+            GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().turn = 2;
+            SceneManager.LoadScene("Roles");
+        }
+        else if(MyTurn == 2)
+        {
+            GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().round ++;
+            GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().turn = 1;
+            SceneManager.LoadScene("Roles");
+        }
+}
+
+
 }

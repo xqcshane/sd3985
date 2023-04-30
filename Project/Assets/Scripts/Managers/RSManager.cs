@@ -14,6 +14,7 @@ public class RSManager : MonoBehaviourPunCallbacks
     [SerializeField]
     Text textPlayerList;
 
+    public GameObject MyStatus;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,7 +49,8 @@ public class RSManager : MonoBehaviourPunCallbacks
                 PhotonNetwork.LocalPlayer.NickName = "Player2" ;
             }
             */
-           OnClickStartGame(); 
+            DontDestroyOnLoad(MyStatus);
+            OnClickStartGame(); 
         }
     }
 
