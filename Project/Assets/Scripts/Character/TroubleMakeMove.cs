@@ -18,6 +18,10 @@ public class TroubleMakeMove : MonoBehaviour
     private Controller GameController;
     private int PR;
     private PhotonView _pv;
+
+    public Animator animator;
+    private bool faceRight = true;
+
     // �ڵ�һ��֡����֮ǰ���� Start
     void Start()
     {
@@ -43,17 +47,48 @@ public class TroubleMakeMove : MonoBehaviour
     {
         if (PR == 1)
         {
-
-
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");
+
+            if (horizontal > 0)
+            {
+                animator.Play("reverager_right");
+                faceRight = true;
+            }
+            else if (horizontal < 0)
+            {
+                animator.Play("reverager_left");
+                faceRight = false;
+            }
+            else if (vertical != 0)
+            {
+                if (faceRight)
+                {
+                    animator.Play("reverager_right");
+                }
+                else
+                {
+                    animator.Play("reverager_left");
+                }
+
+            }
+            else
+            {
+                if (faceRight)
+                {
+                    animator.Play("reverager_idle");
+                }
+                else
+                {
+                    animator.Play("reverager_idle_Flip");
+                }
+
+            }
 
             Vector2 position = transform.position;
             position.x = position.x + speed * horizontal;
             position.y = position.y + speed * vertical;
             transform.position = position;
-
-
         }
     }
     }
