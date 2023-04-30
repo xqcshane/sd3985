@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class RandomEmeny : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class RandomEmeny : MonoBehaviour
             float rmy = this.gameObject.GetComponent<BoxCollider2D>().bounds.size.y/2;
 
             Vector3 position = new Vector3(Random.Range(-rmx, rmx), Random.Range(1-rmy, rmy-1),0);
-            GameObject mypre = Instantiate(prefab, position+this.gameObject.transform.position, Quaternion.identity);
+            GameObject mypre = PhotonNetwork.Instantiate(prefab.name, position+this.gameObject.transform.position, Quaternion.identity);
             mypre.transform.parent = this.gameObject.transform;
         }
     }
