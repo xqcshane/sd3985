@@ -55,7 +55,7 @@ public class Skillchoose : MonoBehaviour
                 NowSkillNumber = 5;
                 break;
         }
-        randomskills = UniqRandom(7, NowSkillNumber);
+        randomskills = UniqRandom(10, NowSkillNumber);
         GameObject allskill = GameObject.Find("ASkillList");
         for(int i=0; i < allskill.transform.childCount; i++)
         {
