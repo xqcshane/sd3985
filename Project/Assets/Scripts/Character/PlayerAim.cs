@@ -47,6 +47,8 @@ public class PlayerAim : MonoBehaviour
     int totalweapon = 2;
     public int currentweaponindex;
     public GameObject[] guns;
+    public Animator[] animators;
+    public Animator nowanimator;
     //public GameObject gunholder;
     //public GameObject currentGun;
     string[] Gunlist = { "normalStaff","shotgunStaff","bombStaff","machineGunStaff"};
@@ -59,9 +61,11 @@ public class PlayerAim : MonoBehaviour
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         guns=new GameObject[4];
+        animators= new Animator[4];
         for(int i=0; i<4; i++)
         {
             guns[i] = transform.GetChild(i).gameObject;
+            animators[i] = guns[i].GetComponent<Animator>();    
             guns[i].SetActive(false);
         }
         guns[0].SetActive(true);
@@ -71,7 +75,8 @@ public class PlayerAim : MonoBehaviour
         bullet3.GetComponent<Bulletcontrol>().damage = damage2;
         bullet4.GetComponent<Bulletcontrol>(). damage = damage3;
         bullet = bullet1;
-        currentweaponindex = 0;
+        nowanimator = animators[1];
+        currentweaponindex = 1;
 
         GameController = GameObject.Find("Controller").GetComponent<Controller>();
         PR = GameController.PlayerRole;
@@ -197,6 +202,7 @@ public class PlayerAim : MonoBehaviour
         {
             guns[0].SetActive(true);
             aimtransform = transform.Find(Gunlist[0]);
+            this.gameObject.GetComponent<PlayerMove>().weaponAnimator = animators[0];
             guns[1].SetActive(false);
             guns[2].SetActive(false);
             guns[3].SetActive(false);
@@ -206,6 +212,7 @@ public class PlayerAim : MonoBehaviour
         {
             guns[1].SetActive(true);
             aimtransform = transform.Find(Gunlist[1]);
+            this.gameObject.GetComponent<PlayerMove>().weaponAnimator = animators[1];
             guns[0].SetActive(false);
             guns[2].SetActive(false);
             guns[3].SetActive(false);
@@ -215,6 +222,7 @@ public class PlayerAim : MonoBehaviour
         {
             guns[2].SetActive(true);
             aimtransform = transform.Find(Gunlist[2]);
+            this.gameObject.GetComponent<PlayerMove>().weaponAnimator = animators[2];
             guns[0].SetActive(false);
             guns[1].SetActive(false);
             guns[3].SetActive(false);
@@ -224,6 +232,7 @@ public class PlayerAim : MonoBehaviour
         {
             guns[3].SetActive(true);
             aimtransform = transform.Find(Gunlist[3]);
+            this.gameObject.GetComponent<PlayerMove>().weaponAnimator = animators[3];
             guns[0].SetActive(false);
             guns[1].SetActive(false);
             guns[2].SetActive(false);

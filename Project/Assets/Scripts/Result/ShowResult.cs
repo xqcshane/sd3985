@@ -20,7 +20,7 @@ public class ShowResult : MonoBehaviour
     {   
         final = GameObject.FindGameObjectWithTag("Result");
         int myrole = final.GetComponent<Result>().PR;
-        MyRat.text = "Round: " + GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().round.ToString() + "/nTurn: " + GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().turn.ToString();
+        MyRat.text = "Round: " + GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().round.ToString() + "\nTurn: " + GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().turn.ToString();
 
         if (myrole == 0)
         {

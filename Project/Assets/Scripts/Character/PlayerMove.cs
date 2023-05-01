@@ -39,6 +39,7 @@ public class PlayerMove : MonoBehaviour
         {
            InitalGame();
         }
+       
     }
 
     private void InitalGame()
