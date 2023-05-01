@@ -728,11 +728,12 @@ MonoBehaviour:
   speed3: 25
   range3: 0.3
   damage3: 2
-  firerate3: 0.01
+  firerate3: 0.1
   currentweaponindex: 0
   guns: []
   animators: []
   nowanimator: {fileID: 0}
+  suckblood: 0
 --- !u!114 &8765844224137345807
 MonoBehaviour:
   m_ObjectHideFlags: 0

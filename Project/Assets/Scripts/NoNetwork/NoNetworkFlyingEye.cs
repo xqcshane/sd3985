@@ -17,26 +17,15 @@ public class NoNetworkFlyingEye : MonoBehaviour
 
     bool canMove = true;
     bool Bonus = false;
-    public int score;
+    public GameObject score;
     public int status;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
         status = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().status;
-        int round = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().round;
-        if (round == 1)
-        {
-            score = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score1;
-        }
-        else if (round == 2)
-        {
-            score = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score2;
-        }
-        else if (round == 3)
-        {
-            score = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score3;
-        }
+        score = GameObject.FindGameObjectWithTag("Score");
+
     }
 
     // Update is called once per frame
@@ -44,13 +33,10 @@ public class NoNetworkFlyingEye : MonoBehaviour
     {
         if (health <= 0)
         {
-            if (Bonus)
+            dead = true;
+            if (dead)
             {
-                score += 20;
-            }
-            else
-            {
-                score += 10;
+                score.GetComponent<ScoreController>().addScore(30);
             }
             StartCoroutine(MyCoroutine());
 

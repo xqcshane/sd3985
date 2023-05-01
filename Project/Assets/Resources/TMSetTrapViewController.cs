@@ -85,6 +85,12 @@ public class TMSetTrapViewController : MonoBehaviour
             if (Input.GetKey(KeyCode.F)){
                 Camera.main.orthographicSize = 100f;    
             }
-        }    
+        }   else if (!CanChangeView)
+        {
+            if (PR == 1)
+            {
+                Camera.main.orthographicSize = 16f;
+            }       
+        }
     }
 }

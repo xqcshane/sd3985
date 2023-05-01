@@ -31,7 +31,11 @@ public class NonetworkEnemy : MonoBehaviour
     {
         if (health <= 0)
         {
-            score.GetComponent<ScoreController>().addScore(10);
+            dead = true;
+            if (dead)
+            {
+                score.GetComponent<ScoreController>().addScore(30);
+            }
             StartCoroutine(MyCoroutine());
           
         }

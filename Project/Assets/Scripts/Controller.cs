@@ -103,6 +103,7 @@ public class Controller : MonoBehaviour
                 {
                     GameObject.FindGameObjectWithTag("TrapController").GetComponent<TrapController>().CallEnhenceBoss();
                     GameObject.Find("ImageEmoji").GetComponent<EmojiController>().CanUseEmoji = true;
+                    GameObject.FindGameObjectWithTag("TroubleMaker").GetComponent<TMSetTrapViewController>().CanChangeView = false;
                 }
 
                 GameStart = true;
@@ -135,6 +136,7 @@ public class Controller : MonoBehaviour
             {
                 GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score3= score2.GetComponent<ScoreController>().score+(int)Gametime * 10;
             }
+            SceneManager.LoadScene("Conclusion");
         }
         if (final.GetComponent<Result>().death)
         {

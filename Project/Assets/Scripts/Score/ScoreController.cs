@@ -26,6 +26,27 @@ public class ScoreController : MonoBehaviour
             score = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score3;
         }
     }
+    private void Update()
+    {
+        int round = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().round;
+        
+        if (status == 0)
+        {
+            if (round == 1)
+            {
+                GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score1 = score;
+            }
+            else if (round == 2)
+            {
+                GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score2 = score;
+            }
+            else if (round == 3)
+            {
+                GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score3 = score;
+            }
+        }
+
+    }
     public void addScore(int number)
     {
         if (status == 0)

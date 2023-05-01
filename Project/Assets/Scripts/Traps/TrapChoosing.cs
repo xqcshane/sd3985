@@ -256,7 +256,14 @@ public class TrapChoosing : MonoBehaviour
         Data.GetComponent<TrapData>().skillindex1 = sendindex1;
         Data.GetComponent<TrapData>().skillindex2 = sendindex2;
         Data.GetComponent<TrapData>().skillindex3= sendindex3;
-        Data.GetComponent<TrapData>().skill = GameObject.Find("TSkillManager").GetComponent<TskillChoose>().sendindex1;
+        if (GameObject.Find("TSkillManager").GetComponent<TskillChoose>().sendindex1 == 0)
+        {
+            Data.GetComponent<TrapData>().skill = 1;
+        }
+        else
+        {
+            Data.GetComponent<TrapData>().skill=GameObject.Find("TSkillManager").GetComponent<TskillChoose>().sendindex1;
+        }
         SceneManager.LoadScene("GameScene");
     }
     public int[] UniqRandom(int RandomNumber, int NeedNumber)

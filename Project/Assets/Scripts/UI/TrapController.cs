@@ -52,6 +52,7 @@ public class TrapController : MonoBehaviourPunCallbacks
     private Controller GameController;
     int PR;
     public GameObject troublemaker;
+    public float distance=100.0f;
     GameObject player;
     void Start()
     {
@@ -177,14 +178,16 @@ public class TrapController : MonoBehaviourPunCallbacks
                 GameObject.Find("TroubleMakeCanvas").transform.GetChild(1).gameObject.SetActive(false);
                 troublemaker = GameObject.FindGameObjectWithTag("TroubleMaker");
                 player = GameObject.FindGameObjectWithTag("Player");
+                distance = Vector2.Distance(troublemaker.transform.position, player.transform.position);
             }
             
-            float distance = Vector2.Distance(troublemaker.transform.position, player.transform.position);
+          
             if (Input.GetKeyUp(KeyCode.Q) && Time.time > nextskill1 && distance<10)
             {
                 SkillUI.GetComponent<Skill>().UseSkill("Q");
                 if (skillindex == 1)
                 {
+                    Debug.Log("NONO");
                     nextskill1 = Time.time + cooldowntime1;
                     //GameObject.Find("MaskCanvas").transform.GetChild(0).GetComponent<Image>().sprite = block;
                     HashTable table = new HashTable();

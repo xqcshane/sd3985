@@ -195,6 +195,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 7909719213556477516}
+  - {fileID: 5364809097272268709}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -228,5 +229,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowLayerWeightsInspector: 1
   ShowParameterInspector: 1
-  m_SynchronizeParameters: []
-  m_SynchronizeLayers: []
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 0
+    Name: run_right
+  - Type: 4
+    SynchronizeType: 0
+    Name: run_left
+  - Type: 4
+    SynchronizeType: 0
+    Name: outOfSight
+  - Type: 4
+    SynchronizeType: 0
+    Name: death
+  - Type: 4
+    SynchronizeType: 0
+    Name: attack
+  - Type: 4
+    SynchronizeType: 0
+    Name: hit
+  - Type: 4
+    SynchronizeType: 0
+    Name: attack_flip
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0

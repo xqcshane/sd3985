@@ -24,34 +24,37 @@ public class Bulletcontrol : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (PR == 0)
         {
-            collision.gameObject.GetComponent<NonetworkEnemy>().Damaged(damage);
-            PhotonNetwork.Destroy(gameObject);
-        }
-        if (collision.gameObject.CompareTag("FlyingEye"))
-        {
-            collision.gameObject.GetComponent<NoNetworkFlyingEye>().Damaged(damage);
-            PhotonNetwork.Destroy(gameObject);
-        }
-        if (collision.gameObject.CompareTag("Mushroom"))
-        {
-            collision.gameObject.GetComponent<NoNetworkMushroom>().Damaged(damage);
-            PhotonNetwork.Destroy(gameObject);
-        }
-        if (collision.gameObject.CompareTag("Seleton"))
-        {
-            collision.gameObject.GetComponent<NoNetworkSkeleton>().Damaged(damage);
-            PhotonNetwork.Destroy(gameObject);
-        }
-        if (collision.gameObject.CompareTag("Wall"))
-        {
-            PhotonNetwork.Destroy(gameObject);
-        }
-        if (collision.gameObject.CompareTag("BOSS"))
-        {
-            collision.gameObject.GetComponent<BossFollow>().Damaged(damage);
-            PhotonNetwork.Destroy(gameObject);
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                collision.gameObject.GetComponent<NonetworkEnemy>().Damaged(damage);
+                PhotonNetwork.Destroy(gameObject);
+            }
+            if (collision.gameObject.CompareTag("FlyingEye"))
+            {
+                collision.gameObject.GetComponent<NoNetworkFlyingEye>().Damaged(damage);
+                PhotonNetwork.Destroy(gameObject);
+            }
+            if (collision.gameObject.CompareTag("Mushroom"))
+            {
+                collision.gameObject.GetComponent<NoNetworkMushroom>().Damaged(damage);
+                PhotonNetwork.Destroy(gameObject);
+            }
+            if (collision.gameObject.CompareTag("Seleton"))
+            {
+                collision.gameObject.GetComponent<NoNetworkSkeleton>().Damaged(damage);
+                PhotonNetwork.Destroy(gameObject);
+            }
+            if (collision.gameObject.CompareTag("Wall"))
+            {
+                PhotonNetwork.Destroy(gameObject);
+            }
+            if (collision.gameObject.CompareTag("BOSS"))
+            {
+                collision.gameObject.GetComponent<BossFollow>().Damaged(damage);
+                PhotonNetwork.Destroy(gameObject);
+            }
         }
     }
     private void Update()
