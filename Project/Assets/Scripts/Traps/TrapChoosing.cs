@@ -54,7 +54,7 @@ public class TrapChoosing : MonoBehaviour
                 NowSkillNumber = 4;
                 break;
         }
-        randomskills = UniqRandom(7, NowSkillNumber);
+        randomskills = UniqRandom(9, NowSkillNumber);
         GameObject allskill = GameObject.Find("TTrapList");
         for (int i = 0; i < allskill.transform.childCount; i++)
         {

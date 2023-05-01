@@ -16,10 +16,15 @@ public class RolesManager: MonoBehaviourPunCallbacks
     void Start()
     {
         MyStatusScript = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>();
-        if(MyStatusScript.turn == 1)
+        _pv = this.gameObject.GetComponent<PhotonView>();
+        if (PhotonNetwork.IsMasterClient)
         {
-            _pv = this.gameObject.GetComponent<PhotonView>();
-            if (PhotonNetwork.IsMasterClient)
+            HashTable table1 = new HashTable();
+            table1.Add("Round", MyStatusScript.round);
+            table1.Add("Turn", MyStatusScript.turn);
+            PhotonNetwork.LocalPlayer.SetCustomProperties(table1);
+
+            if (MyStatusScript.turn == 1)
             {
                 mystatus = Random.Range(0, 2);
                 InitialStatues(mystatus);
@@ -28,22 +33,41 @@ public class RolesManager: MonoBehaviourPunCallbacks
                 table.Add("status", otherstatus);
                 PhotonNetwork.LocalPlayer.SetCustomProperties(table);
             }
-        }
-        else
-        {
-                mystatus = (int)System.Math.Abs(MyStatusScript.status - 1);
-                InitialStatues(mystatus);
+            else if (MyStatusScript.turn == 2)
+            {
+                if (_pv.IsMine)
+                {
+                    mystatus = (int)System.Math.Abs(MyStatusScript.status - 1);
+                    InitialStatues(mystatus);
+                    HashTable table = new HashTable();
+                    int otherstatus = System.Math.Abs(mystatus - 1);
+                    table.Add("status", otherstatus);
+                    PhotonNetwork.LocalPlayer.SetCustomProperties(table);
+                }
+            }
         }
     }
 
 
     public override void OnPlayerPropertiesUpdate(Photon.Realtime.Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
     {
-        if(!_pv.IsMine && targetPlayer == _pv.Owner && changedProps.ContainsKey("status"))
+        if(!_pv.IsMine && targetPlayer == _pv.Owner)
         {
-            int nowstatus = (int)changedProps["status"];
-            InitialStatues(nowstatus);
-            Debug.Log("sty");
+            if (changedProps.ContainsKey("status"))
+            {
+                int nowstatus = (int)changedProps["status"];
+                InitialStatues(nowstatus);
+            }
+            if (changedProps.ContainsKey("Round"))
+            {
+                int NowR = (int)changedProps["Round"];
+                MyStatusScript.round = NowR;
+            }
+            if (changedProps.ContainsKey("Turn"))
+            {
+                int NowT = (int)changedProps["Turn"];
+                MyStatusScript.turn = NowT;
+            }
         }
     }
 
