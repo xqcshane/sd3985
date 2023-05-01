@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class TrapController : MonoBehaviour
+using Photon.Pun;
+using HashTable = ExitGames.Client.Photon.Hashtable;
+public class TrapController : MonoBehaviourPunCallbacks
 {
     public Sprite fireicon;
     public Sprite arrowicon;
@@ -184,7 +186,10 @@ public class TrapController : MonoBehaviour
                 if (skillindex == 1)
                 {
                     nextskill1 = Time.time + cooldowntime1;
-                    GameObject.Find("MaskCanvas").transform.GetChild(0).GetComponent<Image>().sprite = block;
+                    //GameObject.Find("MaskCanvas").transform.GetChild(0).GetComponent<Image>().sprite = block;
+                    HashTable table = new HashTable();
+                    table.Add("TSkill1", true);
+                    PhotonNetwork.LocalPlayer.SetCustomProperties(table);
                     skillflag1 = true;
                     contime1 = Time.time + 10.0f;
                     Debug.Log("haha");
@@ -192,7 +197,10 @@ public class TrapController : MonoBehaviour
                 else if (skillindex == 2)
                 {
                     nextskill1 = Time.time + cooldowntime1;
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>().slower = true;
+                    //GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>().slower = true;
+                    HashTable table = new HashTable();
+                    table.Add("TSkill2", true);
+                    PhotonNetwork.LocalPlayer.SetCustomProperties(table);
                     contime1 = Time.time + 5.0f;
                     skillflag1 = true;
                 }
@@ -200,15 +208,21 @@ public class TrapController : MonoBehaviour
                 {
                     nextskill1 = Time.time + cooldowntime1;
                     //Blast();
-                    GameObject.Find("Skill").GetComponent<SkillController>().flag = false;
+                    //GameObject.Find("Skill").GetComponent<SkillController>().flag = false;
+                    HashTable table = new HashTable();
+                    table.Add("TSkill3", true);
+                    PhotonNetwork.LocalPlayer.SetCustomProperties(table);
                     contime1 = Time.time + 10.0f;
                     skillflag1 = true;
                 }
                 else if (skillindex == 4)
                 {
                     nextskill1 = Time.time + cooldowntime1;
-                    GameObject.Find("AdventureUIAndUICamera").transform.GetChild(1).gameObject.SetActive(false);
+                    //GameObject.Find("AdventureUIAndUICamera").transform.GetChild(1).gameObject.SetActive(false);
                     //moreMagic();
+                    HashTable table = new HashTable();
+                    table.Add("TSkill4", true);
+                    PhotonNetwork.LocalPlayer.SetCustomProperties(table);
                     contime1 = Time.time + 10.0f;
                     skillflag1 = true;
                 }
@@ -217,7 +231,10 @@ public class TrapController : MonoBehaviour
             {
                 if (Time.time > contime1)
                 {
-                    GameObject.Find("MaskCanvas").transform.GetChild(0).GetComponent<Image>().sprite = normal;
+                    //GameObject.Find("MaskCanvas").transform.GetChild(0).GetComponent<Image>().sprite = normal;
+                    HashTable table = new HashTable();
+                    table.Add("TSkill1", false);
+                    PhotonNetwork.LocalPlayer.SetCustomProperties(table);
                     skillflag1 = false;
                 }
             }
@@ -225,7 +242,10 @@ public class TrapController : MonoBehaviour
             {
                 if (Time.time > contime1)
                 {
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>().slower = false;
+                    //GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>().slower = false;
+                    HashTable table = new HashTable();
+                    table.Add("TSkill2", false);
+                    PhotonNetwork.LocalPlayer.SetCustomProperties(table);
                     skillflag1 = false;
                 }
             }
@@ -233,7 +253,10 @@ public class TrapController : MonoBehaviour
             {
                 if (Time.time > contime1)
                 {
-                    GameObject.Find("Skill").GetComponent<SkillController>().flag = true;
+                    //GameObject.Find("Skill").GetComponent<SkillController>().flag = true;
+                    HashTable table = new HashTable();
+                    table.Add("TSkill3", false);
+                    PhotonNetwork.LocalPlayer.SetCustomProperties(table);
                     skillflag1 = false;
                 }
             }
@@ -241,7 +264,10 @@ public class TrapController : MonoBehaviour
             {
                 if (Time.time > contime1)
                 {
-                    GameObject.Find("AdventureUIAndUICamera").transform.GetChild(1).gameObject.SetActive(true);
+                    //GameObject.Find("AdventureUIAndUICamera").transform.GetChild(1).gameObject.SetActive(true);
+                    HashTable table = new HashTable();
+                    table.Add("TSkill4", false);
+                    PhotonNetwork.LocalPlayer.SetCustomProperties(table);
                     skillflag1 = false;
                 }
             }
@@ -343,6 +369,17 @@ public class TrapController : MonoBehaviour
             }
             TrapUI3.GetComponent<TrapUI>().ChangeTrapNumber(amount3.ToString());
         }
+    }
+
+    public void CallEnhenceBoss()
+    {
+        if (index1 == 8 || index2 == 8 || index3 == 8)
+        {
+            HashTable table = new HashTable();
+            table.Add("IsEnhence", true);
+            PhotonNetwork.LocalPlayer.SetCustomProperties(table);
+        }
+            
     }
 
 }

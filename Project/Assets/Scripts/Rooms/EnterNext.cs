@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class EnterNext : MonoBehaviour
 {
@@ -19,7 +20,10 @@ public class EnterNext : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameObject.FindGameObjectWithTag("Controller").GetComponent<Controller>().endGame = true;
+            if (PhotonNetwork.IsMasterClient){
+                GameObject.FindGameObjectWithTag("Controller").GetComponent<Controller>().endGame = true;
+            }
         }
+          
     }
 }

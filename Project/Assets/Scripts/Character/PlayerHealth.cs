@@ -14,9 +14,14 @@ public class PlayerHealth : MonoBehaviourPunCallbacks
     float invincibleTimer;
     public float timeInvincible = 0.2f;
     public int maxHealth = 100;
-    public int health { get { return currentHealth; } set { currentHealth = value; HashTable table = new HashTable();
-            table.Add("hp", currentHealth);
-            PhotonNetwork.LocalPlayer.SetCustomProperties(table);
+    public int health { get { return currentHealth; } set {
+            if (role == 0)
+            {
+                currentHealth = value;
+                HashTable table = new HashTable();
+                table.Add("hp", currentHealth);
+                PhotonNetwork.LocalPlayer.SetCustomProperties(table);
+            }
         } }
     int currentHealth;
 

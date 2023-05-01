@@ -98,7 +98,12 @@ public class Controller : MonoBehaviour
                 }
                 if (PlayerRole == 0) {
                     GameObject.Find("AdventureCanvas").GetComponent<PointerCreater>().StartInitialPointer();
-                        }
+                }
+                if (PlayerRole == 1)
+                {
+                    GameObject.FindGameObjectWithTag("TrapController").GetComponent<TrapController>().CallEnhenceBoss();
+                    GameObject.Find("ImageEmoji").GetComponent<EmojiController>().CanUseEmoji = true;
+                }
 
                 GameStart = true;
             }
