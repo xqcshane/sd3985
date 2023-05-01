@@ -162,7 +162,10 @@ public class SkillController : MonoBehaviour
     {
         if (PR == 0)
         {
-
+            if (index1 == 8 || index2 == 8)
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAim>().suckblood = true;
+            }
             if (Input.GetKeyDown(KeyCode.Q) && Time.time > nextskill1)
             {
                 SkillUI1.GetComponent<Skill>().UseSkill("Q");
@@ -376,10 +379,6 @@ public class SkillController : MonoBehaviour
                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>().timeInvincible = 2.0f;
                 }
             }
-
-        }
-        else if (PR == 1)
-        {
 
         }
     }

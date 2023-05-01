@@ -16,7 +16,10 @@ public class Controller : MonoBehaviour
     public int PlayerRole;
     GameObject final;
     public bool GameStart;
+    public bool endGame=false;
     public Vector3[] StartPoint;
+    public GameObject Status;
+    public GameObject score2;
     //0 is adventure, 1 is troublemake
 
     /*
@@ -29,7 +32,7 @@ public class Controller : MonoBehaviour
 
     void Start()
     {        
-        GameObject Status = GameObject.FindGameObjectWithTag("Status");
+        Status = GameObject.FindGameObjectWithTag("Status");
         final = GameObject.FindGameObjectWithTag("Result");
        
         PlayerRole = Status.GetComponent<Status>().status;
@@ -113,7 +116,21 @@ public class Controller : MonoBehaviour
             SceneManager.LoadScene("Conclusion");
             Debug.Log("Out Of Time0");
         }
-
+        if (endGame)
+        {
+            if (Status.GetComponent<Status>().round == 1)
+            {
+                GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score1= score2.GetComponent<ScoreController>().score+(int)Gametime*10;
+            }
+            else if (Status.GetComponent<Status>().round == 2)
+            {
+                GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score2= score2.GetComponent<ScoreController>().score+(int)Gametime * 10;
+            }
+            else if (Status.GetComponent<Status>().round == 3)
+            {
+                GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score3= score2.GetComponent<ScoreController>().score+(int)Gametime * 10;
+            }
+        }
         if (final.GetComponent<Result>().death)
         {
             final.GetComponent<Result>().score = (int)(Gametime * 0.5 + score);
@@ -123,23 +140,7 @@ public class Controller : MonoBehaviour
 
     }
 
-    /*
-    void EnemyCreation()
-    {
-        for (int i = 0; i < 10; i++)
-        {
-            PhotonNetwork.Instantiate("Enemy", new Vector3(83f, 93f, 0f), Quaternion.identity);
-        }
-        for (int i = 0; i < 10; i++)
-        {
-            PhotonNetwork.Instantiate("Enemy", new Vector3(93f, 112f, 0f), Quaternion.identity);
-        }
-        for (int i = 0; i < 10; i++)
-        {
-            PhotonNetwork.Instantiate("Enemy", new Vector3(110f, 96f, 0f), Quaternion.identity);
-        }
-    }
-    */
+   
 
     public int[] UniqueRandom(int RandomNumber, int NeedNumber)
     {

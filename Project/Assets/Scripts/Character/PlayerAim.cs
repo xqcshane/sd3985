@@ -56,6 +56,7 @@ public class PlayerAim : MonoBehaviour
 
     private Controller GameController;
     private int PR;
+    public bool suckblood=false;
     // Start is called before the first frame update
     private void Start()
     {
@@ -131,6 +132,14 @@ public class PlayerAim : MonoBehaviour
             float realangle = angle + 45.0f;
             Quaternion rotation= Quaternion.Euler(0, 0, realangle);
             GameObject bullets = PhotonNetwork.Instantiate(bullet.name, aimtransform.position,rotation);
+            if (suckblood)
+            {
+                int num = Random.Range(1, 100);
+                if(num>90)
+                {
+                    this.GetComponent<PlayerHealth>().health += 2;
+                }
+            }
             //bullets.GetComponent<Bulletcontrol>().speed = speed;
            // bullets.GetComponent<Bulletcontrol>().exsittime = range;
             /* bulletrb = bullets.GetComponent<Rigidbody2D>();
@@ -167,13 +176,21 @@ public class PlayerAim : MonoBehaviour
             Quaternion rotation2 = Quaternion.Euler(0, 0, realangle2);
             Quaternion rotation3 = Quaternion.Euler(0, 0, realangle3);
             GameObject[] bullets = { PhotonNetwork.Instantiate(bullet.name, aimtransform.position, rotation3), PhotonNetwork.Instantiate(bullet.name, aimtransform.position, rotation1), PhotonNetwork.Instantiate(bullet.name, aimtransform.position, rotation2) };
-          /*  for (int i = 0; i < bullets.Length; i++)
+            if (suckblood)
             {
-               
-                bulletrb = bullets[i].GetComponent<Rigidbody2D>();
-                bulletrb.velocity = bullets[i].transform.right * speed;
-                Destroy(bullets[i], range1);
-            }*/
+                int num = Random.Range(1, 100);
+                if (num > 90)
+                {
+                    this.GetComponent<PlayerHealth>().health += 2;
+                }
+            }
+            /*  for (int i = 0; i < bullets.Length; i++)
+              {
+
+                  bulletrb = bullets[i].GetComponent<Rigidbody2D>();
+                  bulletrb.velocity = bullets[i].transform.right * speed;
+                  Destroy(bullets[i], range1);
+              }*/
 
         }
     }
@@ -185,9 +202,17 @@ public class PlayerAim : MonoBehaviour
             float realangle = angle + 45.0f;
             Quaternion rotation = Quaternion.Euler(0, 0, realangle);
             GameObject bullets = PhotonNetwork.Instantiate(bullet.name, aimtransform.position, rotation);
-           /* bulletrb = bullets.GetComponent<Rigidbody2D>();
-            bulletrb.velocity = bullets.transform.right * speed;
-            Destroy(bullets, range2);*/
+            if (suckblood)
+            {
+                int num = Random.Range(1, 100);
+                if (num > 90)
+                {
+                    this.GetComponent<PlayerHealth>().health += 2;
+                }
+            }
+            /* bulletrb = bullets.GetComponent<Rigidbody2D>();
+             bulletrb.velocity = bullets.transform.right * speed;
+             Destroy(bullets, range2);*/
 
         }
     }
@@ -199,10 +224,18 @@ public class PlayerAim : MonoBehaviour
             float realangle = angle + 45.0f;
             Quaternion rotation = Quaternion.Euler(0, 0, realangle);
             GameObject bullets = PhotonNetwork.Instantiate(bullet.name, aimtransform.position, rotation);
-           /* bulletrb = bullets.GetComponent<Rigidbody2D>();
-            bulletrb.velocity = bullets.transform.right * speed;
-     
-            Destroy(bullets, range3);*/
+            if (suckblood)
+            {
+                int num = Random.Range(1, 100);
+                if (num > 90)
+                {
+                    this.GetComponent<PlayerHealth>().health += 2;
+                }
+            }
+            /* bulletrb = bullets.GetComponent<Rigidbody2D>();
+             bulletrb.velocity = bullets.transform.right * speed;
+
+             Destroy(bullets, range3);*/
         }
     }
     private void changegun()

@@ -9,12 +9,25 @@ public class TrapController : MonoBehaviour
     public Sprite thronesicon;
     public Sprite slowicon;
     public Sprite moveicon;
+    public Sprite fakeicon;
+    public Sprite monstericon;
+    public Sprite Bossicon;
+    public Sprite skill1;
+    public Sprite skill2;
+    public Sprite skill3;
+    public Sprite skill4;
     public int index1;
     public int index2;
     public int index3;
+    public int skillindex;
+    public float cooldowntime1;
+    float nextskill1 = 0.0f;
+    public float contime1;
+    bool skillflag1 = false;
     public GameObject TrapUI1;
     public GameObject TrapUI2;
     public GameObject TrapUI3;
+    public GameObject SkillUI;
     int amount1;
     int amount2;
     int amount3;
@@ -27,6 +40,9 @@ public class TrapController : MonoBehaviour
     public GameObject Thrones;
     public GameObject slow;
     public GameObject move;
+    public GameObject fake;
+    public GameObject monster;
+    //public GameObject boss;
     public GameObject nowtrap;
     GameObject[] traps;
     private Controller GameController;
@@ -34,6 +50,7 @@ public class TrapController : MonoBehaviour
     void Start()
     {
         GameController = GameObject.Find("Controller").GetComponent<Controller>();
+        int round = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().round;
         PR = GameController.PlayerRole;
         if (PR == 1)
         {
@@ -41,61 +58,106 @@ public class TrapController : MonoBehaviour
             index1 = data.GetComponent<TrapData>().skillindex1;
             index2 = data.GetComponent<TrapData>().skillindex2;
             index3 = data.GetComponent<TrapData>().skillindex3;
-            Sprite[] sprites = { fireicon, arrowicon, thronesicon, slowicon, moveicon };
-            traps = new GameObject[5];
+            skillindex = data.GetComponent<TrapData>().skill;
+            Sprite[] sprites = { fireicon, arrowicon, thronesicon, slowicon, moveicon, fakeicon, monstericon, Bossicon };
+            Sprite[] sprites2 = {skill1,skill2,skill3,skill4 };
+            traps = new GameObject[7];
             traps[0] = FireTower;
             traps[1] = Arrow;
             traps[2] = Thrones;
             traps[3] = slow;
             traps[4] = move;
-            if (index1 == 1)
+            traps[5] = fake;
+            traps[6] = monster;
+            if (index1 == 1|| index1 == 3)
             {
-                amount1 = 2;
+                amount1 = 2+round*2;
             }
             else if (index1 == 2 || index1 == 4 || index1 == 5)
             {
-                amount1 = 1;
+                amount1 = 3+round;
             }
-            else if (index1 == 3)
+            else if (index1 == 6)
             {
-                amount1 = 3;
+                amount1 =2 ;
+            }
+            else if(index1 == 7)
+            {
+                amount1 = 2 + round;
             }
             TrapUI1.GetComponent<TrapUI>().ChangeTrapImage(sprites[index1 - 1]);
             TrapUI1.GetComponent<TrapUI>().ChangeTrapNumber(amount1.ToString());
-            if (index2 == 1)
+            if (index2 == 1 || index2 == 3)
             {
-                amount2 = 2;
+                amount2 = 2 + round * 2;
             }
             else if (index2 == 2 || index2 == 4 || index2 == 5)
             {
-                amount2 = 1;
+                amount2 = 3 + round;
             }
-            else if (index2 == 3)
+            else if (index2 == 6)
             {
-                amount2 = 3;
+                amount2 = 2;
+            }
+            else if (index2 == 7)
+            {
+                amount2 = 2 + round;
             }
             TrapUI2.GetComponent<TrapUI>().ChangeTrapImage(sprites[index2 - 1]);
             TrapUI2.GetComponent<TrapUI>().ChangeTrapNumber(amount2.ToString());
-            if (index3 == 1)
+            if (index3 == 1 || index3 == 3)
             {
-                amount3 = 2;
+                amount2 = 2 + round * 2;
             }
             else if (index3 == 2 || index3 == 4 || index3 == 5)
             {
-                amount3 = 1;
+                amount3 = 3 + round;
             }
-            else if (index3 == 3)
+            else if (index3 == 6)
             {
-                amount3 = 3;
+                amount3 = 2;
+            }
+            else if (index3 == 7)
+            {
+                amount3 = 2 + round;
             }
             TrapUI3.GetComponent<TrapUI>().ChangeTrapImage(sprites[index3 - 1]);
             TrapUI3.GetComponent<TrapUI>().ChangeTrapNumber(amount3.ToString());
+            if (skillindex == 1)
+            {
+                cooldowntime1 = 30.0f;
+                SkillUI.GetComponent<Skill>().icon = skill1;
+                SkillUI.GetComponent<Skill>().coolDown = cooldowntime1;
+                SkillUI.GetComponent<Skill>().changeImage();
+            }
+            else if (skillindex == 2)
+            {
+                cooldowntime1 = 15.0f;
+                SkillUI.GetComponent<Skill>().icon = skill2;
+                SkillUI.GetComponent<Skill>().coolDown = cooldowntime1;
+                SkillUI.GetComponent<Skill>().changeImage();
+            }
+            else if (skillindex == 3)
+            {
+                cooldowntime1 = 20.0f;
+                SkillUI.GetComponent<Skill>().icon = skill3;
+                SkillUI.GetComponent<Skill>().coolDown = cooldowntime1;
+                SkillUI.GetComponent<Skill>().changeImage();
+            }
+            else if (skillindex == 4)
+            {
+                cooldowntime1 = 30.0f;
+                SkillUI.GetComponent<Skill>().icon = skill4;
+                SkillUI.GetComponent<Skill>().coolDown = cooldowntime1;
+                SkillUI.GetComponent<Skill>().changeImage();
+            }
             nowtrap = null;
         }
     }
     // Update is called once per frame
     void Update()
     {
+        bool flag = GameObject.FindGameObjectWithTag("Controller").GetComponent<Controller>().GameStart;
         if (PR == 1)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -163,6 +225,7 @@ public class TrapController : MonoBehaviour
                     nowtrap = null;
                 }
             }
+        
         }
     }
     public void usetrap()
