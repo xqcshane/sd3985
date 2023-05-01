@@ -7,6 +7,8 @@ public class MainMenuMusic : MonoBehaviour
     public AudioSource startMenuMusic;
     public float soundvalue;
 
+    public int nowMusic = 0;
+
     private static MainMenuMusic instance = null;
     public static MainMenuMusic Instance
     {
@@ -18,23 +20,23 @@ public class MainMenuMusic : MonoBehaviour
         soundvalue = 1f;
         if (instance == null)
         {
-            Debug.Log("huang");
+            //Debug.Log("huang");
             startMenuMusic.Play();
             instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
         else if (instance != this)
         {
-            Debug.Log("yu");
+            //Debug.Log("yu");
             if (instance.GetComponent<AudioSource>().isPlaying)
             {
-                Debug.Log("yu1");
+                //Debug.Log("yu1");
                 Destroy(gameObject);
                 return;
             }
             else
             {
-                Debug.Log("yu2");
+                //Debug.Log("yu2");
                 //Destroy(gameObject);
                 instance = this;
                 DontDestroyOnLoad(this.gameObject);
@@ -42,7 +44,7 @@ public class MainMenuMusic : MonoBehaviour
         }
         else
         {
-            Debug.Log("feng");
+            //Debug.Log("feng");
             Destroy(gameObject);
             return;
         }
