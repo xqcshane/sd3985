@@ -18,13 +18,17 @@ public class Skillchoose : MonoBehaviour
     public Sprite bla;
     public Sprite magic;
     public Sprite clear;
+    public Sprite Bonus;
+    public Sprite Invinci;
+    public Sprite Suck;
+    public Sprite Moveq;
     public Sprite Change;
     bool skill1=false;
     bool skill2=false;
     bool skilllock=false;
     public Button Q;
     public Button E;
-    public Button Trap3;
+    //public Button Trap3;
     public Sprite before;
     public GameObject Data;
     public float totaltime = 10.0f;
@@ -36,7 +40,7 @@ public class Skillchoose : MonoBehaviour
     private int[] randomskills;
     void Start()
     {
-        Sprite[] list = {before, heal, speed, bla, magic, clear, Change};
+        Sprite[] list = {before, heal, speed, bla, magic, clear, Bonus,Invinci,Suck,Moveq,Change};
         Sprites = list;
         Status MyStatusScript = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>();
         int NowSkillNumber = 0;
@@ -55,7 +59,7 @@ public class Skillchoose : MonoBehaviour
                 NowSkillNumber = 5;
                 break;
         }
-        randomskills = UniqRandom(10, NowSkillNumber);
+        randomskills = UniqRandom(9, NowSkillNumber);
         GameObject allskill = GameObject.Find("ASkillList");
         for(int i=0; i < allskill.transform.childCount; i++)
         {
