@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5921116938913051500}
   m_Layer: 0
   m_Name: TroubleMake
-  m_TagString: Untagged
+  m_TagString: TroubleMaker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

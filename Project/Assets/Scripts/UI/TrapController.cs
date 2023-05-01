@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class TrapController : MonoBehaviour
 {
     public Sprite fireicon;
@@ -16,6 +16,8 @@ public class TrapController : MonoBehaviour
     public Sprite skill2;
     public Sprite skill3;
     public Sprite skill4;
+    public Sprite block;
+    public Sprite normal;
     public int index1;
     public int index2;
     public int index3;
@@ -47,6 +49,8 @@ public class TrapController : MonoBehaviour
     GameObject[] traps;
     private Controller GameController;
     int PR;
+    public GameObject troublemaker;
+    GameObject player;
     void Start()
     {
         GameController = GameObject.Find("Controller").GetComponent<Controller>();
@@ -160,6 +164,87 @@ public class TrapController : MonoBehaviour
         bool flag = GameObject.FindGameObjectWithTag("Controller").GetComponent<Controller>().GameStart;
         if (PR == 1)
         {
+            if (flag == false)
+            {
+                GameObject.Find("TroubleMakeCanvas").transform.GetChild(0).gameObject.SetActive(false);
+                GameObject.Find("TroubleMakeCanvas").transform.GetChild(1).gameObject.SetActive(true);
+            }
+            else
+            {
+                GameObject.Find("TroubleMakeCanvas").transform.GetChild(0).gameObject.SetActive(true);
+                GameObject.Find("TroubleMakeCanvas").transform.GetChild(1).gameObject.SetActive(false);
+                troublemaker = GameObject.FindGameObjectWithTag("TroubleMaker");
+                player = GameObject.FindGameObjectWithTag("Player");
+            }
+            
+            float distance = Vector2.Distance(troublemaker.transform.position, player.transform.position);
+            if (Input.GetKeyUp(KeyCode.Q) && Time.time > nextskill1 && distance<10)
+            {
+                SkillUI.GetComponent<Skill>().UseSkill("Q");
+                if (skillindex == 1)
+                {
+                    nextskill1 = Time.time + cooldowntime1;
+                    GameObject.Find("MaskCanvas").transform.GetChild(0).GetComponent<Image>().sprite = block;
+                    skillflag1 = true;
+                    contime1 = Time.time + 10.0f;
+                    Debug.Log("haha");
+                }
+                else if (skillindex == 2)
+                {
+                    nextskill1 = Time.time + cooldowntime1;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>().slower = true;
+                    contime1 = Time.time + 5.0f;
+                    skillflag1 = true;
+                }
+                else if (skillindex == 3)
+                {
+                    nextskill1 = Time.time + cooldowntime1;
+                    //Blast();
+                    GameObject.Find("Skill").GetComponent<SkillController>().flag = false;
+                    contime1 = Time.time + 10.0f;
+                    skillflag1 = true;
+                }
+                else if (skillindex == 4)
+                {
+                    nextskill1 = Time.time + cooldowntime1;
+                    GameObject.Find("AdventureUIAndUICamera").transform.GetChild(1).gameObject.SetActive(false);
+                    //moreMagic();
+                    contime1 = Time.time + 10.0f;
+                    skillflag1 = true;
+                }
+            }
+            if (index1 == 1 && skillflag1 == true)
+            {
+                if (Time.time > contime1)
+                {
+                    GameObject.Find("MaskCanvas").transform.GetChild(0).GetComponent<Image>().sprite = normal;
+                    skillflag1 = false;
+                }
+            }
+            else if (index1 == 2 && skillflag1 == true)
+            {
+                if (Time.time > contime1)
+                {
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>().slower = false;
+                    skillflag1 = false;
+                }
+            }
+            else if (index1 == 3 && skillflag1 == true)
+            {
+                if (Time.time > contime1)
+                {
+                    GameObject.Find("Skill").GetComponent<SkillController>().flag = true;
+                    skillflag1 = false;
+                }
+            }
+            else if (index1 == 4 && skillflag1 == true)
+            {
+                if (Time.time > contime1)
+                {
+                    GameObject.Find("AdventureUIAndUICamera").transform.GetChild(1).gameObject.SetActive(true);
+                    skillflag1 = false;
+                }
+            }
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 TrapUI1.GetComponent<TrapUI>().OnChooseTrap();

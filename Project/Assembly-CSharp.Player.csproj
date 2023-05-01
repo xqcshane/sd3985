@@ -146,6 +146,7 @@
     <Compile Include="Assets\Scripts\UI\LoadingCircle.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\GridMap\Scripts\MeshUtils.cs" />
+    <Compile Include="Assets\Scripts\Rooms\EnterNext.cs" />
     <Compile Include="Assets\Scripts\Character\TroubleMakeMove.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Scripts\Traps\ChangeTrapIndex.cs" />
@@ -189,6 +190,7 @@
     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingZLegacy.cs" />
     <Compile Include="Assets\Scripts\UI\ToolTip.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
+    <Compile Include="Assets\Scripts\Boss\StrongBoss.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\TestGridInitial.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSpline2d.cs" />
@@ -253,8 +255,6 @@
     <Compile Include="Assets\LeanTween\Examples\Archived\TestingRigidbodyCS.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\FunctionPeriodic.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\Following.cs" />
-    <Compile Include="Assets\Scripts\Rooms\EnterNext.cs" />
-    <Compile Include="Assets\Scripts\Boss\StrongBoss.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -29,6 +29,7 @@ TagManager:
   - Coin
   - FxTemporaire
   - Score
+  - TroubleMaker
   layers:
   - Default
   - TransparentFX

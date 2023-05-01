@@ -29,6 +29,7 @@ public class SkillController : MonoBehaviour
     public GameObject player;
     GameObject sightmask;
     public int PR;
+    public bool flag;
     void Start()
     {
         GameObject data = GameObject.FindWithTag("SkillData");
@@ -37,6 +38,7 @@ public class SkillController : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         sightmask = GameObject.FindGameObjectWithTag("SightMask");
         PR = GameObject.Find("Controller").GetComponent<Controller>().PlayerRole;
+        flag = true;
         if (index1 == 1)
         {
             cooldowntime1 = 10.0f;
@@ -162,6 +164,7 @@ public class SkillController : MonoBehaviour
     {
         if (PR == 0)
         {
+            if(flag==true){ 
             if (index1 == 8 || index2 == 8)
             {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAim>().suckblood = true;
@@ -203,14 +206,14 @@ public class SkillController : MonoBehaviour
                     contime1 = Time.time + 10.0f;
                     skillflag1 = true;
                 }
-                else if(index1 == 6)
+                else if (index1 == 6)
                 {
                     nextskill1 = Time.time + cooldowntime1;
                     Bonus();
                     contime1 = Time.time + 10.0f;
                     skillflag1 = true;
                 }
-                else if(index1 == 7)
+                else if (index1 == 7)
                 {
                     nextskill1 = Time.time + cooldowntime1;
                     invic();
@@ -258,14 +261,14 @@ public class SkillController : MonoBehaviour
                     skillflag1 = false;
                 }
             }
-            else if(index1 == 6 && skillflag1 == true)
+            else if (index1 == 6 && skillflag1 == true)
             {
                 if (Time.time > contime1)
                 {
                     GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreController>().bounus = false;
                 }
             }
-            else if( index1 == 7 && skillflag1 == true)
+            else if (index1 == 7 && skillflag1 == true)
             {
                 if (Time.time > contime1)
                 {
@@ -379,7 +382,7 @@ public class SkillController : MonoBehaviour
                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>().timeInvincible = 2.0f;
                 }
             }
-
+        }
         }
     }
 
