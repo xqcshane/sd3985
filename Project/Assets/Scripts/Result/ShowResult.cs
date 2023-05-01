@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEditor.AssetImporters;
+using TMPro;
+
 public class ShowResult : MonoBehaviour
 {
     GameObject final;
@@ -12,10 +15,13 @@ public class ShowResult : MonoBehaviour
     //public Text result2;
     public Text score2;
     public float showtime = 10.0f;
+    public TextMeshProUGUI MyRat;
     void Start()
     {   
         final = GameObject.FindGameObjectWithTag("Result");
         int myrole = final.GetComponent<Result>().PR;
+        MyRat.text = "Round: " + GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().round.ToString() + "/nTurn: " + GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().turn.ToString();
+
         if (myrole == 0)
         {
             GameObject.Find("Adventure").SetActive(true);
