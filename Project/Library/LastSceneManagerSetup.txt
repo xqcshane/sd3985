@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/Weapon 1.unity
-=======
-- path: Assets/Scenes/Flow/Score 2.unity
->>>>>>> origin/reyes6
   isLoaded: 1
   isActive: 1
   isSubScene: 0

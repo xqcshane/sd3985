@@ -3105,7 +3105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstScoreFinal: 1000
   secondScoreFinal: 2000
-  thirdScoreFinal: 6000
+  thirdScoreFinal: 10
   score1: {fileID: 1170350557}
   score2: {fileID: 1837982417}
   score3: {fileID: 1687521335}
@@ -4391,6 +4391,7 @@ MonoBehaviour:
   score: {fileID: 0}
   score2: {fileID: 0}
   showtime: 10
+  MyRat: {fileID: 0}
 --- !u!1 &1660455458
 GameObject:
   m_ObjectHideFlags: 0
