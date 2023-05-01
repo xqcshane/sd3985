@@ -24,7 +24,8 @@ public class PlayerMove : MonoBehaviour
     public Animator animator;
     private bool faceRight = true;
     public Animator weaponAnimator;
-    
+    public string A1;
+    public string A2;
     public bool NotHit = true;
     void Start()
     {
@@ -39,7 +40,10 @@ public class PlayerMove : MonoBehaviour
         {
            InitalGame();
         }
-       
+        A1 = "weapon";
+        A2 = "weapon_flip";
+
+
     }
 
     private void InitalGame()
@@ -73,25 +77,25 @@ public class PlayerMove : MonoBehaviour
                     {
                         animator.Play("Adventurer_right");
                         faceRight = true;
-                        weaponAnimator.Play("weapon_flip");
+                        weaponAnimator.Play(A2);
                     }
                     else if (horizontal < 0)
                     {
                         animator.Play("Adventurer_left");
                         faceRight = false;
-                        weaponAnimator.Play("weapon");
+                        weaponAnimator.Play(A1);
                     }
                     else if (vertical != 0)
                     {
                         if (faceRight)
                         {
                             animator.Play("Adventurer_right");
-                            weaponAnimator.Play("weapon_flip");
+                            weaponAnimator.Play(A2);
                         }
                         else
                         {
                             animator.Play("Adventurer_left");
-                            weaponAnimator.Play("weapon");
+                            weaponAnimator.Play(A1);
                         }
 
                     }
@@ -100,12 +104,12 @@ public class PlayerMove : MonoBehaviour
                         if (faceRight)
                         {
                             animator.Play("Real_adventurer");
-                            weaponAnimator.Play("weapon_flip");
+                            weaponAnimator.Play(A2);
                         }
                         else
                         {
                             animator.Play("Real_adventurer_Flip");
-                            weaponAnimator.Play("weapon");
+                            weaponAnimator.Play(A1);
                         }
 
                     }

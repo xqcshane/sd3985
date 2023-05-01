@@ -75,8 +75,8 @@ public class PlayerAim : MonoBehaviour
         bullet3.GetComponent<Bulletcontrol>().damage = damage2;
         bullet4.GetComponent<Bulletcontrol>(). damage = damage3;
         bullet = bullet1;
-        nowanimator = animators[1];
-        currentweaponindex = 1;
+        nowanimator = animators[0];
+        currentweaponindex = 0;
 
         GameController = GameObject.Find("Controller").GetComponent<Controller>();
         PR = GameController.PlayerRole;
@@ -203,6 +203,8 @@ public class PlayerAim : MonoBehaviour
             guns[0].SetActive(true);
             aimtransform = transform.Find(Gunlist[0]);
             this.gameObject.GetComponent<PlayerMove>().weaponAnimator = animators[0];
+            this.gameObject.GetComponent<PlayerMove>().A1 = "weapon";
+            this.gameObject.GetComponent<PlayerMove>().A2 = "weapon_flip";
             guns[1].SetActive(false);
             guns[2].SetActive(false);
             guns[3].SetActive(false);
@@ -213,6 +215,9 @@ public class PlayerAim : MonoBehaviour
             guns[1].SetActive(true);
             aimtransform = transform.Find(Gunlist[1]);
             this.gameObject.GetComponent<PlayerMove>().weaponAnimator = animators[1];
+            this.gameObject.GetComponent<PlayerMove>().A1 = "weapon2";
+            this.gameObject.GetComponent<PlayerMove>().A2 = "weapon2_flip";
+            
             guns[0].SetActive(false);
             guns[2].SetActive(false);
             guns[3].SetActive(false);
@@ -223,6 +228,9 @@ public class PlayerAim : MonoBehaviour
             guns[2].SetActive(true);
             aimtransform = transform.Find(Gunlist[2]);
             this.gameObject.GetComponent<PlayerMove>().weaponAnimator = animators[2];
+            this.gameObject.GetComponent<PlayerMove>().A1 = "weapon3";
+            this.gameObject.GetComponent<PlayerMove>().A2 = "weapon3_flip";
+            
             guns[0].SetActive(false);
             guns[1].SetActive(false);
             guns[3].SetActive(false);
@@ -233,6 +241,8 @@ public class PlayerAim : MonoBehaviour
             guns[3].SetActive(true);
             aimtransform = transform.Find(Gunlist[3]);
             this.gameObject.GetComponent<PlayerMove>().weaponAnimator = animators[3];
+            this.gameObject.GetComponent<PlayerMove>().A1 = "weapon4";
+            this.gameObject.GetComponent<PlayerMove>().A2 = "weapon4_flip";
             guns[0].SetActive(false);
             guns[1].SetActive(false);
             guns[2].SetActive(false);
