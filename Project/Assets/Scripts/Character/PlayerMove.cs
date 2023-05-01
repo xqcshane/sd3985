@@ -24,6 +24,9 @@ public class PlayerMove : MonoBehaviour
     public Animator animator;
     private bool faceRight = true;
     public Animator weaponAnimator;
+   // public Animator weaponAnimator2;
+  //  public Animator weaponAnimator3;
+   // public Animator weaponAnimator4;
     public string A1;
     public string A2;
     public bool NotHit = true;
@@ -78,12 +81,14 @@ public class PlayerMove : MonoBehaviour
                         animator.Play("Adventurer_right");
                         faceRight = true;
                         weaponAnimator.Play(A2);
+                 
                     }
                     else if (horizontal < 0)
                     {
                         animator.Play("Adventurer_left");
                         faceRight = false;
                         weaponAnimator.Play(A1);
+                     
                     }
                     else if (vertical != 0)
                     {

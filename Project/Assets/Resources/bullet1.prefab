@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  exsittime: 100
-  speed: 0
+  exsittime: 0.5
+  speed: 20
   pv: {fileID: 0}
 --- !u!114 &8347565576207157045
 MonoBehaviour:

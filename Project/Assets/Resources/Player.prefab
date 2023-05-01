@@ -711,26 +711,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet1: {fileID: 7400203235159826638, guid: 451446c756b5b4f46b6897448e2901f0, type: 3}
   bullet2: {fileID: 22675927609925208, guid: fd4296e2a01d8fc459c1cf4e226f97cd, type: 3}
-  bullet3: {fileID: 3873522454332554993, guid: d5a163706184efb4f922e11eff219812, type: 3}
-  bullet4: {fileID: 6482701619066125320, guid: 729228a8b6b1137459d186d920e547bf, type: 3}
+  bullet3: {fileID: 6482701619066125320, guid: 729228a8b6b1137459d186d920e547bf, type: 3}
+  bullet4: {fileID: 3873522454332554993, guid: d5a163706184efb4f922e11eff219812, type: 3}
   speed: 20
   range: 0.5
   damage: 10
-  firerate: 0.5
+  firerate: 1
   speed1: 10
   range1: 0.5
   damage1: 20
-  firerate1: 1
+  firerate1: 1.5
   speed2: 5
   range2: 0.5
   damage2: 40
-  firerate2: 1
+  firerate2: 2
   speed3: 25
   range3: 0.3
   damage3: 2
   firerate3: 0.01
   currentweaponindex: 0
   guns: []
+  animators: []
+  nowanimator: {fileID: 0}
 --- !u!114 &8765844224137345807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -751,6 +753,8 @@ MonoBehaviour:
   inpassage: 0
   animator: {fileID: 5698858188123970586}
   weaponAnimator: {fileID: 5698858189715441158}
+  A1: 
+  A2: 
   NotHit: 1
 --- !u!1 &5698858189715441156
 GameObject:
