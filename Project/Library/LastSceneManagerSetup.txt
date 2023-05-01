@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/GameScene.unity
+=======
+- path: Assets/Scenes/Weapon 5.unity
+>>>>>>> origin/reyes9
   isLoaded: 1
   isActive: 1
   isSubScene: 0

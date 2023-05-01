@@ -41,18 +41,34 @@ public class NonetworkEnemy : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         if (enterpassage == true)
         {
+            animator.SetBool("attack_flip", false);
+            animator.SetBool("death", false);
+            animator.SetBool("attack", false);
+            animator.SetBool("hit", false);
             animator.SetBool("run_right", false);
             animator.SetBool("run_left", false);
             animator.SetBool("outOfSight", true);
             if (transform.position.x > player.transform.position.x && faceright)
             {
+                animator.SetBool("attack_flip", false);
+                animator.SetBool("death", false);
+                animator.SetBool("attack", false);
+                animator.SetBool("hit", false);
                 animator.SetBool("run_right", true);
-                Flip();
+                animator.SetBool("run_left", false);
+                animator.SetBool("outOfSight", false);
+                //Flip();
             }
             else if (transform.position.x < player.transform.position.x && !faceright)
             {
+                animator.SetBool("attack_flip", false);
+                animator.SetBool("death", false);
+                animator.SetBool("attack", false);
+                animator.SetBool("hit", false);
+                animator.SetBool("run_right", false);
                 animator.SetBool("run_left", true);
-                Flip();
+                animator.SetBool("outOfSight", false);
+                //Flip();
             }
         }
         else if (enterpassage == false)
@@ -62,7 +78,12 @@ public class NonetworkEnemy : MonoBehaviour
 
                 if (distance < sight)
                 {
-
+                    animator.SetBool("attack_flip", false);
+                    animator.SetBool("death", false);
+                    //animator.SetBool("attack", false);
+                    animator.SetBool("hit", false);
+                    animator.SetBool("run_right", false);
+                    animator.SetBool("run_left", false);
                     animator.SetBool("outOfSight", false);
                     if (health > 0)
                     {
@@ -70,24 +91,36 @@ public class NonetworkEnemy : MonoBehaviour
                         transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
                         if (transform.position.x > player.transform.position.x)
                         {
-                            animator.SetBool("run_right", true);
+                            animator.SetBool("attack_flip", false);
+                            animator.SetBool("death", false);
+                            animator.SetBool("attack", false);
+                            animator.SetBool("hit", false);
+                            animator.SetBool("run_right", false);
+                            animator.SetBool("run_left", true);
+                            animator.SetBool("outOfSight", false);
                         }
                         else if (transform.position.x < player.transform.position.x)
                         {
-                            animator.SetBool("run_left", true);
+                            animator.SetBool("attack_flip", false);
+                            animator.SetBool("death", false);
+                            animator.SetBool("attack", false);
+                            animator.SetBool("hit", false);
+                            animator.SetBool("run_right", true);
+                            animator.SetBool("run_left", false);
+                            animator.SetBool("outOfSight", false);
 
                         }
                         if (transform.position.x > player.transform.position.x && faceright)
                         {
                             
-                            Flip();
+                           // Flip();
                           
                            
                         }
                         else if (transform.position.x < player.transform.position.x && !faceright)
                         {
                             
-                            Flip();
+                           // Flip();
                             
                        
                         }
@@ -99,18 +132,21 @@ public class NonetworkEnemy : MonoBehaviour
                 }
                 else if(distance > sight) 
                 {
-
+                    animator.SetBool("attack_flip", false);
+                    animator.SetBool("death", false);
+                    animator.SetBool("attack", false);
+                    animator.SetBool("hit", false);
                     animator.SetBool("run_right", false);
                     animator.SetBool("run_left", false);
                     animator.SetBool("outOfSight", true);
-                   /* if (transform.position.x > player.transform.position.x && faceright)
-                    {
-                        Flip();
-                    }
-                    else if (transform.position.x < player.transform.position.x && !faceright)
-                    {
-                        Flip();
-                    }*/
+                    /* if (transform.position.x > player.transform.position.x && faceright)
+                     {
+                         Flip();
+                     }
+                     else if (transform.position.x < player.transform.position.x && !faceright)
+                     {
+                         Flip();
+                     }*/
                 }
             }
         }
@@ -119,7 +155,13 @@ public class NonetworkEnemy : MonoBehaviour
     private IEnumerator MyCoroutine()
     {
         Debug.Log("globin dead");
-        animator.Play("globin_death");
+        animator.SetBool("attack_flip", false);
+        animator.SetBool("death", true);
+        animator.SetBool("attack", false);
+        animator.SetBool("hit", false);
+        animator.SetBool("run_right", false);
+        animator.SetBool("run_left", false);
+        animator.SetBool("outOfSight", false);
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
         yield return null;
@@ -142,6 +184,7 @@ public class NonetworkEnemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("11");
             StartCoroutine(MyCoroutine3());
             collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-5);
         }
@@ -151,8 +194,12 @@ public class NonetworkEnemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            StartCoroutine(MyCoroutine3());
-            collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-5);
+            if (!animator.GetBool("attack") && !animator.GetBool("attack_flip"))
+            {
+                Debug.Log("2");
+                StartCoroutine(MyCoroutine3());
+                collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-5);
+            }
         }
     }
 
@@ -160,11 +207,38 @@ public class NonetworkEnemy : MonoBehaviour
     private IEnumerator MyCoroutine3()
     {
         //Debug.Log("globin attack");
-        animator.Play("globin_attack");
+        //animator.Play("globin_attack");
+        if (transform.position.x > player.transform.position.x)
+        {
+            animator.SetBool("attack_flip", true);
+            animator.SetBool("death", false);
+            animator.SetBool("attack", false);
+            animator.SetBool("hit", false);
+            animator.SetBool("run_right", false);
+            animator.SetBool("run_left", false);
+            animator.SetBool("outOfSight", false);
+        }
+        if (transform.position.x < player.transform.position.x)
+        {
+            animator.SetBool("attack_flip", false);
+            animator.SetBool("death", false);
+            animator.SetBool("attack", true);
+            animator.SetBool("hit", false);
+            animator.SetBool("run_right", false);
+            animator.SetBool("run_left", false);
+            animator.SetBool("outOfSight", false);
+        }
         canMove = false;
         yield return new WaitForSeconds(1f);
         canMove = true;
-        animator.Play("globin_idle");
+        animator.SetBool("attack_flip", false);
+        animator.SetBool("death", false);
+        animator.SetBool("attack", false);
+        animator.SetBool("hit", false);
+        animator.SetBool("run_right", false);
+        animator.SetBool("run_left", false);
+        animator.SetBool("outOfSight", false);
+        //animator.Play("globin_idle");
         yield return null;
     }
 
@@ -178,11 +252,25 @@ public class NonetworkEnemy : MonoBehaviour
     private IEnumerator MyCoroutine2()
     {
         Debug.Log("globin hit");
-        animator.Play("globin_hit");
+        //animator.Play("globin_hit");
+        animator.SetBool("attack_flip", false);
+        animator.SetBool("death", false);
+        animator.SetBool("attack", false);
+        animator.SetBool("hit", true);
+        animator.SetBool("run_right", false);
+        animator.SetBool("run_left", false);
+        animator.SetBool("outOfSight", false);
         canMove = false;
         yield return new WaitForSeconds(1f);
         canMove = true;
-        animator.Play("globin_idle");
+        animator.SetBool("attack_flip", false);
+        animator.SetBool("death", false);
+        animator.SetBool("attack", false);
+        animator.SetBool("hit", false);
+        animator.SetBool("run_right", false);
+        animator.SetBool("run_left", false);
+        animator.SetBool("outOfSight", false);
+        //animator.Play("globin_idle");
         yield return null;
     }
 }

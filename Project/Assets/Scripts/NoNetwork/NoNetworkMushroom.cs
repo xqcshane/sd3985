@@ -16,12 +16,27 @@ public class NoNetworkMushroom : MonoBehaviour
     public Animator animator;
 
     bool canMove = true;
-
-
+    bool Bonus = false;
+    public int score;
+    public int status;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        status = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().status;
+        int round = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().round;
+        if (round == 1)
+        {
+            score = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score1;
+        }
+        else if (round == 2)
+        {
+            score = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score2;
+        }
+        else if (round == 3)
+        {
+            score = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score3;
+        }
     }
 
     // Update is called once per frame
@@ -29,13 +44,143 @@ public class NoNetworkMushroom : MonoBehaviour
     {
         if (health <= 0)
         {
+            if (Bonus)
+            {
+                score += 20;
+            }
+            else
+            {
+                score += 10;
+            }
             StartCoroutine(MyCoroutine());
+
+        }
+        distance = Vector2.Distance(transform.position, player.transform.position);
+        Vector2 direction = player.transform.position - transform.position;
+        direction.Normalize();
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        if (enterpassage == true)
+        {
+            animator.SetBool("attack_flip", false);
+            animator.SetBool("death", false);
+            animator.SetBool("attack", false);
+            animator.SetBool("hit", false);
+            animator.SetBool("right", false);
+            animator.SetBool("left", false);
+            animator.SetBool("outOfSight", true);
+            if (transform.position.x > player.transform.position.x && faceright)
+            {
+                animator.SetBool("attack_flip", false);
+                animator.SetBool("death", false);
+                animator.SetBool("attack", false);
+                animator.SetBool("hit", false);
+                animator.SetBool("right", true);
+                animator.SetBool("left", false);
+                animator.SetBool("outOfSight", false);
+                //Flip();
+            }
+            else if (transform.position.x < player.transform.position.x && !faceright)
+            {
+                animator.SetBool("attack_flip", false);
+                animator.SetBool("death", false);
+                animator.SetBool("attack", false);
+                animator.SetBool("hit", false);
+                animator.SetBool("right", false);
+                animator.SetBool("left", true);
+                animator.SetBool("outOfSight", false);
+                //Flip();
+            }
+        }
+        else if (enterpassage == false)
+        {
+            if (canMove)
+            {
+
+                if (distance < sight)
+                {
+                    animator.SetBool("attack_flip", false);
+                    animator.SetBool("death", false);
+                    //animator.SetBool("attack", false);
+                    animator.SetBool("hit", false);
+                    animator.SetBool("right", false);
+                    animator.SetBool("left", false);
+                    animator.SetBool("outOfSight", false);
+                    if (health > 0)
+                    {
+
+                        transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+                        if (transform.position.x > player.transform.position.x)
+                        {
+                            animator.SetBool("attack_flip", false);
+                            animator.SetBool("death", false);
+                            animator.SetBool("attack", false);
+                            animator.SetBool("hit", false);
+                            animator.SetBool("right", false);
+                            animator.SetBool("left", true);
+                            animator.SetBool("outOfSight", false);
+                        }
+                        else if (transform.position.x < player.transform.position.x)
+                        {
+                            animator.SetBool("attack_flip", false);
+                            animator.SetBool("death", false);
+                            animator.SetBool("attack", false);
+                            animator.SetBool("hit", false);
+                            animator.SetBool("right", true);
+                            animator.SetBool("left", false);
+                            animator.SetBool("outOfSight", false);
+
+                        }
+                        if (transform.position.x > player.transform.position.x && faceright)
+                        {
+
+                            // Flip();
+
+
+                        }
+                        else if (transform.position.x < player.transform.position.x && !faceright)
+                        {
+
+                            // Flip();
+
+
+                        }
+
+
+                    }
+
+                    //transform.rotation = Quaternion.Euler(Vector3.forward * angle);
+                }
+                else if (distance > sight)
+                {
+                    animator.SetBool("attack_flip", false);
+                    animator.SetBool("death", false);
+                    animator.SetBool("attack", false);
+                    animator.SetBool("hit", false);
+                    animator.SetBool("right", false);
+                    animator.SetBool("left", false);
+                    animator.SetBool("outOfSight", true);
+                    /* if (transform.position.x > player.transform.position.x && faceright)
+                     {
+                         Flip();
+                     }
+                     else if (transform.position.x < player.transform.position.x && !faceright)
+                     {
+                         Flip();
+                     }*/
+                }
+            }
         }
     }
 
     private IEnumerator MyCoroutine()
     {
-        animator.Play("Mushroom_death");
+        animator.SetBool("attack_flip", false);
+        animator.SetBool("death", true);
+        animator.SetBool("attack", false);
+        animator.SetBool("hit", false);
+        animator.SetBool("right", false);
+        animator.SetBool("left", false);
+        animator.SetBool("outOfSight", false);
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
         yield return null;
@@ -44,51 +189,7 @@ public class NoNetworkMushroom : MonoBehaviour
 
     private void FixedUpdate()
     {
-        distance = Vector2.Distance(transform.position, player.transform.position);
-        Vector2 direction = player.transform.position - transform.position;
-        direction.Normalize();
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        if (enterpassage == true)
-        {
-            animator.SetBool("right", false);
-            animator.SetBool("left", false);
-            animator.SetBool("outOfSight", true);
-        }
-        else if (enterpassage == false)
-        {
-            if (canMove)
-            {
-                if (distance < sight)
-                {
 
-                    animator.SetBool("outOfSight", false);
-                    if (System.Math.Abs(transform.position.x - player.transform.position.x) > 2 && health > 0)
-                    {
-
-                        transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-
-                        if (transform.position.x > player.transform.position.x && faceright)
-                        {
-                            animator.SetBool("right", true);
-                            Flip();
-                        }
-                        else if (transform.position.x < player.transform.position.x && !faceright)
-                        {
-                            animator.SetBool("left", true);
-                            Flip();
-                        }
-                    }
-
-                    //transform.rotation = Quaternion.Euler(Vector3.forward * angle);
-                }
-                else
-                {
-                    animator.SetBool("right", false);
-                    animator.SetBool("left", false);
-                    animator.SetBool("outOfSight", true);
-                }
-            }
-        }
     }
     void Flip()
     {
@@ -102,6 +203,7 @@ public class NoNetworkMushroom : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("11");
             StartCoroutine(MyCoroutine3());
             collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-5);
         }
@@ -111,35 +213,83 @@ public class NoNetworkMushroom : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            StartCoroutine(MyCoroutine3());
-            collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-5);
+            if (!animator.GetBool("attack") && !animator.GetBool("attack_flip"))
+            {
+                Debug.Log("2");
+                StartCoroutine(MyCoroutine3());
+                collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-5);
+            }
         }
     }
 
 
     private IEnumerator MyCoroutine3()
     {
-        animator.Play("Mushroom_attack");
+        //Debug.Log("globin attack");
+        //animator.Play("globin_attack");
+        if (transform.position.x > player.transform.position.x)
+        {
+            animator.SetBool("attack_flip", true);
+            animator.SetBool("death", false);
+            animator.SetBool("attack", false);
+            animator.SetBool("hit", false);
+            animator.SetBool("right", false);
+            animator.SetBool("left", false);
+            animator.SetBool("outOfSight", false);
+        }
+        if (transform.position.x < player.transform.position.x)
+        {
+            animator.SetBool("attack_flip", false);
+            animator.SetBool("death", false);
+            animator.SetBool("attack", true);
+            animator.SetBool("hit", false);
+            animator.SetBool("right", false);
+            animator.SetBool("left", false);
+            animator.SetBool("outOfSight", false);
+        }
         canMove = false;
         yield return new WaitForSeconds(1f);
         canMove = true;
-        animator.Play("Mushroom");
+        animator.SetBool("attack_flip", false);
+        animator.SetBool("death", false);
+        animator.SetBool("attack", false);
+        animator.SetBool("hit", false);
+        animator.SetBool("right", false);
+        animator.SetBool("left", false);
+        animator.SetBool("outOfSight", false); ;
+        //animator.Play("globin_idle");
         yield return null;
     }
 
     public void Damaged(float damage)
     {
         health -= damage;
+        //animator.Play("globin_hit");
         StartCoroutine(MyCoroutine2());
     }
 
     private IEnumerator MyCoroutine2()
     {
-        animator.Play("Mush");
+        Debug.Log("globin hit");
+        //animator.Play("globin_hit");
+        animator.SetBool("attack_flip", false);
+        animator.SetBool("death", false);
+        animator.SetBool("attack", false);
+        animator.SetBool("hit", true);
+        animator.SetBool("right", false);
+        animator.SetBool("left", false);
+        animator.SetBool("outOfSight", false);
         canMove = false;
         yield return new WaitForSeconds(1f);
         canMove = true;
-        animator.Play("Mushroom");
+        animator.SetBool("attack_flip", false);
+        animator.SetBool("death", false);
+        animator.SetBool("attack", false);
+        animator.SetBool("hit", false);
+        animator.SetBool("right", false);
+        animator.SetBool("left", false);
+        animator.SetBool("outOfSight", false);
+        //animator.Play("globin_idle");
         yield return null;
     }
 }

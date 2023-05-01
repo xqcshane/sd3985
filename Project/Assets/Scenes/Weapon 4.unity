@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1841875
 Transform:
   m_ObjectHideFlags: 0
@@ -715,8 +715,8 @@ MonoBehaviour:
   sight: 20
   enterpassage: 0
   animator: {fileID: 328389058}
+  score: 0
   status: 0
-  score: {fileID: 0}
 --- !u!95 &328389058
 Animator:
   serializedVersion: 3
@@ -31820,8 +31820,8 @@ MonoBehaviour:
   sight: 20
   enterpassage: 0
   animator: {fileID: 3214377528413785611}
+  score: 0
   status: 0
-  score: {fileID: 0}
 --- !u!114 &3387952168266350120
 MonoBehaviour:
   m_ObjectHideFlags: 0
