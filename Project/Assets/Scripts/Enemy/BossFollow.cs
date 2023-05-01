@@ -70,6 +70,12 @@ public class BossFollow : MonoBehaviour
 
         if (health <= 0)
         {
+            boss.SetBool("goToAttack", false);
+            boss.SetBool("goToIdle", false);
+            boss.SetBool("goToMove", false);
+            boss.SetBool("goToHit", false);
+            boss.SetBool("goToDeath", true);
+            StartCoroutine(MyCoroutineDeath());
             Destroy(gameObject);
         }
         if (Time.time > startSkill)
@@ -217,6 +223,17 @@ public class BossFollow : MonoBehaviour
         yield return null;
     }
 
+    private IEnumerator MyCoroutineDeath()
+    {
+        yield return new WaitForSeconds(1f);
+        boss.SetBool("goToAttack", false);
+        boss.SetBool("goToIdle", false);
+        boss.SetBool("goToMove", false);
+        boss.SetBool("goToHit", false);
+        boss.SetBool("goToDeath", false);
+        yield return null;
+    }
+
     private void FixedUpdate()
     {
         distance = Vector2.Distance(transform.position, player.transform.position);
@@ -231,7 +248,13 @@ public class BossFollow : MonoBehaviour
                 if (!hitted)
                 {
                     canMove = false;
-                    boss.Play("Move");
+                    boss.SetBool("goToAttack", false);
+                    boss.SetBool("goToIdle", false);
+                    boss.SetBool("goToMove", true);
+                    boss.SetBool("goToHit", false);
+                    boss.SetBool("goToDeath", false);
+                    //boss.SetBool("goToMove", true);
+                    //boss.Play("Move");
                 }
             }
         }
@@ -278,14 +301,24 @@ public class BossFollow : MonoBehaviour
             if (!doSkilling1)
             {
                 canMove = false;
-                boss.Play("Attack");
+                boss.SetBool("goToAttack", true);
+                boss.SetBool("goToIdle", false);
+                boss.SetBool("goToMove", false);
+                boss.SetBool("goToHit", false);
+                boss.SetBool("goToDeath", false);
+                //boss.Play("Attack");
             }
         }
         else
         {
             if (!doSkilling1)
             {
-                boss.Play("Idle");
+                boss.SetBool("goToAttack", false);
+                boss.SetBool("goToIdle", true);
+                boss.SetBool("goToMove", false);
+                boss.SetBool("goToHit", false);
+                boss.SetBool("goToDeath", false);
+                //boss.Play("Idle");
                 canMove = true;
             }  
         }
@@ -328,7 +361,13 @@ public class BossFollow : MonoBehaviour
         hitted = true;
         canMove = false;
         doSkilling1 = true;
-        animator.Play("Hit");
+        boss.SetBool("goToAttack", false);
+        boss.SetBool("goToIdle", false);
+        boss.SetBool("goToMove", false);
+        boss.SetBool("goToHit", true);
+        boss.SetBool("goToDeath", false);
+        //boss.SetBool("goToHit", true);
+        //animator.Play("Hit");
         yield return new WaitForSeconds(1f);
         canMove = true;
         doSkilling1 = false;
