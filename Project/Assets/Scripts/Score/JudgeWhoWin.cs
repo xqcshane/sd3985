@@ -13,19 +13,13 @@ public class JudgeWhoWin : MonoBehaviour
     private int yourFinalScore;
     private int otherFinalScore;
 
-    public WinOrLose music;
-
-    public AudioSource audioSource;
-
-    private bool play=false;
+    public AudioSource musicSource;
 
     // Start is called before the first frame update
     void Start()
     {
         yourFinalScore = yourScore.firstScoreFinal + yourScore.secondScoreFinal + yourScore.thirdScoreFinal;
         otherFinalScore = otherScore.firstScoreFinal + otherScore.secondScoreFinal + otherScore.thirdScoreFinal;
-        //Debug.Log(yourScore.firstScoreFinal+ yourScore.secondScoreFinal+ yourScore.thirdScoreFinal);
-        //Debug.Log(player1.text);
     }
 
     // Update is called once per frame
@@ -39,17 +33,14 @@ public class JudgeWhoWin : MonoBehaviour
             {
                 Win.SetActive(true);
                 Win.GetComponent<Animator>().Play("Win");
-                music.PlayMusic("Win");
-                //music.StopMusic("Win");
+                musicSource.Stop();
             }
             else
             {
                 Lose.SetActive(true);
                 Lose.GetComponent<Animator>().Play("Lose");
-                music.PlayMusic("Lose");
-                //music.StopMusic("Win");
+                musicSource.Stop();
             }
-
         }
     }
 }

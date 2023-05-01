@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class WinOrLose : MonoBehaviour
 {
-    //public static SoundManager instance { get; private set; }
     public static WinOrLose instance = null;
     public static WinOrLose Instance
     {
@@ -19,7 +18,15 @@ public class WinOrLose : MonoBehaviour
 
     private void Awake()
     {
-        
+        if (instance == null || instance != this)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Start()
@@ -42,11 +49,8 @@ public class WinOrLose : MonoBehaviour
         }
         else
         {
-            /*
             musicSource.clip = s.clip;
             musicSource.Play();
-            */
-            musicSource.PlayOneShot(s.clip);
         }
     }
 
