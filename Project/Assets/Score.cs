@@ -23,12 +23,15 @@ public class Score : MonoBehaviour
     public int growthRate = 10;
     private bool countOver = false;
     public float showtime = 20.0f;
+
+    public bool finishCal = false;
+
     // Update is called once per frame
     void Start()
     {
-        firstScoreFinal = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score1;
-        secondScoreFinal = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score2;
-        thirdScoreFinal = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score3;
+        //firstScoreFinal = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score1;
+        //secondScoreFinal = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score2;
+        //thirdScoreFinal = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score3;
     }
     void Update()
     {
@@ -92,5 +95,10 @@ public class Score : MonoBehaviour
         {
             endScores += growthRate;
         }
+        else
+        {
+            finishCal = true;
+        }
+        
     }
 }
