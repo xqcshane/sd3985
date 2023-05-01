@@ -16,12 +16,27 @@ public class NonetworkEnemy : MonoBehaviour
     public Animator animator;
 
     bool canMove = true;
-
-
+    bool Bonus = false;
+    public int score;
+    public int status;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        status=GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().status;
+        int round = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().round;
+        if (round == 1)
+        {
+            score = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score1;
+        }
+        else if (round == 2)
+        {
+            score = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score2;
+        }
+        else if(round == 3)
+        {
+            score = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score3;
+        }
     }
 
     // Update is called once per frame
@@ -29,7 +44,16 @@ public class NonetworkEnemy : MonoBehaviour
     {
         if (health <= 0)
         {
+            if(Bonus)
+            {
+                score += 20;
+            }
+            else
+            {
+                score += 10;
+            }
             StartCoroutine(MyCoroutine());
+            
         }
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;

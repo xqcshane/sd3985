@@ -172,6 +172,8 @@ MonoBehaviour:
   sight: 20
   enterpassage: 0
   animator: {fileID: 2247038132914696845}
+  score: 0
+  status: 0
 --- !u!114 &6658727516606916368
 MonoBehaviour:
   m_ObjectHideFlags: 0

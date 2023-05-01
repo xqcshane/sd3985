@@ -10,6 +10,10 @@ public class SkillController : MonoBehaviour
     public Sprite Blasticon;
     public Sprite magicicon;
     public Sprite clearicon;
+    public Sprite Bonusicon;
+    public Sprite Invincicon;
+    public Sprite Suckicon;
+    public Sprite Moveqicon;
     public float cooldowntime1;
     float nextskill1 = 0.0f;
     public float cooldowntime2;
@@ -68,6 +72,30 @@ public class SkillController : MonoBehaviour
             SkillUI1.GetComponent<Skill>().coolDown = cooldowntime1;
             SkillUI1.GetComponent<Skill>().changeImage();
         }
+        else if(index1 == 6)
+        {
+            cooldowntime1 = 20.0f;
+            SkillUI1.GetComponent<Skill>().icon = Bonusicon;
+            SkillUI1.GetComponent<Skill>().coolDown = cooldowntime1;
+            SkillUI1.GetComponent<Skill>().changeImage();
+        }
+        else if (index1 == 7)
+        {
+            cooldowntime1 = 25.0f;
+            SkillUI1.GetComponent<Skill>().icon = Invincicon;
+            SkillUI1.GetComponent<Skill>().coolDown = cooldowntime1;
+            SkillUI1.GetComponent<Skill>().changeImage();
+        }
+        else if (index1 == 8)
+        {
+            SkillUI1.GetComponent<Skill>().icon = Suckicon;
+            SkillUI1.GetComponent<Skill>().changeImage();
+        }
+        else if (index1 == 9)
+        {
+            SkillUI1.GetComponent<Skill>().icon = Moveqicon;
+            SkillUI1.GetComponent<Skill>().changeImage();
+        }
         if (index2 == 1)
         {
             cooldowntime2 = 10.0f;
@@ -101,6 +129,30 @@ public class SkillController : MonoBehaviour
             cooldowntime2 = 30.0f;
             SkillUI2.GetComponent<Skill>().icon = clearicon;
             SkillUI2.GetComponent<Skill>().coolDown = cooldowntime2;
+            SkillUI2.GetComponent<Skill>().changeImage();
+        }
+        else if (index2 == 6)
+        {
+            cooldowntime2 = 20.0f;
+            SkillUI2.GetComponent<Skill>().icon = Bonusicon;
+            SkillUI2.GetComponent<Skill>().coolDown = cooldowntime1;
+            SkillUI2.GetComponent<Skill>().changeImage();
+        }
+        else if (index2 == 7)
+        {
+            cooldowntime1 = 25.0f;
+            SkillUI2.GetComponent<Skill>().icon = Invincicon;
+            SkillUI2.GetComponent<Skill>().coolDown = cooldowntime1;
+            SkillUI2.GetComponent<Skill>().changeImage();
+        }
+        else if (index2 == 8)
+        {
+            SkillUI2.GetComponent<Skill>().icon = Suckicon;
+            SkillUI2.GetComponent<Skill>().changeImage();
+        }
+        else if (index2 == 9)
+        {
+            SkillUI2.GetComponent<Skill>().icon = Moveqicon;
             SkillUI2.GetComponent<Skill>().changeImage();
         }
     }
@@ -147,7 +199,13 @@ public class SkillController : MonoBehaviour
                     contime1 = Time.time + 10.0f;
                     skillflag1 = true;
                 }
-
+                else if(index1 == 6)
+                {
+                    nextskill1 = Time.time + cooldowntime1;
+                    Clear();
+                    contime1 = Time.time + 10.0f;
+                    skillflag1 = true;
+                }
 
             }
             //update the skill
@@ -312,6 +370,10 @@ public class SkillController : MonoBehaviour
     {
         sightmask.transform.GetChild(0).gameObject.SetActive(false);
         Debug.Log("kk");
+    }
+    void Bonus()
+    {
+
     }
     void unclear()
     {
