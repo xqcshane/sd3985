@@ -699,9 +699,6 @@
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.2D.Path.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
@@ -716,6 +713,9 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
@@ -751,6 +751,18 @@
       <Project>{2F299321-7155-BE83-F0B4-F6822D4A9FC6}</Project>
       <Name>PhotonChat</Name>
     </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
+      <Project>{D5D937EA-8503-894C-9F1D-0D0DAE095B59}</Project>
+      <Name>ToonyColorsPro.Demo.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="KinoBloom.Runtime.csproj">
+      <Project>{B42543B9-D32E-F682-B970-84C64AED987E}</Project>
+      <Name>KinoBloom.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXREditor.csproj">
+      <Project>{2EB651E2-D330-C334-C92F-3D29FC0F9FCD}</Project>
+      <Name>CFXREditor</Name>
+    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
       <Project>{0B74B41B-6CD8-5FCC-BBA1-556DDD6DDFF7}</Project>
       <Name>PhotonUnityNetworking.Editor</Name>
@@ -758,6 +770,10 @@
     <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
       <Project>{DD452141-925C-B850-029C-C286FDDD2013}</Project>
       <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRDemo.csproj">
+      <Project>{7C83DAB4-DD94-6720-2244-B6235D97699C}</Project>
+      <Name>CFXRDemo</Name>
     </ProjectReference>
     <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
       <Project>{30149A36-3B40-FE1A-472F-1CFB561BCEB1}</Project>
@@ -779,22 +795,6 @@
       <Project>{8DBEA269-F151-5550-651D-A564A7349EC1}</Project>
       <Name>PhotonUnityNetworking.Demos</Name>
     </ProjectReference>
-    <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
-      <Project>{DE181346-9A7E-FD8A-3EA4-19DACF42BA1B}</Project>
-      <Name>PunDemos.DemoSlotcarEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
-      <Project>{13A687D2-6B48-F7BA-7091-A108CDDD03F8}</Project>
-      <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
-      <Project>{D5D937EA-8503-894C-9F1D-0D0DAE095B59}</Project>
-      <Name>ToonyColorsPro.Demo.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="CFXREditor.csproj">
-      <Project>{2EB651E2-D330-C334-C92F-3D29FC0F9FCD}</Project>
-      <Name>CFXREditor</Name>
-    </ProjectReference>
     <ProjectReference Include="CFXR.WelcomeScreen.csproj">
       <Project>{9A7AD3C1-C8EB-D297-1727-4597BC857405}</Project>
       <Name>CFXR.WelcomeScreen</Name>
@@ -803,13 +803,13 @@
       <Project>{C7268A7D-F233-0333-B9D7-AC0BD26D0C27}</Project>
       <Name>CFXRRuntime</Name>
     </ProjectReference>
-    <ProjectReference Include="KinoBloom.Runtime.csproj">
-      <Project>{B42543B9-D32E-F682-B970-84C64AED987E}</Project>
-      <Name>KinoBloom.Runtime</Name>
+    <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
+      <Project>{DE181346-9A7E-FD8A-3EA4-19DACF42BA1B}</Project>
+      <Name>PunDemos.DemoSlotcarEditor</Name>
     </ProjectReference>
-    <ProjectReference Include="CFXRDemo.csproj">
-      <Project>{7C83DAB4-DD94-6720-2244-B6235D97699C}</Project>
-      <Name>CFXRDemo</Name>
+    <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
+      <Project>{13A687D2-6B48-F7BA-7091-A108CDDD03F8}</Project>
+      <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
