@@ -30,7 +30,8 @@ public class ShowResult : MonoBehaviour
             if (!final.GetComponent<Result>().death)
             {
                 result.text = "Time Out";
-                score.text = "Your total score is :" + (final.GetComponent<Result>().score).ToString();
+                //score.text = "Your total score is :" + (final.GetComponent<Result>().score).ToString();
+                score.text = "You will be the Reverager";
             }
             else
             {
@@ -44,11 +45,11 @@ public class ShowResult : MonoBehaviour
             GameObject.Find("Troublemaker").SetActive(true);
             if (!final.GetComponent<Result>().death)
             {
-                score2.text = "You Block the Adventure";
+                score2.text = "You Block the Conqueror";
             }
             else
             {
-                score2.text = "You Kill the Adventure";
+                score2.text = "You Kill the Conqueror";
             }
         }
         Destroy(GameObject.Find("Data1"));

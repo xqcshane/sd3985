@@ -1620,7 +1620,7 @@ MonoBehaviour:
   E: {fileID: 475059456}
   before: {fileID: 21300000, guid: 1455a3d096e0bf74fbbac0f76b17cbce, type: 3}
   Data: {fileID: 1972005683}
-  totaltime: 30
+  totaltime: 5
   time: {fileID: 1529976898}
   buttonindex: -1
 --- !u!4 &276345794
@@ -2756,7 +2756,7 @@ MonoBehaviour:
   trap3: {fileID: 513220250}
   before: {fileID: 21300000, guid: 1455a3d096e0bf74fbbac0f76b17cbce, type: 3}
   Data: {fileID: 565662501}
-  totaltime: 30
+  totaltime: 5
   time: {fileID: 180879236}
   buttonindex: -1
 --- !u!4 &510203069
@@ -5421,7 +5421,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6971,9 +6971,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillindex: 0
   sendindex1: 0
-  heal: {fileID: 21300000, guid: e691198d56e3a1848b5009e1ff94dbb5, type: 3}
+  heal: {fileID: 21300000, guid: cdec13907ffc75749ab2ed436bec6b14, type: 3}
   speed: {fileID: 21300000, guid: 2bccd332882fcd14b9e4c377e432c587, type: 3}
-  bla: {fileID: 21300000, guid: cdec13907ffc75749ab2ed436bec6b14, type: 3}
+  bla: {fileID: 21300000, guid: e691198d56e3a1848b5009e1ff94dbb5, type: 3}
   magic: {fileID: 21300000, guid: c46be55a65cb30e44b7c89e3c0d531da, type: 3}
   clear: {fileID: 21300000, guid: c0c621637e6ca054cb6f00c56255ade7, type: 3}
   Change: {fileID: 21300000, guid: 37f57a0c61fc801499a0a562f1bd9777, type: 3}

@@ -9,26 +9,23 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/StartLoadingScene.unity
-    guid: 1580ccaac1d477444a41e895296c76c6
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/StartGameScene.unity
-    guid: 5d8c8768dc9e8db42b66275bdddc72fa
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/RoomListScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/RoomScene.unity
-    guid: 0e9e645dbfc250f4794d1e72ef2e3527
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 234a83800b4f81f45bedd5625d2dbdb4
   - enabled: 1
     path: Assets/Scenes/New2SkillChoosing.unity
     guid: 79b6d8ad598415d44ba58e48e85d9e79
-  - enabled: 1
-    path: Assets/Scenes/Conclusion.unity
-    guid: 8ca1e828d5a8f18429ca951c4e9ed9f4
   - enabled: 1
     path: Assets/Scenes/Flow/1.unity
     guid: ac13c28657bc56d4bb180d4c9643472d
@@ -53,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Flow/Score.unity
     guid: eb4464fc5ccffbb4ab3ccc661a00a117
+  - enabled: 1
+    path: Assets/Scenes/Conclusion.unity
+    guid: 553fe0d283918b6479f0c4aeabf5419b
   m_configObjects: {}
