@@ -27,31 +27,31 @@ public class Bulletcontrol : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             collision.gameObject.GetComponent<NonetworkEnemy>().Damaged(damage);
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("FlyingEye"))
         {
             collision.gameObject.GetComponent<NoNetworkFlyingEye>().Damaged(damage);
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("Mushroom"))
         {
             collision.gameObject.GetComponent<NoNetworkMushroom>().Damaged(damage);
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("Seleton"))
         {
             collision.gameObject.GetComponent<NoNetworkSkeleton>().Damaged(damage);
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("Wall"))
         {
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("BOSS"))
         {
             collision.gameObject.GetComponent<BossFollow>().Damaged(damage);
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
     }
     private void Update()

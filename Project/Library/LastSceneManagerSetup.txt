@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/New2SkillChoosing.unity
-=======
-- path: Assets/Scenes/Conclusion 1.unity
->>>>>>> origin/reyes8
+- path: Assets/Scenes/GameScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
