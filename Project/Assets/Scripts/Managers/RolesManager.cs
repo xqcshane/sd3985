@@ -19,11 +19,12 @@ public class RolesManager: MonoBehaviourPunCallbacks
         _pv = this.gameObject.GetComponent<PhotonView>();
         if (PhotonNetwork.IsMasterClient)
         {
+            /*
             HashTable table1 = new HashTable();
             table1.Add("Round", MyStatusScript.round);
             table1.Add("Turn", MyStatusScript.turn);
             PhotonNetwork.LocalPlayer.SetCustomProperties(table1);
-
+            */
             if (MyStatusScript.turn == 1)
             {
                 mystatus = Random.Range(0, 2);
@@ -58,6 +59,7 @@ public class RolesManager: MonoBehaviourPunCallbacks
                 int nowstatus = (int)changedProps["status"];
                 InitialStatues(nowstatus);
             }
+            /*
             if (changedProps.ContainsKey("Round"))
             {
                 int NowR = (int)changedProps["Round"];
@@ -68,6 +70,7 @@ public class RolesManager: MonoBehaviourPunCallbacks
                 int NowT = (int)changedProps["Turn"];
                 MyStatusScript.turn = NowT;
             }
+            */
         }
     }
 
