@@ -40,7 +40,7 @@ public class Skillchoose : MonoBehaviour
     private int[] randomskills;
     void Start()
     {
-        Sprite[] list = {before, heal, speed, bla, magic, clear, Bonus,Invinci,Suck,Moveq,Change};
+        Sprite[] list = {before, heal, speed, bla, magic, clear, Bonus,Invinci,Moveq,Suck,Change};
         Sprites = list;
         Status MyStatusScript = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>();
         int NowSkillNumber = 0;

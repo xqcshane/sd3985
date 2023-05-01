@@ -15,6 +15,9 @@ public class TrapChoosing : MonoBehaviour
     public Sprite bla;
     public Sprite magic;
     public Sprite clear;
+    public Sprite fake;
+    public Sprite monster;
+    public Sprite boss;
     public Sprite Change;
     bool skill1 = false;
     bool skill2 = false;
@@ -35,7 +38,7 @@ public class TrapChoosing : MonoBehaviour
     void Start()
     {
         before = Q.GetComponent<Image>().sprite;
-        Sprite[] list = { before, heal, speed, bla, magic, clear, Change };
+        Sprite[] list = { before, heal, speed, bla, magic, clear, fake,monster, boss,Change };
         Sprites = list;
         Status MyStatusScript = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>();
         int NowSkillNumber = 0;
@@ -54,7 +57,7 @@ public class TrapChoosing : MonoBehaviour
                 NowSkillNumber = 4;
                 break;
         }
-        randomskills = UniqRandom(9, NowSkillNumber);
+        randomskills = UniqRandom(8, NowSkillNumber);
         GameObject allskill = GameObject.Find("TTrapList");
         for (int i = 0; i < allskill.transform.childCount; i++)
         {

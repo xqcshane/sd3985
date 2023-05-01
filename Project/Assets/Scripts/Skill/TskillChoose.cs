@@ -72,7 +72,24 @@ public class TskillChoose : MonoBehaviour
     {
         Sprite[] list = { before, heal, speed, bla, magic, clear, Change };
         Sprites = list;
-        randomskills = UniqRandom(5, 3);
+        Status MyStatusScript = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>();
+        int NowSkillNumber = 0;
+        switch (MyStatusScript.round)
+        {
+            case 1:
+                NowSkillNumber = 2;
+                break;
+            case 2:
+                NowSkillNumber = 3;
+                break;
+            case 3:
+                NowSkillNumber = 4;
+                break;
+            default:
+                NowSkillNumber = 2;
+                break;
+        }
+        randomskills = UniqRandom(4, NowSkillNumber);
         GameObject allskill = GameObject.Find("TSkillList");
         for (int i = 0; i < allskill.transform.childCount; i++)
         {
