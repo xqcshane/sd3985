@@ -67,7 +67,12 @@ public class PlayerHealth : MonoBehaviourPunCallbacks
             }
             */
 
-            animator.Play("Adventurer_hit");
+            animator.SetBool("rightRun", false);
+            animator.SetBool("leftRun", false);
+            animator.SetBool("backIdle", false);
+            animator.SetBool("backIdle_Flip", false);
+            animator.SetBool("hit", true);
+            //animator.Play("Adventurer_hit");
             currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
             Debug.Log(currentHealth + "/" + maxHealth);
             this.gameObject.GetComponent<PlayerMove>().NotHit = false;

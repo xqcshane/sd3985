@@ -78,29 +78,57 @@ public class PlayerMove : MonoBehaviour
 
                     if (horizontal > 0)
                     {
-                        animator.Play("Adventurer_right");
+                        animator.SetBool("rightRun", true);
+                        animator.SetBool("leftRun", false);
+                        animator.SetBool("backIdle", false);
+                        animator.SetBool("backIdle_Flip", false);
+                        animator.SetBool("hit", false);
+                        //animator.Play("Adventurer_right");
                         faceRight = true;
-                        weaponAnimator.Play(A2);
+
+                        weaponAnimator.SetBool("flip",true);
+                        //weaponAnimator.Play(A2);
                  
                     }
                     else if (horizontal < 0)
                     {
-                        animator.Play("Adventurer_left");
+                        animator.SetBool("rightRun", false);
+                        animator.SetBool("leftRun", true);
+                        animator.SetBool("backIdle", false);
+                        animator.SetBool("backIdle_Flip", false);
+                        animator.SetBool("hit", false);
+                        //animator.Play("Adventurer_left");
                         faceRight = false;
-                        weaponAnimator.Play(A1);
+
+                        weaponAnimator.SetBool("flip", false);
+                        //weaponAnimator.Play(A1);
                      
                     }
                     else if (vertical != 0)
                     {
                         if (faceRight)
                         {
-                            animator.Play("Adventurer_right");
-                            weaponAnimator.Play(A2);
+                            animator.SetBool("rightRun", true);
+                            animator.SetBool("leftRun", false);
+                            animator.SetBool("backIdle", false);
+                            animator.SetBool("backIdle_Flip", false);
+                            animator.SetBool("hit", false);
+                            //animator.Play("Adventurer_right");
+
+                            weaponAnimator.SetBool("flip", true);
+                            //weaponAnimator.Play(A2);
                         }
                         else
                         {
-                            animator.Play("Adventurer_left");
-                            weaponAnimator.Play(A1);
+                            animator.SetBool("rightRun", false);
+                            animator.SetBool("leftRun", true);
+                            animator.SetBool("backIdle", false);
+                            animator.SetBool("backIdle_Flip", false);
+                            animator.SetBool("hit", false);
+                            //animator.Play("Adventurer_left");
+
+                            weaponAnimator.SetBool("flip", false);
+                            //weaponAnimator.Play(A1);
                         }
 
                     }
@@ -108,13 +136,27 @@ public class PlayerMove : MonoBehaviour
                     {
                         if (faceRight)
                         {
-                            animator.Play("Real_adventurer");
-                            weaponAnimator.Play(A2);
+                            animator.SetBool("rightRun", false);
+                            animator.SetBool("leftRun", false);
+                            animator.SetBool("backIdle", true);
+                            animator.SetBool("backIdle_Flip", false);
+                            animator.SetBool("hit", false);
+                            //animator.Play("Real_adventurer");
+
+                            weaponAnimator.SetBool("flip", true);
+                            //weaponAnimator.Play(A2);
                         }
                         else
                         {
-                            animator.Play("Real_adventurer_Flip");
-                            weaponAnimator.Play(A1);
+                            animator.SetBool("rightRun", false);
+                            animator.SetBool("leftRun", false);
+                            animator.SetBool("backIdle", false);
+                            animator.SetBool("backIdle_Flip", true);
+                            animator.SetBool("hit", false);
+                            //animator.Play("Real_adventurer_Flip");
+
+                            weaponAnimator.SetBool("flip", false);
+                            //weaponAnimator.Play(A1);
                         }
 
                     }
