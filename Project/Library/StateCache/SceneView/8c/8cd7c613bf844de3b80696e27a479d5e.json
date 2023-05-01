@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":499.2622375488281,"y":128.96456909179688,"z":-75.65260314941406},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":280.020751953125,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":406.0655517578125,"y":193.3193817138672,"z":-76.46013641357422},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":226.48973083496095,"orthographic":true}
+>>>>>>> origin/reyes8
