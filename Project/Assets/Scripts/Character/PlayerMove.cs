@@ -82,6 +82,7 @@ public class PlayerMove : MonoBehaviour
                         animator.SetBool("leftRun", false);
                         animator.SetBool("backIdle", false);
                         animator.SetBool("backIdle_Flip", false);
+                        animator.SetBool("hit", false);
                         //animator.Play("Adventurer_right");
                         faceRight = true;
 
@@ -95,6 +96,7 @@ public class PlayerMove : MonoBehaviour
                         animator.SetBool("leftRun", true);
                         animator.SetBool("backIdle", false);
                         animator.SetBool("backIdle_Flip", false);
+                        animator.SetBool("hit", false);
                         //animator.Play("Adventurer_left");
                         faceRight = false;
 
@@ -110,6 +112,7 @@ public class PlayerMove : MonoBehaviour
                             animator.SetBool("leftRun", false);
                             animator.SetBool("backIdle", false);
                             animator.SetBool("backIdle_Flip", false);
+                            animator.SetBool("hit", false);
                             //animator.Play("Adventurer_right");
 
                             weaponAnimator.SetBool("flip", true);
@@ -121,6 +124,7 @@ public class PlayerMove : MonoBehaviour
                             animator.SetBool("leftRun", true);
                             animator.SetBool("backIdle", false);
                             animator.SetBool("backIdle_Flip", false);
+                            animator.SetBool("hit", false);
                             //animator.Play("Adventurer_left");
 
                             weaponAnimator.SetBool("flip", false);
@@ -136,6 +140,7 @@ public class PlayerMove : MonoBehaviour
                             animator.SetBool("leftRun", false);
                             animator.SetBool("backIdle", true);
                             animator.SetBool("backIdle_Flip", false);
+                            animator.SetBool("hit", false);
                             //animator.Play("Real_adventurer");
 
                             weaponAnimator.SetBool("flip", true);
@@ -147,6 +152,7 @@ public class PlayerMove : MonoBehaviour
                             animator.SetBool("leftRun", false);
                             animator.SetBool("backIdle", false);
                             animator.SetBool("backIdle_Flip", true);
+                            animator.SetBool("hit", false);
                             //animator.Play("Real_adventurer_Flip");
 
                             weaponAnimator.SetBool("flip", false);
