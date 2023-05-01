@@ -149,6 +149,7 @@ public class SkillController : MonoBehaviour
         {
             SkillUI2.GetComponent<Skill>().icon = Suckicon;
             SkillUI2.GetComponent<Skill>().changeImage();
+            //GameObject.FindGameObjectWithTag("Player")
         }
         else if (index2 == 9)
         {
@@ -202,7 +203,14 @@ public class SkillController : MonoBehaviour
                 else if(index1 == 6)
                 {
                     nextskill1 = Time.time + cooldowntime1;
-                    Clear();
+                    Bonus();
+                    contime1 = Time.time + 10.0f;
+                    skillflag1 = true;
+                }
+                else if(index1 == 7)
+                {
+                    nextskill1 = Time.time + cooldowntime1;
+                    invic();
                     contime1 = Time.time + 10.0f;
                     skillflag1 = true;
                 }
@@ -247,7 +255,20 @@ public class SkillController : MonoBehaviour
                     skillflag1 = false;
                 }
             }
-
+            else if(index1 == 6 && skillflag1 == true)
+            {
+                if (Time.time > contime1)
+                {
+                    GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreController>().bounus = false;
+                }
+            }
+            else if( index1 == 7 && skillflag1 == true)
+            {
+                if (Time.time > contime1)
+                {
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>().timeInvincible = 2.0f;
+                }
+            }
             // E skill
             if (Input.GetKeyDown(KeyCode.E) && Time.time > nextskill2)
             {
@@ -283,6 +304,20 @@ public class SkillController : MonoBehaviour
                 {
                     nextskill2 = Time.time + cooldowntime2;
                     Clear();
+                    contime2 = Time.time + 10.0f;
+                    skillflag2 = true;
+                }
+                else if (index2 == 6)
+                {
+                    nextskill2 = Time.time + cooldowntime1;
+                    Bonus();
+                    contime2 = Time.time + 10.0f;
+                    skillflag2 = true;
+                }
+                else if (index2 == 7)
+                {
+                    nextskill2 = Time.time + cooldowntime1;
+                    invic();
                     contime2 = Time.time + 10.0f;
                     skillflag2 = true;
                 }
@@ -327,6 +362,21 @@ public class SkillController : MonoBehaviour
                     skillflag2 = false;
                 }
             }
+            else if (index2 == 6 && skillflag2 == true)
+            {
+                if (Time.time > contime2)
+                {
+                    GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreController>().bounus = false;
+                }
+            }
+            else if (index2 == 7 && skillflag2 == true)
+            {
+                if (Time.time > contime2)
+                {
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>().timeInvincible = 2.0f;
+                }
+            }
+
         }
         else if (PR == 1)
         {
@@ -373,7 +423,11 @@ public class SkillController : MonoBehaviour
     }
     void Bonus()
     {
-
+        GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreController>().bounus = true;
+    }
+    void invic()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>().timeInvincible = 10.0f;
     }
     void unclear()
     {

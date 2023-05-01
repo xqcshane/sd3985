@@ -28,6 +28,7 @@ TagManager:
   - HealthSprite
   - Coin
   - FxTemporaire
+  - Score
   layers:
   - Default
   - TransparentFX
