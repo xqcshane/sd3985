@@ -30,6 +30,12 @@ public class PlayerMove : MonoBehaviour
     public string A1;
     public string A2;
     public bool NotHit = true;
+
+    //public MusicManager musicManager;
+
+    public GameObject[] Music;
+    private bool playing = false;
+
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
@@ -88,7 +94,11 @@ public class PlayerMove : MonoBehaviour
 
                         weaponAnimator.SetBool("flip",true);
                         //weaponAnimator.Play(A2);
-                 
+
+                        Music[0].SetActive(true);
+                        StartCoroutine(MyCoroutine());
+                        
+
                     }
                     else if (horizontal < 0)
                     {
@@ -102,7 +112,11 @@ public class PlayerMove : MonoBehaviour
 
                         weaponAnimator.SetBool("flip", false);
                         //weaponAnimator.Play(A1);
-                     
+
+                        //musicManager.PlaySFX("Run");
+                        Music[0].SetActive(true);
+                        StartCoroutine(MyCoroutine());
+
                     }
                     else if (vertical != 0)
                     {
@@ -117,6 +131,10 @@ public class PlayerMove : MonoBehaviour
 
                             weaponAnimator.SetBool("flip", true);
                             //weaponAnimator.Play(A2);
+
+                            //musicManager.PlaySFX("Run");
+                            Music[0].SetActive(true);
+                            StartCoroutine(MyCoroutine());
                         }
                         else
                         {
@@ -129,6 +147,10 @@ public class PlayerMove : MonoBehaviour
 
                             weaponAnimator.SetBool("flip", false);
                             //weaponAnimator.Play(A1);
+
+                            //musicManager.PlaySFX("Run");
+                            Music[0].SetActive(true);
+                            StartCoroutine(MyCoroutine());
                         }
 
                     }
@@ -170,4 +192,15 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+    private IEnumerator MyCoroutine()
+    {
+        if (!playing)
+        {
+            playing = true;
+            yield return new WaitForSeconds(0.4f);
+            Music[0].SetActive(false);
+            playing = false;
+            yield return null;
+        }   
     }
+}
