@@ -146,6 +146,7 @@
     <Compile Include="Assets\Scripts\UI\ToolTipSystem.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
     <Compile Include="Assets\Scripts\UI\LoadingCircle.cs" />
+    <Compile Include="Assets\MusicManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\GridMap\Scripts\MeshUtils.cs" />
     <Compile Include="Assets\Scripts\Rooms\EnterNext.cs" />
@@ -257,7 +258,6 @@
     <Compile Include="Assets\LeanTween\Examples\Archived\TestingRigidbodyCS.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\FunctionPeriodic.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\Following.cs" />
-    <Compile Include="Assets\MusicManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
