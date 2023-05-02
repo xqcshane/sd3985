@@ -34,6 +34,7 @@ public class CheckGun : MonoBehaviourPunCallbacks
         if (role == 1 && changedProps.ContainsKey("GunIndex"))
         {
             myaim.currentweaponindex = (int)changedProps["GunIndex"];
+            myaim.changegun();
         }
     }
 

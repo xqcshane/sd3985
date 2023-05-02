@@ -14,6 +14,7 @@ public class ShowResult : MonoBehaviour
 
     //public Text result2;
     public Text score2;
+    public Text score3;
     public float showtime = 10.0f;
     public TextMeshProUGUI MyRat;
     void Start()
@@ -59,8 +60,17 @@ public class ShowResult : MonoBehaviour
         {
             GameObject.Find("Adventure").SetActive(false);
             GameObject.Find("Troublemaker").SetActive(true);
+            if (MyRound == 3 && MyTurn == 2)
+            {
+                score3.text = "See the Result";
+            }
+            else
+            {
+                score3.text = "You will be the adventurer next turn";
+            }
             if (!final.GetComponent<Status>().death)
             {
+                
                 if (MyRound == 3 && MyTurn == 2)
                 {
                     score2.text = "Game Over";

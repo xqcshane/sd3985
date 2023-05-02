@@ -56,6 +56,7 @@ public class JudgeWhoWin : MonoBehaviourPunCallbacks
             }
             else
             {
+                Destroy(GameObject.FindGameObjectWithTag("Status"));
                 PhotonNetwork.LeaveRoom();
             }
         }

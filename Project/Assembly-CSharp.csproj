@@ -99,6 +99,7 @@
     <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\UI_TextComplex.cs" />
     <Compile Include="Assets\Enemy Galore 1 - Pixel Art\Script\EnemyTest.cs" />
     <Compile Include="Assets\Scenes\Scripts\NoNetwork\NonetworkCamera.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Trophy\CreateTrophy.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Scenes\Scripts\Traps\CallRevengerSkilll.cs" />
     <Compile Include="Assets\Scenes\Scripts\Character\Bulletcontrol.cs" />
@@ -154,6 +155,7 @@
     <Compile Include="Assets\Scenes\Scripts\Character\TroubleMakeMove.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Scenes\Scripts\Traps\ChangeTrapIndex.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Character\CheckGun.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralAdvancedTechniques.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\ZombiSoft\TinyHealthSystem\Demo\Demo.cs" />
@@ -255,13 +257,12 @@
     <Compile Include="Assets\Scenes\Scripts\Rooms\RoomRandomController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\CMDebug.cs" />
-    <Compile Include="Assets\Scenes\Scripts\Trophy.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Trophy\Trophy.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Scenes\Scripts\Boss\BossSkillDamage.cs" />
     <Compile Include="Assets\LeanTween\Examples\Archived\TestingRigidbodyCS.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\FunctionPeriodic.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\Following.cs" />
-    <Compile Include="Assets\Scenes\Scripts\Character\CheckGun.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

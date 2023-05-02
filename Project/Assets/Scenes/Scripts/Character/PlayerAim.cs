@@ -247,7 +247,7 @@ public class PlayerAim : MonoBehaviour
              Destroy(bullets, range3);*/
         }
     }
-    private void changegun()
+    public void changegun()
     {
         if (currentweaponindex == 0)
         {
