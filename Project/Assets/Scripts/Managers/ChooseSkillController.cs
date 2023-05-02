@@ -6,10 +6,13 @@ using Photon.Pun;
 public class ChooseSkillController : MonoBehaviour
 {
     private int status;
+    public int[] skillid;
     // Start is called before the first frame update
     void Start()
     {
         int status = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().status;
+        int round = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().round;
+        skillid =new int[1+round];
         if (status==0)
         {
             //status = 0;
@@ -28,7 +31,7 @@ public class ChooseSkillController : MonoBehaviour
             GameObject.Find("Troublemaker").SetActive(true);
             GameObject.Find("SkillManager").SetActive(false);
             GameObject.Find("SkillManager2").SetActive(false);
-            GameObject.Find("TSkillManager").GetComponent<TskillChoose>().IntialSkill();
+            skillid=GameObject.Find("TSkillManager").GetComponent<TskillChoose>().IntialSkill();
             GameObject.Find("Troublemakerskill").SetActive(false);
         }
 

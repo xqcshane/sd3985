@@ -101,7 +101,7 @@ public class Controller : MonoBehaviour
                 }
                 if (PlayerRole == 1)
                 {
-                    GameObject.FindGameObjectWithTag("TrapController").GetComponent<TrapController>().CallEnhenceBoss();
+                    
                     GameObject.Find("ImageEmoji").GetComponent<EmojiController>().CanUseEmoji = true;
                     GameObject.FindGameObjectWithTag("TroubleMaker").GetComponent<TMSetTrapViewController>().CanChangeView = false;
                 }

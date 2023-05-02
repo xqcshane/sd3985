@@ -68,9 +68,9 @@ public class TskillChoose : MonoBehaviour
         //Data.GetComponent<TrapData>().skillindex1 = sendindex1;
        // SceneManager.LoadScene("GameScene");
     }
-    public void IntialSkill()
+    public int[] IntialSkill()
     {
-        Sprite[] list = { before, heal, speed, bla, magic, clear, Change };
+        Sprite[] list = { before, heal, speed, magic, clear, Change };
         Sprites = list;
         Status MyStatusScript = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>();
         int NowSkillNumber = 0;
@@ -102,6 +102,7 @@ public class TskillChoose : MonoBehaviour
         sendindex1 = 0;
         frame1 = Q.gameObject.transform.GetChild(0).gameObject;
         frame1.GetComponent<Image>().sprite = before;
+        return randomskills;
     }
     public int[] UniqRandom(int RandomNumber, int NeedNumber)
     {

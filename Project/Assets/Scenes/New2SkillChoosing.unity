@@ -757,6 +757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbee5f4684076324fa16dc68fe4f9485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillid: 
 --- !u!4 &76067006
 Transform:
   m_ObjectHideFlags: 0
@@ -6974,7 +6975,7 @@ MonoBehaviour:
   heal: {fileID: 21300000, guid: cdec13907ffc75749ab2ed436bec6b14, type: 3}
   speed: {fileID: 21300000, guid: 2bccd332882fcd14b9e4c377e432c587, type: 3}
   bla: {fileID: 21300000, guid: e691198d56e3a1848b5009e1ff94dbb5, type: 3}
-  magic: {fileID: 21300000, guid: c46be55a65cb30e44b7c89e3c0d531da, type: 3}
+  magic: {fileID: 21300000, guid: e691198d56e3a1848b5009e1ff94dbb5, type: 3}
   clear: {fileID: 21300000, guid: c0c621637e6ca054cb6f00c56255ade7, type: 3}
   Change: {fileID: 21300000, guid: 37f57a0c61fc801499a0a562f1bd9777, type: 3}
   Q: {fileID: 563594075}

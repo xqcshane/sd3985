@@ -258,7 +258,7 @@ public class TrapChoosing : MonoBehaviour
         Data.GetComponent<TrapData>().skillindex3= sendindex3;
         if (GameObject.Find("TSkillManager").GetComponent<TskillChoose>().sendindex1 == 0)
         {
-            Data.GetComponent<TrapData>().skill = 1;
+            Data.GetComponent<TrapData>().skill = GameObject.Find("GameManager").GetComponent<ChooseSkillController>().skillid[0];
         }
         else
         {

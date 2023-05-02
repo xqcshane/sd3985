@@ -10,6 +10,11 @@ public class StrongBoss : MonoBehaviourPunCallbacks
     private void Start()
     {
         role = GameObject.Find("Controller").GetComponent<Controller>().PlayerRole;
+        if(role == 1)
+        {
+            GameObject.FindGameObjectWithTag("TrapController").GetComponent<TrapController>().CallEnhenceBoss();
+        }
+        
     }
     public void stronge()
     {

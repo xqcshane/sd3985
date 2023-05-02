@@ -89,6 +89,7 @@
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\Scripts\Result\ShowResult.cs" />
     <Compile Include="Assets\Scripts\Traps\TrapData.cs" />
+    <Compile Include="Assets\Scripts\Rooms\BossRoomChecker.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\World_Mesh.cs" />
     <Compile Include="Assets\Scripts\Managers\Status.cs" />
