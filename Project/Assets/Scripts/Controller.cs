@@ -117,52 +117,72 @@ public class Controller : MonoBehaviour
         }
         else 
         {
-            if (Status.GetComponent<Status>().round == 1)
+            if (PlayerRole == 0)
             {
-                GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score1 = score2.GetComponent<ScoreController>().score + 10 * ((int)Gametime % 10);
+                if (Status.GetComponent<Status>().round == 1)
+                {
+                    GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score1 = score2.GetComponent<ScoreController>().score + 10 * ((int)Gametime % 10);
+                }
+                else if (Status.GetComponent<Status>().round == 2)
+                {
+                    GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score2 = score2.GetComponent<ScoreController>().score + 10 * ((int)Gametime % 10);
+                }
+                else if (Status.GetComponent<Status>().round == 3)
+                {
+                    GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score3 = score2.GetComponent<ScoreController>().score + 10 * ((int)Gametime % 10);
+                }
             }
-            else if (Status.GetComponent<Status>().round == 2)
+            if (PhotonNetwork.IsMasterClient)
             {
-                GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score2 = score2.GetComponent<ScoreController>().score + 10 * ((int)Gametime % 10);
+                SceneManager.LoadScene("Conclusion");
             }
-            else if (Status.GetComponent<Status>().round == 3)
-            {
-                GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score3 = score2.GetComponent<ScoreController>().score + 10 * ((int)Gametime % 10);
-            }
-            SceneManager.LoadScene("Conclusion");
-            Debug.Log("Out Of Time0");
+            
         }
         if (endGame)
         {
-            if (Status.GetComponent<Status>().round == 1)
+            if (PlayerRole == 0)
             {
-                GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score1= score2.GetComponent<ScoreController>().score+10*((int)Gametime%10);
+                if (Status.GetComponent<Status>().round == 1)
+                {
+                    GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score1 = score2.GetComponent<ScoreController>().score + 10 * ((int)Gametime % 10);
+                }
+                else if (Status.GetComponent<Status>().round == 2)
+                {
+                    GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score2 = score2.GetComponent<ScoreController>().score + 10 * ((int)Gametime % 10);
+                }
+                else if (Status.GetComponent<Status>().round == 3)
+                {
+                    GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score3 = score2.GetComponent<ScoreController>().score + 10 * ((int)Gametime % 10);
+                }
+
             }
-            else if (Status.GetComponent<Status>().round == 2)
+            if (PhotonNetwork.IsMasterClient)
             {
-                GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score2= score2.GetComponent<ScoreController>().score+ 10 * ((int)Gametime % 10);
+                SceneManager.LoadScene("Conclusion");
             }
-            else if (Status.GetComponent<Status>().round == 3)
-            {
-                GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score3= score2.GetComponent<ScoreController>().score+ 10 * ((int)Gametime % 10);
-            }
-            SceneManager.LoadScene("Conclusion");
         }
         if (final.GetComponent<Status>().death)
         {
-            if (Status.GetComponent<Status>().round == 1)
+            if (PlayerRole == 0)
             {
-                GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score1 = score2.GetComponent<ScoreController>().score + 10 * ((int)Gametime % 10);
+                if (Status.GetComponent<Status>().round == 1)
+                {
+                    GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score1 = score2.GetComponent<ScoreController>().score + 10 * ((int)Gametime % 10);
+                }
+                else if (Status.GetComponent<Status>().round == 2)
+                {
+                    GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score2 = score2.GetComponent<ScoreController>().score + 10 * ((int)Gametime % 10);
+                }
+                else if (Status.GetComponent<Status>().round == 3)
+                {
+                    GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score3 = score2.GetComponent<ScoreController>().score + 10 * ((int)Gametime % 10);
+                }
+
             }
-            else if (Status.GetComponent<Status>().round == 2)
+            if (PhotonNetwork.IsMasterClient)
             {
-                GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score2 = score2.GetComponent<ScoreController>().score + 10 * ((int)Gametime % 10);
+                SceneManager.LoadScene("Conclusion");
             }
-            else if (Status.GetComponent<Status>().round == 3)
-            {
-                GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score3 = score2.GetComponent<ScoreController>().score + 10 * ((int)Gametime % 10);
-            }
-            SceneManager.LoadScene("Conclusion");
         }
 
     }
