@@ -796,21 +796,21 @@ MonoBehaviour:
   bullet3: {fileID: 6482701619066125320, guid: 729228a8b6b1137459d186d920e547bf, type: 3}
   bullet4: {fileID: 3873522454332554993, guid: d5a163706184efb4f922e11eff219812, type: 3}
   speed: 20
-  range: 0.5
+  range: 1.5
   damage: 10
   firerate: 1
   speed1: 10
-  range1: 0.5
+  range1: 1.2
   damage1: 20
   firerate1: 1.5
   speed2: 5
-  range2: 0.5
+  range2: 1.2
   damage2: 40
   firerate2: 2
   speed3: 25
-  range3: 0.3
+  range3: 1
   damage3: 2
-  firerate3: 0.1
+  firerate3: 0.3
   currentweaponindex: 0
   guns: []
   animators: []
@@ -829,7 +829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69531a9f6198b834986264da4f4313b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.5
   canMove: 1
   slower: 0
   originalSpeed: 1

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class NonetworkEnemy : MonoBehaviour
 {
@@ -34,7 +35,7 @@ public class NonetworkEnemy : MonoBehaviour
             
             if (!isaddscore)
             {
-                score.GetComponent<ScoreController>().addScore(30);
+                score.GetComponent<ScoreController>().addScore(10);
                 isaddscore = true;
             }
             StartCoroutine(MyCoroutine());
@@ -168,7 +169,7 @@ public class NonetworkEnemy : MonoBehaviour
         animator.SetBool("run_left", false);
         animator.SetBool("outOfSight", false);
         yield return new WaitForSeconds(1f);
-        Destroy(gameObject);
+        PhotonNetwork.Destroy(gameObject);
         yield return null;
     }
     

@@ -78,6 +78,10 @@ public class PlayerMove : MonoBehaviour
                     {
                         speed = originalSpeed * 0.1f;
                     }
+                    else
+                    {
+                        speed = originalSpeed;
+                    }
                     
                     float horizontal = Input.GetAxis("Horizontal");
                     float vertical = Input.GetAxis("Vertical");

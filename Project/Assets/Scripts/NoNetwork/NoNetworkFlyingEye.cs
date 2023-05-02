@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+
 
 public class NoNetworkFlyingEye : MonoBehaviour
 {
@@ -35,7 +37,7 @@ public class NoNetworkFlyingEye : MonoBehaviour
         {
             if (!isaddscore)
             {
-                score.GetComponent<ScoreController>().addScore(30);
+                score.GetComponent<ScoreController>().addScore(10);
                 isaddscore = true;
             }
             StartCoroutine(MyCoroutine());
@@ -168,7 +170,7 @@ public class NoNetworkFlyingEye : MonoBehaviour
         animator.SetBool("left", false);
         animator.SetBool("outOfSight", false);
         yield return new WaitForSeconds(1f);
-        Destroy(gameObject);
+        PhotonNetwork.Destroy(gameObject);
         yield return null;
     }
 

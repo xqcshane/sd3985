@@ -51,8 +51,8 @@ public class PlayerHealth : MonoBehaviourPunCallbacks
         }
         if (currentHealth <= 0)
         {
-            GameObject final = GameObject.FindGameObjectWithTag("Result");
-            final.GetComponent<Result>().death = true;
+            GameObject final = GameObject.FindGameObjectWithTag("Status");
+            final.GetComponent<Status>().death = true;
             Destroy(gameObject);
 
         }

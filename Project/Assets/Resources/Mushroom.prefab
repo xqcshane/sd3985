@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  health: 210
+  health: 30
   damage: 5
   sight: 20
   enterpassage: 0

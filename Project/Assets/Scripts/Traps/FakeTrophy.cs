@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class FakeTrophy : MonoBehaviour
 {
@@ -8,8 +9,8 @@ public class FakeTrophy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-5);
-            Destroy(gameObject);
+            collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-10);
+            PhotonNetwork.Destroy(gameObject);
         }
     }
 }

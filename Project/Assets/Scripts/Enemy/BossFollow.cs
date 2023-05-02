@@ -55,7 +55,8 @@ public class BossFollow : MonoBehaviourPunCallbacks
 
     private bool hitted = false;
     public int status;
-
+    public GameObject score;
+    bool isaddscore = false;
     private void Start()
     {
         secondStage = health / 2;
@@ -63,6 +64,7 @@ public class BossFollow : MonoBehaviourPunCallbacks
         secondSpeed = speed * 1.5f;
         player = GameObject.FindGameObjectWithTag("Player");
         status = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().status;
+        score = GameObject.FindGameObjectWithTag("Score");
     }
 
     // Update is called once per frame
@@ -94,6 +96,11 @@ public class BossFollow : MonoBehaviourPunCallbacks
     {
         if (health <= 0)
         {
+            if (!isaddscore)
+            {
+                score.GetComponent<ScoreController>().addScore(300);
+                isaddscore = true;
+            }
             boss.SetBool("goToAttack", false);
             boss.SetBool("goToIdle", false);
             boss.SetBool("goToMove", false);

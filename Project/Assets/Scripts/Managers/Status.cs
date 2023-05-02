@@ -20,11 +20,13 @@ public class Status : MonoBehaviourPunCallbacks
 
     //room information of the room
     public int[] roominfo;
+    public bool death;
 
     private void Start()
     {
         round = 1;
         turn = 1;
+        death = false;
     }
     public override void OnPlayerPropertiesUpdate(Photon.Realtime.Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
     {

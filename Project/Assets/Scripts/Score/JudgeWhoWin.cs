@@ -10,26 +10,32 @@ public class JudgeWhoWin : MonoBehaviour
     public GameObject Win;
     public GameObject Lose;
 
+    /*
     private int yourFinalScore;
     private int otherFinalScore;
+    */
 
     public AudioSource musicSource;
+
+    public bool YouFinsh;
+    public bool OtherFinsh;
 
     // Start is called before the first frame update
     void Start()
     {
+        /*
         yourFinalScore = yourScore.firstScoreFinal + yourScore.secondScoreFinal + yourScore.thirdScoreFinal;
         otherFinalScore = otherScore.firstScoreFinal + otherScore.secondScoreFinal + otherScore.thirdScoreFinal;
+        */
     }
 
     // Update is called once per frame
     void Update()
     {
-        
         //Debug.Log(yourScore.finishCal);
         if (yourScore.finishCal && otherScore.finishCal)
         {
-            if (yourFinalScore > otherFinalScore)
+            if (yourScore.endScores > otherScore.endScores)
             {
                 Win.SetActive(true);
                 Win.GetComponent<Animator>().Play("Win");

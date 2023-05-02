@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Conclusion.unity
     guid: 553fe0d283918b6479f0c4aeabf5419b
+  - enabled: 1
+    path: Assets/Scenes/Flow/Score.unity
+    guid: a40ac56617aec234f986af1b4f334d4e
   m_configObjects: {}
