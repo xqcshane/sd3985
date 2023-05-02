@@ -230,7 +230,7 @@ public class TrapController : MonoBehaviourPunCallbacks
                     skillflag1 = true;
                 }
             }
-            if (index1 == 1 && skillflag1 == true)
+            if (skillindex == 1 && skillflag1 == true)
             {
                 if (Time.time > contime1)
                 {
@@ -241,7 +241,7 @@ public class TrapController : MonoBehaviourPunCallbacks
                     skillflag1 = false;
                 }
             }
-            else if (index1 == 2 && skillflag1 == true)
+            else if (skillindex == 2 && skillflag1 == true)
             {
                 if (Time.time > contime1)
                 {
@@ -252,7 +252,7 @@ public class TrapController : MonoBehaviourPunCallbacks
                     skillflag1 = false;
                 }
             }
-            else if (index1 == 3 && skillflag1 == true)
+            else if (skillindex==3 && skillflag1 == true)
             {
                 if (Time.time > contime1)
                 {
@@ -263,7 +263,7 @@ public class TrapController : MonoBehaviourPunCallbacks
                     skillflag1 = false;
                 }
             }
-            else if (index1 == 4 && skillflag1 == true)
+            else if (skillindex == 4 && skillflag1 == true)
             {
                 if (Time.time > contime1)
                 {

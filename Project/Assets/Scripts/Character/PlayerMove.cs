@@ -33,7 +33,7 @@ public class PlayerMove : MonoBehaviour
 
     //public MusicManager musicManager;
 
-    public GameObject[] Music;
+    public GameObject Music;
     private bool playing = false;
 
     void Start()
@@ -51,7 +51,7 @@ public class PlayerMove : MonoBehaviour
         }
         A1 = "weapon";
         A2 = "weapon_flip";
-
+        Music = GameObject.Find("MusicManager");
 
     }
 
@@ -78,6 +78,7 @@ public class PlayerMove : MonoBehaviour
                     {
                         speed = originalSpeed * 0.1f;
                     }
+                    
                     float horizontal = Input.GetAxis("Horizontal");
                     float vertical = Input.GetAxis("Vertical");
 
@@ -95,7 +96,7 @@ public class PlayerMove : MonoBehaviour
                         weaponAnimator.SetBool("flip",true);
                         //weaponAnimator.Play(A2);
 
-                        Music[0].SetActive(true);
+                        Music.transform.GetChild(0).gameObject.SetActive(true);
                         StartCoroutine(MyCoroutine());
                         
 
@@ -114,7 +115,7 @@ public class PlayerMove : MonoBehaviour
                         //weaponAnimator.Play(A1);
 
                         //musicManager.PlaySFX("Run");
-                        Music[0].SetActive(true);
+                        Music.transform.GetChild(0).gameObject.SetActive(true);
                         StartCoroutine(MyCoroutine());
 
                     }
@@ -133,7 +134,7 @@ public class PlayerMove : MonoBehaviour
                             //weaponAnimator.Play(A2);
 
                             //musicManager.PlaySFX("Run");
-                            Music[0].SetActive(true);
+                            Music.transform.GetChild(0).gameObject.SetActive(true);
                             StartCoroutine(MyCoroutine());
                         }
                         else
@@ -149,7 +150,7 @@ public class PlayerMove : MonoBehaviour
                             //weaponAnimator.Play(A1);
 
                             //musicManager.PlaySFX("Run");
-                            Music[0].SetActive(true);
+                            Music.transform.GetChild(0).gameObject.SetActive(true);
                             StartCoroutine(MyCoroutine());
                         }
 
@@ -198,7 +199,7 @@ public class PlayerMove : MonoBehaviour
         {
             playing = true;
             yield return new WaitForSeconds(0.4f);
-            Music[0].SetActive(false);
+            Music.transform.GetChild(0).gameObject.SetActive(false);
             playing = false;
             yield return null;
         }   

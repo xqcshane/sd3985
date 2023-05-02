@@ -100,6 +100,7 @@ public class BossFollow : MonoBehaviourPunCallbacks
             boss.SetBool("goToHit", false);
             boss.SetBool("goToDeath", true);
             StartCoroutine(MyCoroutineDeath());
+            PhotonNetwork.Destroy(GameObject.FindGameObjectWithTag("BossRoomBlocks"));
             PhotonNetwork.Destroy(gameObject);
         }
     }

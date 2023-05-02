@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviourPunCallbacks
     public float timeInvincible = 0.2f;
     public int maxHealth = 100;
 
-    public GameObject[] Music;
+    public GameObject Music;
     private bool playing = false;
 
     public int health { get { return currentHealth; } set {
@@ -37,6 +37,7 @@ public class PlayerHealth : MonoBehaviourPunCallbacks
     {
         role = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().status;
         currentHealth = maxHealth;
+        Music = GameObject.Find("MusicManager");
     }
 
     // Update is called once per frame
@@ -67,7 +68,7 @@ public class PlayerHealth : MonoBehaviourPunCallbacks
 
                 isInvincible = true;
                 invincibleTimer = timeInvincible;
-                Music[0].SetActive(true);
+                Music.transform.GetChild(1).gameObject.SetActive(true);
                 StartCoroutine(MyCoroutine());
             }
 
@@ -115,7 +116,7 @@ public class PlayerHealth : MonoBehaviourPunCallbacks
         {
             playing = true;
             yield return new WaitForSeconds(0.4f);
-            Music[0].SetActive(false);
+            Music.transform.GetChild(1).gameObject.SetActive(false);
             playing = false;
             yield return null;
         }

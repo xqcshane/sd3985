@@ -59,7 +59,7 @@ public class PlayerAim : MonoBehaviour
     public bool suckblood=false;
     // Start is called before the first frame update
 
-    public GameObject[] Music;
+    public GameObject Music;
     private bool playing = false;
 
     private void Start()
@@ -93,6 +93,8 @@ public class PlayerAim : MonoBehaviour
 
         GameController = GameObject.Find("Controller").GetComponent<Controller>();
         PR = GameController.PlayerRole;
+        Music = GameObject.Find("MusicManager");
+
     }
 
     // Update is called once per frame
@@ -150,7 +152,7 @@ public class PlayerAim : MonoBehaviour
              bulletrb.velocity = bullets.transform.right * speed;
              Destroy(bullets,range);*/
 
-            Music[0].SetActive(true);
+            Music.transform.GetChild(2).gameObject.SetActive(true);
             StartCoroutine(MyCoroutine());
 
         }
@@ -305,7 +307,7 @@ public class PlayerAim : MonoBehaviour
         {
             playing = true;
             yield return new WaitForSeconds(0.4f);
-            Music[0].SetActive(false);
+            Music.transform.GetChild(2).gameObject.SetActive(false);
             playing = false;
             yield return null;
         }

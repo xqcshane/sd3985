@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8080035204569511976}
   - component: {fileID: 6089586489241101381}
   - component: {fileID: 4528694258940800}
+  - component: {fileID: 8056949902919889034}
   m_Layer: 0
   m_Name: Block (2)
-  m_TagString: InitialBlocks
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382159836726151193}
   m_LocalRotation: {x: -0.000000029802319, y: 0.000000029802319, z: 0.7071069, w: 0.7071067}
-  m_LocalPosition: {x: -20.71001, y: 28.210007, z: 0}
+  m_LocalPosition: {x: -20.71, y: 28.6, z: -0}
   m_LocalScale: {x: 1.2000003, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4226137241533661239}
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 6.13, y: 1.5}
+  m_Size: {x: 7.86, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -123,7 +124,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3, y: 1.5}
-    newSize: {x: 6.13, y: 1.5}
+    newSize: {x: 7.86, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
@@ -131,6 +132,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.011946, y: 1.4017465}
   m_EdgeRadius: 0
+--- !u!114 &8056949902919889034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382159836726151193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &687046542576486191
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,9 +166,10 @@ GameObject:
   - component: {fileID: 7828273488962660359}
   - component: {fileID: 9036026066929566135}
   - component: {fileID: 5492151708130834801}
+  - component: {fileID: 2993618822238987504}
   m_Layer: 0
   m_Name: Block (4)
-  m_TagString: InitialBlocks
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,7 +182,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687046542576486191}
   m_LocalRotation: {x: -0.000000029802319, y: 0.000000029802319, z: 0.7071069, w: 0.7071067}
-  m_LocalPosition: {x: 42.22001, y: -4.979998, z: 0}
+  m_LocalPosition: {x: 42.22, y: -4.44, z: -0}
   m_LocalScale: {x: 1.2000003, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4226137241533661239}
@@ -209,7 +233,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 6.13, y: 1.5}
+  m_Size: {x: 9.23, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -254,7 +278,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3, y: 1.5}
-    newSize: {x: 6.13, y: 1.5}
+    newSize: {x: 9.23, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
@@ -262,6 +286,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.011946, y: 1.4017465}
   m_EdgeRadius: 0
+--- !u!114 &2993618822238987504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687046542576486191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &877906230432511772
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,9 +320,10 @@ GameObject:
   - component: {fileID: 5307274842958288038}
   - component: {fileID: 8683412573569536540}
   - component: {fileID: 7908397977982566261}
+  - component: {fileID: 6505378730370863967}
   m_Layer: 0
   m_Name: Block (3)
-  m_TagString: InitialBlocks
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -289,7 +336,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877906230432511772}
   m_LocalRotation: {x: -0.000000029802319, y: 0.000000029802319, z: 0.7071069, w: 0.7071067}
-  m_LocalPosition: {x: -20.700012, y: -6.2000012, z: 0}
+  m_LocalPosition: {x: -20.7, y: -5.27, z: -0}
   m_LocalScale: {x: 1.2000003, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4226137241533661239}
@@ -340,7 +387,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 6.13, y: 1.5}
+  m_Size: {x: 8.53, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -385,7 +432,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3, y: 1.5}
-    newSize: {x: 6.13, y: 1.5}
+    newSize: {x: 8.53, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
@@ -393,6 +440,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.011946, y: 1.4017465}
   m_EdgeRadius: 0
+--- !u!114 &6505378730370863967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877906230432511772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &892420614065208564
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,9 +471,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4226137241533661239}
+  - component: {fileID: 5341111426406864006}
   m_Layer: 0
   m_Name: BossRoomBlocks
-  m_TagString: Untagged
+  m_TagString: BossRoomBlocks
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -427,6 +497,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5341111426406864006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892420614065208564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &8167163110162529399
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,9 +531,10 @@ GameObject:
   - component: {fileID: 3954847035137505283}
   - component: {fileID: 2394273875413036163}
   - component: {fileID: 6609474598048274932}
+  - component: {fileID: 4935089135379504275}
   m_Layer: 0
   m_Name: Block (5)
-  m_TagString: InitialBlocks
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -454,7 +547,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8167163110162529399}
   m_LocalRotation: {x: -0.000000029802319, y: 0.000000029802319, z: 0.7071069, w: 0.7071067}
-  m_LocalPosition: {x: 42.29001, y: 28.110004, z: 0}
+  m_LocalPosition: {x: 42.29, y: 28.27, z: -0}
   m_LocalScale: {x: 1.2000003, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4226137241533661239}
@@ -505,7 +598,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 6.13, y: 1.5}
+  m_Size: {x: 9.09, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -550,7 +643,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3, y: 1.5}
-    newSize: {x: 6.13, y: 1.5}
+    newSize: {x: 9.09, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
@@ -558,3 +651,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.011946, y: 1.4017465}
   m_EdgeRadius: 0
+--- !u!114 &4935089135379504275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8167163110162529399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0

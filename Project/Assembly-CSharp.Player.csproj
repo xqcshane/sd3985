@@ -147,6 +147,7 @@
     <Compile Include="Assets\Scripts\UI\ToolTipSystem.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
     <Compile Include="Assets\Scripts\UI\LoadingCircle.cs" />
+    <Compile Include="Assets\MusicManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\GridMap\Scripts\MeshUtils.cs" />
     <Compile Include="Assets\Scripts\Rooms\EnterNext.cs" />

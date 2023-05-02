@@ -8,7 +8,7 @@ public class MusicManager : MonoBehaviour
     private AudioSource source;
 
     public Sound[] musicSounds, sfxSounds;
-    public AudioSource musicSource, sfxSource;
+    //public AudioSource musicSource, sfxSource;
 
     private void Awake()
     {
@@ -34,8 +34,8 @@ public class MusicManager : MonoBehaviour
         }
         else
         {
-            musicSource.clip = s.clip;
-            musicSource.Play();
+            //musicSource.clip = s.clip;
+            //musicSource.Play();
         }
     }
 
@@ -49,8 +49,8 @@ public class MusicManager : MonoBehaviour
         }
         else
         {
-            musicSource.clip = s.clip;
-            musicSource.Stop();
+            //musicSource.clip = s.clip;
+            //musicSource.Stop();
         }
     }
 
@@ -64,7 +64,7 @@ public class MusicManager : MonoBehaviour
         }
         else
         {
-            sfxSource.PlayOneShot(s.clip);
+            //sfxSource.PlayOneShot(s.clip);
         }
     }
 }

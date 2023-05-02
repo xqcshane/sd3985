@@ -30,6 +30,7 @@ TagManager:
   - FxTemporaire
   - Score
   - TroubleMaker
+  - BossRoomBlocks
   layers:
   - Default
   - TransparentFX

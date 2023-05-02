@@ -737,6 +737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeInvincible: 1
   maxHealth: 200
+  Music: {fileID: 0}
   animator: {fileID: 5698858188123970586}
 --- !u!114 &5698858189652019665
 MonoBehaviour:
@@ -815,6 +816,7 @@ MonoBehaviour:
   animators: []
   nowanimator: {fileID: 0}
   suckblood: 0
+  Music: {fileID: 0}
 --- !u!114 &8765844224137345807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -827,7 +829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69531a9f6198b834986264da4f4313b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 1
   canMove: 1
   slower: 0
   originalSpeed: 1
@@ -838,6 +840,7 @@ MonoBehaviour:
   A1: 
   A2: 
   NotHit: 1
+  Music: {fileID: 0}
 --- !u!1 &5698858189715441156
 GameObject:
   m_ObjectHideFlags: 0

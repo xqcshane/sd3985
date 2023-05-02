@@ -25,6 +25,7 @@ public class BossRoomChecker : MonoBehaviour
             if (collision.gameObject.CompareTag("Player"))
             {
                 PhotonNetwork.Instantiate("BossRoomBlocks", this.transform.parent.transform.parent.transform.position, Quaternion.identity);
+                GameObject MyBoss = PhotonNetwork.Instantiate("Boss", this.transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
              
