@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 44924713928323813}
   - component: {fileID: 44924713928323812}
   - component: {fileID: 44924713928323815}
-  - component: {fileID: 44924713928323814}
   - component: {fileID: 5355144095236093287}
   - component: {fileID: 5136970182549990769}
+  - component: {fileID: 3638445274563867722}
   m_Layer: 0
   m_Name: Trophy
   m_TagString: Coin
@@ -113,18 +113,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
---- !u!114 &44924713928323814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 44924713928323817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b2114f5299bb9f4c86e96316e521b5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5355144095236093287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,7 +133,6 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 5136970182549990769}
-  - {fileID: 4229070523290577348}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -165,6 +152,18 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!114 &3638445274563867722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44924713928323817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d92181df3c626049a3d751ef4de2f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &44924713997156209
 GameObject:
   m_ObjectHideFlags: 0

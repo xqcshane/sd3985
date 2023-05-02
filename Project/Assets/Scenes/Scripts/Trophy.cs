@@ -22,7 +22,7 @@ public class Trophy : MonoBehaviour
                 GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreController>().addScore(150);
                 //PhotonNetwork.Instantiate("Gate", this.transform.position, this.transform.rotation);
             }
-            PhotonNetwork.Destroy(gameObject);
+            PhotonNetwork.Destroy(this.gameObject);
         }
     }
 }

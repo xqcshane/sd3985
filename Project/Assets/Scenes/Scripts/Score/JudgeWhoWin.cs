@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class JudgeWhoWin : MonoBehaviour
+public class JudgeWhoWin : MonoBehaviourPunCallbacks
 {
     public Score yourScore;
     public Score otherScore;
@@ -19,7 +21,7 @@ public class JudgeWhoWin : MonoBehaviour
 
     public bool YouFinsh;
     public bool OtherFinsh;
-
+    public float showtime;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +49,20 @@ public class JudgeWhoWin : MonoBehaviour
                 Lose.GetComponent<Animator>().Play("Lose");
                 musicSource.Stop();
             }
+            if (showtime > 0)
+            {
+                showtime -= Time.deltaTime;
+
+            }
+            else
+            {
+                PhotonNetwork.LeaveRoom();
+            }
         }
+    }
+
+    public override void OnLeftRoom()
+    {
+        SceneManager.LoadScene("1");
     }
 }

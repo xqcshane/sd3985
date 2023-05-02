@@ -30040,32 +30040,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trophy
       objectReference: {fileID: 0}
-    - target: {fileID: 5355144095236093287, guid: 40bdfaf17ca0e404fa794a0d59f3ccbd, type: 3}
-      propertyPath: ObservedComponents.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 44924713928323814, guid: 40bdfaf17ca0e404fa794a0d59f3ccbd, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40bdfaf17ca0e404fa794a0d59f3ccbd, type: 3}
 --- !u!4 &7788162935623247734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 44924713928323813, guid: 40bdfaf17ca0e404fa794a0d59f3ccbd, type: 3}
   m_PrefabInstance: {fileID: 7821211205514204563}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7788162935623247738 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 44924713928323817, guid: 40bdfaf17ca0e404fa794a0d59f3ccbd, type: 3}
-  m_PrefabInstance: {fileID: 7821211205514204563}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3638445274563867722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7788162935623247738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d92181df3c626049a3d751ef4de2f2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

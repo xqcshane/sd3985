@@ -356,7 +356,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -459.0459, y: 66.999985}
+  m_AnchoredPosition: {x: -445, y: 66.999985}
   m_SizeDelta: {x: 831.5322, y: 96.282}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &230616205
@@ -392,7 +392,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Time Score:'
+  m_Text: 'Frist Round Score:'
 --- !u!222 &230616206
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -751,7 +751,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -471.0459, y: -22.000021}
+  m_AnchoredPosition: {x: -425, y: -22.000021}
   m_SizeDelta: {x: 831.5322, y: 96.282}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &647588729
@@ -787,7 +787,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Killing Score:'
+  m_Text: 'Second Round Score:'
 --- !u!222 &647588730
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2672,6 +2672,7 @@ MonoBehaviour:
   musicSource: {fileID: 1848375365}
   YouFinsh: 0
   OtherFinsh: 0
+  showtime: 5
 --- !u!1 &1687521332
 GameObject:
   m_ObjectHideFlags: 0
@@ -2864,7 +2865,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -471.0459, y: -121.000015}
+  m_AnchoredPosition: {x: -438, y: -121.000015}
   m_SizeDelta: {x: 831.5322, y: 96.282}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1719504912
@@ -2900,7 +2901,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Trophy Score:'
+  m_Text: 'Third Round Score:'
 --- !u!222 &1719504913
 CanvasRenderer:
   m_ObjectHideFlags: 0
