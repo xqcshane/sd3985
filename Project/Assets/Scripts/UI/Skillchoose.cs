@@ -165,9 +165,10 @@ public class Skillchoose : MonoBehaviour
             {
                 for (int i = 0; i < randomskills.Length; i++)
                 {
-                    if (randomskills[i] != sendindex1 && randomskills[i] != sendindex2)
+                    int nowind = randomskills[i] + 1;
+                    if (nowind != sendindex1 && nowind != sendindex2)
                     {
-                        sendindex1 = randomskills[i];
+                        sendindex1 = nowind;
                         break;
                     }
                 }
@@ -176,9 +177,10 @@ public class Skillchoose : MonoBehaviour
             {
                 for (int i = 0; i < randomskills.Length; i++)
                 {
-                    if (randomskills[i] != sendindex1 && randomskills[i] != sendindex2)
+                    int nowind = randomskills[i] + 1;
+                    if (nowind != sendindex1 && nowind != sendindex2)
                     {
-                        sendindex2 = randomskills[i];
+                        sendindex2 = nowind;
                         break;
                     }
                 }

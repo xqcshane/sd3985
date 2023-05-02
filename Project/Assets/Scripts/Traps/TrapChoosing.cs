@@ -220,12 +220,14 @@ public class TrapChoosing : MonoBehaviour
     {
         if (sendindex1 == 0 || sendindex2 == 0 || sendindex3 == 0)
         {
+            
             if (sendindex1 == 0) {
                 for (int i = 0; i < randomskills.Length; i++)
                 {
-                    if (randomskills[i] != sendindex1 && randomskills[i] != sendindex2 && randomskills[i] != sendindex3)
+                    int nowind = randomskills[i] + 1;
+                    if (nowind != sendindex1 && nowind != sendindex2 && nowind != sendindex3)
                     {
-                        sendindex1 = randomskills[i];
+                        sendindex1 = nowind;
                         break;
                     }
                 }
@@ -234,9 +236,10 @@ public class TrapChoosing : MonoBehaviour
             {
                 for (int i = 0; i < randomskills.Length; i++)
                 {
-                    if (randomskills[i] != sendindex1 && randomskills[i] != sendindex2 && randomskills[i] != sendindex3)
+                    int nowind = randomskills[i] + 1;
+                    if (nowind != sendindex1 && nowind != sendindex2 && nowind != sendindex3)
                     {
-                        sendindex2 = randomskills[i];
+                        sendindex2 = nowind;
                         break;
                     }
                 }
@@ -245,9 +248,10 @@ public class TrapChoosing : MonoBehaviour
             {
                 for (int i = 0; i < randomskills.Length; i++)
                 {
-                    if (randomskills[i] != sendindex1 && randomskills[i] != sendindex2 && randomskills[i] != sendindex3)
+                    int nowind = randomskills[i] + 1;
+                    if (nowind  != sendindex1 && nowind != sendindex2 && nowind != sendindex3)
                     {
-                        sendindex3 = randomskills[i];
+                        sendindex3 = nowind;
                         break;
                     }
                 }
@@ -258,7 +262,7 @@ public class TrapChoosing : MonoBehaviour
         Data.GetComponent<TrapData>().skillindex3= sendindex3;
         if (GameObject.Find("TSkillManager").GetComponent<TskillChoose>().sendindex1 == 0)
         {
-            Data.GetComponent<TrapData>().skill = GameObject.Find("GameManager").GetComponent<ChooseSkillController>().skillid[0];
+            Data.GetComponent<TrapData>().skill = GameObject.Find("GameManager").GetComponent<ChooseSkillController>().skillid[0]+1;
         }
         else
         {

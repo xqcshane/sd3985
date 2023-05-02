@@ -40,7 +40,7 @@ public class ScoreSceneManager : MonoBehaviourPunCallbacks
             {
                 Otherscore.SetInitial(OScore[1], OScore[2], OScore[2]);
 
-                Youscore.SetInitial(OScore[1], OScore[2], OScore[2]);
+                Youscore.SetInitial(mys.score1, mys.score2, mys.score3);
             }
         }
     }

@@ -36,7 +36,7 @@ public class Controller : MonoBehaviour
         final = GameObject.FindGameObjectWithTag("Status");
        
         PlayerRole = Status.GetComponent<Status>().status;
-        final.GetComponent<Result>().PR = PlayerRole;
+        //final.GetComponent<Result>().PR = PlayerRole;
         GameStart = false;
 
         if (PlayerRole == 1)
