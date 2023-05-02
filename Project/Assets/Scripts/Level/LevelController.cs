@@ -25,4 +25,9 @@ public class LevelController : MonoBehaviour
     {
         SceneManager.LoadScene("RL");
     }
+
+    public void loadAdventureSkill()
+    {
+        SceneManager.LoadScene("AS");
+    }
 }
