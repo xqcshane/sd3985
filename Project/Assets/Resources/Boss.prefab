@@ -348,6 +348,7 @@ MonoBehaviour:
   Skill54: {fileID: 4292080779656127489}
   animator: {fileID: 5485404445701425201}
   status: 0
+  score: {fileID: 0}
 --- !u!95 &5485404445701425201
 Animator:
   serializedVersion: 3

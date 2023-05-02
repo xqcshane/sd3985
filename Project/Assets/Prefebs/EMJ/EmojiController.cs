@@ -13,12 +13,17 @@ public class EmojiController : MonoBehaviourPunCallbacks
     float nextemo = 0.0f;
     bool setemo = false;
     float conemo;
+    public GameObject SkillUI1;
+    public GameObject SkillUI2;
+    public GameObject SkillUI3;
+    public GameObject SkillUI4;
     // Start is called before the first frame update
     void Start()
     {
         EmoA = this.gameObject.GetComponent<Animator>();
         role = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().status;
         CanUseEmoji = false;
+        //SkillUI1.
     }
 
     // Update is called once per frame

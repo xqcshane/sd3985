@@ -20,6 +20,7 @@ public class Controller : MonoBehaviour
     public Vector3[] StartPoint;
     public GameObject Status;
     public GameObject score2;
+    public int collected;
     //0 is adventure, 1 is troublemake
 
     /*
@@ -38,7 +39,7 @@ public class Controller : MonoBehaviour
         PlayerRole = Status.GetComponent<Status>().status;
         //final.GetComponent<Result>().PR = PlayerRole;
         GameStart = false;
-
+        collected = 0;
         if (PlayerRole == 1)
         {
             GameObject.Find("AdventureUIAndUICamera").SetActive(false);

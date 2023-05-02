@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using Photon.Pun;
 using HashTable = ExitGames.Client.Photon.Hashtable;
+using UnityEngine.UIElements;
 
 public class BossFollow : MonoBehaviourPunCallbacks
 {
@@ -108,6 +109,7 @@ public class BossFollow : MonoBehaviourPunCallbacks
             boss.SetBool("goToDeath", true);
             StartCoroutine(MyCoroutineDeath());
             PhotonNetwork.Destroy(GameObject.FindGameObjectWithTag("BossRoomBlocks"));
+            PhotonNetwork.Instantiate("Gate", this.transform.position, this.transform.rotation);
             PhotonNetwork.Destroy(gameObject);
         }
     }
