@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 5698858188213059954}
   - component: {fileID: 5698858188213059955}
   - component: {fileID: 5698858188937934970}
+  - component: {fileID: 4337108996492121818}
   m_Layer: 7
   m_Name: bombStaff
   m_TagString: Untagged
@@ -229,6 +230,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 5698858188213059955}
+  - {fileID: 4337108996492121818}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -267,6 +269,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4337108996492121818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5698858188213059958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 1
+    Name: flip
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
 --- !u!1 &5698858188668071241
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,6 +303,7 @@ GameObject:
   - component: {fileID: 5698858188668071221}
   - component: {fileID: 5698858188668071242}
   - component: {fileID: 5698858188937934969}
+  - component: {fileID: 8338264475968666784}
   m_Layer: 7
   m_Name: machineGunStaff
   m_TagString: Untagged
@@ -372,6 +396,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 5698858188668071242}
+  - {fileID: 8338264475968666784}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -410,6 +435,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8338264475968666784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5698858188668071241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 1
+    Name: flip
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
 --- !u!1 &5698858188956524724
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,6 +469,7 @@ GameObject:
   - component: {fileID: 5698858188956524721}
   - component: {fileID: 5698858188956524726}
   - component: {fileID: 5698858188937934971}
+  - component: {fileID: 3130829185840887196}
   m_Layer: 7
   m_Name: shotgunStaff
   m_TagString: Untagged
@@ -515,6 +562,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 5698858188956524726}
+  - {fileID: 3130829185840887196}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -553,6 +601,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3130829185840887196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5698858188956524724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 1
+    Name: flip
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
 --- !u!1 &5698858189652019692
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,6 +839,7 @@ GameObject:
   - component: {fileID: 5698858189715441152}
   - component: {fileID: 5698858189715441153}
   - component: {fileID: 5698858189715441158}
+  - component: {fileID: 1643621484659433917}
   m_Layer: 7
   m_Name: normalStaff
   m_TagString: Untagged
@@ -862,6 +932,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 5698858189715441153}
+  - {fileID: 1643621484659433917}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -900,3 +971,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1643621484659433917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5698858189715441156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 1
+    Name: flip
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0

@@ -12,7 +12,7 @@ public class NoNetworkMushroom : MonoBehaviour
     public float sight;
     bool faceright = true;
     public bool enterpassage = false;
-    bool dead = false;
+    bool isaddscore = false;
     public Animator animator;
 
     bool canMove = true;
@@ -32,10 +32,10 @@ public class NoNetworkMushroom : MonoBehaviour
     {
         if (health <= 0)
         {
-            dead = true;
-            if (dead)
+            if (!isaddscore)
             {
                 score.GetComponent<ScoreController>().addScore(30);
+                isaddscore = true;
             }
             StartCoroutine(MyCoroutine());
 
