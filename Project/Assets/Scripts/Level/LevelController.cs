@@ -28,6 +28,12 @@ public class LevelController : MonoBehaviour
 
     public void loadAdventureSkill()
     {
+
         SceneManager.LoadScene("AS");
+    }
+    public void loadTs()
+    {
+
+        SceneManager.LoadScene("TS");
     }
 }
