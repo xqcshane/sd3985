@@ -58,6 +58,10 @@ public class PlayerAim : MonoBehaviour
     private int PR;
     public bool suckblood=false;
     // Start is called before the first frame update
+
+    public GameObject[] Music;
+    private bool playing = false;
+
     private void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
@@ -141,10 +145,13 @@ public class PlayerAim : MonoBehaviour
                 }
             }
             //bullets.GetComponent<Bulletcontrol>().speed = speed;
-           // bullets.GetComponent<Bulletcontrol>().exsittime = range;
+            // bullets.GetComponent<Bulletcontrol>().exsittime = range;
             /* bulletrb = bullets.GetComponent<Rigidbody2D>();
              bulletrb.velocity = bullets.transform.right * speed;
              Destroy(bullets,range);*/
+
+            Music[0].SetActive(true);
+            StartCoroutine(MyCoroutine());
 
         }
     }
@@ -291,5 +298,16 @@ public class PlayerAim : MonoBehaviour
             bullet = bullet4;
         }
     }
- 
+
+    private IEnumerator MyCoroutine()
+    {
+        if (!playing)
+        {
+            playing = true;
+            yield return new WaitForSeconds(0.4f);
+            Music[0].SetActive(false);
+            playing = false;
+            yield return null;
+        }
+    }
 }

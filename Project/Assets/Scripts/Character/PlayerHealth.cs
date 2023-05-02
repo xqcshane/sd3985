@@ -14,6 +14,10 @@ public class PlayerHealth : MonoBehaviourPunCallbacks
     float invincibleTimer;
     public float timeInvincible = 0.2f;
     public int maxHealth = 100;
+
+    public GameObject[] Music;
+    private bool playing = false;
+
     public int health { get { return currentHealth; } set {
             if (role == 0)
             {
@@ -63,6 +67,8 @@ public class PlayerHealth : MonoBehaviourPunCallbacks
 
                 isInvincible = true;
                 invincibleTimer = timeInvincible;
+                Music[0].SetActive(true);
+                StartCoroutine(MyCoroutine());
             }
 
             /*
@@ -101,5 +107,17 @@ public class PlayerHealth : MonoBehaviourPunCallbacks
     private void ChangeAnimation()
     {
         this.gameObject.GetComponent<PlayerMove>().NotHit = true;
+    }
+
+    private IEnumerator MyCoroutine()
+    {
+        if (!playing)
+        {
+            playing = true;
+            yield return new WaitForSeconds(0.4f);
+            Music[0].SetActive(false);
+            playing = false;
+            yield return null;
+        }
     }
 }
