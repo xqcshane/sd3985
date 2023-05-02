@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Photon.Pun;
 
 public class Pickup : MonoBehaviour
 {
@@ -36,22 +37,22 @@ public class Pickup : MonoBehaviour
             Debug.Log("yi2");
             if (collision.GetComponent<PlayerAim>().currentweaponindex==0)
             {
-              Instantiate(Staff1, transform.position, transform.rotation);
+                PhotonNetwork.Instantiate("normal", transform.position, transform.rotation);
             }
             else if (collision.GetComponent<PlayerAim>().currentweaponindex == 1)
             {
-              Instantiate(Staff2, transform.position, transform.rotation);
+                PhotonNetwork.Instantiate("shotgun", transform.position, transform.rotation);
             }
             else if (collision.GetComponent<PlayerAim>().currentweaponindex == 2)
             {
-                Instantiate(Staff3, transform.position, transform.rotation);
+                PhotonNetwork.Instantiate("bomb", transform.position, transform.rotation);
             }
             else if (collision.GetComponent<PlayerAim>().currentweaponindex == 3)
             {
-               Instantiate(Staff4, transform.position, transform.rotation);
+                PhotonNetwork.Instantiate("fast", transform.position, transform.rotation);
             }
             collision.GetComponent<PlayerAim>().currentweaponindex = index;
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
     }
 }

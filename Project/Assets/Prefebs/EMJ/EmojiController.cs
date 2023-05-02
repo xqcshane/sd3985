@@ -23,7 +23,10 @@ public class EmojiController : MonoBehaviourPunCallbacks
         EmoA = this.gameObject.GetComponent<Animator>();
         role = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().status;
         CanUseEmoji = false;
-        //SkillUI1.
+        SkillUI1.GetComponent<Skill>().coolDown = 5.0f;
+        SkillUI2.GetComponent<Skill>().coolDown = 5.0f;
+        SkillUI3.GetComponent<Skill>().coolDown = 5.0f;
+        SkillUI4.GetComponent<Skill>().coolDown = 5.0f;
     }
 
     // Update is called once per frame
@@ -36,6 +39,10 @@ public class EmojiController : MonoBehaviourPunCallbacks
 
                 if (Input.GetKeyDown(KeyCode.Alpha1) && Time.time > nextemo)
                 {
+                    SkillUI1.GetComponent<Skill>().UseSkill("Q");
+                    SkillUI2.GetComponent<Skill>().UseSkill("Q");
+                    SkillUI3.GetComponent<Skill>().UseSkill("Q");
+                    SkillUI4.GetComponent<Skill>().UseSkill("Q");
                     nextemo = Time.time + 5.0f;
                     EmoA.SetBool("Anger", true);
 
@@ -47,6 +54,10 @@ public class EmojiController : MonoBehaviourPunCallbacks
                 }
                 else if (Input.GetKeyDown(KeyCode.Alpha2) && Time.time > nextemo)
                 {
+                    SkillUI1.GetComponent<Skill>().UseSkill("Q");
+                    SkillUI2.GetComponent<Skill>().UseSkill("Q");
+                    SkillUI3.GetComponent<Skill>().UseSkill("Q");
+                    SkillUI4.GetComponent<Skill>().UseSkill("Q");
                     nextemo = Time.time + 5.0f;
                     EmoA.SetBool("HAHA", true);
 
@@ -58,6 +69,10 @@ public class EmojiController : MonoBehaviourPunCallbacks
                 }
                 else if (Input.GetKeyDown(KeyCode.Alpha3) && Time.time > nextemo)
                 {
+                    SkillUI1.GetComponent<Skill>().UseSkill("Q");
+                    SkillUI2.GetComponent<Skill>().UseSkill("Q");
+                    SkillUI3.GetComponent<Skill>().UseSkill("Q");
+                    SkillUI4.GetComponent<Skill>().UseSkill("Q");
                     nextemo = Time.time + 5.0f;
                     EmoA.SetBool("CRY", true);
 
@@ -69,6 +84,10 @@ public class EmojiController : MonoBehaviourPunCallbacks
                 }
                 else if (Input.GetKeyDown(KeyCode.Alpha4) && Time.time > nextemo)
                 {
+                    SkillUI1.GetComponent<Skill>().UseSkill("Q");
+                    SkillUI2.GetComponent<Skill>().UseSkill("Q");
+                    SkillUI3.GetComponent<Skill>().UseSkill("Q");
+                    SkillUI4.GetComponent<Skill>().UseSkill("Q");
                     nextemo = Time.time + 5.0f;
                     EmoA.SetBool("Good", true);
 
