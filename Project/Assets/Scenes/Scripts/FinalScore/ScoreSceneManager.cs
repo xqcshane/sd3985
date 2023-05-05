@@ -13,6 +13,9 @@ public class ScoreSceneManager : MonoBehaviourPunCallbacks
 
     private Status mys;
     private int role;
+
+    private AudioSource introMusic;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,13 @@ public class ScoreSceneManager : MonoBehaviourPunCallbacks
         HashTable table = new HashTable();
         table.Add("MyScore", MyScore);
         PhotonNetwork.LocalPlayer.SetCustomProperties(table);
+
+        introMusic = MainMenuMusic.Instance.gameObject.GetComponent<AudioSource>();
+        if (introMusic != null)
+        {
+            // Destroy the object
+            Destroy(introMusic);
+        }
     }
 
     // Update is called once per frame
