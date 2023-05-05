@@ -54,6 +54,7 @@ public class TrapController : MonoBehaviourPunCallbacks
     public GameObject troublemaker;
     public float distance=100.0f;
     GameObject player;
+    public GameObject Music;
     void Start()
     {
         GameController = GameObject.Find("Controller").GetComponent<Controller>();
@@ -194,6 +195,9 @@ public class TrapController : MonoBehaviourPunCallbacks
                     table.Add("TSkill1", true);
                     PhotonNetwork.LocalPlayer.SetCustomProperties(table);
                     skillflag1 = true;
+
+                    Music.transform.GetChild(7).gameObject.SetActive(true);
+
                     contime1 = Time.time + 10.0f;
                     Debug.Log("haha");
                 }
@@ -204,6 +208,9 @@ public class TrapController : MonoBehaviourPunCallbacks
                     HashTable table = new HashTable();
                     table.Add("TSkill2", true);
                     PhotonNetwork.LocalPlayer.SetCustomProperties(table);
+
+                    Music.transform.GetChild(8).gameObject.SetActive(true);
+
                     contime1 = Time.time + 5.0f;
                     skillflag1 = true;
                 }
@@ -215,6 +222,9 @@ public class TrapController : MonoBehaviourPunCallbacks
                     HashTable table = new HashTable();
                     table.Add("TSkill3", true);
                     PhotonNetwork.LocalPlayer.SetCustomProperties(table);
+
+                    Music.transform.GetChild(9).gameObject.SetActive(true);
+
                     contime1 = Time.time + 10.0f;
                     skillflag1 = true;
                 }
@@ -226,6 +236,9 @@ public class TrapController : MonoBehaviourPunCallbacks
                     HashTable table = new HashTable();
                     table.Add("TSkill4", true);
                     PhotonNetwork.LocalPlayer.SetCustomProperties(table);
+
+                    Music.transform.GetChild(10).gameObject.SetActive(true);
+
                     contime1 = Time.time + 10.0f;
                     skillflag1 = true;
                 }
@@ -239,6 +252,7 @@ public class TrapController : MonoBehaviourPunCallbacks
                     table.Add("TSkill1", false);
                     PhotonNetwork.LocalPlayer.SetCustomProperties(table);
                     skillflag1 = false;
+                    Music.transform.GetChild(7).gameObject.SetActive(false);
                 }
             }
             else if (skillindex == 2 && skillflag1 == true)
@@ -250,6 +264,7 @@ public class TrapController : MonoBehaviourPunCallbacks
                     table.Add("TSkill2", false);
                     PhotonNetwork.LocalPlayer.SetCustomProperties(table);
                     skillflag1 = false;
+                    Music.transform.GetChild(8).gameObject.SetActive(false);
                 }
             }
             else if (skillindex==3 && skillflag1 == true)
@@ -261,6 +276,7 @@ public class TrapController : MonoBehaviourPunCallbacks
                     table.Add("TSkill3", false);
                     PhotonNetwork.LocalPlayer.SetCustomProperties(table);
                     skillflag1 = false;
+                    Music.transform.GetChild(9).gameObject.SetActive(false);
                 }
             }
             else if (skillindex == 4 && skillflag1 == true)
@@ -272,6 +288,7 @@ public class TrapController : MonoBehaviourPunCallbacks
                     table.Add("TSkill4", false);
                     PhotonNetwork.LocalPlayer.SetCustomProperties(table);
                     skillflag1 = false;
+                    Music.transform.GetChild(10).gameObject.SetActive(false);
                 }
             }
             if (Input.GetKeyDown(KeyCode.Alpha1))

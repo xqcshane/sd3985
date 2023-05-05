@@ -5,24 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
-    guid: 234a83800b4f81f45bedd5625d2dbdb4
+    path: Assets/Scenes/Flow/1.unity
+    guid: ac13c28657bc56d4bb180d4c9643472d
   - enabled: 1
     path: Assets/Scenes/New2SkillChoosing.unity
     guid: 79b6d8ad598415d44ba58e48e85d9e79
@@ -30,17 +15,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Flow/AS.unity
     guid: b3543ac17539df1409d4a8cd3835652a
   - enabled: 1
-    path: Assets/Scenes/Flow/1.unity
-    guid: ac13c28657bc56d4bb180d4c9643472d
+    path: Assets/Scenes/GameScene.unity
+    guid: a6e019fcd78cb9948b861e532e81b41a
   - enabled: 1
     path: Assets/Scenes/Flow/TS.unity
     guid: 218d1ca94cbb3b24399fb3048c4f81db
   - enabled: 1
     path: Assets/Scenes/Flow/S1.unity
     guid: a0adada5a283b0b489616feccf0d491a
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Flow/QS.unity
     guid: 249341b87eeb05547a5ef0cfd971bc26
@@ -53,9 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Flow/SL.unity
     guid: 2456e0d7a911ebf44b79bf535266cd92
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Flow/I1.unity
     guid: 0c8af10f3e02a6e4caef892bf6107cb2

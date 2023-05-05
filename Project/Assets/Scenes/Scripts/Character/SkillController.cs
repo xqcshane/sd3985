@@ -30,6 +30,7 @@ public class SkillController : MonoBehaviour
     GameObject sightmask;
     public int PR;
     public bool flag;
+    public GameObject Music;
     void Start()
     {
         GameObject data = GameObject.FindWithTag("SkillData");
@@ -39,124 +40,127 @@ public class SkillController : MonoBehaviour
         sightmask = GameObject.FindGameObjectWithTag("SightMask");
         PR = GameObject.Find("Controller").GetComponent<Controller>().PlayerRole;
         flag = true;
-        if (index1 == 1)
+        if (PR == 0)
         {
-            cooldowntime1 = 10.0f;
-            SkillUI1.GetComponent<Skill>().icon = healingicon;
-            SkillUI1.GetComponent<Skill>().coolDown = cooldowntime1;
-            SkillUI1.GetComponent<Skill>().changeImage();
-        }
-        else if (index1 == 2)
-        {
-            cooldowntime1 = 15.0f;
-            SkillUI1.GetComponent<Skill>().icon = speedupicon;
-            SkillUI1.GetComponent<Skill>().coolDown = cooldowntime1;
-            SkillUI1.GetComponent<Skill>().changeImage();
-        }
-        else if (index1 == 3)
-        {
-            cooldowntime1 = 20.0f;
-            SkillUI1.GetComponent<Skill>().icon = Blasticon;
-            SkillUI1.GetComponent<Skill>().coolDown = cooldowntime1;
-            SkillUI1.GetComponent<Skill>().changeImage();
-        }
-        else if (index1 == 4)
-        {
-            cooldowntime1 = 15.0f;
-            SkillUI1.GetComponent<Skill>().icon = magicicon;
-            SkillUI1.GetComponent<Skill>().coolDown = cooldowntime1;
-            SkillUI1.GetComponent<Skill>().changeImage();
-        }
-        else if (index1 == 5)
-        {
-            cooldowntime1 = 30.0f;
-            SkillUI1.GetComponent<Skill>().icon = clearicon;
-            SkillUI1.GetComponent<Skill>().coolDown = cooldowntime1;
-            SkillUI1.GetComponent<Skill>().changeImage();
-        }
-        else if(index1 == 6)
-        {
-            cooldowntime1 = 20.0f;
-            SkillUI1.GetComponent<Skill>().icon = Bonusicon;
-            SkillUI1.GetComponent<Skill>().coolDown = cooldowntime1;
-            SkillUI1.GetComponent<Skill>().changeImage();
-        }
-        else if (index1 == 7)
-        {
-            cooldowntime1 = 25.0f;
-            SkillUI1.GetComponent<Skill>().icon = Invincicon;
-            SkillUI1.GetComponent<Skill>().coolDown = cooldowntime1;
-            SkillUI1.GetComponent<Skill>().changeImage();
-        }
-        else if (index1 == 8)
-        {
-            SkillUI1.GetComponent<Skill>().icon = Suckicon;
-            SkillUI1.GetComponent<Skill>().changeImage();
-        }
-        else if (index1 == 9)
-        {
-            SkillUI1.GetComponent<Skill>().icon = Moveqicon;
-            SkillUI1.GetComponent<Skill>().changeImage();
-        }
-        if (index2 == 1)
-        {
-            cooldowntime2 = 10.0f;
-            SkillUI2.GetComponent<Skill>().icon = healingicon;
-            SkillUI2.GetComponent<Skill>().coolDown = cooldowntime2;
-            SkillUI2.GetComponent<Skill>().changeImage();
-        }
-        else if (index2 == 2)
-        {
-            cooldowntime2 = 15.0f;
-            SkillUI2.GetComponent<Skill>().icon = speedupicon;
-            SkillUI2.GetComponent<Skill>().coolDown = cooldowntime2;
-            SkillUI2.GetComponent<Skill>().changeImage();
-        }
-        else if (index2 == 3)
-        {
-            cooldowntime2 = 20.0f;
-            SkillUI2.GetComponent<Skill>().icon = Blasticon;
-            SkillUI2.GetComponent<Skill>().coolDown = cooldowntime2;
-            SkillUI2.GetComponent<Skill>().changeImage();
-        }
-        else if (index2 == 4)
-        {
-            cooldowntime2 = 15.0f;
-            SkillUI2.GetComponent<Skill>().icon = magicicon;
-            SkillUI2.GetComponent<Skill>().coolDown = cooldowntime2;
-            SkillUI2.GetComponent<Skill>().changeImage();
-        }
-        else if (index2 == 5)
-        {
-            cooldowntime2 = 30.0f;
-            SkillUI2.GetComponent<Skill>().icon = clearicon;
-            SkillUI2.GetComponent<Skill>().coolDown = cooldowntime2;
-            SkillUI2.GetComponent<Skill>().changeImage();
-        }
-        else if (index2 == 6)
-        {
-            cooldowntime2 = 20.0f;
-            SkillUI2.GetComponent<Skill>().icon = Bonusicon;
-            SkillUI2.GetComponent<Skill>().coolDown = cooldowntime1;
-            SkillUI2.GetComponent<Skill>().changeImage();
-        }
-        else if (index2 == 7)
-        {
-            cooldowntime1 = 25.0f;
-            SkillUI2.GetComponent<Skill>().icon = Invincicon;
-            SkillUI2.GetComponent<Skill>().coolDown = cooldowntime1;
-            SkillUI2.GetComponent<Skill>().changeImage();
-        }
-        else if (index2 == 8)
-        {
-            SkillUI2.GetComponent<Skill>().icon = Suckicon;
-            SkillUI2.GetComponent<Skill>().changeImage();
-            //GameObject.FindGameObjectWithTag("Player")
-        }
-        else if (index2 == 9)
-        {
-            SkillUI2.GetComponent<Skill>().icon = Moveqicon;
-            SkillUI2.GetComponent<Skill>().changeImage();
+            if (index1 == 1)
+            {
+                cooldowntime1 = 10.0f;
+                SkillUI1.GetComponent<Skill>().icon = healingicon;
+                SkillUI1.GetComponent<Skill>().coolDown = cooldowntime1;
+                SkillUI1.GetComponent<Skill>().changeImage();
+            }
+            else if (index1 == 2)
+            {
+                cooldowntime1 = 15.0f;
+                SkillUI1.GetComponent<Skill>().icon = speedupicon;
+                SkillUI1.GetComponent<Skill>().coolDown = cooldowntime1;
+                SkillUI1.GetComponent<Skill>().changeImage();
+            }
+            else if (index1 == 3)
+            {
+                cooldowntime1 = 20.0f;
+                SkillUI1.GetComponent<Skill>().icon = Blasticon;
+                SkillUI1.GetComponent<Skill>().coolDown = cooldowntime1;
+                SkillUI1.GetComponent<Skill>().changeImage();
+            }
+            else if (index1 == 4)
+            {
+                cooldowntime1 = 15.0f;
+                SkillUI1.GetComponent<Skill>().icon = magicicon;
+                SkillUI1.GetComponent<Skill>().coolDown = cooldowntime1;
+                SkillUI1.GetComponent<Skill>().changeImage();
+            }
+            else if (index1 == 5)
+            {
+                cooldowntime1 = 30.0f;
+                SkillUI1.GetComponent<Skill>().icon = clearicon;
+                SkillUI1.GetComponent<Skill>().coolDown = cooldowntime1;
+                SkillUI1.GetComponent<Skill>().changeImage();
+            }
+            else if (index1 == 6)
+            {
+                cooldowntime1 = 20.0f;
+                SkillUI1.GetComponent<Skill>().icon = Bonusicon;
+                SkillUI1.GetComponent<Skill>().coolDown = cooldowntime1;
+                SkillUI1.GetComponent<Skill>().changeImage();
+            }
+            else if (index1 == 7)
+            {
+                cooldowntime1 = 25.0f;
+                SkillUI1.GetComponent<Skill>().icon = Invincicon;
+                SkillUI1.GetComponent<Skill>().coolDown = cooldowntime1;
+                SkillUI1.GetComponent<Skill>().changeImage();
+            }
+            else if (index1 == 8)
+            {
+                SkillUI1.GetComponent<Skill>().icon = Suckicon;
+                SkillUI1.GetComponent<Skill>().changeImage();
+            }
+            else if (index1 == 9)
+            {
+                SkillUI1.GetComponent<Skill>().icon = Moveqicon;
+                SkillUI1.GetComponent<Skill>().changeImage();
+            }
+            if (index2 == 1)
+            {
+                cooldowntime2 = 10.0f;
+                SkillUI2.GetComponent<Skill>().icon = healingicon;
+                SkillUI2.GetComponent<Skill>().coolDown = cooldowntime2;
+                SkillUI2.GetComponent<Skill>().changeImage();
+            }
+            else if (index2 == 2)
+            {
+                cooldowntime2 = 15.0f;
+                SkillUI2.GetComponent<Skill>().icon = speedupicon;
+                SkillUI2.GetComponent<Skill>().coolDown = cooldowntime2;
+                SkillUI2.GetComponent<Skill>().changeImage();
+            }
+            else if (index2 == 3)
+            {
+                cooldowntime2 = 20.0f;
+                SkillUI2.GetComponent<Skill>().icon = Blasticon;
+                SkillUI2.GetComponent<Skill>().coolDown = cooldowntime2;
+                SkillUI2.GetComponent<Skill>().changeImage();
+            }
+            else if (index2 == 4)
+            {
+                cooldowntime2 = 15.0f;
+                SkillUI2.GetComponent<Skill>().icon = magicicon;
+                SkillUI2.GetComponent<Skill>().coolDown = cooldowntime2;
+                SkillUI2.GetComponent<Skill>().changeImage();
+            }
+            else if (index2 == 5)
+            {
+                cooldowntime2 = 30.0f;
+                SkillUI2.GetComponent<Skill>().icon = clearicon;
+                SkillUI2.GetComponent<Skill>().coolDown = cooldowntime2;
+                SkillUI2.GetComponent<Skill>().changeImage();
+            }
+            else if (index2 == 6)
+            {
+                cooldowntime2 = 20.0f;
+                SkillUI2.GetComponent<Skill>().icon = Bonusicon;
+                SkillUI2.GetComponent<Skill>().coolDown = cooldowntime1;
+                SkillUI2.GetComponent<Skill>().changeImage();
+            }
+            else if (index2 == 7)
+            {
+                cooldowntime1 = 25.0f;
+                SkillUI2.GetComponent<Skill>().icon = Invincicon;
+                SkillUI2.GetComponent<Skill>().coolDown = cooldowntime1;
+                SkillUI2.GetComponent<Skill>().changeImage();
+            }
+            else if (index2 == 8)
+            {
+                SkillUI2.GetComponent<Skill>().icon = Suckicon;
+                SkillUI2.GetComponent<Skill>().changeImage();
+                //GameObject.FindGameObjectWithTag("Player")
+            }
+            else if (index2 == 9)
+            {
+                SkillUI2.GetComponent<Skill>().icon = Moveqicon;
+                SkillUI2.GetComponent<Skill>().changeImage();
+            }
         }
     }
     // Update is called once per frame
@@ -174,12 +178,15 @@ public class SkillController : MonoBehaviour
                 SkillUI1.GetComponent<Skill>().UseSkill("Q");
                 if (index1 == 1)
                 {
+                    Music.transform.GetChild(11).gameObject.SetActive(true);
+                    StartCoroutine(MyCoroutine());
                     nextskill1 = Time.time + cooldowntime1;
                     addHealth();
                     Debug.Log("haha");
                 }
                 else if (index1 == 2)
                 {
+                    Music.transform.GetChild(12).gameObject.SetActive(true);
                     nextskill1 = Time.time + cooldowntime1;
                     IncreaseSpeed();
                     contime1 = Time.time + 5.0f;
@@ -187,6 +194,7 @@ public class SkillController : MonoBehaviour
                 }
                 else if (index1 == 3)
                 {
+                    Music.transform.GetChild(13).gameObject.SetActive(true);
                     nextskill1 = Time.time + cooldowntime1;
                     Blast();
                     contime1 = Time.time + 5.0f;
@@ -194,6 +202,7 @@ public class SkillController : MonoBehaviour
                 }
                 else if (index1 == 4)
                 {
+                    Music.transform.GetChild(14).gameObject.SetActive(true);
                     nextskill1 = Time.time + cooldowntime1;
                     moreMagic();
                     contime1 = Time.time + 5.0f;
@@ -201,6 +210,7 @@ public class SkillController : MonoBehaviour
                 }
                 else if (index1 == 5)
                 {
+                    Music.transform.GetChild(15).gameObject.SetActive(true);
                     nextskill1 = Time.time + cooldowntime1;
                     Clear();
                     contime1 = Time.time + 10.0f;
@@ -208,6 +218,7 @@ public class SkillController : MonoBehaviour
                 }
                 else if (index1 == 6)
                 {
+                    Music.transform.GetChild(16).gameObject.SetActive(true);
                     nextskill1 = Time.time + cooldowntime1;
                     Bonus();
                     contime1 = Time.time + 10.0f;
@@ -215,6 +226,7 @@ public class SkillController : MonoBehaviour
                 }
                 else if (index1 == 7)
                 {
+                    Music.transform.GetChild(17).gameObject.SetActive(true);
                     nextskill1 = Time.time + cooldowntime1;
                     invic();
                     contime1 = Time.time + 10.0f;
@@ -228,6 +240,7 @@ public class SkillController : MonoBehaviour
                 if (Time.time > contime1)
                 {
                     player.GetComponent<PlayerMove>().speed /= 1.5f;
+                    Music.transform.GetChild(12).gameObject.SetActive(false);
                     skillflag1 = false;
                 }
             }
@@ -235,6 +248,7 @@ public class SkillController : MonoBehaviour
             {
                 if (Time.time > contime1)
                 {
+                    Music.transform.GetChild(13).gameObject.SetActive(false);
                     player.GetComponent<PlayerAim>().firerate += 0.2f;
                     player.GetComponent<PlayerAim>().firerate1 += 0.2f;
                     player.GetComponent<PlayerAim>().firerate2 += 0.2f;
@@ -246,6 +260,7 @@ public class SkillController : MonoBehaviour
             {
                 if (Time.time > contime1)
                 {
+                    Music.transform.GetChild(14).gameObject.SetActive(false);
                     player.GetComponent<PlayerAim>().damage -= 10;
                     player.GetComponent<PlayerAim>().damage1 -= 10;
                     player.GetComponent<PlayerAim>().damage2 -= 20;
@@ -257,6 +272,7 @@ public class SkillController : MonoBehaviour
             {
                 if (Time.time > contime1)
                 {
+                    Music.transform.GetChild(15).gameObject.SetActive(false);
                     sightmask.transform.GetChild(0).gameObject.SetActive(true);
                     skillflag1 = false;
                 }
@@ -265,6 +281,7 @@ public class SkillController : MonoBehaviour
             {
                 if (Time.time > contime1)
                 {
+                    Music.transform.GetChild(16).gameObject.SetActive(false);
                     GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreController>().bounus = false;
                 }
             }
@@ -272,6 +289,7 @@ public class SkillController : MonoBehaviour
             {
                 if (Time.time > contime1)
                 {
+                    Music.transform.GetChild(17).gameObject.SetActive(false);
                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>().timeInvincible = 2.0f;
                 }
             }
@@ -282,12 +300,15 @@ public class SkillController : MonoBehaviour
                 if (index2 == 1)
                 {
                     nextskill2 = Time.time + cooldowntime2;
+                    Music.transform.GetChild(11).gameObject.SetActive(true);
+                    StartCoroutine(MyCoroutine());
                     addHealth();
                     Debug.Log("haha");
                 }
                 else if (index2 == 2)
                 {
                     nextskill2 = Time.time + cooldowntime2;
+                    Music.transform.GetChild(12).gameObject.SetActive(true);
                     IncreaseSpeed();
                     contime2 = Time.time + 5.0f;
                     skillflag2 = true;
@@ -295,6 +316,7 @@ public class SkillController : MonoBehaviour
                 else if (index2 == 3)
                 {
                     nextskill2 = Time.time + cooldowntime2;
+                    Music.transform.GetChild(13).gameObject.SetActive(true);
                     Blast();
                     contime2 = Time.time + 5.0f;
                     skillflag2 = true;
@@ -302,6 +324,7 @@ public class SkillController : MonoBehaviour
                 else if (index2 == 4)
                 {
                     nextskill2 = Time.time + cooldowntime2;
+                    Music.transform.GetChild(14).gameObject.SetActive(true);
                     moreMagic();
                     contime2 = Time.time + 5.0f;
                     skillflag2 = true;
@@ -309,6 +332,7 @@ public class SkillController : MonoBehaviour
                 else if (index2 == 5)
                 {
                     nextskill2 = Time.time + cooldowntime2;
+                    Music.transform.GetChild(15).gameObject.SetActive(true);
                     Clear();
                     contime2 = Time.time + 10.0f;
                     skillflag2 = true;
@@ -316,6 +340,7 @@ public class SkillController : MonoBehaviour
                 else if (index2 == 6)
                 {
                     nextskill2 = Time.time + cooldowntime1;
+                    Music.transform.GetChild(16).gameObject.SetActive(true);
                     Bonus();
                     contime2 = Time.time + 10.0f;
                     skillflag2 = true;
@@ -323,6 +348,7 @@ public class SkillController : MonoBehaviour
                 else if (index2 == 7)
                 {
                     nextskill2 = Time.time + cooldowntime1;
+                    Music.transform.GetChild(17).gameObject.SetActive(true);
                     invic();
                     contime2 = Time.time + 10.0f;
                     skillflag2 = true;
@@ -334,6 +360,7 @@ public class SkillController : MonoBehaviour
             {
                 if (Time.time > contime2)
                 {
+                    Music.transform.GetChild(12).gameObject.SetActive(false);
                     player.GetComponent<PlayerMove>().speed /= 1.5f;
                     skillflag2 = false;
                 }
@@ -342,6 +369,7 @@ public class SkillController : MonoBehaviour
             {
                 if (Time.time > contime2)
                 {
+                    Music.transform.GetChild(13).gameObject.SetActive(false);
                     player.GetComponent<PlayerAim>().firerate += 0.2f;
                     player.GetComponent<PlayerAim>().firerate1 += 0.2f;
                     player.GetComponent<PlayerAim>().firerate2 += 0.2f;
@@ -353,6 +381,7 @@ public class SkillController : MonoBehaviour
             {
                 if (Time.time > contime2)
                 {
+                    Music.transform.GetChild(14).gameObject.SetActive(false);
                     player.GetComponent<PlayerAim>().damage -= 10;
                     player.GetComponent<PlayerAim>().damage1 -= 10;
                     player.GetComponent<PlayerAim>().damage2 -= 20;
@@ -364,6 +393,7 @@ public class SkillController : MonoBehaviour
             {
                 if (Time.time > contime2)
                 {
+                    Music.transform.GetChild(15).gameObject.SetActive(false);
                     sightmask.transform.GetChild(0).gameObject.SetActive(true);
                     skillflag2 = false;
                 }
@@ -372,6 +402,7 @@ public class SkillController : MonoBehaviour
             {
                 if (Time.time > contime2)
                 {
+                    Music.transform.GetChild(16).gameObject.SetActive(false);
                     GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreController>().bounus = false;
                 }
             }
@@ -379,12 +410,21 @@ public class SkillController : MonoBehaviour
             {
                 if (Time.time > contime2)
                 {
+                    Music.transform.GetChild(17).gameObject.SetActive(false);
                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>().timeInvincible = 2.0f;
                 }
             }
         }
         }
     }
+
+    private IEnumerator MyCoroutine()
+    {
+        yield return new WaitForSeconds(2f);
+        Music.transform.GetChild(11).gameObject.SetActive(false);
+        yield return null;
+    }
+
 
     // skill for add health
     void addHealth()
