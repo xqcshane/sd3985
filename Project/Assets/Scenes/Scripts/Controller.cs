@@ -72,7 +72,7 @@ public class Controller : MonoBehaviour
             }
             //nemyCreation();
         }
-
+        GameObject.Find("EmojiSystem").transform.GetChild(0).transform.GetChild(1).gameObject.SetActive(false);
     }
 
     // Update is called once per frame

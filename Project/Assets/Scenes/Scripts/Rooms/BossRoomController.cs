@@ -12,6 +12,7 @@ public class BossRoomController : MonoBehaviour
         if (status == 0)
         {
             GameObject MyBoss = PhotonNetwork.Instantiate("Boss", this.transform.position, Quaternion.identity);
+            GameObject.Find("BossHealthBar").GetComponent<BossHealthBar>().initialHealth(MyBoss.gameObject.GetComponent<BossFollow>());
         }
     }
 

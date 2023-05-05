@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
-  exsittime: 0.3
+  exsittime: 1
   speed: 25
   pv: {fileID: 0}
 --- !u!114 &-14302485409321574

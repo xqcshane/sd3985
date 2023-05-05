@@ -14,7 +14,9 @@ public class BossFollow : MonoBehaviourPunCallbacks
     public float health;
     private float secondStage;
     private float secondSpeed;
-
+    bool isInvincible;
+    float invincibleTimer;
+    public float timeInvincible = 0.2f;
     //public int damageToBoss;
     public float sight;
     bool faceright = true;
@@ -73,6 +75,12 @@ public class BossFollow : MonoBehaviourPunCallbacks
     {
         if (status == 0)
         {
+            if (isInvincible)
+            {
+                invincibleTimer -= Time.deltaTime;
+                if (invincibleTimer < 0)
+                    isInvincible = false;
+            }
             //Go to second stage
             if (health < secondStage)
             {
@@ -97,6 +105,7 @@ public class BossFollow : MonoBehaviourPunCallbacks
     {
         if (health <= 0)
         {
+            GameObject.Find("EmojiSystem").transform.GetChild(0).transform.GetChild(1).gameObject.SetActive(false);
             if (!isaddscore)
             {
                 score.GetComponent<ScoreController>().addScore(300);
@@ -390,6 +399,11 @@ public class BossFollow : MonoBehaviourPunCallbacks
     {
         if (status == 0)
         {
+             if (isInvincible)
+                    return;
+
+                isInvincible = true;
+                invincibleTimer = timeInvincible;
             health -= damageToBoss;
             StartCoroutine(MyCoroutine());
             Debug.Log("hitBoss");

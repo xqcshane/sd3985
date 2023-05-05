@@ -93,9 +93,9 @@ public class ShowResult : MonoBehaviour
                 }
             }
         }
-        Destroy(GameObject.Find("Data1"));
-        Destroy(GameObject.Find("Data2"));
-        Destroy(GameObject.Find("result"));
+        Destroy(GameObject.FindGameObjectWithTag("SkillData"));
+        Destroy(GameObject.FindGameObjectWithTag("TrapData"));
+        //Destroy(GameObject.Find("result"));
         // Destroy(GameObject.)
 
     }
