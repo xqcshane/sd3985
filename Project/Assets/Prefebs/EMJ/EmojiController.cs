@@ -17,6 +17,8 @@ public class EmojiController : MonoBehaviourPunCallbacks
     public GameObject SkillUI2;
     public GameObject SkillUI3;
     public GameObject SkillUI4;
+
+    public GameObject Music;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +48,8 @@ public class EmojiController : MonoBehaviourPunCallbacks
                     nextemo = Time.time + 5.0f;
                     EmoA.SetBool("Anger", true);
 
+                    Music.transform.GetChild(6).gameObject.SetActive(true);
+
                     HashTable table = new HashTable();
                     table.Add("Anger", true);
                     PhotonNetwork.LocalPlayer.SetCustomProperties(table);
@@ -60,6 +64,8 @@ public class EmojiController : MonoBehaviourPunCallbacks
                     SkillUI4.GetComponent<Skill>().UseSkill("Q");
                     nextemo = Time.time + 5.0f;
                     EmoA.SetBool("HAHA", true);
+
+                    Music.transform.GetChild(5).gameObject.SetActive(true);
 
                     HashTable table = new HashTable();
                     table.Add("HAHA", true);
@@ -76,6 +82,8 @@ public class EmojiController : MonoBehaviourPunCallbacks
                     nextemo = Time.time + 5.0f;
                     EmoA.SetBool("CRY", true);
 
+                    Music.transform.GetChild(4).gameObject.SetActive(true);
+
                     HashTable table = new HashTable();
                     table.Add("CRY", true);
                     PhotonNetwork.LocalPlayer.SetCustomProperties(table);
@@ -90,6 +98,8 @@ public class EmojiController : MonoBehaviourPunCallbacks
                     SkillUI4.GetComponent<Skill>().UseSkill("Q");
                     nextemo = Time.time + 5.0f;
                     EmoA.SetBool("Good", true);
+
+                    Music.transform.GetChild(3).gameObject.SetActive(true);
 
                     HashTable table = new HashTable();
                     table.Add("Good", true);
@@ -111,6 +121,11 @@ public class EmojiController : MonoBehaviourPunCallbacks
                 table.Add("HAHA", false);
                 table.Add("Anger", false);
                 PhotonNetwork.LocalPlayer.SetCustomProperties(table);
+
+                Music.transform.GetChild(3).gameObject.SetActive(false);
+                Music.transform.GetChild(4).gameObject.SetActive(false);
+                Music.transform.GetChild(5).gameObject.SetActive(false);
+                Music.transform.GetChild(6).gameObject.SetActive(false);
             }
         }
     }
