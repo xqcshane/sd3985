@@ -48,7 +48,7 @@ public class ScoreSceneManager : MonoBehaviourPunCallbacks
             int[] OScore = (int[])changedProps["MyScore"];
             if(role != OScore[0])
             {
-                Otherscore.SetInitial(OScore[1], OScore[2], OScore[2]);
+                Otherscore.SetInitial(OScore[1], OScore[2], OScore[3]);
 
                 Youscore.SetInitial(mys.score1, mys.score2, mys.score3);
             }

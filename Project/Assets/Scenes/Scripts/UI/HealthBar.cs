@@ -20,8 +20,11 @@ public class HealthBar : MonoBehaviour
     public void SetHealth(int hp)
     {
         //healthBar.value = hp;
-        manaPoint=hp;
-        UpdateManaBar();
+        if (hp < maxManaPoint)
+        {
+            manaPoint = hp;
+            UpdateManaBar();
+        }
         
     }
 
