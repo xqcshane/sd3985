@@ -137,18 +137,22 @@ public class EmojiController : MonoBehaviourPunCallbacks
             if (changedProps.ContainsKey("Good"))
             {
                 EmoA.SetBool("Good", (bool)changedProps["Good"]);
+                Music.transform.GetChild(3).gameObject.SetActive((bool)changedProps["Good"]);
             }
             if (changedProps.ContainsKey("CRY"))
             {
                 EmoA.SetBool("CRY", (bool)changedProps["CRY"]);
+                Music.transform.GetChild(4).gameObject.SetActive((bool)changedProps["CRY"]);
             }
             if (changedProps.ContainsKey("HAHA"))
             {
                 EmoA.SetBool("HAHA", (bool)changedProps["HAHA"]);
+                Music.transform.GetChild(5).gameObject.SetActive((bool)changedProps["HAHA"]);
             }
             if (changedProps.ContainsKey("Anger"))
             {
                 EmoA.SetBool("Anger", (bool)changedProps["Anger"]);
+                Music.transform.GetChild(6).gameObject.SetActive((bool)changedProps["Anger"]);
             }
         }
     }

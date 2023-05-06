@@ -19,10 +19,8 @@ public class EnterNext : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
-        {
-            if (PhotonNetwork.IsMasterClient){
-                GameObject.FindGameObjectWithTag("Controller").GetComponent<Controller>().endGame = true;
-            }
+        {        
+             GameObject.FindGameObjectWithTag("Controller").GetComponent<Controller>().endGame = true;
         }
           
     }

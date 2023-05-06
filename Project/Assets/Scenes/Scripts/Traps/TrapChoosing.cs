@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
+
 public class TrapChoosing : MonoBehaviour
 {
     // same logic as the skillchoosing but three button
@@ -268,7 +270,10 @@ public class TrapChoosing : MonoBehaviour
         {
             Data.GetComponent<TrapData>().skill=GameObject.Find("TSkillManager").GetComponent<TskillChoose>().sendindex1;
         }
-        SceneManager.LoadScene("GameScene");
+        if (PhotonNetwork.IsMasterClient)
+        {
+            SceneManager.LoadScene("Conclusion");
+        }
     }
     public int[] UniqRandom(int RandomNumber, int NeedNumber)
     {

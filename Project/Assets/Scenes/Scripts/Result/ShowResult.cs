@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEditor.AssetImporters;
+//using UnityEditor.AssetImporters;
 using TMPro;
 
 public class ShowResult : MonoBehaviour

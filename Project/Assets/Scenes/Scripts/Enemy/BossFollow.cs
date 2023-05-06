@@ -68,6 +68,8 @@ public class BossFollow : MonoBehaviourPunCallbacks
         player = GameObject.FindGameObjectWithTag("Player");
         status = GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().status;
         score = GameObject.FindGameObjectWithTag("Score");
+        GameObject.Find("EmojiSystem").transform.GetChild(0).transform.GetChild(1).gameObject.GetComponent<BossHealthBar>().initialHealth(this.gameObject.GetComponent<BossFollow>());
+        GameObject.Find("EmojiSystem").transform.GetChild(0).transform.GetChild(1).gameObject.SetActive(true);
     }
 
     // Update is called once per frame

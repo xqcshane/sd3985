@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 //using UnityEngine.UIElements;
 using UnityEngine.UI;
+using Photon.Pun;
 
 public class Skillchoose : MonoBehaviour
 {
@@ -189,7 +190,10 @@ public class Skillchoose : MonoBehaviour
         }
         Data.GetComponent<SkillData>().skillindex1 = sendindex1;
         Data.GetComponent<SkillData>().skillindex2 = sendindex2;
-        SceneManager.LoadScene("GameScene");
+        if (PhotonNetwork.IsMasterClient)
+        {
+            SceneManager.LoadScene("Conclusion");
+        }
     }
 
     /*Changeskillinexicon(int curerentint)

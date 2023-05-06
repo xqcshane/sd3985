@@ -155,7 +155,6 @@ public class Controller : MonoBehaviour
                 {
                     GameObject.FindGameObjectWithTag("Status").GetComponent<Status>().score3 = score2.GetComponent<ScoreController>().score + 10 * ((int)Gametime % 10);
                 }
-
             }
             if (PhotonNetwork.IsMasterClient)
             {

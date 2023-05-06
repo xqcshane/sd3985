@@ -26,13 +26,14 @@ public class BossRoomChecker : MonoBehaviour
             {
                 PhotonNetwork.Instantiate("BossRoomBlocks", this.transform.parent.transform.parent.transform.position, Quaternion.identity);
                 GameObject MyBoss = PhotonNetwork.Instantiate("Boss", this.transform.position, Quaternion.identity);
-                GameObject.Find("EmojiSystem").transform.GetChild(0).transform.GetChild(1).gameObject.GetComponent<BossHealthBar>().initialHealth(MyBoss.gameObject.GetComponent<BossFollow>());
-                GameObject.Find("EmojiSystem").transform.GetChild(0).transform.GetChild(1).gameObject.SetActive(true);
+                //GameObject.Find("EmojiSystem").transform.GetChild(0).transform.GetChild(1).gameObject.GetComponent<BossHealthBar>().initialHealth(MyBoss.gameObject.GetComponent<BossFollow>());
+               
                 Destroy(gameObject);
             }
              
         }
-           
+
+
 
     }
 }
