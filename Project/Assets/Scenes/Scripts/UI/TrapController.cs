@@ -395,6 +395,7 @@ public class TrapController : MonoBehaviourPunCallbacks
     {
         if (index1 == 8 || index2 == 8 || index3 == 8)
         {
+            GameObject.FindGameObjectWithTag("BOSS").GetComponent<StrongBoss>().stronge();
             HashTable table = new HashTable();
             table.Add("IsEnhence", true);
             PhotonNetwork.LocalPlayer.SetCustomProperties(table);

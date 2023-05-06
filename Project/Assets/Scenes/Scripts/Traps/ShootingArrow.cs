@@ -30,10 +30,7 @@ public class ShootingArrow : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            Launch();
-        }
+
     }
 
     void Launch()
