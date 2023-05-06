@@ -272,7 +272,7 @@ public class TrapChoosing : MonoBehaviour
         }
         if (PhotonNetwork.IsMasterClient)
         {
-            SceneManager.LoadScene("Conclusion");
+            SceneManager.LoadScene("GameScene");
         }
     }
     public int[] UniqRandom(int RandomNumber, int NeedNumber)

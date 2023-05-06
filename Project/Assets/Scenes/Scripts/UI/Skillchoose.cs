@@ -192,7 +192,7 @@ public class Skillchoose : MonoBehaviour
         Data.GetComponent<SkillData>().skillindex2 = sendindex2;
         if (PhotonNetwork.IsMasterClient)
         {
-            SceneManager.LoadScene("Conclusion");
+            SceneManager.LoadScene("GameScene");
         }
     }
 

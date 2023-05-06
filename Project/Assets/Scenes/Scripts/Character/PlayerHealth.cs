@@ -53,7 +53,9 @@ public class PlayerHealth : MonoBehaviourPunCallbacks
         {
             GameObject final = GameObject.FindGameObjectWithTag("Status");
             final.GetComponent<Status>().death = true;
-            Destroy(gameObject);
+            this.gameObject.GetComponent<PlayerMove>().canMove = false;
+            this.gameObject.GetComponent<PlayerAim>().enabled = false;
+            //Destroy(gameObject);
 
         }
     }

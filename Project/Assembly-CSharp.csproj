@@ -167,7 +167,7 @@
     <Compile Include="Assets\Scenes\Scripts\Skill\TskillChoose.cs" />
     <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\FunctionUpdater.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasics2d.cs" />
-    <Compile Include="Assets\Scenes\Scripts\Camera\CameraController.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Enemy\Camera\CameraController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Scenes\Scripts\Character\PlayerMove.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplines.cs" />

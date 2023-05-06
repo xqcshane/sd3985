@@ -39,6 +39,7 @@ public class Controller : MonoBehaviour
         PlayerRole = Status.GetComponent<Status>().status;
         //final.GetComponent<Result>().PR = PlayerRole;
         GameStart = false;
+        endGame = false;
         collected = 0;
         if (PlayerRole == 1)
         {

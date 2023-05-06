@@ -40,6 +40,8 @@ public class PlayerMove : MonoBehaviour
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         originalSpeed = speed;
+        canMove = true;
+        this.gameObject.GetComponent<PlayerAim>().enabled = true;
         _pv = this.gameObject.GetComponent<PhotonView>();
 
         GameController = GameObject.Find("Controller").GetComponent<Controller>();
