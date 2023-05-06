@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Arrow : MonoBehaviour
 {
@@ -18,9 +19,9 @@ public class Arrow : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.magnitude > 10.0f)
+        if (transform.position.magnitude > 50.0f)
         {
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
     }
 
@@ -29,7 +30,7 @@ public class Arrow : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-5);
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
     }
 }

@@ -18,8 +18,10 @@ public class StrongBoss : MonoBehaviourPunCallbacks
     }
     public void stronge()
     {
-        this.GetComponent<BossFollow>().health = this.GetComponent<BossFollow>().health * 2;
+        this.GetComponent<BossFollow>().health = this.GetComponent<BossFollow>().health * 1.5f;
         this.GetComponent<BossFollow>().speed=this.GetComponent<BossFollow>().speed +=0.5f;
+        GameObject.Find("EmojiSystem").transform.GetChild(0).transform.GetChild(1).gameObject.GetComponent<BossHealthBar>().maxhealthPoint = 300f;
+        GameObject.Find("EmojiSystem").transform.GetChild(0).transform.GetChild(1).gameObject.GetComponent<BossHealthBar>().healthPoint = 300f;
     }
 
     public override void OnPlayerPropertiesUpdate(Photon.Realtime.Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)

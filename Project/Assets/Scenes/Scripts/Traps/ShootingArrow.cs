@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class ShootingArrow : MonoBehaviour
 {
@@ -37,7 +38,7 @@ public class ShootingArrow : MonoBehaviour
 
     void Launch()
     {
-        GameObject justArrow = Instantiate(justArrowPrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
+        GameObject justArrow = PhotonNetwork.Instantiate("justArrowPrefab", rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
 
         Arrow arrow = justArrow.GetComponent<Arrow>();
         arrow.Launch(lookDirection, 300);
