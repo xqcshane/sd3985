@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 using UnityEngine.SceneManagement;
-using static UnityEngine.Networking.UnityWebRequest;
-using UnityEngine.SocialPlatforms.Impl;
 
-public class ErrorSceneController : MonoBehaviour
+
+public class ErrorSceneController : MonoBehaviourPunCallbacks
 {
     GameObject final;
 
@@ -46,6 +46,11 @@ public class ErrorSceneController : MonoBehaviour
         else
         {
             SceneManager.LoadScene("1");
+            //PhotonNetwork.LeaveRoom();
         }
+    }
+    public override void OnLeftRoom()
+    {
+        SceneManager.LoadScene("1");
     }
 }

@@ -1633,7 +1633,7 @@ MonoBehaviour:
   score: {fileID: 1878070074}
   score2: {fileID: 234300047}
   score3: {fileID: 1464570669}
-  showtime: 10
+  showtime: 3
   MyRat: {fileID: 1070153256}
 --- !u!1 &1848375361
 GameObject:

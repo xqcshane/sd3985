@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/ErrorScene.unity
+- path: Assets/Scenes/Flow/Score.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

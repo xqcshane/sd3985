@@ -21,17 +21,17 @@ public class Arrow : MonoBehaviour
         PV = GetComponent<PhotonView>();
     }
 
-    public void Launch(Vector2 direction, float force)
+    public void Launch(Vector2 direction, float speed)
     {
-        if (PV.IsMine)
+        if (PR==0)
         {
-            rigidbody2d.AddForce(direction * force);
+            gameObject.GetComponent<Rigidbody2D>().velocity = gameObject.transform.up * speed;
         }
     }
 
     void Update()
     {
-        if (PV.IsMine)
+        if (PR==0)
         {
             nowgap = math.abs((transform.position - startposition).magnitude);
             if (nowgap > MAXShootDistance)
@@ -44,11 +44,17 @@ public class Arrow : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (PR == 0)
         {
-            if (PR == 0)
+            if (collision.gameObject.CompareTag("Player"))
             {
+
                 collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-5);
+                PhotonNetwork.Destroy(gameObject);
+
+            }
+            if (collision.gameObject.CompareTag("Wall"))
+            {
                 PhotonNetwork.Destroy(gameObject);
             }
         }

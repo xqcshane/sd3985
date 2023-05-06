@@ -793,7 +793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eade9eb512e3bb4ca535b660362f7f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totaltime: 5
+  totaltime: 3
   MyStatusScript: {fileID: 0}
 --- !u!4 &684765987
 Transform:

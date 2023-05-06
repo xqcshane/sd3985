@@ -25,7 +25,7 @@ public class ShootingArrow : MonoBehaviour
     private IEnumerator MyCoroutine()
     {
         Launch();
-        yield return new WaitForSeconds(0.66667f);
+        yield return new WaitForSeconds(1.2f);
         RepeatMyCoroutine();
         yield return null;
     }
@@ -43,7 +43,7 @@ public class ShootingArrow : MonoBehaviour
             GameObject justArrow = PhotonNetwork.Instantiate("Justarrow", new Vector3(newPosition.x, newPosition.y, 0.0f), Quaternion.identity);
 
             Arrow arrow = justArrow.GetComponent<Arrow>();
-            arrow.Launch(lookDirection, 300);
+            arrow.Launch(lookDirection, -10.0f);
         }
     }
 }

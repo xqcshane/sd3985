@@ -13,7 +13,7 @@ public class ErrorManager : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.CurrentRoom == null)
         {
-            SceneManager.LoadScene("ErrorScene");
+            PhotonNetwork.LeaveRoom();
         }
     }
 
@@ -33,7 +33,7 @@ public class ErrorManager : MonoBehaviourPunCallbacks
 
         if (CountPlayerNum != 2)
         {
-            SceneManager.LoadScene("ErrorScene");
+            PhotonNetwork.LeaveRoom();
         }
     }
 
