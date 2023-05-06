@@ -53,7 +53,7 @@ public class ShowResult : MonoBehaviour
                 {
                     score.text = "Reverage Next turn";
                 }
-
+                final.GetComponent<Status>().death = false;
             }
         }
         else
@@ -91,6 +91,7 @@ public class ShowResult : MonoBehaviour
                 {
                     score2.text = "You Kill the Conqueror";
                 }
+                final.GetComponent<Status>().death = false;
             }
         }
         Destroy(GameObject.FindGameObjectWithTag("SkillData"));

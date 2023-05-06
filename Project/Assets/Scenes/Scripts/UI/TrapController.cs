@@ -115,7 +115,7 @@ public class TrapController : MonoBehaviourPunCallbacks
             TrapUI2.GetComponent<TrapUI>().ChangeTrapNumber(amount2.ToString());
             if (index3 == 1 || index3 == 3)
             {
-                amount2 = 2 + round * 2;
+                amount3 = 2 + round * 2;
             }
             else if (index3 == 2 || index3 == 4 || index3 == 5)
             {
