@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5155398274755051556}
   - component: {fileID: 15032062197732793}
-  - component: {fileID: 3252659776234545077}
+  - component: {fileID: 4683908062610792072}
   m_Layer: 0
   m_Name: arrow_1
   m_TagString: Untagged
@@ -71,8 +71,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c1b742ff4cf96b14a984cd1aca5ae3d9, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 3af347a7d20b9734eaf18a2190baaba2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &3252659776234545077
+--- !u!95 &4683908062610792072
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -91,9 +91,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2279028159301122370}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bbc40c74b4956a247a9bf8dd80c98345, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8134ddda4a58ddf4287cb36c94c76e27, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

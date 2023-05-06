@@ -874,6 +874,7 @@ MonoBehaviour:
   score2: 0
   score3: 0
   roominfo: 
+  death: 0
 --- !u!4 &110746362
 Transform:
   m_ObjectHideFlags: 0
@@ -1621,7 +1622,7 @@ MonoBehaviour:
   E: {fileID: 475059456}
   before: {fileID: 21300000, guid: 1455a3d096e0bf74fbbac0f76b17cbce, type: 3}
   Data: {fileID: 1972005683}
-  totaltime: 5
+  totaltime: 15
   time: {fileID: 1529976898}
   buttonindex: -1
 --- !u!4 &276345794
@@ -2757,7 +2758,7 @@ MonoBehaviour:
   trap3: {fileID: 513220250}
   before: {fileID: 21300000, guid: 1455a3d096e0bf74fbbac0f76b17cbce, type: 3}
   Data: {fileID: 565662501}
-  totaltime: 5
+  totaltime: 15
   time: {fileID: 180879236}
   buttonindex: -1
 --- !u!4 &510203069
