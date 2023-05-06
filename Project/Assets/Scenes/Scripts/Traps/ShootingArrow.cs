@@ -8,10 +8,12 @@ public class ShootingArrow : MonoBehaviour
     public GameObject justArrowPrefab;
     Rigidbody2D rigidbody2d;
     public Vector2 lookDirection = new Vector2(1, 0);
+    private int PR;
 
     private void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+        PR = GameObject.Find("Controller").GetComponent<Controller>().PlayerRole;
         StartCoroutine(MyCoroutine());
     }
 
@@ -35,9 +37,13 @@ public class ShootingArrow : MonoBehaviour
 
     void Launch()
     {
-        GameObject justArrow = PhotonNetwork.Instantiate("Justarrow", rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
+        if (PR == 0)
+        {
+            Vector2 newPosition = rigidbody2d.position + Vector2.up * 0.5f;
+            GameObject justArrow = PhotonNetwork.Instantiate("Justarrow", new Vector3(newPosition.x, newPosition.y, 0.0f), Quaternion.identity);
 
-        Arrow arrow = justArrow.GetComponent<Arrow>();
-        arrow.Launch(lookDirection, 300);
+            Arrow arrow = justArrow.GetComponent<Arrow>();
+            arrow.Launch(lookDirection, 300);
+        }
     }
 }
