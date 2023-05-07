@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ErrorScene.unity
     guid: b4a6c6b695fbfc94f8749995cfbba4a5
+  - enabled: 1
+    path: Assets/Scenes/Flow/DevelopersScene.unity
+    guid: f125187e40a7090489b364b4c4fcb61d
   m_configObjects: {}
