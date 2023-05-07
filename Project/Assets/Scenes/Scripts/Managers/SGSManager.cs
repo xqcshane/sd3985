@@ -113,4 +113,10 @@ public class SGSManager : MonoBehaviourPunCallbacks
     {
         SceneManager.LoadScene("S1");
     }
+
+    public void OnClickDevelopers()
+    {
+        SceneManager.LoadScene("DevelopersScene");
+    }
+    
 }
